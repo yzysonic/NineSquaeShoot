@@ -6,8 +6,8 @@ namespace NSS
 {
     public class FieldBlock : MonoBehaviour
     {
-        public int Index { get; set; }
-        public ETeam Team { get; set; }
+        public int Index { get; set; } = 0;
+        public ETeam Team { get; set; } = ETeam.none;
         public Character StayingCharacter { get; private set; }
 
         public bool TryEnter(Character character)

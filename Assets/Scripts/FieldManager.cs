@@ -16,7 +16,7 @@ namespace NSS
         private GameObject enemyFieldBlockPrefab;
 
         [SerializeField]
-        private Vector2 fieldBlockStartLocation = new Vector2(3, 5);
+        private Vector2 fieldBlockStartLocation = new(3, 5);
 
         [SerializeField]
         private Vector2 fieldBlockInterval = 1.3f * Vector2.one;

@@ -6,6 +6,7 @@ namespace NSS
 {
     public enum ETeam
     {
+        none = -1,
         player,
         enemy,
         count
@@ -15,10 +16,7 @@ namespace NSS
     {
         public FieldBlock StayingBlock
         {
-            get
-            {
-                return stayingBlock;
-            }
+            get => stayingBlock;
             set
             {
                 if (stayingBlock != null)

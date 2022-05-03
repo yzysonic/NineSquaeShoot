@@ -9,20 +9,8 @@ namespace NSS
     public class Singleton<T> : MonoBehaviour where T : Singleton<T>
     {
         private static Singleton<T> instance;
-        public static T Instance
-        {
-            get
-            {
-                return instance ? (T)instance : new GameObject().AddComponent<T>();
-            }
-        }
-        public static bool IsCreated
-        {
-            get
-            {
-                return instance != null;
-            }
-        }
+        public static T Instance => IsCreated ? (T)instance : new GameObject().AddComponent<T>();
+        public static bool IsCreated => instance != null;
 
         protected virtual void Awake()
         {
@@ -72,10 +60,7 @@ namespace NSS
 
         public float Interval
         {
-            get
-            {
-                return interval;
-            }
+            get => interval;
             set
             {
                 interval = value;
@@ -84,10 +69,7 @@ namespace NSS
         }
         public float Elapsed
         {
-            get
-            {
-                return elapsed;
-            }
+            get => elapsed;
             set
             {
                 elapsed = value;
