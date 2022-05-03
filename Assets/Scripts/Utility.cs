@@ -128,11 +128,11 @@ namespace NSS
 
     }
 
-    public class Pool<T> : MonoBehaviour where T : Component, IPoolObject
+    public class Pool<T> : MonoBehaviour where T : Component, IPooledObject
     {
+        protected GameObject prefab;
 
-        public GameObject perfab;
-        public int maxCount;
+        protected int maxCount;
 
         private List<T> list;
 
@@ -141,20 +141,18 @@ namespace NSS
             list = new List<T>(maxCount);
             for (var i = 0; i < maxCount; i++)
             {
-                var t = Instantiate(perfab, transform).GetComponent<T>();
-                t.gameObject.SetActive(false);
+                var t = Instantiate(prefab, transform).GetComponent<T>();
+                t.IsUsing = false;
                 list.Add(t);
             }
         }
 
-        public T Get()
+        public T GetAvailablePoolObject()
         {
             foreach (var obj in list)
             {
                 if (!obj.IsUsing)
                 {
-                    obj.Init();
-                    obj.gameObject.SetActive(true);
                     obj.IsUsing = true;
                     return obj;
                 }
@@ -163,9 +161,9 @@ namespace NSS
             return null;
         }
 
-        public T Get(Transform parent)
+        public T GetAvailablePoolObject(Transform parent)
         {
-            var obj = Get();
+            var obj = GetAvailablePoolObject();
             if (obj != null)
             {
                 obj.transform.parent = parent;
@@ -173,9 +171,9 @@ namespace NSS
             return obj;
         }
 
-        public T Get(Vector3 position, Quaternion rotation)
+        public T GetAvailablePoolObject(Vector3 position, Quaternion rotation)
         {
-            var obj = Get();
+            var obj = GetAvailablePoolObject();
             if (obj != null)
             {
                 obj.transform.position = position;
@@ -185,9 +183,9 @@ namespace NSS
 
         }
 
-        public T Get(Vector3 position, Quaternion rotation, Transform parent)
+        public T GetAvailablePoolObject(Vector3 position, Quaternion rotation, Transform parent)
         {
-            var obj = Get();
+            var obj = GetAvailablePoolObject();
             if (obj != null)
             {
                 obj.transform.position = position;
@@ -196,15 +194,37 @@ namespace NSS
             }
             return obj;
         }
-
-
     }
 
-    public interface IPoolObject
+    public interface IPooledObject
     {
         bool IsUsing { get; set; }
-        void Init();
-        void Uninit();
+    }
+
+    public class PooledMonoBehavior : MonoBehaviour, IPooledObject
+    {
+        private bool isUsing = false;
+        public virtual bool IsUsing
+        {
+            get => isUsing;
+            set
+            {
+                if(value)
+                {
+                    OnEnabled();
+                }
+                else
+                {
+                    OnDisabled();
+                }
+                gameObject.SetActive(value);
+                isUsing = value;
+            }
+        }
+
+        public virtual void OnEnabled() { }
+
+        public virtual void OnDisabled() { }
     }
 
     public struct Int2

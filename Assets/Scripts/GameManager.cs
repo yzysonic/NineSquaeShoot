@@ -22,6 +22,7 @@ namespace NSS
             {
                 GameObject playerObj = Instantiate(playerPrefab);
                 Player = playerObj.GetComponent<Player>();
+                Player.Team = ETeam.player;
                 var movement = playerObj.GetComponent<CharacterMovement>();
                 if(movement != null)
                 {

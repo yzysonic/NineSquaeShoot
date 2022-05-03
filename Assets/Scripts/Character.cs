@@ -14,6 +14,7 @@ namespace NSS
 
     public class Character : MonoBehaviour
     {
+        public ETeam Team { get; set; } = ETeam.none;
         public FieldBlock StayingBlock
         {
             get => stayingBlock;

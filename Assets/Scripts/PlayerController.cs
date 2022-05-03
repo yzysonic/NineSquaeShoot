@@ -9,6 +9,7 @@ namespace NSS
     {
         private GameInput input;
         private CharacterMovement movement;
+        private Weapon weapon;
 
         // Start is called before the first frame update
         private void Awake()
@@ -18,11 +19,22 @@ namespace NSS
             input.Enable();
 
             movement = GetComponent<CharacterMovement>();
+            weapon = GetComponent<Weapon>();
         }
 
         void GameInput.IPlayerActions.OnFire(InputAction.CallbackContext context)
         {
-            
+            if (weapon != null)
+            {
+                if (context.started)
+                {
+                    weapon.StartFire();
+                }
+                else if (context.canceled)
+                {
+                    weapon.StopFire();
+                }
+            }
         }
 
         void GameInput.IPlayerActions.OnMoveUp(InputAction.CallbackContext context)

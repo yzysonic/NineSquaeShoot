@@ -67,5 +67,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerFieldBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 7129450740928305681, guid: 82e2da63f3c40fc419d00e4d7521e43f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82e2da63f3c40fc419d00e4d7521e43f, type: 3}
