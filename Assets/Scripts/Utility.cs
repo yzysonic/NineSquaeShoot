@@ -78,6 +78,8 @@ namespace NSS
         }
         public float Progress { get; protected set; }
 
+        public bool IsComplete => Progress >= 1.0f;
+
         public Timer(float interval = 1.0f)
         {
             this.interval = interval;
@@ -104,11 +106,6 @@ namespace NSS
             Elapsed = 0.0f;
         }
 
-        public bool TimesUp()
-        {
-            return Progress >= 1.0f;
-        }
-
         virtual protected void UpdateProgress()
         {
             Progress = elapsed / interval;
@@ -126,7 +123,7 @@ namespace NSS
 
         public static implicit operator bool(Timer timer)
         {
-            return timer.TimesUp();
+            return timer.IsComplete;
         }
 
     }

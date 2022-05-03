@@ -6,25 +6,73 @@ namespace NSS
 {
     public class CharacterMovement : MonoBehaviour
     {
+        [SerializeField, Range(0, 5)]
+        private float moveDuration = 0.1f;
+
+        [SerializeField]
+        private AnimationCurve moveCurve = AnimationCurve.Linear(0, 0, 1, 1);
+
+        public bool IsMoving { get; private set; } = false;
+
         private Character character;
+        private Timer timer;
+        private Transform startPoint;
+        private Transform endPoint;
 
         private void Awake()
         {
             character = GetComponent<Character>();
+            timer = new Timer();
         }
 
-        public bool TryMove(Vector2 direction)
+        private void Update()
         {
-            FieldBlock targetBlock = FieldManager.Instance.GetAdjacentBlock(character.StayingBlock, direction);
-            if(targetBlock == null)
+            UpdateMove();
+        }
+
+        public bool TryMove(in Vector2 direction)
+        {
+            if(IsMoving)
             {
                 return false;
             }
 
-            return TryEnterBlock(targetBlock);
+            // Just move instantaneously
+            if (moveDuration <= 0)
+            {
+                return TryMove_Implementation(direction);
+            }
+
+            // Setup to move smoothly
+            startPoint = character.StayingBlock.transform;
+
+            // When the move fails
+            if (!TryMove_Implementation(direction))
+            {
+                startPoint = null;
+                return false;
+            }
+
+            endPoint = character.StayingBlock.transform;
+            timer.Reset(moveDuration);
+            IsMoving = true;
+
+            return true;
         }
 
-        public bool TryEnterBlock(FieldBlock block)
+        protected virtual bool TryMove_Implementation(in Vector2 direction)
+        {
+            FieldBlock targetBlock = FieldManager.Instance.GetAdjacentBlock(character.StayingBlock, direction);
+            if (targetBlock == null)
+            {
+                return false;
+            }
+
+            bool shouldSetPosition = moveDuration <= 0;
+            return TryEnterBlock(targetBlock, shouldSetPosition);
+        }
+
+        public bool TryEnterBlock(FieldBlock block, bool setCharacterPosition = true)
         {
             if (block == null)
             {
@@ -34,11 +82,35 @@ namespace NSS
             if (block.TryEnter(character))
             {
                 character.StayingBlock = block;
-                transform.position = block.transform.position;
+                if (setCharacterPosition)
+                {
+                    transform.position = block.transform.position;
+                }
                 return true;
             }
 
             return false;
+        }
+
+        private void UpdateMove()
+        {
+            if(!IsMoving
+                || startPoint == null 
+                || endPoint == null
+                || Time.timeScale == 0)
+            {
+                return;
+            }
+
+            timer.Step();
+            transform.position = Vector3.Lerp(startPoint.position, endPoint.position, moveCurve.Evaluate(timer.Progress));
+
+            if (timer.IsComplete)
+            {
+                IsMoving = false;
+                startPoint = null;
+                endPoint = null;
+            }
         }
     }
 }
