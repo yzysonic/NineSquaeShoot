@@ -55,10 +55,10 @@ namespace NSS
             }
 
             // Make move direction lottery
-            List<MoveDirection> moveLottery = new((int)MoveDirection.Count);
-            for (int i = 0; i < (int)MoveDirection.Count; i++)
+            List<EMoveDirection> moveLottery = new((int)EMoveDirection.Count);
+            for (int i = 0; i < (int)EMoveDirection.Count; i++)
             {
-                moveLottery.Add((MoveDirection)i);
+                moveLottery.Add((EMoveDirection)i);
             }
 
             moveLottery = moveLottery.OrderBy(_ => Random.value).ToList();

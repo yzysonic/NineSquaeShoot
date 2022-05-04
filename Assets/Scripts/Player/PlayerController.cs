@@ -41,7 +41,7 @@ namespace NSS
         {
             if(context.started)
             {
-                movement.TryMove(MoveDirection.Upper);
+                movement.TryMove(EMoveDirection.Upper);
             }
         }
 
@@ -49,7 +49,7 @@ namespace NSS
         {
             if(context.started)
             {
-                movement.TryMove(MoveDirection.Lower);
+                movement.TryMove(EMoveDirection.Lower);
             }
         }
 
@@ -57,7 +57,7 @@ namespace NSS
         {
             if(context.started)
             {
-                movement.TryMove(MoveDirection.Left);
+                movement.TryMove(EMoveDirection.Left);
             }
         }
 
@@ -65,7 +65,7 @@ namespace NSS
         {
             if(context.started)
             {
-                movement.TryMove(MoveDirection.Right);
+                movement.TryMove(EMoveDirection.Right);
             }
         }
     }

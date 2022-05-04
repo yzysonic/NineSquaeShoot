@@ -62,7 +62,7 @@ namespace NSS
             }
         }
 
-        public FieldBlock GetAdjacentBlock(in FieldBlock currentBlock, MoveDirection direction)
+        public FieldBlock GetAdjacentBlock(in FieldBlock currentBlock, EMoveDirection direction)
         {
             if (currentBlock == null)
             {
@@ -72,28 +72,28 @@ namespace NSS
             // Try to get target block depends on moving direction
             switch (direction)
             {
-                case MoveDirection.Upper:
+                case EMoveDirection.Upper:
                     return GetUpBlock(currentBlock);
 
-                case MoveDirection.Lower:
+                case EMoveDirection.Lower:
                     return GetDownBlock(currentBlock);
 
-                case MoveDirection.Left:
+                case EMoveDirection.Left:
                     return GetLeftBlock(currentBlock);
 
-                case MoveDirection.Right:
+                case EMoveDirection.Right:
                     return GetRightBlock(currentBlock);
 
-                case MoveDirection.UpperLeft:
+                case EMoveDirection.UpperLeft:
                     return GetUpperLeftBlock(currentBlock);
 
-                case MoveDirection.UpperRight:
+                case EMoveDirection.UpperRight:
                     return GetUpperRightBlock(currentBlock);
 
-                case MoveDirection.LowerLeft:
+                case EMoveDirection.LowerLeft:
                     return GetLowerLeftBlock(currentBlock);
 
-                case MoveDirection.LowerRight:
+                case EMoveDirection.LowerRight:
                     return GetLowerRightBlock(currentBlock);
             }
 

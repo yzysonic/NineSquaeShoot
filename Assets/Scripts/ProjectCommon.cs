@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace NSS
 {
-    public enum MoveDirection
+    public enum EMoveDirection
     {
         None = -1,
         Upper,
