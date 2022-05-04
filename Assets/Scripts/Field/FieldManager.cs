@@ -83,6 +83,18 @@ namespace NSS
 
                 case MoveDirection.Right:
                     return GetRightBlock(currentBlock);
+
+                case MoveDirection.UpperLeft:
+                    return GetUpperLeftBlock(currentBlock);
+
+                case MoveDirection.UpperRight:
+                    return GetUpperRightBlock(currentBlock);
+
+                case MoveDirection.LowerLeft:
+                    return GetLowerLeftBlock(currentBlock);
+
+                case MoveDirection.LowerRight:
+                    return GetLowerRightBlock(currentBlock);
             }
 
             // No block can move
@@ -101,18 +113,33 @@ namespace NSS
 
         public FieldBlock GetUpBlock(in FieldBlock currentBlock)
         {
+            if(!currentBlock)
+            {
+                return null;
+            }
+
             int upBlockIndex = currentBlock.Index - teamBlockSideCount;
             return GetBlock(currentBlock.Team, upBlockIndex);
         }
 
         public FieldBlock GetDownBlock(in FieldBlock currentBlock)
         {
+            if (!currentBlock)
+            {
+                return null;
+            }
+
             int downBlockIndex = currentBlock.Index + teamBlockSideCount;
             return GetBlock(currentBlock.Team, downBlockIndex);
         }
 
         public FieldBlock GetLeftBlock(in FieldBlock currentBlock)
         {
+            if (!currentBlock)
+            {
+                return null;
+            }
+
             int modIndex = currentBlock.Index % teamBlockSideCount;
             if (modIndex == 0)
             {
@@ -125,6 +152,11 @@ namespace NSS
 
         public FieldBlock GetRightBlock(in FieldBlock currentBlock)
         {
+            if (!currentBlock)
+            {
+                return null;
+            }
+
             int modIndex = currentBlock.Index % teamBlockSideCount;
             if (modIndex == (teamBlockSideCount - 1))
             {
@@ -133,6 +165,26 @@ namespace NSS
 
             int rightBlockIndex = currentBlock.Index + 1;
             return GetBlock(currentBlock.Team, rightBlockIndex);
+        }
+
+        public FieldBlock GetUpperLeftBlock(in FieldBlock currentBlock)
+        {
+            return GetUpBlock(GetLeftBlock(currentBlock));
+        }
+
+        public FieldBlock GetUpperRightBlock(in FieldBlock currentBlock)
+        {
+            return GetUpBlock(GetRightBlock(currentBlock));
+        }
+
+        public FieldBlock GetLowerLeftBlock(in FieldBlock currentBlock)
+        {
+            return GetDownBlock(GetLeftBlock(currentBlock));
+        }
+
+        public FieldBlock GetLowerRightBlock(in FieldBlock currentBlock)
+        {
+            return GetDownBlock(GetRightBlock(currentBlock));
         }
     }
 }

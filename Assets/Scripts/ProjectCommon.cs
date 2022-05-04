@@ -6,7 +6,7 @@ namespace NSS
 {
     public enum MoveDirection
     {
-        None,
+        None = -1,
         Upper,
         Lower,
         Left,
@@ -14,6 +14,7 @@ namespace NSS
         UpperLeft,
         UpperRight,
         LowerLeft,
-        LowerRight
+        LowerRight,
+        Count
     }
 }

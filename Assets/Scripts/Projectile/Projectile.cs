@@ -24,7 +24,7 @@ namespace NSS
         {
             if(Time.deltaTime != 0)
             {
-                transform.Translate(Time.deltaTime * Velocity * transform.right);
+                transform.Translate(Time.deltaTime * Velocity * transform.right, Space.World);
             }
         }
     }
