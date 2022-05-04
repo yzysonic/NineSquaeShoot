@@ -28,11 +28,11 @@ namespace NSS
             {
                 if (context.started)
                 {
-                    weapon.StartFire();
+                    weapon.StartRapidFire();
                 }
                 else if (context.canceled)
                 {
-                    weapon.StopFire();
+                    weapon.StopRapidFire();
                 }
             }
         }
@@ -41,7 +41,7 @@ namespace NSS
         {
             if(context.started)
             {
-                movement.TryMove(Vector2.up);
+                movement.TryMove(MoveDirection.Upper);
             }
         }
 
@@ -49,7 +49,7 @@ namespace NSS
         {
             if(context.started)
             {
-                movement.TryMove(Vector2.down);
+                movement.TryMove(MoveDirection.Lower);
             }
         }
 
@@ -57,7 +57,7 @@ namespace NSS
         {
             if(context.started)
             {
-                movement.TryMove(Vector2.left);
+                movement.TryMove(MoveDirection.Left);
             }
         }
 
@@ -65,7 +65,7 @@ namespace NSS
         {
             if(context.started)
             {
-                movement.TryMove(Vector2.right);
+                movement.TryMove(MoveDirection.Right);
             }
         }
     }

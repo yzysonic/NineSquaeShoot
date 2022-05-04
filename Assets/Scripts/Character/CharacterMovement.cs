@@ -30,7 +30,7 @@ namespace NSS
             UpdateMove();
         }
 
-        public bool TryMove(in Vector2 direction)
+        public bool TryMove(MoveDirection direction)
         {
             if(IsMoving)
             {
@@ -60,7 +60,7 @@ namespace NSS
             return true;
         }
 
-        protected virtual bool TryMove_Implementation(in Vector2 direction)
+        protected virtual bool TryMove_Implementation(MoveDirection direction)
         {
             FieldBlock targetBlock = FieldManager.Instance.GetAdjacentBlock(character.StayingBlock, direction);
             if (targetBlock == null)

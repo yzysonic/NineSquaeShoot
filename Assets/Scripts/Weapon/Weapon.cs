@@ -12,9 +12,11 @@ namespace NSS
         [SerializeField]
         private Transform firePoint;
 
-        public bool IsFiring { get; private set; } = false;
+        public bool IsRapidFiring { get; private set; } = false;
 
-        private Timer timer;
+        public bool IsCoolDownComplete => coolDownTimer.IsComplete;
+
+        private Timer coolDownTimer;
         private Character character;
 
         protected override void Awake()
@@ -29,8 +31,8 @@ namespace NSS
                 maxCount = Mathf.RoundToInt(ProjectProperty.baseResolution.x / weaponProfile.projectileVelocity / weaponProfile.fireInterval);
             }
 
-            timer = new Timer(weaponProfile.fireInterval);
-            timer.Elapsed = weaponProfile.fireInterval;
+            coolDownTimer = new Timer(weaponProfile.fireInterval);
+            coolDownTimer.Elapsed = weaponProfile.fireInterval;
             character = GetComponent<Character>();
 
             base.Awake();
@@ -38,43 +40,43 @@ namespace NSS
 
         private void Update()
         {
-            timer.Step();
-            if (!IsFiring)
+            coolDownTimer.Step();
+            if (!IsRapidFiring)
             {
                 return;
             }
 
-            if(timer.IsComplete)
-            {
-                LaunchProjectile();
-                timer.Reset();
-            }
+            TryFireOnce();
         }
 
-        public void StartFire()
+        public void StartRapidFire()
         {
-            if(IsFiring)
+            if(IsRapidFiring)
             {
                 return;
             }
 
-            if(timer.IsComplete)
-            {
-                LaunchProjectile();
-                timer.Reset();
-            }
-            
-            IsFiring = true;
+            TryFireOnce();
+
+            IsRapidFiring = true;
         }
 
-        public void StopFire()
+        public void StopRapidFire()
         {
-            if(!IsFiring)
+            if(!IsRapidFiring)
             {
                 return;
             }
 
-            IsFiring= false;
+            IsRapidFiring= false;
+        }
+
+        public void TryFireOnce()
+        {
+            if(IsCoolDownComplete)
+            {
+                LaunchProjectile();
+            }
         }
 
         private void LaunchProjectile()
@@ -92,6 +94,8 @@ namespace NSS
                 }
                 
                 projectile.Velocity = weaponProfile.projectileVelocity / 100.0f;
+
+                coolDownTimer.Reset();
             }
         }
     }
