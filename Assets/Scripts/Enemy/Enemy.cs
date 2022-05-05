@@ -10,5 +10,11 @@ namespace NSS
         private float moveInterval = 1;
 
         public float MoveInterval => moveInterval;
+
+        protected override void OnDefeated()
+        {
+            base.OnDefeated();
+            gameObject.SetActive(false);
+        }
     }
 }

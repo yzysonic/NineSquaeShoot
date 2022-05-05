@@ -81,6 +81,11 @@ namespace NSS
 
         private void LaunchProjectile()
         {
+            if (!character || !character.StayingBlock)
+            {
+                return;
+            }
+
             Projectile projectile = GetAvailablePoolObject(firePoint.position, firePoint.rotation, null);
             if (projectile != null)
             {
@@ -92,8 +97,10 @@ namespace NSS
                 {
                     projectile.gameObject.layer = LayerMask.NameToLayer("EnemyAttack");
                 }
-                
+
+                projectile.FieldRowIndex = character.StayingBlock.RowIndex;
                 projectile.Velocity = weaponProfile.projectileVelocity / 100.0f;
+                projectile.Damage = weaponProfile.damage;
 
                 coolDownTimer.Reset();
             }

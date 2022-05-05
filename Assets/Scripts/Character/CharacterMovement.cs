@@ -79,7 +79,7 @@ namespace NSS
                 return false;
             }
 
-            if (block.TryEnter(character))
+            if (block.TryCharacterEnter(character))
             {
                 character.StayingBlock = block;
                 if (setCharacterPosition)

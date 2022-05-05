@@ -203,13 +203,18 @@ namespace NSS
 
     public class PooledMonoBehavior : MonoBehaviour, IPooledObject
     {
-        private bool isUsing = false;
+        private bool isUsing = true;
         public virtual bool IsUsing
         {
             get => isUsing;
             set
             {
-                if(value)
+                if (isUsing == value)
+                {
+                    return;
+                }
+
+                if (value)
                 {
                     OnEnabled();
                 }
@@ -217,8 +222,17 @@ namespace NSS
                 {
                     OnDisabled();
                 }
+
                 gameObject.SetActive(value);
                 isUsing = value;
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (!IsUsing)
+            {
+                OnDisabled();
             }
         }
 

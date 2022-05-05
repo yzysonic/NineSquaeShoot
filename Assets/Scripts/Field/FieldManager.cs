@@ -16,6 +16,9 @@ namespace NSS
         private GameObject enemyFieldBlockPrefab;
 
         [SerializeField]
+        private GameObject fieldColliderPrefab;
+
+        [SerializeField]
         private Vector2 fieldBlockStartLocation = new(3, 5);
 
         [SerializeField]
@@ -33,6 +36,9 @@ namespace NSS
                 blocks[i] = new FieldBlock[teamBlockCount];
             }
 
+            // Reference to FieldColliders
+            FieldCollider[] colliders = new FieldCollider[teamBlockSideCount];
+
             // Spawn player's field
             for (int y = 0; y < teamBlockSideCount; y++)
             {
@@ -43,8 +49,29 @@ namespace NSS
                     var block = blockObj.GetComponent<FieldBlock>();
                     block.Index = y * teamBlockSideCount + x;
                     block.Team = ETeam.player;
+                    block.RowIndex = (uint)y;
                     blocks[(int)ETeam.player][block.Index] = block;
+
+                    // Create field's collider for one row
+                    if (y == 0)
+                    {
+                        Vector3 colliderPos = new(pos.x, 0.5f * ProjectProperty.baseResolution.y / 100.0f, 0);
+                        GameObject colliderObject = Instantiate(fieldColliderPrefab, colliderPos, Quaternion.identity);
+                        colliderObject.layer = LayerMask.NameToLayer("PlayerField");
+                        colliders[x] = colliderObject.GetComponent<FieldCollider>();
+                    }
+
+                    if (colliders[x] != null)
+                    {
+                        colliders[x].SetBlockMap((uint)y, block);
+                    }
                 }
+            }
+
+            // Reset reference of FieldCollider
+            for (int i = 0; i < teamBlockSideCount; i++)
+            {
+                colliders[i] = null;
             }
 
             // Spawn Enemy's field
@@ -57,7 +84,22 @@ namespace NSS
                     var block = blockObj.GetComponent<FieldBlock>();
                     block.Index = y * teamBlockSideCount + x;
                     block.Team = ETeam.enemy;
+                    block.RowIndex = (uint)y;
                     blocks[(int)ETeam.enemy][block.Index] = block;
+
+                    // Create field's collider for one row
+                    if (y == 0)
+                    {
+                        Vector3 colliderPos = new(pos.x, 0.5f * ProjectProperty.baseResolution.y / 100.0f, 0);
+                        GameObject colliderObject = Instantiate(fieldColliderPrefab, colliderPos, Quaternion.identity);
+                        colliderObject.layer = LayerMask.NameToLayer("EnemyField");
+                        colliders[x] = colliderObject.GetComponent<FieldCollider>();
+                    }
+
+                    if (colliders[x] != null)
+                    {
+                        colliders[x].SetBlockMap((uint)y, block);
+                    }
                 }
             }
         }
