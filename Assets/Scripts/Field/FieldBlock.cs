@@ -37,6 +37,7 @@ namespace NSS
         public void CharacterExit()
         {
             StayingCharacter = null;
+            FieldManager.Instance.OnCharacterExitedBlock(this);
         }
 
         public void ReserveDamageTransferring(Object owner, DamageInfo damageInfo)
@@ -56,6 +57,7 @@ namespace NSS
                 (this as IDamageSender).SendDamage(character.gameObject, item.Value, character);
             }
             damageReservations.Clear();
+            FieldManager.Instance.OnCharacterEnteredBlock(this);
         }
     }
 }

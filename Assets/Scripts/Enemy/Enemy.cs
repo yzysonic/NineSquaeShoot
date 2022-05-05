@@ -11,10 +11,16 @@ namespace NSS
 
         public float MoveInterval => moveInterval;
 
+        protected override void Awake()
+        {
+            base.Awake();
+            Team = ETeam.enemy;
+        }
+
         protected override void OnDefeated()
         {
             base.OnDefeated();
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

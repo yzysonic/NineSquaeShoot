@@ -34,7 +34,7 @@ namespace NSS
 
         private Animator animator;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             life = GetComponent<LifeComponent>();
             if (life)

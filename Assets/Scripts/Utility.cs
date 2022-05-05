@@ -5,6 +5,15 @@ using UnityEngine;
 namespace NSS
 {
 
+    public static class Utility
+    {
+        public static void RemoveAtSwap<T>(this List<T> list, int index)
+        {
+            list[index] = list[list.Count - 1];
+            list.RemoveAt(list.Count - 1);
+        }
+    }
+
     [DisallowMultipleComponent]
     public class Singleton<T> : MonoBehaviour where T : Singleton<T>
     {
