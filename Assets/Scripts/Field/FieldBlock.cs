@@ -6,6 +6,9 @@ namespace NSS
 {
     public class FieldBlock : MonoBehaviour, IDamageSender, IDamageReceiver
     {
+        [SerializeField]
+        private SpriteRenderer groundLightRenderer;
+
         public int Index { get; set; } = 0;
         public ETeam Team { get; set; } = ETeam.none;
         public uint RowIndex { get; set; } = 0;
@@ -42,12 +45,26 @@ namespace NSS
 
         public void ReserveDamageTransferring(Object owner, DamageInfo damageInfo)
         {
+            if (damageReservations.Count == 0)
+            {
+                if (groundLightRenderer)
+                {
+                    groundLightRenderer.enabled = true;
+                }
+            }
             damageReservations.Add(owner, damageInfo);
         }
 
         public void CancelDamageTransferring(Object owner)
         {
             damageReservations.Remove(owner);
+            if (damageReservations.Count == 0)
+            {
+                if (groundLightRenderer)
+                {
+                    groundLightRenderer.enabled = false;
+                }
+            }
         }
 
         private void OnCharacterEntered(Character character)
@@ -56,7 +73,13 @@ namespace NSS
             {
                 (this as IDamageSender).SendDamage(character.gameObject, item.Value, character);
             }
+
             damageReservations.Clear();
+            if (groundLightRenderer)
+            {
+                groundLightRenderer.enabled = false;
+            }
+
             FieldManager.Instance.OnCharacterEnteredBlock(this);
         }
     }
