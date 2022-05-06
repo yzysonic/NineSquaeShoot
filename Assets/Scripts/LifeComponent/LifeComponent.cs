@@ -24,6 +24,8 @@ public class LifeComponent : MonoBehaviour
         }
     }
 
+    public uint MaxValue => maxValue;
+
     private uint value = 0;
 
     public event Action<uint> ValueChanged;

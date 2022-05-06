@@ -143,16 +143,22 @@ namespace NSS
 
         protected int maxCount;
 
+        protected Transform attachTransform;
+
         private List<T> list;
 
         protected virtual void Awake()
         {
+            Transform parent = attachTransform ? attachTransform : transform;
             list = new List<T>(maxCount);
             for (var i = 0; i < maxCount; i++)
             {
-                var t = Instantiate(prefab, transform).GetComponent<T>();
-                t.IsUsing = false;
-                list.Add(t);
+                var t = Instantiate(prefab, parent).GetComponent<T>();
+                if (t)
+                {
+                    t.IsUsing = false;
+                    list.Add(t);
+                }
             }
         }
 

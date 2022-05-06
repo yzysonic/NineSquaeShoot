@@ -43,6 +43,8 @@ namespace NSS
             }
 
             animator = gameObject.GetComponent<Animator>();
+
+            GameUIManager.Instance.BindCharacterLifeUI(this);
         }
 
         public void ReceiveDamage(DamageInfo damageInfo)
@@ -72,7 +74,10 @@ namespace NSS
             }
         }
 
-        protected virtual void OnDefeated() { }
+        protected virtual void OnDefeated()
+        {
+            GameUIManager.Instance.UnbindCharacterLifeUI(this);
+        }
     }
 
 }
