@@ -30,7 +30,6 @@ namespace NSS
 
                 if (!ownerCharacter)
                 {
-                    lifeMax = 0;
                     return;
                 }
 
@@ -38,8 +37,6 @@ namespace NSS
                 if (newLifeComp)
                 {
                     newLifeComp.ValueChanged += OnLifeChanged;
-
-                    lifeMax = newLifeComp.MaxValue;
 
                     if (lifeGauge)
                     {
@@ -51,7 +48,6 @@ namespace NSS
         }
 
         private Character ownerCharacter;
-        private uint lifeMax = 0;
 
         private void LateUpdate()
         {
