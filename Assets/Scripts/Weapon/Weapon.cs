@@ -28,7 +28,7 @@ namespace NSS
             }
             else
             {
-                maxCount = Mathf.RoundToInt(ProjectProperty.baseResolution.x / weaponProfile.projectileVelocity / weaponProfile.fireInterval);
+                maxCount = Mathf.CeilToInt((float)ProjectProperty.baseResolution.x / weaponProfile.projectileVelocity / weaponProfile.fireInterval);
             }
 
             coolDownTimer = new Timer(weaponProfile.fireInterval);
