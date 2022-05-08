@@ -26,7 +26,14 @@ namespace NSS
             {
                 if (stayingBlock)
                 {
-                    stayingBlock.CancelDamageTransferring(this);
+                    if( stayingBlock.Team == Team)
+                    {
+                        stayingBlock.OnSelfProjectileExited(this);
+                    }
+                    else
+                    {
+                        stayingBlock.CancelDamageTransferring(this);
+                    }
                 }
 
                 stayingBlock = value;
@@ -86,9 +93,13 @@ namespace NSS
                 }
 
                 // Entered self field
-                else if(block.StayingCharacter != OwnerCharacter)
+                else
                 {
-                    block.OnSelfProjectileEntered(this);
+                    StayingBlock = block;
+                    if (block.StayingCharacter != OwnerCharacter)
+                    {
+                        block.OnSelfProjectileEntered(this);
+                    }
                 }
             }
         }
