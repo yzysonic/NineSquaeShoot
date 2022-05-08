@@ -9,6 +9,10 @@ namespace NSS
         [SerializeField]
         private AudioClip se;
 
+        public Character OwnerCharacter { get; set; }
+
+        public ETeam Team => OwnerCharacter.Team;
+
         public uint FieldRowIndex { get; set; } = 0;
 
         public float Velocity { get; set; } = 0;
@@ -66,16 +70,25 @@ namespace NSS
                     return;
                 }
 
-                if (block.CanTransferDamage)
+                // Entered target's field
+                if (Team != block.Team)
                 {
-                    StayingBlock = null;
-                    (this as IDamageSender).SendDamage(block.gameObject, damageInfo, block);
+                    if (block.CanTransferDamage)
+                    {
+                        StayingBlock = null;
+                        (this as IDamageSender).SendDamage(block.gameObject, damageInfo, block);
+                    }
+                    else
+                    {
+                        StayingBlock = block;
+                        block.ReserveDamageTransferring(this, damageInfo);
+                    }
                 }
-                else
-                {
 
-                    StayingBlock = block;
-                    block.ReserveDamageTransferring(this, damageInfo);
+                // Entered self field
+                else if(block.StayingCharacter != OwnerCharacter)
+                {
+                    block.OnSelfProjectileEntered(this);
                 }
             }
         }
@@ -86,9 +99,19 @@ namespace NSS
             {
                 var fieldCollider = collision.GetComponent<FieldCollider>();
                 FieldBlock block = fieldCollider ? fieldCollider.GetBlock(FieldRowIndex) : null;
-                if(block && block == StayingBlock)
+                if (block)
                 {
-                    StayingBlock = null;
+                    if (Team != block.Team)
+                    {
+                        if (block == StayingBlock)
+                        {
+                            StayingBlock = null;
+                        }
+                    }
+                    else
+                    {
+                        block.OnSelfProjectileExited(this);
+                    }
                 }
             }
         }

@@ -98,6 +98,7 @@ namespace NSS
                     projectile.gameObject.layer = LayerMask.NameToLayer("EnemyAttack");
                 }
 
+                projectile.OwnerCharacter = character;
                 projectile.FieldRowIndex = character.StayingBlock.RowIndex;
                 projectile.Velocity = weaponProfile.projectileVelocity / 100.0f;
                 projectile.Damage = weaponProfile.damage;

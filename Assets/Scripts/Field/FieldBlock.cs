@@ -6,8 +6,22 @@ namespace NSS
 {
     public class FieldBlock : MonoBehaviour, IDamageSender, IDamageReceiver
     {
+        private enum EGroundLightState
+        {
+            None,
+            Player,
+            Enemy,
+            Both
+        }
+
         [SerializeField]
         private SpriteRenderer groundLightRenderer;
+
+        [SerializeField]
+        private Color playerGroundLightColor = Color.white;
+
+        [SerializeField]
+        private Color enemyGroundLightColor = Color.yellow;
 
         public int Index { get; set; } = 0;
         public ETeam Team { get; set; } = ETeam.none;
@@ -16,6 +30,10 @@ namespace NSS
         public bool CanTransferDamage => StayingCharacter != null;
 
         private readonly Dictionary<Object, DamageInfo> damageReservations = new();
+
+        private readonly HashSet<Projectile> stayingSelfProjectiles = new();
+
+        private EGroundLightState groundLightState = EGroundLightState.None;
 
         public void ReceiveDamage(DamageInfo damageInfo)
         {
@@ -47,10 +65,7 @@ namespace NSS
         {
             if (damageReservations.Count == 0)
             {
-                if (groundLightRenderer)
-                {
-                    groundLightRenderer.enabled = true;
-                }
+                SetGroundLight(Team == ETeam.enemy, true);
             }
             damageReservations.Add(owner, damageInfo);
         }
@@ -60,10 +75,7 @@ namespace NSS
             damageReservations.Remove(owner);
             if (damageReservations.Count == 0)
             {
-                if (groundLightRenderer)
-                {
-                    groundLightRenderer.enabled = false;
-                }
+                SetGroundLight(Team == ETeam.enemy, false);
             }
         }
 
@@ -75,12 +87,72 @@ namespace NSS
             }
 
             damageReservations.Clear();
-            if (groundLightRenderer)
-            {
-                groundLightRenderer.enabled = false;
-            }
+            SetGroundLight(Team == ETeam.enemy, false);
 
             FieldManager.Instance.OnCharacterEnteredBlock(this);
+        }
+
+        public void OnSelfProjectileEntered(Projectile projectile)
+        {
+            if (!projectile)
+            {
+                return;
+            }
+            if (stayingSelfProjectiles.Count == 0)
+            {
+                SetGroundLight(projectile.Team == ETeam.player, true);
+            }
+            stayingSelfProjectiles.Add(projectile);
+        }
+
+        public void OnSelfProjectileExited(Projectile projectile)
+        {
+            if (!projectile)
+            {
+                return;
+            }
+            stayingSelfProjectiles.Remove(projectile);
+            if (stayingSelfProjectiles.Count == 0)
+            {
+                SetGroundLight(projectile.Team == ETeam.player, false);
+            }
+        }
+
+        private void SetGroundLight(bool isPlayer, bool enabled)
+        {
+            EGroundLightState settingState = isPlayer ? EGroundLightState.Player : EGroundLightState.Enemy;
+            if(enabled)
+            {
+                groundLightState |= settingState;
+            }
+            else
+            {
+                groundLightState &= ~settingState;
+            }
+
+            if (groundLightRenderer)
+            {
+                switch (groundLightState)
+                {
+                    case EGroundLightState.None:
+                        groundLightRenderer.color = Color.clear;
+                        break;
+
+                    case EGroundLightState.Player:
+                        groundLightRenderer.color = playerGroundLightColor;
+                        break;
+
+                    case EGroundLightState.Enemy:
+                        groundLightRenderer.color = enemyGroundLightColor;
+                        break;
+
+                    case EGroundLightState.Both:
+                        groundLightRenderer.color = playerGroundLightColor * enemyGroundLightColor;
+                        break;
+                }
+
+                groundLightRenderer.enabled = settingState != EGroundLightState.None;
+            }
         }
     }
 }
