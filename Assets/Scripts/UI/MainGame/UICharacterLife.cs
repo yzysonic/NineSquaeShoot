@@ -10,6 +10,9 @@ namespace NSS
         [SerializeField]
         private Slider lifeGauge;
 
+        [SerializeField]
+        private UISpriteNumber lifeNumber;
+
         public Character OwnerCharacter
         {
             get => ownerCharacter;
@@ -43,6 +46,11 @@ namespace NSS
                         lifeGauge.maxValue = newLifeComp.MaxValue;
                         lifeGauge.value = newLifeComp.Value;
                     }
+
+                    if (lifeNumber)
+                    {
+                        lifeNumber.Value = (int)newLifeComp.Value;
+                    }
                 }
             }
         }
@@ -69,6 +77,12 @@ namespace NSS
                 lifeGauge.maxValue = 1;
                 lifeGauge.value = 1;
             }
+
+            if (lifeNumber)
+            {
+                lifeNumber.Value = 0;
+            }
+
             base.OnDisabled();
         }
 
@@ -89,6 +103,10 @@ namespace NSS
             if (lifeGauge)
             {
                 lifeGauge.value = value;
+            }
+            if (lifeNumber)
+            {
+                lifeNumber.Value = (int)value;
             }
         }
     }

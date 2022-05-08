@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7193158966263833307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1169313999486020786}
+  - component: {fileID: 6003376424476334762}
+  m_Layer: 5
+  m_Name: CharacterLifeNumber
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1169313999486020786
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7193158966263833307}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 12.500002}
+  m_SizeDelta: {x: 82, y: -24.999994}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6003376424476334762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7193158966263833307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a8d7ddfe269ab846b853378d9d6b4d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 233892790, guid: dffbc5a9031f9284b9f1e53ba76c2dc0, type: 3}
+  - {fileID: 1313491741, guid: dffbc5a9031f9284b9f1e53ba76c2dc0, type: 3}
+  - {fileID: 831454736, guid: dffbc5a9031f9284b9f1e53ba76c2dc0, type: 3}
+  - {fileID: -97909714, guid: dffbc5a9031f9284b9f1e53ba76c2dc0, type: 3}
+  - {fileID: 1290430861, guid: dffbc5a9031f9284b9f1e53ba76c2dc0, type: 3}
+  - {fileID: 1692285576, guid: dffbc5a9031f9284b9f1e53ba76c2dc0, type: 3}
+  - {fileID: 2133304863, guid: dffbc5a9031f9284b9f1e53ba76c2dc0, type: 3}
+  - {fileID: 559352198, guid: dffbc5a9031f9284b9f1e53ba76c2dc0, type: 3}
+  - {fileID: -823664936, guid: dffbc5a9031f9284b9f1e53ba76c2dc0, type: 3}
+  - {fileID: -74450614, guid: dffbc5a9031f9284b9f1e53ba76c2dc0, type: 3}
+  - {fileID: 1591851364, guid: dffbc5a9031f9284b9f1e53ba76c2dc0, type: 3}
+  - {fileID: 965133721, guid: dffbc5a9031f9284b9f1e53ba76c2dc0, type: 3}
+  - {fileID: 1327998277, guid: dffbc5a9031f9284b9f1e53ba76c2dc0, type: 3}
+  digitPrefab: {fileID: 4468366580430933283, guid: ac287dc5dd67c24429c17858eb0a27e4, type: 3}
+  maxDigitCount: 3
+  value: 
+  alignment: 1
+  spacing: 0
+  zeroPadding: 0
