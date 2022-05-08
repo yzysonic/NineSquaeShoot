@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75bc088fe935433489eb7f1149fe7d80, type: 3}
-  m_Name: WeaponProfile1
+  m_Name: WeaponProfile2
   m_EditorClassIdentifier: 
-  fireInterval: 2
+  fireInterval: 5
   damage: 10
   projectilePrefab: {fileID: 5414060531969112104, guid: 83234683b913629409e764d86b8cf7f7, type: 3}
   projectileVelocity: 500
