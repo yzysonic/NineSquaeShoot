@@ -26,6 +26,7 @@ namespace NSS
                 {
                     movement.TryEnterBlock(startBlock);
                 }
+                Player = playerObj.GetComponent<Player>();
             }
         }
     }

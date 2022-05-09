@@ -56,6 +56,7 @@ namespace NSS
         private void Awake()
         {
             AddDigitImages(maxDigitCount);
+            UpdateDigitAlignment();
         }
 
         private void AddDigitImages(int count)
@@ -76,14 +77,72 @@ namespace NSS
             }
         }
 
+        private void UpdateDigitAlignment()
+        {
+            float anchorXMin = 0,
+                anchorXMax = 0,
+                pivotX = 0;
+
+            switch (alignment)
+            {
+                case Alignment.Left:
+                    anchorXMin = 0;
+                    anchorXMax = 0;
+                    pivotX = 0;
+                    break;
+
+                case Alignment.Center:
+                    anchorXMin = 0.5f;
+                    anchorXMax = 0.5f;
+                    pivotX = 0.5f;
+                    break;
+
+                case Alignment.Right:
+                    anchorXMin = 1;
+                    anchorXMax = 1;
+                    pivotX = 1;
+                    break;
+            }
+
+            foreach (var digit in digitImages)
+            {
+                Vector2 anchorMin = digit.rectTransform.anchorMin;
+                anchorMin.x = anchorXMin;
+                digit.rectTransform.anchorMin = anchorMin;
+
+                Vector2 anchorMax = digit.rectTransform.anchorMax;
+                anchorMax.x = anchorXMax;
+                digit.rectTransform.anchorMax = anchorMax;
+
+                Vector2 pivot = digit.rectTransform.pivot;
+                pivot.x = pivotX;
+                digit.rectTransform.pivot = pivot;
+            }
+        }
+
         private void UpdateDigitLocation()
         {
             float width = spacing * (currentDisplayDigitCount - 1);
-            float startX = -0.5f * width;
+            float startX = 0;
+
+            switch (alignment)
+            {
+                case Alignment.Left:
+                    startX = 0;
+                    break;
+
+                case Alignment.Center:
+                    startX = -0.5f * width;
+                    break;
+
+                case Alignment.Right:
+                    startX = -width;
+                    break;
+            }
 
             for (int i = 0; i < currentDisplayDigitCount; i++)
             {
-                digitImages[i].transform.localPosition = (startX + i * spacing) * Vector3.right;
+                digitImages[i].rectTransform.anchoredPosition = (startX + i * spacing) * Vector3.right;
             }
         }
 
