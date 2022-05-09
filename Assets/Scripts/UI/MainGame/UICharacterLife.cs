@@ -65,7 +65,7 @@ namespace NSS
                 Sprite sprite = spriteRenderer ? spriteRenderer.sprite : null;
                 if (sprite)
                 {
-                    transform.position = ownerCharacter.transform.position * 100 + (spriteRenderer.sprite.textureRect.yMax - spriteRenderer.sprite.pivot.y) * Vector3.up;
+                    transform.position = GameUIManager.Instance.MainCanvas.scaleFactor * (ownerCharacter.transform.position * 100 + (spriteRenderer.sprite.textureRect.yMax - spriteRenderer.sprite.pivot.y) * Vector3.up);
                 }
             }
         }
