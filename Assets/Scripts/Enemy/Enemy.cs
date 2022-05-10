@@ -9,6 +9,9 @@ namespace NSS
         [SerializeField]
         private float moveInterval = 1;
 
+        [SerializeField]
+        private int baseScore = 100;
+
         public float MoveInterval => moveInterval;
 
         protected override void Awake()
@@ -20,6 +23,9 @@ namespace NSS
         protected override void OnDefeated()
         {
             base.OnDefeated();
+
+            ScoreManager.Instance.CurrentScore += baseScore;
+
             Destroy(gameObject);
         }
     }
