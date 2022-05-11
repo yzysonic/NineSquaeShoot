@@ -18,6 +18,16 @@ namespace NSS
         {
             base.Awake();
             Team = ETeam.enemy;
+            EnemyManager.Instance.OnEnemySpawned(this);
+        }
+
+        protected override void OnDestroy()
+        {
+            if (EnemyManager.IsCreated)
+            {
+                EnemyManager.Instance.OnEnemyDestroyed(this);
+            }
+            base.OnDestroy();
         }
 
         protected override void OnDefeated()

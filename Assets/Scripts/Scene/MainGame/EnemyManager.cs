@@ -10,6 +10,9 @@ namespace NSS
         private List<GameObject> enemyPrefabs = new();
 
         [SerializeField]
+        private float startEnemySpawnTime = 1.5f;
+
+        [SerializeField]
         private float baseEnemySpawnInterval = 30.0f;
 
         [SerializeField, Range(1, FieldManager.teamBlockCount)]
@@ -22,10 +25,12 @@ namespace NSS
 
         private readonly Timer spawnTimer = new();
 
+        private readonly HashSet<Enemy> enemies = new HashSet<Enemy>();
+
         protected override void Awake()
         {
             base.Awake();
-            spawnTimer.Reset(0);
+            spawnTimer.Reset(startEnemySpawnTime);
             EnableSpawnEnemy = true;
         }
 
@@ -82,6 +87,36 @@ namespace NSS
 
                 availableBlocs.RemoveAtSwap(blockNo);
             }
+        }
+
+        public void DestroyAllEnemies(bool disableAllProjectiles = true)
+        {
+            HashSet<Enemy> list = enemies;
+            foreach(Enemy enemy in list)
+            {
+                if (enemy.Weapon && disableAllProjectiles)
+                {
+                    enemy.Weapon.DisableAllPoolObject();
+                }
+                Destroy(enemy.gameObject);
+            }
+        }
+
+        public void OnNewGameStarted()
+        {
+            DestroyAllEnemies();
+            spawnTimer.Reset(startEnemySpawnTime);
+            EnableSpawnEnemy = true;
+        }
+
+        public void OnEnemySpawned(Enemy enemy)
+        {
+            enemies.Add(enemy);
+        }
+
+        public void OnEnemyDestroyed(Enemy enemy)
+        {
+            enemies.Remove(enemy);
         }
     }
 }

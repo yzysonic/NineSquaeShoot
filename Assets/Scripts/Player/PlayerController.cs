@@ -16,10 +16,19 @@ namespace NSS
         {
             input = new GameInput();
             input.Player.SetCallbacks(this);
-            input.Enable();
 
             movement = GetComponent<CharacterMovement>();
             weapon = GetComponent<Weapon>();
+        }
+
+        private void OnEnable()
+        {
+            input.Enable();
+        }
+
+        private void OnDisable()
+        {
+            input.Disable();
         }
 
         void GameInput.IPlayerActions.OnFire(InputAction.CallbackContext context)

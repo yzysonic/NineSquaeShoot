@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,9 +29,21 @@ namespace NSS
             }
         }
 
+        public LifeComponent Life { get => life; }
+
+        public CharacterMovement Movement { get => movement; }
+
+        public Weapon Weapon { get => weapon; }
+
+        public event Action Defeated;
+
         private FieldBlock stayingBlock;
 
         private LifeComponent life;
+
+        private CharacterMovement movement;
+
+        private Weapon weapon;
 
         private Animator animator;
 
@@ -42,9 +55,21 @@ namespace NSS
                 life.ValueChanged += OnLifeChanged;
             }
 
+            movement = GetComponent<CharacterMovement>();
+
+            weapon = GetComponent<Weapon>();
+
             animator = gameObject.GetComponent<Animator>();
 
             GameUIManager.Instance.BindCharacterLifeUI(this);
+        }
+
+        protected virtual void OnDestroy()
+        {
+            if (GameUIManager.IsCreated)
+            {
+                GameUIManager.Instance.UnbindCharacterLifeUI(this);
+            }
         }
 
         public void ReceiveDamage(DamageInfo damageInfo)
@@ -64,6 +89,10 @@ namespace NSS
 
         protected virtual void OnLifeChanged(uint life)
         {
+            if (!enabled)
+            {
+                return;
+            }
             if (animator)
             {
                 animator.SetTrigger("damaged");
@@ -76,7 +105,32 @@ namespace NSS
 
         protected virtual void OnDefeated()
         {
-            GameUIManager.Instance.UnbindCharacterLifeUI(this);
+            if (Defeated != null)
+            {
+                Defeated.Invoke();
+            }
+        }
+
+        public void ResetStatus()
+        {
+            StayingBlock = null;
+            if (Life)
+            {
+                Life.ResetValue();
+            }
+            if (Movement)
+            {
+                Movement.ResetStatus();
+            }
+            if (Weapon)
+            {
+                weapon.ResetStatus();
+            }
+            if (animator)
+            {
+                animator.Rebind();
+                animator.Play("Idle");
+            }
         }
     }
 

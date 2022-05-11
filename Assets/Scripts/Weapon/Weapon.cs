@@ -106,5 +106,13 @@ namespace NSS
                 coolDownTimer.Reset();
             }
         }
+
+        public void ResetStatus()
+        {
+            if (coolDownTimer)
+            {
+                coolDownTimer.Elapsed = weaponProfile.fireInterval;
+            }
+        }
     }
 }

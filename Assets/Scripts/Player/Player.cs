@@ -11,5 +11,19 @@ namespace NSS
             base.Awake();
             Team = ETeam.player;
         }
+
+        public void OnNewGameStarted()
+        {
+            gameObject.SetActive(true);
+            ResetStatus();
+            GameUIManager.Instance.BindCharacterLifeUI(this);
+        }
+
+        protected override void OnDefeated()
+        {
+            base.OnDefeated();
+            GameUIManager.Instance.UnbindCharacterLifeUI(this);
+            gameObject.SetActive(false);
+        }
     }
 }

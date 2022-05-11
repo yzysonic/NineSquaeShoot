@@ -112,5 +112,13 @@ namespace NSS
                 endPoint = null;
             }
         }
+
+        public void ResetStatus()
+        {
+            IsMoving = false;
+            startPoint = null;
+            endPoint = null;
+            timer.Reset(moveDuration);
+        }
     }
 }

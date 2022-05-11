@@ -9,13 +9,16 @@ namespace NSS
         [SerializeField]
         private GameObject CharacterLifeUIPrefab;
 
+        [SerializeField]
+        private Transform parentTransform;
+
         private readonly Dictionary<Character, UICharacterLife> bindMap = new();
 
         protected override void Awake()
         {
             prefab = CharacterLifeUIPrefab;
             maxCount = FieldManager.teamBlockCount * (int)ETeam.count;
-            attachTransform = GameUIManager.Instance.MainCanvas.transform;
+            attachTransform = parentTransform;
             base.Awake();
         }
 
@@ -46,6 +49,8 @@ namespace NSS
                 ui.OwnerCharacter = null;
                 ui.IsUsing = false;
             }
+
+            bindMap.Remove(character);
         }
     }
 }

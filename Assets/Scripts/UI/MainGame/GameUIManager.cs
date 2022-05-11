@@ -9,6 +9,9 @@ namespace NSS
         [SerializeField]
         private Canvas mainCanvas;
 
+        [SerializeField]
+        private UIResult result;
+
         private CharacterLifeUIPool characterLifeUIPool;
 
         public Canvas MainCanvas => mainCanvas;
@@ -32,6 +35,14 @@ namespace NSS
             if (characterLifeUIPool)
             {
                 characterLifeUIPool.UnbindCharacter(character);
+            }
+        }
+
+        public void SetResultActive(bool value)
+        {
+            if (result)
+            {
+                result.gameObject.SetActive(value);
             }
         }
     }

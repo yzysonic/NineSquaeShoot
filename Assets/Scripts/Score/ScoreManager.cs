@@ -12,6 +12,11 @@ namespace NSS
             get => currentScore;
             set
             {
+                if (IsScoreReadonly)
+                {
+                    return;
+                }
+
                 value = Math.Max(0, value);
                 if (currentScore != value)
                 {
@@ -25,6 +30,14 @@ namespace NSS
         }
 
         public event Action<int> CurrentScoreChanged;
+
+        public bool IsScoreReadonly { get; set; } = false;
+
+        public void OnNewGameStarted()
+        {
+            IsScoreReadonly = false;
+            CurrentScore = 0;
+        }
 
         private int currentScore = 0;
     }

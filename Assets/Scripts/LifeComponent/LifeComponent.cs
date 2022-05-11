@@ -46,4 +46,9 @@ public class LifeComponent : MonoBehaviour
             Value = 0;
         }
     }
+
+    public void ResetValue()
+    {
+        Value = MaxValue;
+    }
 }

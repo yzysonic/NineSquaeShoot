@@ -23,7 +23,7 @@ namespace NSS
                     return;
                 }
 
-                var oldLifeComp = ownerCharacter ? ownerCharacter.GetComponent<LifeComponent>() : null;
+                var oldLifeComp = ownerCharacter ? ownerCharacter.Life : null;
                 if (oldLifeComp)
                 {
                     oldLifeComp.ValueChanged -= OnLifeChanged;
@@ -36,7 +36,7 @@ namespace NSS
                     return;
                 }
 
-                var newLifeComp = ownerCharacter.GetComponent<LifeComponent>();
+                var newLifeComp = ownerCharacter.Life;
                 if (newLifeComp)
                 {
                     newLifeComp.ValueChanged += OnLifeChanged;
@@ -90,7 +90,7 @@ namespace NSS
         {
             if (OwnerCharacter)
             {
-                var oldLifeComp = OwnerCharacter.GetComponent<LifeComponent>();
+                var oldLifeComp = OwnerCharacter.Life;
                 if (oldLifeComp)
                 {
                     oldLifeComp.ValueChanged -= OnLifeChanged;

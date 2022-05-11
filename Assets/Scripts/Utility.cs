@@ -209,6 +209,14 @@ namespace NSS
             }
             return obj;
         }
+
+        public void DisableAllPoolObject()
+        {
+            foreach(var obj in list)
+            {
+                obj.IsUsing = false;
+            }
+        }
     }
 
     public interface IPooledObject

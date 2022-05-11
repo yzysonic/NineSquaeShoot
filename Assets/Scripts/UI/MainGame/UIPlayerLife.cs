@@ -23,7 +23,7 @@ namespace NSS
             player = GameManager.Instance.Player;
             if (player)
             {
-                var lifeComp = player.GetComponent<LifeComponent>();
+                var lifeComp = player.Life;
                 if (lifeComp)
                 {
                     if (slider)
