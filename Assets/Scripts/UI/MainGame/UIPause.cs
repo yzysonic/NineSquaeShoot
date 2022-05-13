@@ -3,22 +3,16 @@ using UnityEngine.UI;
 
 namespace NSS
 {
-    public class UIResult : MonoBehaviour
+    public class UIPause : MonoBehaviour
     {
         [SerializeField]
         private GameObject background;
 
         [SerializeField]
-        private Text scoreValue;
-
-        [SerializeField]
-        private Text rankValue;
-
-        [SerializeField]
         private Button mainMenuButton;
 
         [SerializeField]
-        private Button playAginButton;
+        private Button resumeButton;
 
         private void Awake()
         {
@@ -26,25 +20,22 @@ namespace NSS
             {
                 mainMenuButton.onClick.AddListener(OnMainMenuButtonPressed);
             }
-            if (playAginButton)
+            if (resumeButton)
             {
-                playAginButton.onClick.AddListener(OnPlayAgainButtonPressed);
+                resumeButton.onClick.AddListener(OnResumeButtonPressed);
             }
         }
 
         private void OnEnable()
         {
+            Time.timeScale = 0.0f;
             background.SetActive(true);
-            int score = ScoreManager.Instance.CurrentScore;
-            scoreValue.text = score.ToString("N0");
-            rankValue.text = ResultManager.Instance.ScoreRankProfile.FindRank(score).ToString();
         }
 
         private void OnDisable()
         {
+            Time.timeScale = 1.0f;
             background.SetActive(false);
-            scoreValue.text = string.Empty;
-            rankValue.text = string.Empty;
         }
 
         private void OnMainMenuButtonPressed()
@@ -52,10 +43,10 @@ namespace NSS
             FadeManager.Instance.LoadSceneWithFade("MainMenuScene");
         }
 
-        private void OnPlayAgainButtonPressed()
+        private void OnResumeButtonPressed()
         {
-            GameUIManager.Instance.SetResultActive(false);
-            GameManager.Instance.StartNewGame();
+            gameObject.SetActive(false);
         }
+
     }
 }

@@ -89,6 +89,8 @@ namespace NSS
 
         public bool IsComplete => Progress >= 1.0f;
 
+        public bool IsStepEvenWhenPause { get; set; } = false;
+
         public Timer(float interval = 1.0f)
         {
             this.interval = interval;
@@ -96,12 +98,12 @@ namespace NSS
 
         public void Step()
         {
-            Elapsed += Time.deltaTime;
+            Elapsed += IsStepEvenWhenPause ? Time.unscaledDeltaTime : Time.deltaTime;
         }
 
         public void Step(float speedScale)
         {
-            Elapsed += Time.deltaTime * speedScale;
+            Elapsed += (IsStepEvenWhenPause ? Time.unscaledDeltaTime : Time.deltaTime) * speedScale;
         }
 
         public void Reset()

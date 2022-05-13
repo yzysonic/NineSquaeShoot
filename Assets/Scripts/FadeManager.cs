@@ -53,13 +53,14 @@ namespace NSS
             FO = false;
 
             timer = new Timer(fadeTime);
+            timer.IsStepEvenWhenPause = true;
 
             enabled = false;
 
             DontDestroyOnLoad(gameObject);
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             timer++;
 
