@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 namespace NSS
 {
@@ -15,16 +12,16 @@ namespace NSS
         private Text rankValue;
 
         [SerializeField]
-        private Button backToMainMenuButton;
+        private Button mainMenuButton;
 
         [SerializeField]
         private Button playAginButton;
 
         private void Awake()
         {
-            if (backToMainMenuButton)
+            if (mainMenuButton)
             {
-                backToMainMenuButton.onClick.AddListener(OnBackToMainMenuButtonPressed);
+                mainMenuButton.onClick.AddListener(OnMainMenuButtonPressed);
             }
             if (playAginButton)
             {
@@ -45,9 +42,9 @@ namespace NSS
             rankValue.text = string.Empty;
         }
 
-        private void OnBackToMainMenuButtonPressed()
+        private void OnMainMenuButtonPressed()
         {
-            SceneManager.LoadScene("MainMenuScene");
+            FadeManager.Instance.LoadSceneWithFade("MainMenuScene");
         }
 
         private void OnPlayAgainButtonPressed()

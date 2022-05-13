@@ -415,7 +415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: {fileID: 486604522}
   rankValue: {fileID: 1163190555}
-  backToMainMenuButton: {fileID: 2140933768}
+  mainMenuButton: {fileID: 2140933768}
   playAginButton: {fileID: 1205108217}
 --- !u!114 &223279721
 MonoBehaviour:
@@ -1044,7 +1044,7 @@ GameObject:
   - component: {fileID: 754067941}
   - component: {fileID: 754067940}
   m_Layer: 5
-  m_Name: RemapCanvas
+  m_Name: UICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1309,7 +1309,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play again
+  m_Text: Play Again
 --- !u!222 &846557280
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2253,7 +2253,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back to main menu
+  m_Text: Main Menu
 --- !u!222 &1768302109
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2275,7 +2275,7 @@ GameObject:
   - component: {fileID: 1844612962}
   - component: {fileID: 1844612961}
   m_Layer: 5
-  m_Name: UICanvas
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2503,12 +2503,12 @@ GameObject:
   - component: {fileID: 2140933769}
   - component: {fileID: 2140933768}
   m_Layer: 5
-  m_Name: BackToMainMenuButton
+  m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2140933767
 RectTransform:
   m_ObjectHideFlags: 0
