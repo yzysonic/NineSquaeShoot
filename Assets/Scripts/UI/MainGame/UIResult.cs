@@ -15,6 +15,9 @@ namespace NSS
         private Text rankValue;
 
         [SerializeField]
+        private Text placeValue;
+
+        [SerializeField]
         private Button mainMenuButton;
 
         [SerializeField]
@@ -37,6 +40,7 @@ namespace NSS
             background.SetActive(true);
             int score = ScoreManager.Instance.CurrentScore;
             scoreValue.text = score.ToString("N0");
+            placeValue.text = Utility.GetPlacementName(ScoreManager.Instance.LastPlacement);
             rankValue.text = ResultManager.Instance.ScoreRankProfile.FindRank(score).ToString();
         }
 

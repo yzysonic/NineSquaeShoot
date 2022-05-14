@@ -12,6 +12,19 @@ namespace NSS
             list[index] = list[list.Count - 1];
             list.RemoveAt(list.Count - 1);
         }
+
+        public static string GetPlacementName(int placement)
+        {
+            switch (placement)
+            {
+                case 0: return "1st";
+                case 1: return "2nd";
+                case 2: return "3rd";
+                case 3: return "4th";
+                case 4: return "5th";
+            }
+            return "-";
+        }
     }
 
     [DisallowMultipleComponent]
