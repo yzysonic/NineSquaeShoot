@@ -86,7 +86,7 @@ namespace NSS
             maxCount = Mathf.Min(maxCount, (int)(baseEnemySpawnMaxCount * currentDiffcultyParam.spawnMaxCountBonusRate));
 
             // Determine spawn count
-            int spawnCount = Random.Range(1, maxCount);
+            int spawnCount = Random.Range(1, maxCount + 1);
 
             for (int i = 0; i < spawnCount; i++)
             {
