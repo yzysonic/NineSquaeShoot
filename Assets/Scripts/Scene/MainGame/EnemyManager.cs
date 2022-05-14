@@ -11,6 +11,7 @@ namespace NSS
         public float hpBonusRate = 1.0f;
         public float damageBonusRate = 1.0f;
         public float attackIntervalBonusRate = 1.0f;
+        public float spawnMaxCountBonusRate = 1.0f;
         public float spawnIntervalBonusRate = 1.0f;
     }
 
@@ -82,7 +83,7 @@ namespace NSS
                 return;
             }
 
-            maxCount = Mathf.Min(maxCount, baseEnemySpawnMaxCount);
+            maxCount = Mathf.Min(maxCount, (int)(baseEnemySpawnMaxCount * currentDiffcultyParam.spawnMaxCountBonusRate));
 
             // Determine spawn count
             int spawnCount = Random.Range(1, maxCount);
