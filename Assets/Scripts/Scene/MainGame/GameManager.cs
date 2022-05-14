@@ -45,8 +45,8 @@ namespace NSS
 
         public void StartNewGame()
         {
-            EnemyManager.Instance.OnNewGameStarted();
             ScoreManager.Instance.OnNewGameStarted();
+            EnemyManager.Instance.OnNewGameStarted();
 
             if (Player)
             {

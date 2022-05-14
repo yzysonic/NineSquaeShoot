@@ -43,6 +43,7 @@ namespace NSS
                     }
 
                     lifeComp.ValueChanged += OnLifeChanged;
+                    lifeComp.MaxValueChanged += OnMaxLifeChanged;
                 }
             }
             
@@ -57,6 +58,18 @@ namespace NSS
             if (currentValue)
             {
                 currentValue.Value = (int)value;
+            }
+        }
+
+        private void OnMaxLifeChanged(uint value)
+        {
+            if (slider)
+            {
+                slider.maxValue = value;
+            }
+            if (maxValue)
+            {
+                maxValue.Value = (int)value;
             }
         }
     }

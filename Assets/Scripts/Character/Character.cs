@@ -79,9 +79,17 @@ namespace NSS
                 return;
             }
 
-            if (life)
+            if (damageInfo.DamageValue > 0)
             {
-                life.TackDamage(damageInfo.DamageValue);
+                if (life)
+                {
+                    life.TackDamage(damageInfo.DamageValue);
+                }
+
+                if (animator)
+                {
+                    animator.SetTrigger("damaged");
+                }
             }
 
             (this as IDamageReceiver).NotifyDamageSender(damageInfo);
@@ -89,15 +97,7 @@ namespace NSS
 
         protected virtual void OnLifeChanged(uint life)
         {
-            if (!enabled)
-            {
-                return;
-            }
-            if (animator)
-            {
-                animator.SetTrigger("damaged");
-            }
-            if (life == 0)
+            if (enabled && life == 0)
             {
                 OnDefeated();
             }

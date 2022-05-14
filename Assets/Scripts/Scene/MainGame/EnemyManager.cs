@@ -4,6 +4,16 @@ using UnityEngine;
 
 namespace NSS
 {
+    [System.Serializable]
+    public class EnemyDifficultyParam
+    {
+        public int scoreMax = 0;
+        public float hpBonusRate = 1.0f;
+        public float damageBonusRate = 1.0f;
+        public float attackIntervalBonusRate = 1.0f;
+        public float spawnIntervalBonusRate = 1.0f;
+    }
+
     public class EnemyManager : Singleton<EnemyManager>
     {
         [SerializeField]
@@ -18,10 +28,15 @@ namespace NSS
         [SerializeField, Range(1, FieldManager.teamBlockCount)]
         private int baseEnemySpawnMaxCount = 3;
 
-        [SerializeField, Range(0, FieldManager.teamBlockCount-1)]
+        [SerializeField, Range(0, FieldManager.teamBlockCount - 1)]
         private int keepBlockFreeCount = 1;
 
+        [SerializeField]
+        private List<EnemyDifficultyParam> enemyDiffcultyParamList;
+
         public bool EnableSpawnEnemy { get; set; } = false;
+
+        private EnemyDifficultyParam currentDiffcultyParam;
 
         private readonly Timer spawnTimer = new();
 
@@ -30,8 +45,12 @@ namespace NSS
         protected override void Awake()
         {
             base.Awake();
-            spawnTimer.Reset(startEnemySpawnTime);
             EnableSpawnEnemy = true;
+
+            ScoreManager.Instance.CurrentScoreChanged += OnScoreChanged;
+            OnScoreChanged(ScoreManager.Instance.CurrentScore);
+            
+            spawnTimer.Reset(startEnemySpawnTime);
         }
 
         private void Update()
@@ -58,7 +77,7 @@ namespace NSS
         {
             // Check available field block count
             int maxCount = FieldManager.Instance.GetAvailableBlockCount(ETeam.enemy) - keepBlockFreeCount;
-            if(maxCount == 0)
+            if (maxCount == 0)
             {
                 return;
             }
@@ -68,7 +87,7 @@ namespace NSS
             // Determine spawn count
             int spawnCount = Random.Range(1, maxCount);
 
-            for(int i = 0; i < spawnCount; i++)
+            for (int i = 0; i < spawnCount; i++)
             {
                 // Determine enemy type
                 GameObject enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Count - 1)];
@@ -85,6 +104,8 @@ namespace NSS
                     movement.TryEnterBlock(availableBlocs[blockNo]);
                 }
 
+                ApplyEnemyDiffcultyParam(enemyObj);
+
                 availableBlocs.RemoveAtSwap(blockNo);
             }
         }
@@ -92,7 +113,7 @@ namespace NSS
         public void DestroyAllEnemies(bool disableAllProjectiles = true)
         {
             HashSet<Enemy> list = enemies;
-            foreach(Enemy enemy in list)
+            foreach (Enemy enemy in list)
             {
                 if (enemy.Weapon && disableAllProjectiles)
                 {
@@ -117,6 +138,50 @@ namespace NSS
         public void OnEnemyDestroyed(Enemy enemy)
         {
             enemies.Remove(enemy);
+        }
+
+        private void OnScoreChanged(int score)
+        {
+            if (enemyDiffcultyParamList.Count == 0)
+            {
+                return;
+            }
+
+            System.Index index = enemyDiffcultyParamList.FindIndex(row => score <= row.scoreMax);
+            if (index.Value < 0)
+            {
+                index = ^1;
+            }
+
+            currentDiffcultyParam = enemyDiffcultyParamList[index];
+            spawnTimer.Interval = baseEnemySpawnInterval * currentDiffcultyParam.spawnIntervalBonusRate;
+        }
+
+        private void ApplyEnemyDiffcultyParam(GameObject enemyObj)
+        {
+            Enemy enemy = enemyObj.GetComponent<Enemy>();
+            if (!enemy)
+            {
+                return;
+            }
+
+            // Apply life bonus
+            var life = enemy.Life;
+            if (life)
+            {
+                var applyValue = (uint)(life.MaxValue * currentDiffcultyParam.hpBonusRate);
+                life.ResetValue(applyValue);
+            }
+
+            var weapon = enemy.Weapon;
+            if (weapon)
+            {
+                // Apply damage bonus
+                weapon.DamageBonusRate = currentDiffcultyParam.damageBonusRate;
+
+                // Apply attack frequency bonus
+                weapon.FireIntervalBonusRate = currentDiffcultyParam.attackIntervalBonusRate;
+            }
         }
     }
 }

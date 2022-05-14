@@ -2647,10 +2647,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 5001851624335306761, guid: 0becf5ce7dcc8e143bbf024ba8ba6db7, type: 3}
-  startEnemySpawnTime: 2
+  startEnemySpawnTime: 1.5
   baseEnemySpawnInterval: 10
   baseEnemySpawnMaxCount: 3
   keepBlockFreeCount: 1
+  enemyDiffcultyParamList:
+  - scoreMax: 1000
+    hpBonusRate: 1
+    damageBonusRate: 1
+    attackIntervalBonusRate: 1
+    spawnIntervalBonusRate: 1
+  - scoreMax: 2000
+    hpBonusRate: 1.2
+    damageBonusRate: 1.1
+    attackIntervalBonusRate: 0.95
+    spawnIntervalBonusRate: 0.95
+  - scoreMax: 3000
+    hpBonusRate: 1.3
+    damageBonusRate: 1.2
+    attackIntervalBonusRate: 0.9
+    spawnIntervalBonusRate: 0.9
+  - scoreMax: 5000
+    hpBonusRate: 1.4
+    damageBonusRate: 1.3
+    attackIntervalBonusRate: 0.85
+    spawnIntervalBonusRate: 0.85
+  - scoreMax: 6000
+    hpBonusRate: 1.55
+    damageBonusRate: 1.4
+    attackIntervalBonusRate: 0.8
+    spawnIntervalBonusRate: 0.8
 --- !u!4 &1743723130
 Transform:
   m_ObjectHideFlags: 0

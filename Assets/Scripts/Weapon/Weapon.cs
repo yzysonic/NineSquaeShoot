@@ -16,23 +16,51 @@ namespace NSS
 
         public bool IsCoolDownComplete => coolDownTimer.IsComplete;
 
+        public float DamageBonusRate { get; set; } = 1.0f;
+
+        public float FireIntervalBonusRate
+        {
+            get => fireIntervalBonusRate;
+            set
+            {
+                if (fireIntervalBonusRate != value)
+                {
+                    fireIntervalBonusRate = value;
+
+                    // Reset cooldown timer
+                    coolDownTimer.Reset(FireInterval);
+                    coolDownTimer.Elapsed = FireInterval;
+
+                    // Reset pool size
+                    DeterminePoolSize();
+                    ResizePool();
+                }
+            }
+        }
+
+        private float FireInterval
+        {
+            get
+            {
+                if (weaponProfile)
+                {
+                    return weaponProfile.fireInterval * FireIntervalBonusRate;
+                }
+                return 0.0f;
+            }
+        }
+
         private Timer coolDownTimer;
         private Character character;
+        private float fireIntervalBonusRate = 1.0f;
 
         protected override void Awake()
         {
             prefab = weaponProfile.projectilePrefab;
-            if(weaponProfile.projectileVelocity * weaponProfile.fireInterval == 0)
-            {
-                maxCount = 0;
-            }
-            else
-            {
-                maxCount = Mathf.CeilToInt((float)ProjectProperty.baseResolution.x / weaponProfile.projectileVelocity / weaponProfile.fireInterval);
-            }
+            DeterminePoolSize();
 
-            coolDownTimer = new Timer(weaponProfile.fireInterval);
-            coolDownTimer.Elapsed = weaponProfile.fireInterval;
+            coolDownTimer = new Timer(FireInterval);
+            coolDownTimer.Elapsed = FireInterval;
             character = GetComponent<Character>();
 
             base.Awake();
@@ -47,6 +75,18 @@ namespace NSS
             }
 
             TryFireOnce();
+        }
+
+        private void DeterminePoolSize()
+        {
+            if (weaponProfile.projectileVelocity * FireInterval == 0)
+            {
+                maxCount = 0;
+            }
+            else
+            {
+                maxCount = Mathf.CeilToInt((float)ProjectProperty.baseResolution.x / weaponProfile.projectileVelocity / FireInterval);
+            }
         }
 
         public void StartRapidFire()
@@ -101,7 +141,7 @@ namespace NSS
                 projectile.OwnerCharacter = character;
                 projectile.FieldRowIndex = character.StayingBlock.RowIndex;
                 projectile.Velocity = weaponProfile.projectileVelocity / 100.0f;
-                projectile.Damage = weaponProfile.damage;
+                projectile.Damage = (uint)(weaponProfile.damage * DamageBonusRate);
 
                 coolDownTimer.Reset();
             }
@@ -111,7 +151,7 @@ namespace NSS
         {
             if (coolDownTimer)
             {
-                coolDownTimer.Elapsed = weaponProfile.fireInterval;
+                coolDownTimer.Elapsed = FireInterval;
             }
         }
     }

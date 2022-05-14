@@ -151,15 +151,52 @@ namespace NSS
 
         protected virtual void Awake()
         {
-            Transform parent = attachTransform ? attachTransform : transform;
             list = new List<T>(maxCount);
-            for (var i = 0; i < maxCount; i++)
+            AddPooledObject(maxCount);
+        }
+
+        private void AddPooledObject(int count)
+        {
+            Transform parent = attachTransform ? attachTransform : transform;
+            for (var i = 0; i < count; i++)
             {
                 var t = Instantiate(prefab, parent).GetComponent<T>();
                 if (t)
                 {
                     t.IsUsing = false;
                     list.Add(t);
+                }
+            }
+        }
+
+        public void ResizePool(bool shrink = false)
+        {
+            if (list == null || list.Count == maxCount)
+            {
+                return;
+            }
+
+            int countDiff = maxCount - list.Count;
+
+            // Add objects
+            if (countDiff > 0)
+            {
+                AddPooledObject(countDiff);
+            }
+
+            // Remove objects
+            else if (shrink)
+            {
+                int removeCount = -countDiff;
+                for (int i = 0; i < removeCount; i++)
+                {
+                    System.Index index = ^1;
+                    T t = list[index];
+                    if (t)
+                    {
+                        Destroy(t.gameObject);
+                    }
+                    list.RemoveAt(index.Value);
                 }
             }
         }
@@ -214,7 +251,7 @@ namespace NSS
 
         public void DisableAllPoolObject()
         {
-            foreach(var obj in list)
+            foreach (var obj in list)
             {
                 obj.IsUsing = false;
             }

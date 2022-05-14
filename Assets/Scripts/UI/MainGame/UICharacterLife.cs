@@ -40,6 +40,7 @@ namespace NSS
                 if (newLifeComp)
                 {
                     newLifeComp.ValueChanged += OnLifeChanged;
+                    newLifeComp.MaxValueChanged += OnMaxLifeChanged;
 
                     if (lifeGauge)
                     {
@@ -107,6 +108,14 @@ namespace NSS
             if (lifeNumber)
             {
                 lifeNumber.Value = (int)value;
+            }
+        }
+
+        private void OnMaxLifeChanged(uint value)
+        {
+            if (lifeGauge)
+            {
+                lifeGauge.maxValue = value;
             }
         }
     }

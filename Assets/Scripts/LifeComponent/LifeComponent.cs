@@ -24,11 +24,23 @@ public class LifeComponent : MonoBehaviour
         }
     }
 
-    public uint MaxValue => maxValue;
+    public uint MaxValue
+    {
+        get => maxValue;
+        set
+        {
+            if(maxValue != value)
+            {
+                maxValue = value;
+                MaxValueChanged?.Invoke(maxValue);
+            }
+        }
+    }
 
     private uint value = 0;
 
     public event Action<uint> ValueChanged;
+    public event Action<uint> MaxValueChanged;
 
     private void Awake()
     {
@@ -50,5 +62,11 @@ public class LifeComponent : MonoBehaviour
     public void ResetValue()
     {
         Value = MaxValue;
+    }
+
+    public void ResetValue(uint maxValue)
+    {
+        MaxValue = maxValue;
+        ResetValue();
     }
 }
