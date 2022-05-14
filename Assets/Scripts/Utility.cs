@@ -155,6 +155,18 @@ namespace NSS
             AddPooledObject(maxCount);
         }
 
+        private void OnDestroy()
+        {
+            foreach (T t in list)
+            {
+                if (t && t.gameObject)
+                {
+                    Destroy(t.gameObject);
+                }
+            }
+            list = null;
+        }
+
         private void AddPooledObject(int count)
         {
             Transform parent = attachTransform ? attachTransform : transform;
