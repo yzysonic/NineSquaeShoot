@@ -96,7 +96,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3705683342757114732, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
       propertyPath: maxValue
-      value: 50
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4700756581628002208, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
       propertyPath: m_Sprite
@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveInterval: 1
+  baseScore: 100
 --- !u!114 &7459154850050120555
 MonoBehaviour:
   m_ObjectHideFlags: 0
