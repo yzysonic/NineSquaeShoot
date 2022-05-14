@@ -58,7 +58,10 @@ namespace NSS
         public void CharacterExit()
         {
             StayingCharacter = null;
-            FieldManager.Instance.OnCharacterExitedBlock(this);
+            if (FieldManager.IsCreated)
+            {
+                FieldManager.Instance.OnCharacterExitedBlock(this);
+            }
         }
 
         public void ReserveDamageTransferring(Object owner, DamageInfo damageInfo)
