@@ -15,4 +15,4 @@ MonoBehaviour:
   fireInterval: 0.5
   damage: 10
   projectilePrefab: {fileID: 5414060531969112104, guid: 83234683b913629409e764d86b8cf7f7, type: 3}
-  projectileVelocity: 1600
+  projectileVelocity: 1800

@@ -2905,7 +2905,7 @@ MonoBehaviour:
   baseEnemySpawnInterval: 3
   overrideSpawnIntervalOnEnemyEmpty: 2
   baseEnemySpawnMaxCount: 2
-  keepBlockFreeCount: 1
+  keepBlockFreeCount: 5
   enemyDiffcultyParamList:
   - scoreMax: 1000
     hpBonusRate: 1
@@ -2914,49 +2914,49 @@ MonoBehaviour:
     spawnMaxCountBonusRate: 1
     spawnIntervalBonusRate: 1
   - scoreMax: 2500
-    hpBonusRate: 1.064
+    hpBonusRate: 1
     damageBonusRate: 1
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.017
     spawnIntervalBonusRate: 1
   - scoreMax: 4000
-    hpBonusRate: 1.136
+    hpBonusRate: 1
     damageBonusRate: 1
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.161
     spawnIntervalBonusRate: 1
   - scoreMax: 5500
-    hpBonusRate: 1.22
+    hpBonusRate: 1
     damageBonusRate: 1
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.321
     spawnIntervalBonusRate: 1
   - scoreMax: 7000
-    hpBonusRate: 1.316
+    hpBonusRate: 2
     damageBonusRate: 1
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.5
     spawnIntervalBonusRate: 1
   - scoreMax: 9000
-    hpBonusRate: 1.429
+    hpBonusRate: 2
     damageBonusRate: 1
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.591
     spawnIntervalBonusRate: 1
   - scoreMax: 11000
-    hpBonusRate: 1.563
+    hpBonusRate: 2
     damageBonusRate: 1
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.721
     spawnIntervalBonusRate: 1
   - scoreMax: 13000
-    hpBonusRate: 1.724
+    hpBonusRate: 2
     damageBonusRate: 1
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.852
     spawnIntervalBonusRate: 1
   - scoreMax: 15000
-    hpBonusRate: 1.724
+    hpBonusRate: 2
     damageBonusRate: 1
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.982
