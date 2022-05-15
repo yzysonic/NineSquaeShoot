@@ -66,6 +66,7 @@ namespace NSS
 
         protected virtual void OnDestroy()
         {
+            StayingBlock = null;
             if (GameUIManager.IsCreated)
             {
                 GameUIManager.Instance.UnbindCharacterLifeUI(this);

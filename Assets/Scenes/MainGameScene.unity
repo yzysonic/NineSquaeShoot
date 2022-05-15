@@ -377,6 +377,7 @@ MonoBehaviour:
   background: {fileID: 223279718}
   scoreValue: {fileID: 486604522}
   rankValue: {fileID: 1163190555}
+  placeValue: {fileID: 1727164082}
   mainMenuButton: {fileID: 2140933768}
   playAginButton: {fileID: 1205108217}
 --- !u!1 &223279718
@@ -2333,7 +2334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1512258790
 RectTransform:
   m_ObjectHideFlags: 0

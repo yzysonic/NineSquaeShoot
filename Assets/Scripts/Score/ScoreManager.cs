@@ -33,12 +33,29 @@ namespace NSS
 
         public bool IsScoreReadonly { get; set; } = false;
 
+        public ScoreRecord ScoreRecord { get; private set; }
+
+        public int LastPlacement { get; private set; } = -1;
+
+        private int currentScore = 0;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            ScoreRecord = SaveManager.SaveData.scoreRecord;
+        }
+
         public void OnNewGameStarted()
         {
             IsScoreReadonly = false;
             CurrentScore = 0;
         }
 
-        private int currentScore = 0;
+        public void UpdateRecord()
+        {
+            ScoreRecord.TryAddScore(CurrentScore, out int placement);
+            LastPlacement = placement;
+            SaveManager.SaveChanges();
+        }
     }
 }

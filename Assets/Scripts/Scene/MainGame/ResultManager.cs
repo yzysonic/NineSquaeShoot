@@ -13,6 +13,7 @@ namespace NSS
 
         public void OnPlayerDefeated()
         {
+            ScoreManager.Instance.UpdateRecord();
             GameUIManager.Instance.SetResultActive(true);
         }
     }
