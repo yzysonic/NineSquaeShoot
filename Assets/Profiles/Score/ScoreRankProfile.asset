@@ -17,7 +17,7 @@ MonoBehaviour:
     rank: 1
   - scoreMax: 4000
     rank: 2
-  - scoreMax: 7000
+  - scoreMax: 5500
     rank: 3
   - scoreMax: 9000
     rank: 4
