@@ -17,6 +17,9 @@ namespace NSS
         private Button exitGameButton;
 
         [SerializeField]
+        private UILeaderboard leaderboard;
+
+        [SerializeField]
         private Text versionInfo;
 
         private void Awake()
@@ -46,7 +49,10 @@ namespace NSS
 
         private void OnLeaderboardButtonPressed()
         {
-
+            if (leaderboard)
+            {
+                leaderboard.gameObject.SetActive(true);
+            }
         }
 
         private void OnExitGameButtonPressed()
