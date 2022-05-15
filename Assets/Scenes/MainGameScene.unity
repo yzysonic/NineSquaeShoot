@@ -2648,7 +2648,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 5001851624335306761, guid: 0becf5ce7dcc8e143bbf024ba8ba6db7, type: 3}
   startEnemySpawnTime: 1.5
-  baseEnemySpawnInterval: 10
+  baseEnemySpawnInterval: 3
   baseEnemySpawnMaxCount: 2
   keepBlockFreeCount: 1
   enemyDiffcultyParamList:
