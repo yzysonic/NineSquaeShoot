@@ -160,7 +160,11 @@ namespace NSS
 
         protected Transform attachTransform;
 
+        protected bool shouldClearAllObjectOnDestry = true;
+
         private List<T> list;
+
+        protected List<T> PooledObjects => list;
 
         protected virtual void Awake()
         {
@@ -168,16 +172,19 @@ namespace NSS
             AddPooledObject(maxCount);
         }
 
-        private void OnDestroy()
+        protected virtual void OnDestroy()
         {
-            foreach (T t in list)
+            if (shouldClearAllObjectOnDestry)
             {
-                if (t && t.gameObject)
+                foreach (T t in list)
                 {
-                    Destroy(t.gameObject);
+                    if (t && t.gameObject)
+                    {
+                        Destroy(t.gameObject);
+                    }
                 }
+                list = null;
             }
-            list = null;
         }
 
         private void AddPooledObject(int count)
@@ -290,6 +297,8 @@ namespace NSS
 
     public class PooledMonoBehavior : MonoBehaviour, IPooledObject
     {
+        public bool IsDestroyOnDisabled { get; set; } = false;
+
         private bool isUsing = true;
         public virtual bool IsUsing
         {
@@ -325,7 +334,13 @@ namespace NSS
 
         public virtual void OnEnabled() { }
 
-        public virtual void OnDisabled() { }
+        public virtual void OnDisabled()
+        {
+            if (IsDestroyOnDisabled)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     public struct Int2

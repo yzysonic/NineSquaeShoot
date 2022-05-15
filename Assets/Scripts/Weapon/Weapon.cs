@@ -63,6 +63,7 @@ namespace NSS
             coolDownTimer.Elapsed = FireInterval;
             character = GetComponent<Character>();
 
+            shouldClearAllObjectOnDestry = false;
             base.Awake();
         }
 
@@ -75,6 +76,28 @@ namespace NSS
             }
 
             TryFireOnce();
+        }
+
+        protected override void OnDestroy()
+        {
+            foreach (var projectile in PooledObjects)
+            {
+                if (!projectile)
+                {
+                    continue;
+                }
+
+                if (!projectile.gameObject.activeInHierarchy)
+                {
+                    Destroy(projectile.gameObject);
+                }
+                else
+                {
+                    projectile.IsDestroyOnDisabled = true;
+                }
+            }
+
+            base.OnDestroy();
         }
 
         private void DeterminePoolSize()
@@ -91,7 +114,7 @@ namespace NSS
 
         public void StartRapidFire()
         {
-            if(IsRapidFiring)
+            if (IsRapidFiring)
             {
                 return;
             }
@@ -103,17 +126,17 @@ namespace NSS
 
         public void StopRapidFire()
         {
-            if(!IsRapidFiring)
+            if (!IsRapidFiring)
             {
                 return;
             }
 
-            IsRapidFiring= false;
+            IsRapidFiring = false;
         }
 
         public void TryFireOnce()
         {
-            if(IsCoolDownComplete)
+            if (IsCoolDownComplete)
             {
                 LaunchProjectile();
             }
