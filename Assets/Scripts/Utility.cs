@@ -100,6 +100,8 @@ namespace NSS
         }
         public float Progress { get; protected set; }
 
+        public float RemainingTime => Interval - Elapsed;
+
         public bool IsComplete => Progress >= 1.0f;
 
         public bool IsStepEvenWhenPause { get; set; } = false;

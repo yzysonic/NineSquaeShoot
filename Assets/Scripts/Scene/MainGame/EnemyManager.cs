@@ -26,6 +26,9 @@ namespace NSS
         [SerializeField]
         private float baseEnemySpawnInterval = 30.0f;
 
+        [SerializeField]
+        private float overrideSpawnIntervalOnEnemyEmpty = 2f;
+
         [SerializeField, Range(1, FieldManager.teamBlockCount)]
         private int baseEnemySpawnMaxCount = 3;
 
@@ -137,6 +140,19 @@ namespace NSS
         public void OnEnemyDestroyed(Enemy enemy)
         {
             enemies.Remove(enemy);
+
+            if (enemies.Count == 0)
+            {
+                OnEnemyEmpty();
+            }
+        }
+
+        private void OnEnemyEmpty()
+        {
+            if (spawnTimer.RemainingTime > overrideSpawnIntervalOnEnemyEmpty)
+            {
+                spawnTimer.Elapsed = spawnTimer.Interval - overrideSpawnIntervalOnEnemyEmpty;
+            }
         }
 
         private void OnScoreChanged(int score)
