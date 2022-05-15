@@ -18,6 +18,9 @@ namespace NSS
         private Text placeValue;
 
         [SerializeField]
+        private Text timeValue;
+
+        [SerializeField]
         private Button mainMenuButton;
 
         [SerializeField]
@@ -42,6 +45,7 @@ namespace NSS
             scoreValue.text = score.ToString("N0");
             placeValue.text = Utility.GetPlacementName(ScoreManager.Instance.LastPlacement);
             rankValue.text = ResultManager.Instance.ScoreRankProfile.FindRank(score).ToString();
+            timeValue.text = System.TimeSpan.FromSeconds(MainGameTimer.Instance.Elapsed).ToString(@"mm\:ss"); 
         }
 
         private void OnDisable()

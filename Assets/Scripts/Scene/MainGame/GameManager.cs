@@ -38,6 +38,7 @@ namespace NSS
 
         private void OnPlayerDefeated()
         {
+            MainGameTimer.Instance.enabled = false;
             ScoreManager.Instance.IsScoreReadonly = true;
             EnemyManager.Instance.EnableSpawnEnemy = false;
             ResultManager.Instance.OnPlayerDefeated();
@@ -45,6 +46,7 @@ namespace NSS
 
         public void StartNewGame()
         {
+            MainGameTimer.Instance.OnNewGameStarted();
             ScoreManager.Instance.OnNewGameStarted();
             EnemyManager.Instance.OnNewGameStarted();
 
