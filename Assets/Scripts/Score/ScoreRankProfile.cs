@@ -7,12 +7,14 @@ namespace NSS
     public enum ERank
     { 
         None,
-        D, 
-        C, 
-        B, 
-        A, 
-        S, 
-        SS, 
+        F,
+        E,
+        D,
+        C,
+        B,
+        A,
+        S,
+        SS,
         SSS,
         Count
     }
