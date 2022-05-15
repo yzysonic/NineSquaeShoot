@@ -2594,64 +2594,52 @@ MonoBehaviour:
     spawnMaxCountBonusRate: 1
     spawnIntervalBonusRate: 1
   - scoreMax: 2500
-    hpBonusRate: 1.017
+    hpBonusRate: 1.064
     damageBonusRate: 1
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.017
     spawnIntervalBonusRate: 1
   - scoreMax: 4000
-    hpBonusRate: 1.161
+    hpBonusRate: 1.136
     damageBonusRate: 1
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.161
     spawnIntervalBonusRate: 1
   - scoreMax: 5500
-    hpBonusRate: 1.161
-    damageBonusRate: 1
-    attackIntervalBonusRate: 1
-    spawnMaxCountBonusRate: 1.161
-    spawnIntervalBonusRate: 1
-  - scoreMax: 7000
-    hpBonusRate: 1.321
+    hpBonusRate: 1.22
     damageBonusRate: 1
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.321
     spawnIntervalBonusRate: 1
-  - scoreMax: 9000
-    hpBonusRate: 1.702
+  - scoreMax: 7000
+    hpBonusRate: 1.316
     damageBonusRate: 1
     attackIntervalBonusRate: 1
-    spawnMaxCountBonusRate: 1.702
+    spawnMaxCountBonusRate: 1.5
+    spawnIntervalBonusRate: 1
+  - scoreMax: 9000
+    hpBonusRate: 1.429
+    damageBonusRate: 1
+    attackIntervalBonusRate: 1
+    spawnMaxCountBonusRate: 1.591
     spawnIntervalBonusRate: 1
   - scoreMax: 11000
-    hpBonusRate: 1.932
+    hpBonusRate: 1.563
     damageBonusRate: 1
     attackIntervalBonusRate: 1
-    spawnMaxCountBonusRate: 1.932
+    spawnMaxCountBonusRate: 1.721
     spawnIntervalBonusRate: 1
   - scoreMax: 13000
-    hpBonusRate: 2.195
+    hpBonusRate: 1.724
     damageBonusRate: 1
     attackIntervalBonusRate: 1
-    spawnMaxCountBonusRate: 2.195
+    spawnMaxCountBonusRate: 1.852
     spawnIntervalBonusRate: 1
   - scoreMax: 15000
-    hpBonusRate: 2.5
+    hpBonusRate: 1.724
     damageBonusRate: 1
     attackIntervalBonusRate: 1
-    spawnMaxCountBonusRate: 2.5
-    spawnIntervalBonusRate: 1
-  - scoreMax: 17599
-    hpBonusRate: 2.857
-    damageBonusRate: 1
-    attackIntervalBonusRate: 1
-    spawnMaxCountBonusRate: 2.857
-    spawnIntervalBonusRate: 1
-  - scoreMax: 20000
-    hpBonusRate: 3.281
-    damageBonusRate: 1
-    attackIntervalBonusRate: 1
-    spawnMaxCountBonusRate: 3.281
+    spawnMaxCountBonusRate: 1.982
     spawnIntervalBonusRate: 1
 --- !u!4 &1743723130
 Transform:
