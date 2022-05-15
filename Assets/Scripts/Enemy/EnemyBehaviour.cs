@@ -7,10 +7,14 @@ namespace NSS
 {
     public class EnemyBehaviour : MonoBehaviour
     {
+        [SerializeField]
+        private float startIdleTime = 0.5f;
+
         private Enemy enemy;
         private Weapon weapon;
         private CharacterMovement movement;
         private Timer moveTimer;
+        private Timer startIdleTimer;
 
         private void Awake()
         {
@@ -18,6 +22,7 @@ namespace NSS
             weapon = GetComponent<Weapon>();
             movement = GetComponent<CharacterMovement>();
             moveTimer = new Timer(enemy ? enemy.MoveInterval : 1);
+            startIdleTimer = new Timer(startIdleTime);
         }
 
         private void Update()
@@ -41,10 +46,18 @@ namespace NSS
             }
 
             // Fire action
-            if (weapon && weapon.IsCoolDownComplete)
+            if (startIdleTimer.IsComplete)
             {
-                weapon.TryFireOnce();
+                if (weapon && weapon.IsCoolDownComplete)
+                {
+                    weapon.TryFireOnce();
+                }
             }
+            else
+            {
+                startIdleTimer.Step();
+            }
+            
         }
 
         private bool TryMoveRandomly()
