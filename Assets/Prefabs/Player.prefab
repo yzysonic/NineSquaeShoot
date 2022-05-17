@@ -110,6 +110,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1705918985620043624, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
+      propertyPath: damageAudio
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705918985620043624, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
+      propertyPath: defeatAudio
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4700756581628002208, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
       propertyPath: m_Sprite
       value: 

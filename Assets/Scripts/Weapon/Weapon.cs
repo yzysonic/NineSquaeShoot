@@ -166,6 +166,11 @@ namespace NSS
                 projectile.Velocity = weaponProfile.projectileVelocity / 100.0f;
                 projectile.Damage = (uint)(weaponProfile.damage * DamageBonusRate);
 
+                if (character.AudioPlayer)
+                {
+                    character.AudioPlayer.Play(ECharacterAudio.Fire);
+                }
+
                 coolDownTimer.Reset();
             }
         }

@@ -12,12 +12,15 @@ namespace NSS
         [SerializeField]
         private int baseScore = 100;
 
+        public EnemyBehaviour Behaviour { get; private set; }
+
         public float MoveInterval => moveInterval;
 
         protected override void Awake()
         {
             base.Awake();
             Team = ETeam.enemy;
+            Behaviour = GetComponent<EnemyBehaviour>();
             EnemyManager.Instance.OnEnemySpawned(this);
         }
 
@@ -36,7 +39,13 @@ namespace NSS
 
             ScoreManager.Instance.CurrentScore += baseScore;
 
-            Destroy(gameObject);
+            Destroy(gameObject, 1.0f);
+        }
+
+        protected override void SetComponentsEnabledOnDefeated(bool value)
+        {
+            base.SetComponentsEnabledOnDefeated(value);
+            if (Behaviour) Behaviour.enabled = value;
         }
     }
 }

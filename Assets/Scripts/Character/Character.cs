@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace NSS
 {
@@ -35,6 +36,10 @@ namespace NSS
 
         public Weapon Weapon { get => weapon; }
 
+        public CharacterAudioPlayer AudioPlayer { get; private set; }
+
+        public bool IsInvincible { get; set; } = false;
+
         public event Action Defeated;
 
         private FieldBlock stayingBlock;
@@ -61,6 +66,8 @@ namespace NSS
 
             animator = gameObject.GetComponent<Animator>();
 
+            AudioPlayer = GetComponent<CharacterAudioPlayer>();
+
             GameUIManager.Instance.BindCharacterLifeUI(this);
         }
 
@@ -75,7 +82,7 @@ namespace NSS
 
         public void ReceiveDamage(DamageInfo damageInfo)
         {
-            if(damageInfo == null)
+            if(IsInvincible || damageInfo == null)
             {
                 return;
             }
@@ -90,6 +97,11 @@ namespace NSS
                 if (animator)
                 {
                     animator.SetTrigger("damaged");
+                }
+
+                if (AudioPlayer)
+                {
+                    AudioPlayer.Play(ECharacterAudio.Damage);
                 }
             }
 
@@ -106,14 +118,38 @@ namespace NSS
 
         protected virtual void OnDefeated()
         {
+            if (IsInvincible)
+            {
+                var i = 0;
+            }
+            IsInvincible = true;
+
             if (Defeated != null)
             {
                 Defeated.Invoke();
             }
+
+            if (AudioPlayer)
+            {
+                AudioPlayer.Play(ECharacterAudio.Defeat);
+            }
+
+            GameUIManager.Instance.UnbindCharacterLifeUI(this);
+            SetComponentsEnabledOnDefeated(false);
+        }
+
+        protected virtual void SetComponentsEnabledOnDefeated(bool value)
+        {
+            var renderer = GetComponent<SpriteRenderer>();
+            if (renderer)   renderer.enabled = value;
+            if (animator)   animator.enabled = value;
+            if (movement)   movement.enabled = value;
+            if (weapon)     weapon.enabled = value;
         }
 
         public void ResetStatus()
         {
+            IsInvincible = false;
             StayingBlock = null;
             if (Life)
             {

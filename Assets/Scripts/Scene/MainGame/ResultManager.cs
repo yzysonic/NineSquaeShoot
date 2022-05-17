@@ -15,6 +15,7 @@ namespace NSS
         {
             ScoreManager.Instance.UpdateRecord();
             GameUIManager.Instance.SetResultActive(true);
+            BGMPlayer.Instance.FadeOutToPlayNextBGM("Result", 0.5f);
         }
     }
 }

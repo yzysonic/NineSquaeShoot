@@ -27,7 +27,7 @@ namespace NSS
         public ETeam Team { get; set; } = ETeam.none;
         public uint RowIndex { get; set; } = 0;
         public Character StayingCharacter { get; private set; }
-        public bool CanTransferDamage => StayingCharacter != null;
+        public bool CanTransferDamage => StayingCharacter && !StayingCharacter.IsInvincible;
 
         private readonly Dictionary<Object, DamageInfo> damageReservations = new();
 

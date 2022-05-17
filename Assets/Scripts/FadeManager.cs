@@ -10,9 +10,10 @@ namespace NSS
 
         public const float fadeTime = 0.3f;
 
+        public event System.Action FadeCompleted;
+
         private RawImage image;
         private bool FI, FO;
-        private System.Action callBackIn, callBackOut;
         private Timer timer;
 
         public float Alpha
@@ -74,7 +75,7 @@ namespace NSS
                     enabled = false;
                     image.enabled = false;
 
-                    callBackIn?.Invoke();
+                    FadeCompleted?.Invoke();
                 }
 
             }
@@ -87,7 +88,7 @@ namespace NSS
                     FO = false;
                     enabled = false;
 
-                    callBackOut?.Invoke();
+                    FadeCompleted?.Invoke();
                 }
 
             }
@@ -96,7 +97,7 @@ namespace NSS
         public void FadeIn(float fadeTime, System.Action callBack = null)
         {
             FI = true;
-            this.callBackIn = callBack;
+            this.FadeCompleted = callBack;
             timer.Reset(fadeTime);
             enabled = true;
             image.enabled = true;
@@ -111,7 +112,7 @@ namespace NSS
         public void FadeOut(float fadeTime, System.Action callBack = null)
         {
             FO = true;
-            this.callBackOut = callBack;
+            this.FadeCompleted = callBack;
             timer.Reset(fadeTime);
             enabled = true;
             image.color = Color.clear;
@@ -125,8 +126,17 @@ namespace NSS
 
         public void LoadSceneWithFade(string sceneName)
         {
-            FadeOut(() => SceneManager.LoadSceneAsync(sceneName)
-                .completed += _ => FadeIn());
+            // TODO: Redesign BGMPlayer and AudioMixerFader
+            AudioMixerFader.Instance.Out(fadeTime);
+
+            FadeOut(() =>
+            {
+                AudioMixerFader.Instance.Set(1);
+                Destroy(BGMPlayer.Instance.gameObject);
+                Destroy(AudioMixerFader.Instance.gameObject);
+
+                SceneManager.LoadSceneAsync(sceneName).completed += _ => FadeIn();
+            });
         }
 
     }

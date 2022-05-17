@@ -94,6 +94,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1705918985620043624, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
+      propertyPath: damageAudio
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705918985620043624, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
+      propertyPath: defeatAudio
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3705683342757114732, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
       propertyPath: maxValue
       value: 10
@@ -152,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77dc070eb45f0eb4baf64af5f3db50a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startIdleTime: 0.5
 --- !u!4 &5823652517033830352 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1305865208264200896, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
