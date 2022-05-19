@@ -19,6 +19,18 @@ namespace NSS
 
             movement = GetComponent<CharacterMovement>();
             weapon = GetComponent<Weapon>();
+
+            GameUIManager.Instance.Pause.PauseStateChanged += value =>
+            {
+                if (value)
+                {
+                    input.Player.Disable();
+                }
+                else
+                {
+                    input.Player.Enable();
+                }
+            };
         }
 
         private void OnEnable()
@@ -29,6 +41,11 @@ namespace NSS
         private void OnDisable()
         {
             input.Disable();
+        }
+
+        private void OnDestroy()
+        {
+            input.Player.SetCallbacks(null);
         }
 
         void GameInput.IPlayerActions.OnFire(InputAction.CallbackContext context)
@@ -48,7 +65,7 @@ namespace NSS
 
         void GameInput.IPlayerActions.OnMoveUp(InputAction.CallbackContext context)
         {
-            if(context.started)
+            if (context.started)
             {
                 movement.TryMove(EMoveDirection.Upper);
             }
@@ -56,7 +73,7 @@ namespace NSS
 
         void GameInput.IPlayerActions.OnMoveDown(InputAction.CallbackContext context)
         {
-            if(context.started)
+            if (context.started)
             {
                 movement.TryMove(EMoveDirection.Lower);
             }
@@ -64,7 +81,7 @@ namespace NSS
 
         void GameInput.IPlayerActions.OnMoveLeft(InputAction.CallbackContext context)
         {
-            if(context.started)
+            if (context.started)
             {
                 movement.TryMove(EMoveDirection.Left);
             }
@@ -72,9 +89,17 @@ namespace NSS
 
         void GameInput.IPlayerActions.OnMoveRight(InputAction.CallbackContext context)
         {
-            if(context.started)
+            if (context.started)
             {
                 movement.TryMove(EMoveDirection.Right);
+            }
+        }
+
+        void GameInput.IPlayerActions.OnPause(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                GameUIManager.Instance.SetPauseActive(true);
             }
         }
     }

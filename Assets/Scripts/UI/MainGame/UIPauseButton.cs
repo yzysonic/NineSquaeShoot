@@ -7,9 +7,6 @@ namespace NSS
 {
     public class UIPauseButton : MonoBehaviour
     {
-        [SerializeField]
-        private UIPause pauseUI;
-
         private Button button;
 
         private void Awake()
@@ -23,10 +20,7 @@ namespace NSS
 
         private void OnButtonPressed()
         {
-            if (pauseUI)
-            {
-                pauseUI.gameObject.SetActive(true);
-            }
+            GameUIManager.Instance.SetPauseActive(true);
         }
     }
 }

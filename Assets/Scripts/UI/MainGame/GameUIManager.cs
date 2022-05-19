@@ -10,11 +10,16 @@ namespace NSS
         private Canvas mainCanvas;
 
         [SerializeField]
+        private UIPause pause;
+
+        [SerializeField]
         private UIResult result;
 
         private CharacterLifeUIPool characterLifeUIPool;
 
         public Canvas MainCanvas => mainCanvas;
+
+        public UIPause Pause => pause;
 
         protected override void Awake()
         {
@@ -35,6 +40,14 @@ namespace NSS
             if (characterLifeUIPool)
             {
                 characterLifeUIPool.UnbindCharacter(character);
+            }
+        }
+
+        public void SetPauseActive(bool value)
+        {
+            if (pause)
+            {
+                pause.gameObject.SetActive(value);
             }
         }
 

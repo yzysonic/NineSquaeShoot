@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace NSS
 {
-    public class UIResult : MonoBehaviour
+    public class UIResult : UIMenu
     {
         [SerializeField]
         private GameObject background;
@@ -26,8 +27,10 @@ namespace NSS
         [SerializeField]
         private Button playAginButton;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             if (mainMenuButton)
             {
                 mainMenuButton.onClick.AddListener(OnMainMenuButtonPressed);
@@ -45,7 +48,8 @@ namespace NSS
             scoreValue.text = score.ToString("N0");
             placeValue.text = Utility.GetPlacementName(ScoreManager.Instance.LastPlacement);
             rankValue.text = ResultManager.Instance.ScoreRankProfile.FindRank(score).ToString();
-            timeValue.text = System.TimeSpan.FromSeconds(MainGameTimer.Instance.Elapsed).ToString(@"mm\:ss"); 
+            timeValue.text = System.TimeSpan.FromSeconds(MainGameTimer.Instance.Elapsed).ToString(@"mm\:ss");
+            playAginButton.Select();
         }
 
         private void OnDisable()
@@ -53,6 +57,11 @@ namespace NSS
             background.SetActive(false);
             scoreValue.text = string.Empty;
             rankValue.text = string.Empty;
+            
+            if (EventSystem.current)
+            {
+                EventSystem.current.SetSelectedGameObject(null);
+            }
         }
 
         private void OnMainMenuButtonPressed()

@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace NSS
 {
-    public class UILeaderboard : MonoBehaviour
+    public class UILeaderboard : UIMenu
     {
         private class RecordInfo
         {
@@ -40,11 +41,14 @@ namespace NSS
 
         private readonly List<RecordInfo> recordInfoList = new(ScoreRecord.MaxCount);
 
-        private void Awake()
+        private GameObject lastSelectedObject;
+
+        protected override void Awake()
         {
             if (closeButton)
             {
                 closeButton.onClick.AddListener(OnCloseButtonPressed);
+                DefaultSelectedButton = (UIMenuButton)closeButton;
             }
 
             if (recordInfoListObject)
@@ -56,6 +60,10 @@ namespace NSS
                     recordInfoList.Add(new(gameObject, infoTexts));
                 }
             }
+
+            lastSelectedObject = EventSystem.current.currentSelectedGameObject;
+
+            base.Awake();
         }
 
         private void OnEnable()
@@ -78,6 +86,12 @@ namespace NSS
                 info.rank.text = scoreRankProfile.FindRank(score).ToString();
                 info.gameObject.SetActive(true);
             }
+
+            if (closeButton && !lastSelectedObject)
+            {
+                lastSelectedObject = EventSystem.current.currentSelectedGameObject;
+                closeButton.Select();
+            }
         }
 
         private void OnDisable()
@@ -87,6 +101,12 @@ namespace NSS
             foreach (var info in recordInfoList)
             {
                 info.gameObject.SetActive(false);
+            }
+
+            if (EventSystem.current && lastSelectedObject)
+            {
+                EventSystem.current.SetSelectedGameObject(lastSelectedObject);
+                lastSelectedObject = null;
             }
         }
 

@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace NSS
 {
-    public class MainMenuManager : MonoBehaviour
+    public class MainMenuManager : UIMenu
     {
         [SerializeField]
         private Button startGameButton;
@@ -22,11 +23,12 @@ namespace NSS
         [SerializeField]
         private Text versionInfo;
 
-        private void Awake()
+        protected override void Awake()
         {
             if (startGameButton)
             {
                 startGameButton.onClick.AddListener(OnStartGameButtonPressed);
+                DefaultSelectedButton = (UIMenuButton)startGameButton;
             }
             if (leaderboardButton)
             {
@@ -40,10 +42,13 @@ namespace NSS
             {
                 versionInfo.text = $"ver.{Application.version}";
             }
+
+            base.Awake();
         }
 
         private void OnStartGameButtonPressed()
         {
+            EventSystem.current.enabled = false;
             FadeManager.Instance.LoadSceneWithFade("MainGameScene");
         }
 

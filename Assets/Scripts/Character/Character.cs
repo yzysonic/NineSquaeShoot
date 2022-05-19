@@ -118,10 +118,6 @@ namespace NSS
 
         protected virtual void OnDefeated()
         {
-            if (IsInvincible)
-            {
-                var i = 0;
-            }
             IsInvincible = true;
 
             if (Defeated != null)
