@@ -588,8 +588,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d93c16e242306041b4ed2f35a8b7c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onSelectAudioClip: {fileID: 0}
-  onPressAudioClip: {fileID: 0}
+  onSelectAudioClip: {fileID: 8300000, guid: ad387fa5d70d1e842840bd1ba8231fef, type: 3}
+  onPressAudioClip: {fileID: 8300000, guid: fcb41eb9f33783c4cb0a44098601ab8e, type: 3}
   background: {fileID: 223279718}
   scoreValue: {fileID: 486604522}
   rankValue: {fileID: 1163190555}
@@ -2492,8 +2492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9dc2282216f7324b9c8601caf823b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onSelectAudioClip: {fileID: 0}
-  onPressAudioClip: {fileID: 0}
+  onSelectAudioClip: {fileID: 8300000, guid: ad387fa5d70d1e842840bd1ba8231fef, type: 3}
+  onPressAudioClip: {fileID: 8300000, guid: fcb41eb9f33783c4cb0a44098601ab8e, type: 3}
   background: {fileID: 223279718}
   mainMenuButton: {fileID: 493565433}
   resumeButton: {fileID: 438876917}
@@ -3306,10 +3306,10 @@ MonoBehaviour:
   audioMixerGroup: {fileID: 5221560774633430656, guid: ffd311c8d7c895b46b9225da6e86080e, type: 2}
   audioList:
   - name: Default
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: ad33ef4d104c36b49bf1e8918d3be931, type: 3}
     volume: 1
   - name: Result
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 4336c988124c1464e9c8b6139c2ec427, type: 3}
     volume: 1
   hasIntroduction: 0
   startDelay: 0.5

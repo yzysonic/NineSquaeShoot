@@ -111,13 +111,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1705918985620043624, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
+      propertyPath: fireAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: fb9cd3531a0d18f48ba5a99e2325db86, type: 3}
+    - target: {fileID: 1705918985620043624, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
       propertyPath: damageAudio
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 69ed3c10f8c05474e8bfc4581b59b3c2, type: 3}
     - target: {fileID: 1705918985620043624, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
       propertyPath: defeatAudio
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: eb4bd84675a770648902a03f1c4b0f9c, type: 3}
     - target: {fileID: 4700756581628002208, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
       propertyPath: m_Sprite
       value: 

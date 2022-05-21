@@ -95,13 +95,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1705918985620043624, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
+      propertyPath: fireAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: ea5c9fba4f228a04e8ef6f3ef9bdef3c, type: 3}
+    - target: {fileID: 1705918985620043624, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
       propertyPath: damageAudio
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 235c59982cddf264498ed807f281c903, type: 3}
     - target: {fileID: 1705918985620043624, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
       propertyPath: defeatAudio
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 8eb962b566b336449804dd0af77fd884, type: 3}
     - target: {fileID: 3705683342757114732, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
       propertyPath: maxValue
       value: 10

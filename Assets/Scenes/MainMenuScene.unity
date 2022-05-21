@@ -791,7 +791,7 @@ MonoBehaviour:
   audioMixerGroup: {fileID: 5221560774633430656, guid: ffd311c8d7c895b46b9225da6e86080e, type: 2}
   audioList:
   - name: Default
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 9e3caed5b1239a943beae22683ca6b5f, type: 3}
     volume: 1
   hasIntroduction: 0
   startDelay: 0.5
@@ -1039,8 +1039,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29d23fa00aee834cbed701d62f0bf30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onSelectAudioClip: {fileID: 0}
-  onPressAudioClip: {fileID: 0}
+  onSelectAudioClip: {fileID: 8300000, guid: ad387fa5d70d1e842840bd1ba8231fef, type: 3}
+  onPressAudioClip: {fileID: 8300000, guid: fcb41eb9f33783c4cb0a44098601ab8e, type: 3}
   scoreRankProfile: {fileID: 11400000, guid: 1809a7f48a8bf6442a432c8edb2b8bd5, type: 2}
   background: {fileID: 1314592186}
   noRecordSignObject: {fileID: 837628692}
@@ -3469,8 +3469,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d465a8f17a0f994fbe76c67a08f9686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onSelectAudioClip: {fileID: 0}
-  onPressAudioClip: {fileID: 0}
+  onSelectAudioClip: {fileID: 8300000, guid: ad387fa5d70d1e842840bd1ba8231fef, type: 3}
+  onPressAudioClip: {fileID: 8300000, guid: fcb41eb9f33783c4cb0a44098601ab8e, type: 3}
   startGameButton: {fileID: 777125525}
   leaderboardButton: {fileID: 1127060496}
   exitGameButton: {fileID: 1669011321}
