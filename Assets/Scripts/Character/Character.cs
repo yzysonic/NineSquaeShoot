@@ -87,21 +87,21 @@ namespace NSS
                 return;
             }
 
-            if (damageInfo.DamageValue > 0)
+            if (life && damageInfo.DamageValue > 0)
             {
-                if (life)
-                {
-                    life.TackDamage(damageInfo.DamageValue);
-                }
+                life.TackDamage(damageInfo.DamageValue);
 
-                if (animator)
+                if (life.Value > 0)
                 {
-                    animator.SetTrigger("damaged");
-                }
+                    if (animator)
+                    {
+                        animator.SetTrigger("damaged");
+                    }
 
-                if (AudioPlayer)
-                {
-                    AudioPlayer.Play(ECharacterAudio.Damage);
+                    if (AudioPlayer)
+                    {
+                        AudioPlayer.Play(ECharacterAudio.Damage);
+                    }
                 }
             }
 
