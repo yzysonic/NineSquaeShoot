@@ -162,11 +162,8 @@ namespace NSS
                 return;
             }
 
-            System.Index index = enemyDiffcultyParamList.FindIndex(row => score <= row.scoreMax);
-            if (index.Value < 0)
-            {
-                index = ^1;
-            }
+            int findResult = enemyDiffcultyParamList.FindIndex(row => score <= row.scoreMax);
+            System.Index index = findResult >= 0 ? findResult : ^1;
 
             currentDiffcultyParam = enemyDiffcultyParamList[index];
             spawnTimer.Interval = baseEnemySpawnInterval * currentDiffcultyParam.spawnIntervalBonusRate;
