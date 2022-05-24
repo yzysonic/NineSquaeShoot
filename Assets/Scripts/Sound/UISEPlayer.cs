@@ -14,6 +14,10 @@ namespace NSS
         {
             base.Awake();
             audioSource = GetComponent<AudioSource>();
+            if (audioSource)
+            {
+                audioSource.outputAudioMixerGroup = GlobalAsset.Instance.SEMixerGroup;
+            }
             DontDestroyOnLoad(gameObject);
         }
 
