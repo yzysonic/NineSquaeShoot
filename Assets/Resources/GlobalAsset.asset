@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4402fd6f72e24d34faa7544a1e80c694, type: 3}
   m_Name: GlobalAsset
   m_EditorClassIdentifier: 
+  MainAudioMixer: {fileID: 24100000, guid: ffd311c8d7c895b46b9225da6e86080e, type: 2}
   SEMixerGroup: {fileID: 8843504923207118554, guid: ffd311c8d7c895b46b9225da6e86080e, type: 2}

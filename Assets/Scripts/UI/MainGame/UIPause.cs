@@ -16,6 +16,11 @@ namespace NSS
         [SerializeField]
         private Button resumeButton;
 
+        [SerializeField]
+        private float overrideBGMVolume = -10;
+
+        private float originalBGMVolume = 0.0f;
+
         public event Action<bool> PauseStateChanged;
 
         protected override void Awake()
@@ -39,6 +44,10 @@ namespace NSS
             resumeButton.Select();
             background.SetActive(true);
             PauseStateChanged?.Invoke(true);
+
+
+            GlobalAsset.Instance.MainAudioMixer.GetFloat("BGM", out originalBGMVolume);
+            GlobalAsset.Instance.MainAudioMixer.SetFloat("BGM", overrideBGMVolume);
         }
 
         private void OnDisable()
@@ -46,6 +55,7 @@ namespace NSS
             Time.timeScale = 1.0f;
             background.SetActive(false);
             PauseStateChanged?.Invoke(false);
+            GlobalAsset.Instance.MainAudioMixer.SetFloat("BGM", originalBGMVolume);
 
             if (EventSystem.current)
             {

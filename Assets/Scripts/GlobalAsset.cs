@@ -8,6 +8,7 @@ namespace NSS
     [CreateAssetMenu(menuName = "NSS/GlobalAsset", fileName = "GlobalAsset")]
     public class GlobalAsset : ScriptableObject
     {
+        public AudioMixer MainAudioMixer;
         public AudioMixerGroup SEMixerGroup;
 
         public static GlobalAsset Instance { get; private set; }
