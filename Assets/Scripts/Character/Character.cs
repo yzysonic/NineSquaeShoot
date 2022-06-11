@@ -80,6 +80,20 @@ namespace NSS
             }
         }
 
+        public virtual void EntryField(FieldBlock block)
+        {
+            IsInvincible = true;
+            if (movement)
+            {
+                movement.TryEnterBlock(block);
+            }
+        }
+
+        public virtual void OnEntryPerformanceFinished()
+        {
+            IsInvincible = false;
+        }
+
         public void ReceiveDamage(DamageInfo damageInfo)
         {
             if(IsInvincible || damageInfo == null)

@@ -100,10 +100,10 @@ namespace NSS
 
                 // Spawn enemy
                 GameObject enemyObj = Instantiate(enemyPrefab);
-                var movement = enemyObj.GetComponent<CharacterMovement>();
-                if (movement)
+                var enemy = enemyObj.GetComponent<Enemy>();
+                if (enemy)
                 {
-                    movement.TryEnterBlock(availableBlocs[blockNo]);
+                    enemy.EntryField(availableBlocs[blockNo]);
                 }
 
                 ApplyEnemyDiffcultyParam(enemyObj);

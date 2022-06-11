@@ -33,6 +33,24 @@ namespace NSS
             base.OnDestroy();
         }
 
+        public override void EntryField(FieldBlock block)
+        {
+            base.EntryField(block);
+            if (Behaviour)
+            {
+                Behaviour.IsWaitEntryPerformance = true;
+            }
+        }
+
+        public override void OnEntryPerformanceFinished()
+        {
+            base.OnEntryPerformanceFinished();
+            if (Behaviour)
+            {
+                Behaviour.IsWaitEntryPerformance = false;
+            }
+        }
+
         protected override void OnDefeated()
         {
             base.OnDefeated();

@@ -10,6 +10,8 @@ namespace NSS
         [SerializeField]
         private float startIdleTime = 0.5f;
 
+        public bool IsWaitEntryPerformance { get; set; } = false;
+
         private Enemy enemy;
         private Weapon weapon;
         private CharacterMovement movement;
@@ -27,6 +29,11 @@ namespace NSS
 
         private void Update()
         {
+            if (IsWaitEntryPerformance)
+            {
+                return;
+            }
+
             if (movement && movement.IsMoving)
             {
                 // Don't allow any action when moving

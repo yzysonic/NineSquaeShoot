@@ -23,14 +23,10 @@ namespace NSS
             if(playerStartBlock != null)
             {
                 GameObject playerObj = Instantiate(playerPrefab);
-                var movement = playerObj.GetComponent<CharacterMovement>();
-                if(movement != null)
-                {
-                    movement.TryEnterBlock(playerStartBlock);
-                }
                 Player = playerObj.GetComponent<Player>();
                 if (Player)
                 {
+                    Player.EntryField(playerStartBlock);
                     Player.Defeated += OnPlayerDefeated;
                 }
             }
