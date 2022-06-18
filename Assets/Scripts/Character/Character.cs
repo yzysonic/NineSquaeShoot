@@ -38,7 +38,21 @@ namespace NSS
 
         public CharacterAudioPlayer AudioPlayer { get; private set; }
 
-        public bool IsInvincible { get; set; } = false;
+        public bool IsInvincible
+        {
+            get
+            {
+                if (movement && movement.IsMoving)
+                {
+                    return false;
+                }
+                return isInvincible;
+            }
+            set
+            {
+                isInvincible = value;
+            }
+        }
 
         public event Action Defeated;
 
@@ -51,6 +65,8 @@ namespace NSS
         private Weapon weapon;
 
         private Animator animator;
+
+        private bool isInvincible = false;
 
         protected virtual void Awake()
         {
@@ -92,6 +108,16 @@ namespace NSS
         public virtual void OnEntryPerformanceFinished()
         {
             IsInvincible = false;
+        }
+
+        public virtual void OnDefeatPerformanceFinished()
+        {
+            GameUIManager.Instance.UnbindCharacterLifeUI(this);
+
+            var renderer = GetComponent<SpriteRenderer>();
+            if (renderer) renderer.enabled = false;
+            if (animator) animator.enabled = false;
+            if (movement) movement.enabled = false;
         }
 
         public void ReceiveDamage(DamageInfo damageInfo)
@@ -139,21 +165,28 @@ namespace NSS
                 Defeated.Invoke();
             }
 
+            if (animator)
+            {
+                animator.SetTrigger("defeated");
+            }
+
             if (AudioPlayer)
             {
                 AudioPlayer.Play(ECharacterAudio.Defeat);
             }
 
-            GameUIManager.Instance.UnbindCharacterLifeUI(this);
             SetComponentsEnabledOnDefeated(false);
         }
 
         protected virtual void SetComponentsEnabledOnDefeated(bool value)
         {
             var renderer = GetComponent<SpriteRenderer>();
-            if (renderer)   renderer.enabled = value;
-            if (animator)   animator.enabled = value;
-            if (movement)   movement.enabled = value;
+            if (value)
+            {
+                if (renderer) renderer.enabled = value;
+                if (animator) animator.enabled = value;
+                if (movement) movement.enabled = value;
+            }
             if (weapon)     weapon.enabled = value;
         }
 

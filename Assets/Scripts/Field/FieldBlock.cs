@@ -55,6 +55,14 @@ namespace NSS
             return true;
         }
 
+        public void OnCharacterEnterFinished(Character character)
+        {
+            if (character && character == StayingCharacter)
+            {
+                ApplyDamageFormReservations(character);
+            }
+        }
+
         public void CharacterExit()
         {
             StayingCharacter = null;
@@ -84,6 +92,15 @@ namespace NSS
 
         private void OnCharacterEntered(Character character)
         {
+            if (character.Movement && !character.Movement.IsMovingVertically)
+            {
+                ApplyDamageFormReservations(character);
+            }
+            FieldManager.Instance.OnCharacterEnteredBlock(this);
+        }
+
+        private void ApplyDamageFormReservations(Character character)
+        {
             foreach (var item in damageReservations)
             {
                 (this as IDamageSender).SendDamage(character.gameObject, item.Value, character);
@@ -91,8 +108,6 @@ namespace NSS
 
             damageReservations.Clear();
             SetGroundLight(Team == ETeam.enemy, false);
-
-            FieldManager.Instance.OnCharacterEnteredBlock(this);
         }
 
         public void OnSelfProjectileEntered(Projectile projectile)

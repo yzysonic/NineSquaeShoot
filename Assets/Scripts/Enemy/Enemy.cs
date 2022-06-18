@@ -51,13 +51,18 @@ namespace NSS
             }
         }
 
+        public override void OnDefeatPerformanceFinished()
+        {
+            base.OnDefeatPerformanceFinished();
+            StayingBlock = null;
+            Destroy(gameObject, 0.5f);
+        }
+
         protected override void OnDefeated()
         {
             base.OnDefeated();
 
             ScoreManager.Instance.CurrentScore += baseScore;
-
-            Destroy(gameObject, 1.0f);
         }
 
         protected override void SetComponentsEnabledOnDefeated(bool value)

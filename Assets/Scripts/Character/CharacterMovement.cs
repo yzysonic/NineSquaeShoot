@@ -14,6 +14,11 @@ namespace NSS
 
         public bool IsMoving { get; private set; } = false;
 
+
+        public bool IsMovingVertically => MovingDirection == EMoveDirection.Upper || MovingDirection == EMoveDirection.Lower;
+
+        public EMoveDirection MovingDirection { get; private set; } = EMoveDirection.None;
+
         private Character character;
         private Timer timer;
         private Transform startPoint;
@@ -36,6 +41,8 @@ namespace NSS
             {
                 return false;
             }
+
+            MovingDirection = direction;
 
             // Just move instantaneously
             if (moveDuration <= 0)
@@ -108,14 +115,20 @@ namespace NSS
             if (timer.IsComplete)
             {
                 IsMoving = false;
+                MovingDirection = EMoveDirection.None;
                 startPoint = null;
                 endPoint = null;
+                if (character.StayingBlock)
+                {
+                    character.StayingBlock.OnCharacterEnterFinished(character);
+                }
             }
         }
 
         public void ResetStatus()
         {
             IsMoving = false;
+            MovingDirection = EMoveDirection.None;
             startPoint = null;
             endPoint = null;
             timer.Reset(moveDuration);
