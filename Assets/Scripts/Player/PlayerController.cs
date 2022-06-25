@@ -7,15 +7,15 @@ namespace NSS
 {
     public class PlayerController : MonoBehaviour, GameInput.IPlayerActions
     {
-        private GameInput input;
+        private GameInput.PlayerActions playerInput;
         private CharacterMovement movement;
         private Weapon weapon;
 
         // Start is called before the first frame update
         private void Awake()
         {
-            input = new GameInput();
-            input.Player.SetCallbacks(this);
+            playerInput = GameInputManager.Instance.Input.Player;
+            playerInput.SetCallbacks(this);
 
             movement = GetComponent<CharacterMovement>();
             weapon = GetComponent<Weapon>();
@@ -24,28 +24,28 @@ namespace NSS
             {
                 if (value)
                 {
-                    input.Player.Disable();
+                    playerInput.Disable();
                 }
                 else
                 {
-                    input.Player.Enable();
+                    playerInput.Enable();
                 }
             };
         }
 
         private void OnEnable()
         {
-            input.Enable();
+            playerInput.Enable();
         }
 
         private void OnDisable()
         {
-            input.Disable();
+            playerInput.Disable();
         }
 
         private void OnDestroy()
         {
-            input.Player.SetCallbacks(null);
+            playerInput.SetCallbacks(null);
         }
 
         void GameInput.IPlayerActions.OnFire(InputAction.CallbackContext context)
@@ -92,14 +92,6 @@ namespace NSS
             if (context.started)
             {
                 movement.TryMove(EMoveDirection.Right);
-            }
-        }
-
-        void GameInput.IPlayerActions.OnPause(InputAction.CallbackContext context)
-        {
-            if (context.started)
-            {
-                GameUIManager.Instance.SetPauseActive(true);
             }
         }
     }

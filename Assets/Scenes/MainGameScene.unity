@@ -427,8 +427,9 @@ GameObject:
   - component: {fileID: 75702518}
   - component: {fileID: 75702517}
   - component: {fileID: 75702519}
+  - component: {fileID: 75702520}
   m_Layer: 0
-  m_Name: EventSystem
+  m_Name: UIInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -492,6 +493,18 @@ MonoBehaviour:
   m_TrackedDeviceOrientationAction: {fileID: -3179929184004362361, guid: 46a16eac160bb804a9744dd50bb3e24a, type: 3}
   m_DeselectOnBackgroundClick: 0
   m_PointerBehavior: 0
+--- !u!114 &75702520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75702515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ba51437cb3fc643b254290b56cae6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &112779137
 GameObject:
   m_ObjectHideFlags: 0
@@ -2497,6 +2510,7 @@ MonoBehaviour:
   background: {fileID: 223279718}
   mainMenuButton: {fileID: 493565433}
   resumeButton: {fileID: 438876917}
+  overrideBGMVolume: -10
 --- !u!222 &942562263
 CanvasRenderer:
   m_ObjectHideFlags: 0

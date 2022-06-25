@@ -51,6 +51,14 @@ namespace NSS
             }
         }
 
+        public void TogglePause()
+        {
+            if (pause)
+            {
+                pause.gameObject.SetActive(!pause.gameObject.activeInHierarchy);
+            }
+        }
+
         public void SetResultActive(bool value)
         {
             if (result)
