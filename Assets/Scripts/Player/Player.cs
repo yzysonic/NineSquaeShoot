@@ -8,11 +8,14 @@ namespace NSS
     {
         public PlayerController Controller { get; private set; }
 
+        private PlayerCounterAction counterAction;
+
         protected override void Awake()
         {
             base.Awake();
             Team = ETeam.player;
             Controller = GetComponent<PlayerController>();
+            counterAction = GetComponent<PlayerCounterAction>();
         }
 
         public void OnNewGameStarted()
@@ -20,6 +23,11 @@ namespace NSS
             SetComponentsEnabledOnDefeated(true);
             ResetStatus();
             GameUIManager.Instance.BindCharacterLifeUI(this);
+
+            if (counterAction)
+            {
+                counterAction.InitCoolTimer();
+            }
         }
 
         protected override void OnDefeated()
@@ -32,6 +40,43 @@ namespace NSS
         {
             base.SetComponentsEnabledOnDefeated(value);
             if (Controller) Controller.enabled = value;
+        }
+
+        public override void ReceiveDamage(DamageInfo damageInfo)
+        {
+            if (counterAction && counterAction.ShouldProcessDamage)
+            {
+                counterAction.ProcessDamage(damageInfo);
+            }
+
+            if (damageInfo.DamageValue > 0)
+            {
+                base.ReceiveDamage(damageInfo);
+            }
+        }
+
+        public void OnCounterValidSectionStart()
+        {
+            if (counterAction)
+            {
+                counterAction.SetCounterValidFlag(true);
+            }
+        }
+
+        public void OnCounterValidSectionEnd()
+        {
+            if (counterAction)
+            {
+                counterAction.SetCounterValidFlag(false);
+            }
+        }
+
+        public void OnCounterAnimationEnd()
+        {
+            if (counterAction)
+            {
+                counterAction.OnCounterAnimationEnd();
+            }
         }
     }
 }

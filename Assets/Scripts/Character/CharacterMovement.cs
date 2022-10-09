@@ -14,6 +14,8 @@ namespace NSS
 
         public bool IsMoving { get; private set; } = false;
 
+        public bool CanMove { get; private set; } = true;
+
 
         public bool IsMovingVertically => MovingDirection == EMoveDirection.Upper || MovingDirection == EMoveDirection.Lower;
 
@@ -37,7 +39,7 @@ namespace NSS
 
         public bool TryMove(EMoveDirection direction)
         {
-            if(IsMoving)
+            if(IsMoving || !CanMove)
             {
                 return false;
             }

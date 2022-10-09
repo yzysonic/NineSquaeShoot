@@ -36,6 +36,8 @@ namespace NSS
 
         public Weapon Weapon { get => weapon; }
 
+        public Animator Animator { get => animator; }
+
         public CharacterAudioPlayer AudioPlayer { get; private set; }
 
         public bool IsInvincible
@@ -120,14 +122,19 @@ namespace NSS
             if (movement) movement.enabled = false;
         }
 
-        public void ReceiveDamage(DamageInfo damageInfo)
+        public virtual void ReceiveDamage(DamageInfo damageInfo)
         {
-            if(IsInvincible || damageInfo == null)
+            if (damageInfo == null)
             {
                 return;
             }
 
-            if (life && damageInfo.DamageValue > 0)
+            if (isInvincible)
+            {
+                damageInfo.ReceiverObject = null;
+            }
+
+            else if (life && damageInfo.DamageValue > 0)
             {
                 life.TackDamage(damageInfo.DamageValue);
 
@@ -210,6 +217,34 @@ namespace NSS
             {
                 animator.Rebind();
                 animator.Play("Idle");
+            }
+        }
+
+        public void OnFired()
+        {
+            if (AudioPlayer)
+            {
+                AudioPlayer.Play(ECharacterAudio.Fire);
+            }
+            if (animator)
+            {
+                animator.SetTrigger("fired");
+            }
+        }
+
+        public void OnSkillStarted()
+        {
+            if (animator)
+            {
+                animator.SetTrigger("skillStarted");
+            }
+        }
+
+        public void OnSkillPerformanceStarted()
+        {
+            if (animator)
+            {
+                animator.SetTrigger("skillPerformanceStarted");
             }
         }
     }

@@ -6,6 +6,9 @@ namespace NSS
 {
     public class Projectile : PooledMonoBehavior, IDamageSender
     {
+        [SerializeField, Range(1, int.MaxValue)]
+        private int life = 1;
+
         [SerializeField]
         private AudioClip se;
 
@@ -102,6 +105,17 @@ namespace NSS
                     }
                 }
             }
+            else if (collision.gameObject.CompareTag("Projectile"))
+            {
+                Projectile projectile = collision.GetComponent<Projectile>();
+                if (projectile)
+                {
+                    if (FieldRowIndex == projectile.FieldRowIndex)
+                    {
+                        projectile.IsUsing = false;
+                    }
+                }
+            }
         }
 
         private void OnTriggerExit2D(Collider2D collision)
@@ -110,19 +124,9 @@ namespace NSS
             {
                 var fieldCollider = collision.GetComponent<FieldCollider>();
                 FieldBlock block = fieldCollider ? fieldCollider.GetBlock(FieldRowIndex) : null;
-                if (block)
+                if (block == StayingBlock)
                 {
-                    if (Team != block.Team)
-                    {
-                        if (block == StayingBlock)
-                        {
-                            StayingBlock = null;
-                        }
-                    }
-                    else
-                    {
-                        block.OnSelfProjectileExited(this);
-                    }
+                    StayingBlock = null;
                 }
             }
         }

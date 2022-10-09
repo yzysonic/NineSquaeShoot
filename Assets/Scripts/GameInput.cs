@@ -73,6 +73,15 @@ namespace NSS
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Counter"",
+                    ""type"": ""Button"",
+                    ""id"": ""db89c43d-7d4e-4023-8f4f-fb31924e5fb4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -282,6 +291,28 @@ namespace NSS
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""MoveRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6bc49f8d-d0b6-436a-8f1d-e6c9926b8e23"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Counter"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""34987dfa-4d1d-40d5-8c6d-63fbeb766969"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Counter"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -866,6 +897,7 @@ namespace NSS
             m_Player_MoveLeft = m_Player.FindAction("MoveLeft", throwIfNotFound: true);
             m_Player_MoveRight = m_Player.FindAction("MoveRight", throwIfNotFound: true);
             m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
+            m_Player_Counter = m_Player.FindAction("Counter", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -943,6 +975,7 @@ namespace NSS
         private readonly InputAction m_Player_MoveLeft;
         private readonly InputAction m_Player_MoveRight;
         private readonly InputAction m_Player_Fire;
+        private readonly InputAction m_Player_Counter;
         public struct PlayerActions
         {
             private @GameInput m_Wrapper;
@@ -952,6 +985,7 @@ namespace NSS
             public InputAction @MoveLeft => m_Wrapper.m_Player_MoveLeft;
             public InputAction @MoveRight => m_Wrapper.m_Player_MoveRight;
             public InputAction @Fire => m_Wrapper.m_Player_Fire;
+            public InputAction @Counter => m_Wrapper.m_Player_Counter;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -976,6 +1010,9 @@ namespace NSS
                     @Fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                     @Fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                     @Fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
+                    @Counter.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCounter;
+                    @Counter.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCounter;
+                    @Counter.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCounter;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -995,6 +1032,9 @@ namespace NSS
                     @Fire.started += instance.OnFire;
                     @Fire.performed += instance.OnFire;
                     @Fire.canceled += instance.OnFire;
+                    @Counter.started += instance.OnCounter;
+                    @Counter.performed += instance.OnCounter;
+                    @Counter.canceled += instance.OnCounter;
                 }
             }
         }
@@ -1128,6 +1168,7 @@ namespace NSS
             void OnMoveLeft(InputAction.CallbackContext context);
             void OnMoveRight(InputAction.CallbackContext context);
             void OnFire(InputAction.CallbackContext context);
+            void OnCounter(InputAction.CallbackContext context);
         }
         public interface IUIActions
         {

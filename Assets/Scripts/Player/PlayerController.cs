@@ -10,6 +10,7 @@ namespace NSS
         private GameInput.PlayerActions playerInput;
         private CharacterMovement movement;
         private Weapon weapon;
+        private PlayerCounterAction counterAction;
 
         // Start is called before the first frame update
         private void Awake()
@@ -19,6 +20,7 @@ namespace NSS
 
             movement = GetComponent<CharacterMovement>();
             weapon = GetComponent<Weapon>();
+            counterAction = GetComponent<PlayerCounterAction>();
 
             GameUIManager.Instance.Pause.PauseStateChanged += value =>
             {
@@ -50,6 +52,11 @@ namespace NSS
 
         void GameInput.IPlayerActions.OnFire(InputAction.CallbackContext context)
         {
+            if (counterAction && counterAction.ShouldBlockOtherAction)
+            {
+                return;
+            }
+
             if (weapon != null)
             {
                 if (context.started)
@@ -65,6 +72,11 @@ namespace NSS
 
         void GameInput.IPlayerActions.OnMoveUp(InputAction.CallbackContext context)
         {
+            if (counterAction && counterAction.ShouldBlockOtherAction)
+            {
+                return;
+            }
+
             if (context.started)
             {
                 movement.TryMove(EMoveDirection.Upper);
@@ -73,6 +85,11 @@ namespace NSS
 
         void GameInput.IPlayerActions.OnMoveDown(InputAction.CallbackContext context)
         {
+            if (counterAction && counterAction.ShouldBlockOtherAction)
+            {
+                return;
+            }
+
             if (context.started)
             {
                 movement.TryMove(EMoveDirection.Lower);
@@ -81,6 +98,11 @@ namespace NSS
 
         void GameInput.IPlayerActions.OnMoveLeft(InputAction.CallbackContext context)
         {
+            if (counterAction && counterAction.ShouldBlockOtherAction)
+            {
+                return;
+            }
+
             if (context.started)
             {
                 movement.TryMove(EMoveDirection.Left);
@@ -89,9 +111,22 @@ namespace NSS
 
         void GameInput.IPlayerActions.OnMoveRight(InputAction.CallbackContext context)
         {
+            if (counterAction && counterAction.ShouldBlockOtherAction)
+            {
+                return;
+            }
+
             if (context.started)
             {
                 movement.TryMove(EMoveDirection.Right);
+            }
+        }
+
+        void GameInput.IPlayerActions.OnCounter(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                counterAction.RequestCounter();
             }
         }
     }
