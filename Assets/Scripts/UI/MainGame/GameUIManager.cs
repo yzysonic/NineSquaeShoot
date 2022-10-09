@@ -15,6 +15,9 @@ namespace NSS
         [SerializeField]
         private UIResult result;
 
+        [SerializeField]
+        private UIPlayerCharacter playerCharacterUI;
+
         private CharacterLifeUIPool characterLifeUIPool;
 
         public Canvas MainCanvas => mainCanvas;
@@ -29,17 +32,39 @@ namespace NSS
 
         public void BindCharacterLifeUI(Character character)
         {
-            if (characterLifeUIPool)
+            if(character is Player)
             {
-                characterLifeUIPool.BindCharacter(character);
+                if (playerCharacterUI)
+                {
+                    playerCharacterUI.gameObject.SetActive(true);
+                    playerCharacterUI.OwnerCharacter = character;
+                }
+            }
+            else
+            {
+                if (characterLifeUIPool)
+                {
+                    characterLifeUIPool.BindCharacter(character);
+                }
             }
         }
 
         public void UnbindCharacterLifeUI(Character character)
         {
-            if (characterLifeUIPool)
+            if (character is Player)
             {
-                characterLifeUIPool.UnbindCharacter(character);
+                if (playerCharacterUI)
+                {
+                    playerCharacterUI.OwnerCharacter = null;
+                    playerCharacterUI.gameObject.SetActive(false);
+                }
+            }
+            else
+            {
+                if (characterLifeUIPool)
+                {
+                    characterLifeUIPool.UnbindCharacter(character);
+                }
             }
         }
 

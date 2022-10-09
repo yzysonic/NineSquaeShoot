@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,8 +35,17 @@ namespace NSS
         [SerializeField]
         private float projectileDamageBonusRate = 1.5f;
 
+        [SerializeField]
+        private float projectileLifeBounusRate = 5.0f;
+
+        [SerializeField]
+        private Animator effectAnimator;
+
         public bool ShouldProcessDamage => state == EState.Executing;
         public bool ShouldBlockOtherAction => state == EState.Executing || state == EState.Success;
+
+        public event Action<float> CoolTimeProgressChanged;
+        public float CurrentCoolTimeProgress => coolTimer.Progress;
 
         private Player player;
         private CharacterMovement movement;
@@ -60,11 +70,13 @@ namespace NSS
                 if(coolTimer.IsComplete)
                 {
                     state = EState.Ready;
+                    effectAnimator.gameObject.SetActive(true);
+                    effectAnimator.Play("Start");
                 }
                 else
                 {
                     coolTimer.Step();
-                    Debug.Log("Counter Cooling: " + coolTimer.Elapsed);
+                    CoolTimeProgressChanged?.Invoke(coolTimer.Progress);
                 }
                 return;
             }
@@ -86,6 +98,7 @@ namespace NSS
             }
 
             coolTimer.Reset();
+            effectAnimator.gameObject.SetActive(false);
             state = EState.Executing;
         }
 
@@ -101,11 +114,13 @@ namespace NSS
                 if (projectile != null)
                 {
                     projectile.IsDestroyOnDisabled = true;
+                    projectile.ShouldHitOtherProjectile = true;
                     projectile.gameObject.layer = LayerMask.NameToLayer("PlayerAttack");
                     projectile.OwnerCharacter = player;
                     projectile.FieldRowIndex = player.StayingBlock.RowIndex;
                     projectile.Velocity = projectileVelocity / 100.0f;
                     projectile.Damage = (uint)(receivedDamage * projectileDamageBonusRate);
+                    projectile.Life = (int)(projectileLifeBounusRate * projectile.Life);
                 }
             }
 
@@ -132,6 +147,14 @@ namespace NSS
             if (state == EState.WaitMove)
             {
                 state = EState.Ready;
+            }
+        }
+
+        public void OnPlayerDefeated()
+        {
+            if (effectAnimator)
+            {
+                effectAnimator.gameObject.SetActive(false);
             }
         }
 

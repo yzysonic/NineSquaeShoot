@@ -183,5 +183,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundLightRenderer: {fileID: 2542627746148990315}
-  selfGroundLightColor: {r: 1, g: 1, b: 1, a: 1}
-  otherGroundLightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  playerGroundLightColor: {r: 1, g: 1, b: 1, a: 1}
+  enemyGroundLightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}

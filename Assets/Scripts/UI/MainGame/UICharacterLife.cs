@@ -13,7 +13,7 @@ namespace NSS
         [SerializeField]
         private UISpriteNumber lifeNumber;
 
-        public Character OwnerCharacter
+        public virtual Character OwnerCharacter
         {
             get => ownerCharacter;
             set

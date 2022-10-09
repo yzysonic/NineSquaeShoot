@@ -34,6 +34,11 @@ namespace NSS
         {
             base.OnDefeated();
             GameUIManager.Instance.UnbindCharacterLifeUI(this);
+
+            if (counterAction)
+            {
+                counterAction.OnPlayerDefeated();
+            }
         }
 
         protected override void SetComponentsEnabledOnDefeated(bool value)

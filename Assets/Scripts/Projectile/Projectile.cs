@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace NSS
 {
-    public class Projectile : PooledMonoBehavior, IDamageSender
+    public class Projectile : PooledMonoBehavior, IDamageSender, IDamageReceiver
     {
         [SerializeField, Range(1, int.MaxValue)]
         private int life = 1;
@@ -15,6 +15,14 @@ namespace NSS
         public Character OwnerCharacter { get; set; }
 
         public ETeam Team => OwnerCharacter.Team;
+
+        public int Life
+        {
+            get => life;
+            set => life = value;
+        }
+
+        public bool ShouldHitOtherProjectile { get; set; } = false;
 
         public uint FieldRowIndex { get; set; } = 0;
 
@@ -64,6 +72,11 @@ namespace NSS
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
+            if (!IsUsing)
+            {
+                return;
+            }
+
             DamageInfo damageInfo = new()
             {
                 DamageValue = Damage,
@@ -107,12 +120,16 @@ namespace NSS
             }
             else if (collision.gameObject.CompareTag("Projectile"))
             {
-                Projectile projectile = collision.GetComponent<Projectile>();
-                if (projectile)
+                if (ShouldHitOtherProjectile)
                 {
-                    if (FieldRowIndex == projectile.FieldRowIndex)
+                    Projectile projectile = collision.GetComponent<Projectile>();
+                    if (projectile && projectile.IsUsing)
                     {
-                        projectile.IsUsing = false;
+                        if (FieldRowIndex == projectile.FieldRowIndex)
+                        {
+                            damageInfo.DamageValue = 1;
+                            (this as IDamageSender).SendDamage(projectile.gameObject, damageInfo, projectile);
+                        }
                     }
                 }
             }
@@ -138,8 +155,33 @@ namespace NSS
                 return;
             }
 
-            stayingBlock = null;
-            IsUsing = false;
+            var projectile = damageInfo.Receiver as Projectile;
+            if (projectile)
+            {
+                StayingBlock = null;
+                TackDamage(1);
+            }
+            else
+            {
+                TackDamage(life);
+            }
+        }
+
+        public void ReceiveDamage(DamageInfo damageInfo)
+        {
+            StayingBlock = null;
+            TackDamage((int)damageInfo.DamageValue);
+            (this as IDamageReceiver).NotifyDamageSender(damageInfo);
+        }
+
+        private void TackDamage(int damage)
+        {
+            life -= damage;
+            if (life <= 0)
+            {
+                stayingBlock = null;
+                IsUsing = false;
+            }
         }
     }
 }
