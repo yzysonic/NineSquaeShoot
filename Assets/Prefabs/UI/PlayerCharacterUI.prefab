@@ -158,9 +158,10 @@ MonoBehaviour:
   lifeNumber: {fileID: 1417579907412358301}
   counterGauge: {fileID: 1132768881578971777}
   counterGaugeColorImage: {fileID: 3130367639532228860}
+  counterGaugeEmisionBoost: 5
   counterNormalColor: {r: 0.9607843, g: 0.5803922, b: 0.23921569, a: 1}
-  counterFullColor: {r: 1, g: 0, b: 0.69883823, a: 1}
-  counterColorFlashSpeed: 1
+  counterFullColor: {r: 1, g: 0.10980392, b: 0.7254902, a: 1}
+  counterColorFlashSpeed: 10
 --- !u!1001 &7823072952604107326
 PrefabInstance:
   m_ObjectHideFlags: 0

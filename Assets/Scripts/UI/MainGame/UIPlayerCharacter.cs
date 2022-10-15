@@ -13,6 +13,9 @@ namespace NSS
         [SerializeField]
         private Image counterGaugeColorImage;
 
+        [SerializeField, Range(1, 20)]
+        private float counterGaugeEmisionBoost = 8.0f;
+
         [SerializeField]
         private Color counterNormalColor;
 
@@ -20,9 +23,14 @@ namespace NSS
         private Color counterFullColor;
 
         [SerializeField]
+        private Color counterExecutingColor = Color.white;
+
+        [SerializeField]
         private float counterColorFlashSpeed = 1.0f;
 
         private float counterColorFlashTime = 0.0f;
+
+        private bool isCounterExecuting = false;
 
         public override Character OwnerCharacter
         {
@@ -39,6 +47,7 @@ namespace NSS
                     if (oldCounterAction)
                     {
                         oldCounterAction.CoolTimeProgressChanged -= OnCounterCoolTimeChanged;
+                        oldCounterAction.PreCounterExecuted -= OnPreCounterExecuted;
                     }
                 }
 
@@ -48,6 +57,7 @@ namespace NSS
                     if (counterAction)
                     {
                         counterAction.CoolTimeProgressChanged += OnCounterCoolTimeChanged;
+                        counterAction.PreCounterExecuted += OnPreCounterExecuted;
 
                         if (counterGauge)
                         {
@@ -62,9 +72,10 @@ namespace NSS
 
         private void Update()
         {
-            if (counterGauge && counterGauge.value >= 1.0f)
+            if (!isCounterExecuting && counterGauge && counterGauge.value >= 1.0f)
             {
-                SetCounterGaugeColor(Color.Lerp(counterFullColor, counterNormalColor, Mathf.Sin(counterColorFlashTime * counterColorFlashSpeed)));
+                float animFactor = Mathf.Sin(counterColorFlashTime * counterColorFlashSpeed);
+                UpdateCounterGaugeColor(animFactor);
                 counterColorFlashTime += Time.deltaTime;
             }
         }
@@ -76,20 +87,35 @@ namespace NSS
                 counterGauge.value = progress;
                 if (progress < 1.0f)
                 {
-                    SetCounterGaugeColor(counterNormalColor);
+                    UpdateCounterGaugeColor(0.0f);
                 }
                 else
                 {
                     counterColorFlashTime = 0.0f;
+                    isCounterExecuting = false;
                 }
             }
         }
 
-        private void SetCounterGaugeColor(Color color)
+        private void OnPreCounterExecuted()
+        {
+            isCounterExecuting = true;
+
+            if (counterGaugeColorImage)
+            {
+                counterGaugeColorImage.color = counterExecutingColor;
+                counterGaugeColorImage.material.SetColor("_EmisionColor", Color.white);
+                counterGaugeColorImage.material.SetFloat("_Boost", counterGaugeEmisionBoost);
+            }
+        }
+
+        private void UpdateCounterGaugeColor(float animFactor)
         {
             if (counterGaugeColorImage)
             {
-                counterGaugeColorImage.color = color;
+                counterGaugeColorImage.color = Color.Lerp(counterNormalColor, counterFullColor, animFactor);
+                counterGaugeColorImage.material.SetColor("_EmisionColor", Color.Lerp(Color.white, counterFullColor, animFactor));
+                counterGaugeColorImage.material.SetFloat("_Boost", Mathf.Lerp(1.0f, counterGaugeEmisionBoost, animFactor));
             }
         }
     }

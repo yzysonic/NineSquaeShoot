@@ -45,6 +45,7 @@ namespace NSS
         public bool ShouldBlockOtherAction => state == EState.Executing || state == EState.Success;
 
         public event Action<float> CoolTimeProgressChanged;
+        public event Action PreCounterExecuted;
         public float CurrentCoolTimeProgress => coolTimer.Progress;
 
         private Player player;
@@ -70,8 +71,12 @@ namespace NSS
                 if(coolTimer.IsComplete)
                 {
                     state = EState.Ready;
-                    effectAnimator.gameObject.SetActive(true);
-                    effectAnimator.Play("Start");
+                    if (effectAnimator)
+                    {
+                        effectAnimator.gameObject.SetActive(true);
+                        effectAnimator.enabled = true;
+                        effectAnimator.Play("Start");
+                    }
                 }
                 else
                 {
@@ -97,8 +102,18 @@ namespace NSS
                 player.OnSkillStarted();
             }
 
+            if (effectAnimator)
+            {
+                effectAnimator.StopPlayback();
+                effectAnimator.enabled = false;
+            }
+
+            if (PreCounterExecuted != null)
+            {
+                PreCounterExecuted.Invoke();
+            }
+
             coolTimer.Reset();
-            effectAnimator.gameObject.SetActive(false);
             state = EState.Executing;
         }
 
@@ -184,6 +199,11 @@ namespace NSS
             {
                 damageInfo.DamageValue = (uint)(damageInfo.DamageValue * failDamageBonusRate);
                 state = EState.Cooling;
+
+                if (effectAnimator)
+                {
+                    effectAnimator.gameObject.SetActive(false);
+                }
             }
         }
 
@@ -193,6 +213,12 @@ namespace NSS
             {
                 player.IsInvincible = false;
             }
+
+            if (effectAnimator)
+            {
+                effectAnimator.gameObject.SetActive(false);
+            }
+
 
             state = EState.Cooling;
         }
