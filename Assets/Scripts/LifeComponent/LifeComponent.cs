@@ -59,6 +59,11 @@ public class LifeComponent : MonoBehaviour
         }
     }
 
+    public void Recover(uint value)
+    {
+        Value = Math.Min(maxValue, Value + value);
+    }
+
     public void ResetValue()
     {
         Value = MaxValue;

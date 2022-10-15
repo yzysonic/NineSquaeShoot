@@ -38,13 +38,13 @@ namespace NSS
             }
         }
 
-        private float FireInterval
+        public float FireInterval
         {
             get
             {
                 if (weaponProfile)
                 {
-                    return weaponProfile.fireInterval * FireIntervalBonusRate;
+                    return Mathf.Max(weaponProfile.fireIntervalMin, weaponProfile.fireInterval * FireIntervalBonusRate);
                 }
                 return 0.0f;
             }
@@ -177,6 +177,26 @@ namespace NSS
             if (coolDownTimer)
             {
                 coolDownTimer.Elapsed = FireInterval;
+            }
+            DamageBonusRate = 1.0f;
+            FireIntervalBonusRate = 1.0f;
+        }
+
+        public void DecreaseFireInterval(float rate)
+        {
+            if (weaponProfile)
+            {
+                FireIntervalBonusRate = FireInterval * (1.0f - rate) / weaponProfile.fireInterval;
+                Debug.Log("PlayerFireInterval:" + FireInterval);
+            }
+        }
+
+        public void AddDamage(uint addValue)
+        {
+            if (weaponProfile)
+            {
+                DamageBonusRate = (weaponProfile.damage * DamageBonusRate + addValue) / (weaponProfile.damage);
+                Debug.Log("PlayerWeaponDamage:" + weaponProfile.damage * DamageBonusRate);
             }
         }
     }

@@ -256,7 +256,14 @@ namespace NSS
             return default;
         }
 
-        public void OnCharacterEnteredBlock(FieldBlock block)
+        public FieldBlock PickOneAvailableBlockRandomly(ETeam team)
+        {
+            List<FieldBlock> blocks = GetAvailaleBlocks(team);
+            int blockNo = Random.Range(0, blocks.Count - 1);
+            return blocks[blockNo];
+        }
+
+        public void OnObjectEnteredBlock(FieldBlock block)
         {
             if (block.Team != ETeam.none && block.Team != ETeam.count)
             {
@@ -264,7 +271,7 @@ namespace NSS
             }
         }
 
-        public void OnCharacterExitedBlock(FieldBlock block)
+        public void OnObjectExitedBlock(FieldBlock block)
         {
             if (block.Team != ETeam.none && block.Team != ETeam.count)
             {

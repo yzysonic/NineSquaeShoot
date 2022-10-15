@@ -18,11 +18,16 @@ namespace NSS
         [SerializeField]
         private UIPlayerCharacter playerCharacterUI;
 
+        [SerializeField]
+        private UIItemHandler itemHandler;
+
         private CharacterLifeUIPool characterLifeUIPool;
 
         public Canvas MainCanvas => mainCanvas;
 
         public UIPause Pause => pause;
+
+        public UIItemHandler ItemHander => itemHandler;
 
         protected override void Awake()
         {
@@ -89,6 +94,14 @@ namespace NSS
             if (result)
             {
                 result.gameObject.SetActive(value);
+            }
+        }
+
+        public void OnNewGameStarted()
+        {
+            if (ItemHander)
+            {
+                ItemHander.ResetItemCount();
             }
         }
     }

@@ -35,6 +35,8 @@ namespace NSS
 
         private EGroundLightState groundLightState = EGroundLightState.None;
 
+        private ItemBase droppedItem;
+
         public void ReceiveDamage(DamageInfo damageInfo)
         {
             if (StayingCharacter)
@@ -68,7 +70,7 @@ namespace NSS
             StayingCharacter = null;
             if (FieldManager.IsCreated)
             {
-                FieldManager.Instance.OnCharacterExitedBlock(this);
+                FieldManager.Instance.OnObjectExitedBlock(this);
             }
         }
 
@@ -96,7 +98,13 @@ namespace NSS
             {
                 ApplyDamageFormReservations(character);
             }
-            FieldManager.Instance.OnCharacterEnteredBlock(this);
+            FieldManager.Instance.OnObjectEnteredBlock(this);
+
+            // Apply dropped item effects if there is any.
+            if (droppedItem)
+            {
+                droppedItem.ApplyToCharacter(character);
+            }
         }
 
         private void ApplyDamageFormReservations(Character character)
@@ -171,6 +179,21 @@ namespace NSS
 
                 groundLightRenderer.enabled = settingState != EGroundLightState.None;
             }
+        }
+
+        public void OnItemDropped(ItemBase item)
+        {
+            // Destroy old item if there is any.
+            if (droppedItem)
+            {
+                Destroy(droppedItem.gameObject);
+            }
+
+            // Set the position of item.
+            item.gameObject.transform.position = transform.position;
+
+            droppedItem = item;
+            FieldManager.Instance.OnObjectEnteredBlock(this);
         }
     }
 }

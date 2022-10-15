@@ -89,26 +89,27 @@ namespace NSS
             // Determine spawn count
             int spawnCount = Mathf.Min(maxCount, (int)(baseEnemySpawnMaxCount * currentDiffcultyParam.spawnMaxCountBonusRate));
 
+            List<FieldBlock> availableBlocks = FieldManager.Instance.GetAvailaleBlocks(ETeam.enemy);
+
             for (int i = 0; i < spawnCount; i++)
             {
                 // Determine enemy type
                 GameObject enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Count - 1)];
 
                 // Determine spawn location
-                List<FieldBlock> availableBlocs = FieldManager.Instance.GetAvailaleBlocks(ETeam.enemy);
-                int blockNo = Random.Range(0, availableBlocs.Count - 1);
+                int blockNo = Random.Range(0, availableBlocks.Count - 1);
 
                 // Spawn enemy
                 GameObject enemyObj = Instantiate(enemyPrefab);
                 var enemy = enemyObj.GetComponent<Enemy>();
                 if (enemy)
                 {
-                    enemy.EntryField(availableBlocs[blockNo]);
+                    enemy.EntryField(availableBlocks[blockNo]);
                 }
 
                 ApplyEnemyDiffcultyParam(enemyObj);
 
-                availableBlocs.RemoveAtSwap(blockNo);
+                availableBlocks.RemoveAtSwap(blockNo);
             }
         }
 

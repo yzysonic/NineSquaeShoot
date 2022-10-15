@@ -53,10 +53,16 @@ namespace NSS
 
         private readonly List<Image> digitImages = new();
 
+        private bool isInitialized = false;
+
         private void Awake()
         {
-            AddDigitImages(maxDigitCount);
-            UpdateDigitAlignment();
+            if (!isInitialized)
+            {
+                AddDigitImages(maxDigitCount);
+                UpdateDigitAlignment();
+                isInitialized = true;
+            }
         }
 
         private void AddDigitImages(int count)
@@ -148,6 +154,11 @@ namespace NSS
 
         private void SetSprites(string value)
         {
+            if (!isInitialized)
+            {
+                Awake();
+            }
+
             int digitCount = value.Length;
             if (digitCount > maxDigitCount)
             {

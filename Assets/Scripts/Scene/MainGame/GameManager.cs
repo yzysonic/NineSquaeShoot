@@ -45,6 +45,7 @@ namespace NSS
             MainGameTimer.Instance.OnNewGameStarted();
             ScoreManager.Instance.OnNewGameStarted();
             EnemyManager.Instance.OnNewGameStarted();
+            GameUIManager.Instance.OnNewGameStarted();
             BGMPlayer.Instance.FadeOutToPlayNextBGM("Default", 0.5f);
 
             if (Player)

@@ -8,6 +8,7 @@ namespace NSS
     public class WeaponProfile : ScriptableObject
     {
         public float fireInterval = 1;
+        public float fireIntervalMin = 0.1f;
         public uint damage = 10;
         public GameObject projectilePrefab;
         public uint projectileVelocity = 500;
