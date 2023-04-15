@@ -52,7 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeGauge: {fileID: 4013565733720443171}
+  fillImage: {fileID: 1403477417838087006}
   lifeNumber: {fileID: 1999502067470441845}
+  colorProfile: {fileID: 11400000, guid: c4efa45576a40b547b78ca158a4156c0, type: 2}
 --- !u!1001 &5255682641904125919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -295,6 +297,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4bdc940a8904284e9c0215382f9a898, type: 3}
+--- !u!114 &1403477417838087006 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5179262366828556994, guid: d4bdc940a8904284e9c0215382f9a898, type: 3}
+  m_PrefabInstance: {fileID: 6096265207034214812}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4013565733720443171 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7145317244548853951, guid: d4bdc940a8904284e9c0215382f9a898, type: 3}

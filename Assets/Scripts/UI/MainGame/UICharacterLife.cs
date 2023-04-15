@@ -11,7 +11,13 @@ namespace NSS
         private Slider lifeGauge;
 
         [SerializeField]
+        private Image fillImage;
+
+        [SerializeField]
         private UISpriteNumber lifeNumber;
+
+        [SerializeField]
+        private LifeGaugeColorProfile colorProfile;
 
         public virtual Character OwnerCharacter
         {
@@ -45,13 +51,9 @@ namespace NSS
                     if (lifeGauge)
                     {
                         lifeGauge.maxValue = newLifeComp.MaxValue;
-                        lifeGauge.value = newLifeComp.Value;
                     }
 
-                    if (lifeNumber)
-                    {
-                        lifeNumber.Value = (int)newLifeComp.Value;
-                    }
+                    OnLifeChanged(newLifeComp.Value);
                 }
             }
         }
@@ -106,6 +108,12 @@ namespace NSS
             if (lifeGauge)
             {
                 lifeGauge.value = value;
+
+                // Update gauge color according to the color profile.
+                if (colorProfile && fillImage)
+                {
+                    fillImage.color = colorProfile.FindColor(lifeGauge.normalizedValue);
+                }
             }
             if (lifeNumber)
             {

@@ -11,10 +11,16 @@ namespace NSS
         private Slider slider;
 
         [SerializeField]
+        private Image fillImage;
+
+        [SerializeField]
         private UISpriteNumber currentValue;
 
         [SerializeField]
         private UISpriteNumber maxValue;
+
+        [SerializeField]
+        private LifeGaugeColorProfile colorProfile;
 
         private Player player;
 
@@ -54,6 +60,12 @@ namespace NSS
             if (slider)
             {
                 slider.value = value;
+
+                // Update gauge color according to the color profile.
+                if (colorProfile && fillImage)
+                {
+                    fillImage.color = colorProfile.FindColor(slider.normalizedValue);
+                }
             }
             if (currentValue)
             {

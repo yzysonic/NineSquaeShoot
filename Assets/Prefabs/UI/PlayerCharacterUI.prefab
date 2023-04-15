@@ -121,6 +121,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d7ddfe269ab846b853378d9d6b4d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1975337122088018614 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1403477417838087006, guid: cf07199267bcf55498d22aea6804d265, type: 3}
+  m_PrefabInstance: {fileID: 582065938517944808}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3271716111315920151 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2698942171907558655, guid: cf07199267bcf55498d22aea6804d265, type: 3}
@@ -155,12 +166,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeGauge: {fileID: 4584916373043486923}
+  fillImage: {fileID: 1975337122088018614}
   lifeNumber: {fileID: 1417579907412358301}
+  colorProfile: {fileID: 11400000, guid: c4efa45576a40b547b78ca158a4156c0, type: 2}
   counterGauge: {fileID: 1132768881578971777}
   counterGaugeColorImage: {fileID: 3130367639532228860}
   counterGaugeEmisionBoost: 5
   counterNormalColor: {r: 0.9607843, g: 0.5803922, b: 0.23921569, a: 1}
   counterFullColor: {r: 1, g: 0.10980392, b: 0.7254902, a: 1}
+  counterExecutingColor: {r: 1, g: 1, b: 1, a: 1}
   counterColorFlashSpeed: 10
 --- !u!1001 &7823072952604107326
 PrefabInstance:
