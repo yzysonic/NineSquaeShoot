@@ -40,7 +40,7 @@ namespace NSS
 
         private void OnEnable()
         {
-            Time.timeScale = 0.0f;
+            GamePause.SetPause(true);
             resumeButton.Select();
             background.SetActive(true);
             PauseStateChanged?.Invoke(true);
@@ -52,7 +52,7 @@ namespace NSS
 
         private void OnDisable()
         {
-            Time.timeScale = 1.0f;
+            GamePause.SetPause(false);
             background.SetActive(false);
             PauseStateChanged?.Invoke(false);
             GlobalAsset.Instance.MainAudioMixer.SetFloat("BGM", originalBGMVolume);

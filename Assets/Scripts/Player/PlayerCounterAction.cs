@@ -50,6 +50,7 @@ namespace NSS
 
         private Player player;
         private CharacterMovement movement;
+        private PlayerCounterPerformance performance;
         private Animator animator;
         private Timer coolTimer;
         private EState state = EState.None;
@@ -59,6 +60,7 @@ namespace NSS
         {
             player = GetComponent<Player>();
             movement = GetComponent<CharacterMovement>();
+            performance = GetComponent<PlayerCounterPerformance>();
             animator = GetComponent<Animator>();
             coolTimer = new Timer(coolTime);
             InitCoolTimer();
@@ -73,7 +75,7 @@ namespace NSS
 
             if (state == EState.Cooling)
             {
-                if(coolTimer.IsComplete)
+                if (coolTimer.IsComplete)
                 {
                     state = EState.Ready;
                     if (effectAnimator)
@@ -113,12 +115,17 @@ namespace NSS
                 effectAnimator.enabled = false;
             }
 
+            if (performance)
+            {
+                performance.StartSlowPerformance();
+            }
+
             if (PreCounterExecuted != null)
             {
                 PreCounterExecuted.Invoke();
             }
 
-            coolTimer.Reset();
+            coolTimer.Reset(coolTime);
             state = EState.Executing;
         }
 
@@ -141,6 +148,11 @@ namespace NSS
                     projectile.Velocity = projectileVelocity / 100.0f;
                     projectile.Damage = (uint)(receivedDamage * projectileDamageBonusRate);
                     projectile.Life = (int)(projectileLifeBounusRate * projectile.Life);
+                }
+
+                if (player.AudioPlayer)
+                {
+                    player.AudioPlayer.Play(ECharacterAudio.SkillFire);
                 }
             }
 
@@ -182,6 +194,11 @@ namespace NSS
         public void SetCounterValidFlag(bool flag)
         {
             CanCounter = state == EState.Executing && flag;
+
+            if (!flag && performance)
+            {
+                performance.StopSlowPerformance();
+            }
         }
 
         public void ProcessDamage(DamageInfo damageInfo)
@@ -210,6 +227,11 @@ namespace NSS
                 {
                     effectAnimator.gameObject.SetActive(false);
                 }
+            }
+
+            if (performance)
+            {
+                performance.StopSlowPerformance();
             }
         }
 

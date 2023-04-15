@@ -259,8 +259,12 @@ namespace NSS
         public FieldBlock PickOneAvailableBlockRandomly(ETeam team)
         {
             List<FieldBlock> blocks = GetAvailaleBlocks(team);
-            int blockNo = Random.Range(0, blocks.Count - 1);
-            return blocks[blockNo];
+            if (blocks != null && blocks.Count > 0)
+            {
+                int blockNo = Random.Range(0, blocks.Count - 1);
+                return blocks[blockNo];
+            }
+            return null;
         }
 
         public void OnObjectEnteredBlock(FieldBlock block)

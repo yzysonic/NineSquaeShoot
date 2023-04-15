@@ -116,9 +116,9 @@ namespace NSS
             Elapsed += IsStepEvenWhenPause ? Time.unscaledDeltaTime : Time.deltaTime;
         }
 
-        public void Step(float speedScale)
+        public void Step(float deltaTime)
         {
-            Elapsed += (IsStepEvenWhenPause ? Time.unscaledDeltaTime : Time.deltaTime) * speedScale;
+            Elapsed += deltaTime;
         }
 
         public void Reset()

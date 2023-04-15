@@ -331,6 +331,10 @@ PrefabInstance:
       propertyPath: defeatAudio
       value: 
       objectReference: {fileID: 8300000, guid: eb4bd84675a770648902a03f1c4b0f9c, type: 3}
+    - target: {fileID: 1705918985620043624, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
+      propertyPath: skillFireAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: a0c7971561c3f144a89d9a40f1b40958, type: 3}
     - target: {fileID: 4700756581628002208, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -404,6 +408,21 @@ MonoBehaviour:
   projectileDamageBonusRate: 1.5
   projectileLifeBounusRate: 5
   effectAnimator: {fileID: 851060329685061059}
+--- !u!114 &9046890601229100041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7947600587548326515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2538c64c4e9f37541b62d010b56c7409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowScale: 0.3
+  slowTrasitionDuration: 0.3
+  BGMLowpassFreq: 450
 --- !u!4 &8930757042930183594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1305865208264200896, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}

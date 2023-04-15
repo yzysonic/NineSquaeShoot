@@ -9,6 +9,7 @@ namespace NSS
         Fire,
         Damage,
         Defeat,
+        SkillFire
     }
 
     [RequireComponent(typeof(AudioSource))]
@@ -22,6 +23,9 @@ namespace NSS
 
         [SerializeField]
         private AudioClip defeatAudio;
+
+        [SerializeField]
+        private AudioClip skillFireAudio;
 
         private AudioSource audioSource;
 
@@ -46,6 +50,10 @@ namespace NSS
 
                 case ECharacterAudio.Defeat:
                     audioClip = defeatAudio;
+                    break;
+
+                case ECharacterAudio.SkillFire:
+                    audioClip = skillFireAudio;
                     break;
             }
 
