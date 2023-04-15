@@ -2566,10 +2566,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc133848e50d55641b8372f76927ff63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefabs:
-  - {fileID: 115245803412400028, guid: ad0c4be40fca42d4cabfd3613ed804c7, type: 3}
-  - {fileID: 115245803412400028, guid: a049777685f21b34c9b27b8ec0ed6a56, type: 3}
-  - {fileID: 115245803412400028, guid: 4fb8ef9dd00652848a2808b0545312b7, type: 3}
+  itemInfos:
+  - prefab: {fileID: 115245803412400028, guid: ad0c4be40fca42d4cabfd3613ed804c7, type: 3}
+    maxDropNum: -1
+  - prefab: {fileID: 115245803412400028, guid: a049777685f21b34c9b27b8ec0ed6a56, type: 3}
+    maxDropNum: 2
+  - prefab: {fileID: 115245803412400028, guid: 4fb8ef9dd00652848a2808b0545312b7, type: 3}
+    maxDropNum: 2
   itemDropTimeInterval: 30
   itemDropScoreInterval: 500
   timeDropWeightTable:

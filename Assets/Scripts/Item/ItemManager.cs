@@ -7,7 +7,16 @@ namespace NSS
 {
     public class ItemManager : Singleton<ItemManager>
     {
-        [System.Serializable]
+        [Serializable]
+        struct ItemInfo
+        {
+            public GameObject prefab;
+
+            [Tooltip("-1: unlimited"), Range(-1f, 1000)]
+            public int maxDropNum;
+        }
+
+        [Serializable]
         struct DropWeightParm
         {
             public int itemID;
@@ -15,7 +24,7 @@ namespace NSS
         }
 
         [SerializeField]
-        private List<GameObject> itemPrefabs;
+        private List<ItemInfo> itemInfos;
 
         [SerializeField]
         private float itemDropTimeInterval = 30.0f;
@@ -34,6 +43,7 @@ namespace NSS
         private int nextDropItemScore = 0;
 
         private Dictionary<ItemBase, FieldBlock> itemFieldMap;
+        private List<int> itemStock;
 
         protected override void Awake()
         {
@@ -41,7 +51,10 @@ namespace NSS
             nextDropItemScore = itemDropScoreInterval;
             timer = new Timer(itemDropTimeInterval);
             itemFieldMap = new Dictionary<ItemBase, FieldBlock>();
+            itemStock = new List<int>();
             ScoreManager.Instance.CurrentScoreChanged += OnScoreChanged;
+
+            InitStock();
         }
 
         private void Update()
@@ -54,6 +67,15 @@ namespace NSS
             }
         }
 
+        private void InitStock()
+        {
+            itemStock.Clear();
+            foreach(ItemInfo item in itemInfos)
+            {
+                itemStock.Add(item.maxDropNum);
+            }
+        }
+
         private void DropItem(List<DropWeightParm> weightParam)
         {
             // Find a available block to drop.
@@ -63,15 +85,25 @@ namespace NSS
                 return;
             }
 
+            // Remove out of stock items.
+            List<DropWeightParm> filteredWeightParam = new(weightParam);
+            filteredWeightParam.RemoveAll(param => itemStock[param.itemID] == 0);
+
             // Determine what type of item to drop.
-            int itemID = DrawItemType(weightParam);
-            if (itemID >= itemPrefabs.Count)
+            int itemID = DrawItemType(filteredWeightParam);
+            if (itemID < 0 || itemID >= itemInfos.Count)
             {
                 return;
             }
 
+            // Update item stock.
+            if (itemStock[itemID] > 0)
+            {
+                itemStock[itemID]--;
+            }
+
             // Instantiate the item.
-            GameObject itemObj = Instantiate(itemPrefabs[itemID]);
+            GameObject itemObj = Instantiate(itemInfos[itemID].prefab);
             ItemBase item = itemObj ? itemObj.GetComponent<ItemBase>() : null;
 
             // Drop the item to the block.
@@ -86,7 +118,7 @@ namespace NSS
         {
             if (weightParam.Count == 0)
             {
-                return 0;
+                return -1;
             }
 
             float weightSum = 0;
@@ -159,6 +191,8 @@ namespace NSS
             }
 
             itemFieldMap.Clear();
+
+            InitStock();
         }
     }
 }
