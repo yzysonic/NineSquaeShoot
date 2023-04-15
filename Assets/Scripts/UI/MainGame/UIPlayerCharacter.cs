@@ -32,6 +32,8 @@ namespace NSS
 
         private bool isCounterExecuting = false;
 
+        private Material counterMaterial;
+
         public override Character OwnerCharacter
         {
             set
@@ -70,6 +72,14 @@ namespace NSS
             }
         }
 
+        private void Awake()
+        {
+            if (counterGaugeColorImage)
+            {
+                counterMaterial = Instantiate(counterGaugeColorImage.material);
+            }
+        }
+
         private void Update()
         {
             if (!isCounterExecuting && counterGauge && counterGauge.value >= 1.0f)
@@ -77,6 +87,14 @@ namespace NSS
                 float animFactor = Mathf.Sin(counterColorFlashTime * counterColorFlashSpeed);
                 UpdateCounterGaugeColor(animFactor);
                 counterColorFlashTime += Time.deltaTime;
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (counterMaterial)
+            {
+                Destroy(counterMaterial);
             }
         }
 
@@ -104,8 +122,8 @@ namespace NSS
             if (counterGaugeColorImage)
             {
                 counterGaugeColorImage.color = counterExecutingColor;
-                counterGaugeColorImage.material.SetColor("_EmisionColor", Color.white);
-                counterGaugeColorImage.material.SetFloat("_Boost", counterGaugeEmisionBoost);
+                counterMaterial.SetColor("_EmisionColor", Color.white);
+                counterMaterial.SetFloat("_Boost", counterGaugeEmisionBoost);
             }
         }
 
@@ -114,8 +132,8 @@ namespace NSS
             if (counterGaugeColorImage)
             {
                 counterGaugeColorImage.color = Color.Lerp(counterNormalColor, counterFullColor, animFactor);
-                counterGaugeColorImage.material.SetColor("_EmisionColor", Color.Lerp(Color.white, counterFullColor, animFactor));
-                counterGaugeColorImage.material.SetFloat("_Boost", Mathf.Lerp(1.0f, counterGaugeEmisionBoost, animFactor));
+                counterMaterial.SetColor("_EmisionColor", Color.Lerp(Color.white, counterFullColor, animFactor));
+                counterMaterial.SetFloat("_Boost", Mathf.Lerp(1.0f, counterGaugeEmisionBoost, animFactor));
             }
         }
     }
