@@ -68,6 +68,12 @@ namespace NSS
 
         private void UpdateEffect()
         {
+            // Clear renderTexture
+            RenderTexture rt = RenderTexture.active;
+            RenderTexture.active = renderTexture1;
+            GL.Clear(true, true, Color.clear);
+            RenderTexture.active = rt;
+
             // Apply outline effect
             Graphics.Blit(sourceTexture, renderTexture1, outlineMaterial);
 
