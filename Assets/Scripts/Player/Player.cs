@@ -41,6 +41,11 @@ namespace NSS
             }
         }
 
+        public override void OnDefeatPerformanceFinished()
+        {
+            ResultManager.Instance.DisplayResult();
+        }
+
         protected override void SetComponentsEnabledOnDefeated(bool value)
         {
             base.SetComponentsEnabledOnDefeated(value);

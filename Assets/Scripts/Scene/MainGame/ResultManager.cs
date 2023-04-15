@@ -11,7 +11,7 @@ namespace NSS
 
         public ScoreRankProfile ScoreRankProfile { get => scoreRankProfile; }
 
-        public void OnPlayerDefeated()
+        public void DisplayResult()
         {
             ScoreManager.Instance.UpdateRecord();
             GameUIManager.Instance.SetResultActive(true);

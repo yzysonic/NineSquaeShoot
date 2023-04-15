@@ -33,11 +33,14 @@ namespace NSS
 
         private int nextDropItemScore = 0;
 
+        private Dictionary<ItemBase, FieldBlock> itemFieldMap;
+
         protected override void Awake()
         {
             base.Awake();
             nextDropItemScore = itemDropScoreInterval;
             timer = new Timer(itemDropTimeInterval);
+            itemFieldMap = new Dictionary<ItemBase, FieldBlock>();
             ScoreManager.Instance.CurrentScoreChanged += OnScoreChanged;
         }
 
@@ -75,6 +78,7 @@ namespace NSS
             if (item)
             {
                 block.OnItemDropped(item);
+                itemFieldMap.Add(item, block);
             }
         }
 
@@ -121,6 +125,8 @@ namespace NSS
                     GameUIManager.Instance.ItemHander.CountupSpeedItem();
                 }
             }
+
+            OnItemExitField(item);
         }
 
         private void OnScoreChanged(int newScore)
@@ -130,6 +136,29 @@ namespace NSS
                 DropItem(scoreDropWeightTable);
                 nextDropItemScore += itemDropScoreInterval;
             }
+        }
+
+        public void OnItemExitField(ItemBase item, bool removeFormMap = true)
+        {
+            if (itemFieldMap.ContainsKey(item))
+            {
+                itemFieldMap[item].OnItemExit();
+                if (removeFormMap)
+                {
+                    itemFieldMap.Remove(item);
+                }
+            }
+        }
+
+        public void OnNewGameStarted()
+        {
+            foreach (ItemBase item in itemFieldMap.Keys)
+            {
+                OnItemExitField(item, false);
+                Destroy(item.gameObject);
+            }
+
+            itemFieldMap.Clear();
         }
     }
 }

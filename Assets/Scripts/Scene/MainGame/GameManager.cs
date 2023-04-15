@@ -37,7 +37,7 @@ namespace NSS
             MainGameTimer.Instance.enabled = false;
             ScoreManager.Instance.IsScoreReadonly = true;
             EnemyManager.Instance.EnableSpawnEnemy = false;
-            ResultManager.Instance.OnPlayerDefeated();
+            BGMPlayer.Instance.Stop();
         }
 
         public void StartNewGame()
@@ -46,6 +46,7 @@ namespace NSS
             ScoreManager.Instance.OnNewGameStarted();
             EnemyManager.Instance.OnNewGameStarted();
             GameUIManager.Instance.OnNewGameStarted();
+            ItemManager.Instance.OnNewGameStarted();
             BGMPlayer.Instance.FadeOutToPlayNextBGM("Default", 0.5f);
 
             if (Player)

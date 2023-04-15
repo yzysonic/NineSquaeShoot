@@ -83,6 +83,12 @@ namespace NSS
 
         public void TogglePause()
         {
+            if (result && result.gameObject.activeInHierarchy)
+            {
+                // Do not allow pause when result is displaying
+                return;
+            }
+
             if (pause)
             {
                 pause.gameObject.SetActive(!pause.gameObject.activeInHierarchy);

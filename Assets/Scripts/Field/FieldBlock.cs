@@ -186,6 +186,7 @@ namespace NSS
             // Destroy old item if there is any.
             if (droppedItem)
             {
+                ItemManager.Instance.OnItemExitField(droppedItem);
                 Destroy(droppedItem.gameObject);
             }
 
@@ -194,6 +195,15 @@ namespace NSS
 
             droppedItem = item;
             FieldManager.Instance.OnObjectEnteredBlock(this);
+        }
+
+        public void OnItemExit()
+        {
+            if (droppedItem)
+            {
+                FieldManager.Instance.OnObjectExitedBlock(this);
+                droppedItem = null;
+            }
         }
     }
 }

@@ -75,5 +75,13 @@ namespace NSS
                 CurrentAudioSource.Play();
             });
         }
+
+        public void Stop()
+        {
+            if (CurrentAudioSource)
+            {
+                CurrentAudioSource.Stop();
+            }
+        }
     }
 }

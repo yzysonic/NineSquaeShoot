@@ -66,6 +66,11 @@ namespace NSS
 
         private void Update()
         {
+            if (state == EState.None)
+            {
+                return;
+            }
+
             if (state == EState.Cooling)
             {
                 if(coolTimer.IsComplete)
@@ -171,6 +176,7 @@ namespace NSS
             {
                 effectAnimator.gameObject.SetActive(false);
             }
+            state = EState.None;
         }
 
         public void SetCounterValidFlag(bool flag)
