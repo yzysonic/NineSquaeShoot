@@ -16,6 +16,9 @@ namespace NSS
 
     public class Character : MonoBehaviour, IDamageReceiver
     {
+        [SerializeField]
+        private GameObject entryEffectObject;
+
         public ETeam Team { get; set; } = ETeam.none;
         public FieldBlock StayingBlock
         {
@@ -104,6 +107,11 @@ namespace NSS
             if (movement)
             {
                 movement.TryEnterBlock(block);
+            }
+
+            if (entryEffectObject)
+            {
+                Instantiate(entryEffectObject, transform.position, Quaternion.identity);
             }
         }
 

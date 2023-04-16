@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad1343982ec8a54ab8a3d5f000d4bb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entryEffectObject: {fileID: 7327926215633487253, guid: d2673e4d520878146887aa01ab7ddd7c, type: 3}
   moveInterval: 1
   baseScore: 100
 --- !u!114 &7459154850050120555
