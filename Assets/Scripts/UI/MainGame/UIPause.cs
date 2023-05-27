@@ -17,6 +17,12 @@ namespace NSS
         private Button resumeButton;
 
         [SerializeField]
+        private Slider BGMSlider;
+
+        [SerializeField]
+        private Slider SoundSlider;
+
+        [SerializeField]
         private float overrideBGMVolume = -10;
 
         private float originalBGMVolume = 0.0f;
@@ -29,11 +35,25 @@ namespace NSS
             {
                 mainMenuButton.onClick.AddListener(OnMainMenuButtonPressed);
             }
+
             if (resumeButton)
             {
                 resumeButton.onClick.AddListener(OnResumeButtonPressed);
                 DefaultSelectedButton = (UIMenuButton)resumeButton;
             }
+
+            if (BGMSlider)
+            {
+                BGMSlider.value = PlayerPrefs.GetFloat("BGMSoundVolume", 1);
+                BGMSlider.onValueChanged.AddListener(OnBGMSliderValueChange);
+            }
+
+            if (SoundSlider)
+            {
+                SoundSlider.value = PlayerPrefs.GetFloat("EffectSoundVolume", 1);
+                SoundSlider.onValueChanged.AddListener(OnSoundSliderrValueChange);
+            }
+
 
             base.Awake();
         }
@@ -73,5 +93,15 @@ namespace NSS
             gameObject.SetActive(false);
         }
 
+        private void OnBGMSliderValueChange(float value)
+        {
+            BGMPlayer.Instance.SetBGMValue(value);
+        }
+
+        private void OnSoundSliderrValueChange(float value)
+        {
+            UISEPlayer.Instance.SetSoundValue(value);
+        }
+        
     }
 }

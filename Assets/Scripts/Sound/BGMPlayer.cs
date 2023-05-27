@@ -35,17 +35,20 @@ namespace NSS
 
         public AudioSource CurrentAudioSource { get; private set; }
 
+        private float soundVolume = 1;
+
         protected override void Awake()
         {
             base.Awake();
 
             AudioSources = new(audioList.Count);
+            soundVolume = PlayerPrefs.GetFloat("BGMSoundVolume", 1);
 
             foreach (var info in audioList)
             {
                 var source = gameObject.AddComponent<AudioSource>();
                 source.clip = info.clip;
-                source.volume = info.volume;
+                source.volume = soundVolume;
                 source.playOnAwake = false;
                 source.outputAudioMixerGroup = audioMixerGroup;
                 source.loop = true;
@@ -61,6 +64,8 @@ namespace NSS
                 AudioSources[AfterIntroAudioName].PlayScheduled(AudioSettings.dspTime + AudioSources[StartAudioName].clip.length + startDelay);
             }
 
+            
+
             CurrentAudioSource = AudioSources[StartAudioName];
         }
 
@@ -69,11 +74,22 @@ namespace NSS
             var fade = AudioMixerFader.Instance;
             fade.Out(fadeOutTime, () => 
             {
+                CurrentAudioSource.volume = soundVolume;
                 CurrentAudioSource.Stop();
                 fade.Set(1.0f);
                 CurrentAudioSource = AudioSources[nextAudio];
                 CurrentAudioSource.Play();
             });
+        }
+
+        public void SetBGMValue(float value)
+        {
+            foreach (var source in AudioSources)
+            {
+                source.Value.volume = value;
+            }
+
+            PlayerPrefs.SetFloat("BGMSoundVolume", value);
         }
     }
 }
