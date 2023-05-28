@@ -35,20 +35,17 @@ namespace NSS
 
         public AudioSource CurrentAudioSource { get; private set; }
 
-        private float soundVolume = 1;
-
         protected override void Awake()
-        {
+        {       
             base.Awake();
 
             AudioSources = new(audioList.Count);
-            soundVolume = PlayerPrefs.GetFloat("BGMSoundVolume", 1);
 
             foreach (var info in audioList)
             {
                 var source = gameObject.AddComponent<AudioSource>();
                 source.clip = info.clip;
-                source.volume = soundVolume;
+                source.volume = info.volume;
                 source.playOnAwake = false;
                 source.outputAudioMixerGroup = audioMixerGroup;
                 source.loop = true;
@@ -64,9 +61,9 @@ namespace NSS
                 AudioSources[AfterIntroAudioName].PlayScheduled(AudioSettings.dspTime + AudioSources[StartAudioName].clip.length + startDelay);
             }
 
-            
+            CurrentAudioSource = AudioSources[StartAudioName];         
 
-            CurrentAudioSource = AudioSources[StartAudioName];
+             
         }
 
         public void FadeOutToPlayNextBGM(string nextAudio, float fadeOutTime)
@@ -74,7 +71,6 @@ namespace NSS
             var fade = AudioMixerFader.Instance;
             fade.Out(fadeOutTime, () => 
             {
-                CurrentAudioSource.volume = soundVolume;
                 CurrentAudioSource.Stop();
                 fade.Set(1.0f);
                 CurrentAudioSource = AudioSources[nextAudio];
@@ -82,14 +78,13 @@ namespace NSS
             });
         }
 
-        public void SetBGMValue(float value)
+        void Update()
         {
-            foreach (var source in AudioSources)
-            {
-                source.Value.volume = value;
-            }
+            float MasterVolume = PlayerPrefs.GetFloat("MasterSoundVolume", -15);
+            float BGMVolume = PlayerPrefs.GetFloat("BGMSoundVolume", 0);
 
-            PlayerPrefs.SetFloat("BGMSoundVolume", value);
+            GlobalAsset.Instance.MainAudioMixer.SetFloat("Master", MasterVolume);
+            GlobalAsset.Instance.MainAudioMixer.SetFloat("BGM", BGMVolume);  
         }
     }
 }

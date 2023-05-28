@@ -10,8 +10,6 @@ namespace NSS
     {
         private AudioSource audioSource;
 
-        private float soundVolume = 1;
-
         protected override void Awake()
         {
             base.Awake();
@@ -22,22 +20,23 @@ namespace NSS
             }
             DontDestroyOnLoad(gameObject);
 
-            soundVolume = PlayerPrefs.GetFloat("EffectSoundVolume", 1);
+            
         }
 
         public void PlayOneShot(AudioClip clip)
-        {
+        {       
             if (audioSource)
             {
-                audioSource.volume = soundVolume;
                 audioSource.PlayOneShot(clip);
             }
         }
 
-        public void SetSoundValue(float value)
+        void Update()
         {
-            soundVolume = value;
-            PlayerPrefs.SetFloat("EffectSoundVolume", value);
+            float effectVolume = PlayerPrefs.GetFloat("EffectSoundVolume", 5);
+
+            GlobalAsset.Instance.MainAudioMixer.SetFloat("GameSE", effectVolume);
+            GlobalAsset.Instance.MainAudioMixer.SetFloat("UISE", effectVolume);
         }
     }
 }

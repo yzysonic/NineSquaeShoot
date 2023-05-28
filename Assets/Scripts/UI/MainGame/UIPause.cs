@@ -17,13 +17,16 @@ namespace NSS
         private Button resumeButton;
 
         [SerializeField]
+        private Slider MasterSlider;
+
+        [SerializeField]
         private Slider BGMSlider;
 
         [SerializeField]
-        private Slider SoundSlider;
+        private Slider EffectSlider;
 
         [SerializeField]
-        private float overrideBGMVolume = -10;
+        private float overrideBGMVolume = 10;
 
         private float originalBGMVolume = 0.0f;
 
@@ -42,16 +45,22 @@ namespace NSS
                 DefaultSelectedButton = (UIMenuButton)resumeButton;
             }
 
+            if (MasterSlider)
+            {
+                MasterSlider.value = PlayerPrefs.GetFloat("MasterSoundVolume", -15);
+                MasterSlider.onValueChanged.AddListener(OnMasterSliderValueChange);
+            }
+
             if (BGMSlider)
             {
-                BGMSlider.value = PlayerPrefs.GetFloat("BGMSoundVolume", 1);
+                BGMSlider.value = PlayerPrefs.GetFloat("BGMSoundVolume", -15);
                 BGMSlider.onValueChanged.AddListener(OnBGMSliderValueChange);
             }
 
-            if (SoundSlider)
+            if (EffectSlider)
             {
-                SoundSlider.value = PlayerPrefs.GetFloat("EffectSoundVolume", 1);
-                SoundSlider.onValueChanged.AddListener(OnSoundSliderrValueChange);
+                EffectSlider.value = PlayerPrefs.GetFloat("EffectSoundVolume", -15);
+                EffectSlider.onValueChanged.AddListener(OnEffectSliderrValueChange);
             }
 
 
@@ -65,9 +74,10 @@ namespace NSS
             background.SetActive(true);
             PauseStateChanged?.Invoke(true);
 
+            
+            //GlobalAsset.Instance.MainAudioMixer.GetFloat("BGM", out originalBGMVolume);
+            //GlobalAsset.Instance.MainAudioMixer.SetFloat("BGM", originalBGMVolume - overrideBGMVolume);
 
-            GlobalAsset.Instance.MainAudioMixer.GetFloat("BGM", out originalBGMVolume);
-            GlobalAsset.Instance.MainAudioMixer.SetFloat("BGM", overrideBGMVolume);
         }
 
         private void OnDisable()
@@ -75,7 +85,7 @@ namespace NSS
             Time.timeScale = 1.0f;
             background.SetActive(false);
             PauseStateChanged?.Invoke(false);
-            GlobalAsset.Instance.MainAudioMixer.SetFloat("BGM", originalBGMVolume);
+            //GlobalAsset.Instance.MainAudioMixer.SetFloat("BGM", originalBGMVolume);
 
             if (EventSystem.current)
             {
@@ -93,14 +103,19 @@ namespace NSS
             gameObject.SetActive(false);
         }
 
-        private void OnBGMSliderValueChange(float value)
+        private void OnMasterSliderValueChange(float value)
         {
-            BGMPlayer.Instance.SetBGMValue(value);
+            GlobalAsset.Instance.SetMasterVolume(value);
         }
 
-        private void OnSoundSliderrValueChange(float value)
+        private void OnBGMSliderValueChange(float value)
         {
-            UISEPlayer.Instance.SetSoundValue(value);
+            GlobalAsset.Instance.SetBGMVolume(value);
+        }
+
+        private void OnEffectSliderrValueChange(float value)
+        {
+            GlobalAsset.Instance.SetEffectVolume(value);
         }
         
     }
