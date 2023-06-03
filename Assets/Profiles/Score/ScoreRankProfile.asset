@@ -13,21 +13,15 @@ MonoBehaviour:
   m_Name: ScoreRankProfile
   m_EditorClassIdentifier: 
   rankList:
-  - scoreMax: 1000
-    rank: 1
-  - scoreMax: 4000
+  - scoreMax: 3000
     rank: 2
-  - scoreMax: 5500
+  - scoreMax: 5000
     rank: 3
-  - scoreMax: 9000
+  - scoreMax: 7000
     rank: 4
-  - scoreMax: 11000
+  - scoreMax: 9000
     rank: 5
-  - scoreMax: 13000
+  - scoreMax: 10000
     rank: 6
-  - scoreMax: 15000
-    rank: 7
-  - scoreMax: 17500
-    rank: 8
   - scoreMax: 20000
-    rank: 9
+    rank: 7

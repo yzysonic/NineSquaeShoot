@@ -2574,17 +2574,17 @@ MonoBehaviour:
   - prefab: {fileID: 115245803412400028, guid: 4fb8ef9dd00652848a2808b0545312b7, type: 3}
     maxDropNum: 10
   itemDropTimeInterval: 30
-  itemDropScoreInterval: 1000
+  itemDropScoreInterval: 500
   timeDropWeightTable:
   - itemID: 0
-    weight: 50
+    weight: 40
   - itemID: 1
-    weight: 25
+    weight: 30
   - itemID: 2
-    weight: 25
+    weight: 30
   scoreDropWeightTable:
   - itemID: 0
-    weight: 20
+    weight: 30
   - itemID: 1
     weight: 40
   - itemID: 2
