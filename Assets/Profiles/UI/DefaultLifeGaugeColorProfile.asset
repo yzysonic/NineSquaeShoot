@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorSets:
   - thresholdRatio: 1
-    color: {r: 0.23529412, g: 0.78039217, b: 0.5686275, a: 1}
+    color: {r: 0.035793543, g: 1, b: 0, a: 1}
   - thresholdRatio: 0.6
-    color: {r: 0.8018868, g: 0.3793205, b: 0.15508187, a: 1}
+    color: {r: 0.9607843, g: 0.9281968, b: 0.06666665, a: 1}
   - thresholdRatio: 0.3
-    color: {r: 0.8, g: 0.15686274, b: 0.3575837, a: 1}
+    color: {r: 1, g: 0.07371545, b: 0, a: 1}

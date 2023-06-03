@@ -376,6 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51fad463a2b4df43b9cde7c01954219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entryEffectObject: {fileID: 0}
 --- !u!114 &5933791591109063819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,11 +402,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coolTime: 5
-  failDamageBonusRate: 1.5
+  failDamageBonusRate: 2
   firePoint: {fileID: 2651038226484292546}
   projectilePrefab: {fileID: 5414060531969112104, guid: 1ec14a90f452c4740b93732acc970365, type: 3}
   projectileVelocity: 1600
-  projectileDamageBonusRate: 1.5
+  projectileDamageBonusRate: 5
   projectileLifeBounusRate: 5
   effectAnimator: {fileID: 851060329685061059}
 --- !u!114 &9046890601229100041
@@ -423,6 +424,7 @@ MonoBehaviour:
   slowScale: 0.3
   slowTrasitionDuration: 0.3
   BGMLowpassFreq: 450
+  BGMVolume: -10
 --- !u!4 &8930757042930183594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1305865208264200896, guid: 206a3c47821efae40a6fb8c03084a3c2, type: 3}

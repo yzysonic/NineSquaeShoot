@@ -2570,25 +2570,25 @@ MonoBehaviour:
   - prefab: {fileID: 115245803412400028, guid: ad0c4be40fca42d4cabfd3613ed804c7, type: 3}
     maxDropNum: -1
   - prefab: {fileID: 115245803412400028, guid: a049777685f21b34c9b27b8ec0ed6a56, type: 3}
-    maxDropNum: 2
+    maxDropNum: 10
   - prefab: {fileID: 115245803412400028, guid: 4fb8ef9dd00652848a2808b0545312b7, type: 3}
-    maxDropNum: 2
+    maxDropNum: 10
   itemDropTimeInterval: 30
-  itemDropScoreInterval: 500
+  itemDropScoreInterval: 1000
   timeDropWeightTable:
   - itemID: 0
-    weight: 30
+    weight: 50
   - itemID: 1
-    weight: 30
+    weight: 25
   - itemID: 2
-    weight: 40
+    weight: 25
   scoreDropWeightTable:
   - itemID: 0
-    weight: 60
+    weight: 20
   - itemID: 1
-    weight: 20
+    weight: 40
   - itemID: 2
-    weight: 20
+    weight: 40
 --- !u!4 &663229280
 Transform:
   m_ObjectHideFlags: 0
@@ -4461,7 +4461,7 @@ MonoBehaviour:
   baseEnemySpawnInterval: 3
   overrideSpawnIntervalOnEnemyEmpty: 2
   baseEnemySpawnMaxCount: 2
-  keepBlockFreeCount: 5
+  keepBlockFreeCount: 3
   enemyDiffcultyParamList:
   - scoreMax: 1000
     hpBonusRate: 1
@@ -4469,54 +4469,60 @@ MonoBehaviour:
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1
     spawnIntervalBonusRate: 1
-  - scoreMax: 2500
-    hpBonusRate: 1
-    damageBonusRate: 1
+  - scoreMax: 2000
+    hpBonusRate: 2.344
+    damageBonusRate: 1.03
     attackIntervalBonusRate: 1
-    spawnMaxCountBonusRate: 1.017
+    spawnMaxCountBonusRate: 1.1
+    spawnIntervalBonusRate: 1
+  - scoreMax: 3000
+    hpBonusRate: 3.804
+    damageBonusRate: 1.093
+    attackIntervalBonusRate: 1
+    spawnMaxCountBonusRate: 1.2
     spawnIntervalBonusRate: 1
   - scoreMax: 4000
-    hpBonusRate: 1
-    damageBonusRate: 1
+    hpBonusRate: 5.682
+    damageBonusRate: 1.193
     attackIntervalBonusRate: 1
-    spawnMaxCountBonusRate: 1.161
-    spawnIntervalBonusRate: 1
-  - scoreMax: 5500
-    hpBonusRate: 1
-    damageBonusRate: 1
+    spawnMaxCountBonusRate: 1.3
+    spawnIntervalBonusRate: 0.833
+  - scoreMax: 5000
+    hpBonusRate: 8.036
+    damageBonusRate: 1.338
     attackIntervalBonusRate: 1
-    spawnMaxCountBonusRate: 1.321
-    spawnIntervalBonusRate: 1
-  - scoreMax: 7000
-    hpBonusRate: 2
-    damageBonusRate: 1
+    spawnMaxCountBonusRate: 1.4
+    spawnIntervalBonusRate: 0.833
+  - scoreMax: 6000
+    hpBonusRate: 10.938
+    damageBonusRate: 1.543
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.5
-    spawnIntervalBonusRate: 1
+    spawnIntervalBonusRate: 0.833
+  - scoreMax: 7000
+    hpBonusRate: 14.474
+    damageBonusRate: 1.828
+    attackIntervalBonusRate: 1
+    spawnMaxCountBonusRate: 1.6
+    spawnIntervalBonusRate: 0.677
+  - scoreMax: 8000
+    hpBonusRate: 18.75
+    damageBonusRate: 2.223
+    attackIntervalBonusRate: 1
+    spawnMaxCountBonusRate: 1.7
+    spawnIntervalBonusRate: 0.677
   - scoreMax: 9000
-    hpBonusRate: 2
-    damageBonusRate: 1
+    hpBonusRate: 23.897
+    damageBonusRate: 2.773
     attackIntervalBonusRate: 1
-    spawnMaxCountBonusRate: 1.591
-    spawnIntervalBonusRate: 1
-  - scoreMax: 11000
-    hpBonusRate: 2
-    damageBonusRate: 1
+    spawnMaxCountBonusRate: 1.8
+    spawnIntervalBonusRate: 0.677
+  - scoreMax: 10000
+    hpBonusRate: 37.5
+    damageBonusRate: 3.548
     attackIntervalBonusRate: 1
-    spawnMaxCountBonusRate: 1.721
-    spawnIntervalBonusRate: 1
-  - scoreMax: 13000
-    hpBonusRate: 2
-    damageBonusRate: 1
-    attackIntervalBonusRate: 1
-    spawnMaxCountBonusRate: 1.852
-    spawnIntervalBonusRate: 1
-  - scoreMax: 15000
-    hpBonusRate: 2
-    damageBonusRate: 1
-    attackIntervalBonusRate: 1
-    spawnMaxCountBonusRate: 1.982
-    spawnIntervalBonusRate: 1
+    spawnMaxCountBonusRate: 1.9
+    spawnIntervalBonusRate: 0.5
 --- !u!4 &1743723130
 Transform:
   m_ObjectHideFlags: 0
