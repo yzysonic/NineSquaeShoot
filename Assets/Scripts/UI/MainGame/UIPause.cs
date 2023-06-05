@@ -17,6 +17,15 @@ namespace NSS
         private Button resumeButton;
 
         [SerializeField]
+        private Slider MasterSlider;
+
+        [SerializeField]
+        private Slider BGMSlider;
+
+        [SerializeField]
+        private Slider EffectSlider;
+
+        [SerializeField]
         private float overrideBGMVolume = -10;
 
         private float originalBGMVolume = 0.0f;
@@ -33,6 +42,24 @@ namespace NSS
             {
                 resumeButton.onClick.AddListener(OnResumeButtonPressed);
                 DefaultSelectedButton = (UIMenuButton)resumeButton;
+            }
+
+            if (MasterSlider)
+            {
+                MasterSlider.value = PlayerPrefs.GetFloat("MasterSoundVolume", -15);
+                MasterSlider.onValueChanged.AddListener(OnMasterSliderValueChange);
+            }
+
+            if (BGMSlider)
+            {
+                BGMSlider.value = PlayerPrefs.GetFloat("BGMSoundVolume", -15);
+                BGMSlider.onValueChanged.AddListener(OnBGMSliderValueChange);
+            }
+
+            if (EffectSlider)
+            {
+                EffectSlider.value = PlayerPrefs.GetFloat("EffectSoundVolume", -15);
+                EffectSlider.onValueChanged.AddListener(OnEffectSliderrValueChange);
             }
 
             base.Awake();
@@ -73,5 +100,19 @@ namespace NSS
             gameObject.SetActive(false);
         }
 
+        private void OnMasterSliderValueChange(float value)
+        {
+            GlobalAsset.Instance.SetMasterVolume(value);
+        }
+
+        private void OnBGMSliderValueChange(float value)
+        {
+            GlobalAsset.Instance.SetBGMVolume(value);
+        }
+
+        private void OnEffectSliderrValueChange(float value)
+        {
+            GlobalAsset.Instance.SetEffectVolume(value);
+        }
     }
 }

@@ -107,7 +107,7 @@ namespace NSS
             }
 
             // Set sound playback spped.
-            //GlobalAsset.Instance.MainAudioMixer.SetFloat("GameSE_Pitch", scale);
+            //GlobalAsset.Instance.MainAudioMixer.SetFloat("GameSE", scale);
         }
 
         private void SetPostEffects(float weight)

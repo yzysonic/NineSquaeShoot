@@ -83,5 +83,14 @@ namespace NSS
                 CurrentAudioSource.Stop();
             }
         }
+
+        void Update()
+        {
+            float MasterVolume = PlayerPrefs.GetFloat("MasterSoundVolume", -15);
+            float BGMVolume = PlayerPrefs.GetFloat("BGMSoundVolume", 0);
+
+            GlobalAsset.Instance.MainAudioMixer.SetFloat("Master", MasterVolume);
+            GlobalAsset.Instance.MainAudioMixer.SetFloat("BGM", BGMVolume);  
+        }
     }
 }

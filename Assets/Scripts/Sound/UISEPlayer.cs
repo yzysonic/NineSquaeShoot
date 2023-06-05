@@ -28,5 +28,13 @@ namespace NSS
                 audioSource.PlayOneShot(clip);
             }
         }
+
+        void Update()
+        {
+            float effectVolume = PlayerPrefs.GetFloat("EffectSoundVolume", 5);
+
+            GlobalAsset.Instance.MainAudioMixer.SetFloat("GameSE", effectVolume);
+            GlobalAsset.Instance.MainAudioMixer.SetFloat("UISE", effectVolume);
+        }
     }
 }

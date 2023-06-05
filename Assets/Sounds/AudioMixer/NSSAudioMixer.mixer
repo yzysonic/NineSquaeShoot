@@ -75,6 +75,12 @@ AudioMixerController:
     name: BGM_LowpassFreq
   - guid: 7b003516556b25f47a8153858e8ab9b6
     name: GameSE_Pitch
+  - guid: ec70948880cb95549add4ca8604fe506
+    name: GameSE
+  - guid: 601c7b130784fda49925e26b89525218
+    name: Master
+  - guid: 3865113c32c12904d8cb14202de8e773
+    name: UISE
   m_AudioMixerGroupViews:
   - guids:
     - 693f2f7e688b8f2478320f136fe1242d
