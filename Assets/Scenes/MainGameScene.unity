@@ -2355,6 +2355,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ResumeButton
       objectReference: {fileID: 0}
+    - target: {fileID: 6204755889446902348, guid: ef9272fe3b32fa14ca222e9480346425, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204755889446902348, guid: ef9272fe3b32fa14ca222e9480346425, type: 3}
+      propertyPath: m_Navigation.m_SelectOnUp
+      value: 
+      objectReference: {fileID: 1793991126}
+    - target: {fileID: 6204755889446902348, guid: ef9272fe3b32fa14ca222e9480346425, type: 3}
+      propertyPath: m_Navigation.m_SelectOnLeft
+      value: 
+      objectReference: {fileID: 493565433}
     - target: {fileID: 6204755889446902349, guid: ef9272fe3b32fa14ca222e9480346425, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4820,7 +4832,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4928271292517328676, guid: 9e616e28643a1b34a988eafa893d8df8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4928271292517328676, guid: 9e616e28643a1b34a988eafa893d8df8, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4828,7 +4840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4928271292517328676, guid: 9e616e28643a1b34a988eafa893d8df8, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4928271292989000313, guid: 9e616e28643a1b34a988eafa893d8df8, type: 3}
       propertyPath: m_Name
@@ -4924,7 +4936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4928271293159127937, guid: 9e616e28643a1b34a988eafa893d8df8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4928271293159127937, guid: 9e616e28643a1b34a988eafa893d8df8, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5756,6 +5768,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenuButton
       objectReference: {fileID: 0}
+    - target: {fileID: 6204755889446902348, guid: ef9272fe3b32fa14ca222e9480346425, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204755889446902348, guid: ef9272fe3b32fa14ca222e9480346425, type: 3}
+      propertyPath: m_Navigation.m_SelectOnUp
+      value: 
+      objectReference: {fileID: 1793991126}
+    - target: {fileID: 6204755889446902348, guid: ef9272fe3b32fa14ca222e9480346425, type: 3}
+      propertyPath: m_Navigation.m_SelectOnRight
+      value: 
+      objectReference: {fileID: 438876917}
     - target: {fileID: 6204755889446902349, guid: ef9272fe3b32fa14ca222e9480346425, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
