@@ -2577,18 +2577,18 @@ MonoBehaviour:
   itemDropScoreInterval: 500
   timeDropWeightTable:
   - itemID: 0
-    weight: 40
-  - itemID: 1
     weight: 20
-  - itemID: 2
+  - itemID: 1
     weight: 40
+  - itemID: 2
+    weight: 20
   scoreDropWeightTable:
   - itemID: 0
     weight: 20
   - itemID: 1
-    weight: 60
-  - itemID: 2
     weight: 20
+  - itemID: 2
+    weight: 40
 --- !u!4 &663229280
 Transform:
   m_ObjectHideFlags: 0
