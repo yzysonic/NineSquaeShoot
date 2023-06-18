@@ -80,4 +80,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   getEffect: {fileID: 681900231686548213, guid: 9f1ad8fe34057714a8ae10e79d24c1c1, type: 3}
-  addFireSpeed: 10
+  addFireSpeed: 15
