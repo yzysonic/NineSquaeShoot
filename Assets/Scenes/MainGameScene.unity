@@ -2589,18 +2589,18 @@ MonoBehaviour:
   itemDropScoreInterval: 500
   timeDropWeightTable:
   - itemID: 0
-    weight: 20
+    weight: 10
   - itemID: 1
-    weight: 40
+    weight: 80
   - itemID: 2
-    weight: 20
+    weight: 10
   scoreDropWeightTable:
   - itemID: 0
-    weight: 20
+    weight: 10
   - itemID: 1
-    weight: 20
+    weight: 10
   - itemID: 2
-    weight: 40
+    weight: 80
 --- !u!4 &663229280
 Transform:
   m_ObjectHideFlags: 0
@@ -4071,7 +4071,7 @@ Transform:
   m_GameObject: {fileID: 1321472784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8, y: 4.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0059, y: 1.0089, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4640,61 +4640,61 @@ MonoBehaviour:
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1
     spawnIntervalBonusRate: 1
-  - scoreMax: 2000
+  - scoreMax: 3000
     hpBonusRate: 1.875
     damageBonusRate: 1.03
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.1
     spawnIntervalBonusRate: 1
-  - scoreMax: 3000
+  - scoreMax: 5000
     hpBonusRate: 3.043
     damageBonusRate: 1.077
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.2
     spawnIntervalBonusRate: 1
-  - scoreMax: 4000
+  - scoreMax: 6000
     hpBonusRate: 4.545
     damageBonusRate: 1.148
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.3
     spawnIntervalBonusRate: 0.833
-  - scoreMax: 5000
+  - scoreMax: 7000
     hpBonusRate: 6.429
     damageBonusRate: 1.246
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.4
     spawnIntervalBonusRate: 0.833
-  - scoreMax: 6000
+  - scoreMax: 8000
     hpBonusRate: 8.75
     damageBonusRate: 1.379
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.5
     spawnIntervalBonusRate: 0.833
-  - scoreMax: 7000
+  - scoreMax: 9000
     hpBonusRate: 11.579
     damageBonusRate: 1.554
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.6
     spawnIntervalBonusRate: 0.677
-  - scoreMax: 8000
+  - scoreMax: 10000
     hpBonusRate: 15
     damageBonusRate: 1.783
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.7
     spawnIntervalBonusRate: 0.677
-  - scoreMax: 9000
+  - scoreMax: 12000
     hpBonusRate: 19.118
     damageBonusRate: 2.084
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.8
     spawnIntervalBonusRate: 0.677
-  - scoreMax: 10000
+  - scoreMax: 14000
     hpBonusRate: 24.062
     damageBonusRate: 2.478
     attackIntervalBonusRate: 1
     spawnMaxCountBonusRate: 1.9
     spawnIntervalBonusRate: 0.5
-  - scoreMax: 13000
+  - scoreMax: 16000
     hpBonusRate: 30
     damageBonusRate: 2.999
     attackIntervalBonusRate: 1
