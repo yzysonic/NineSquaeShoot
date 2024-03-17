@@ -23,6 +23,9 @@ namespace NSS
         [SerializeField]
         private Text versionInfo;
 
+        [SerializeField]
+        private RectTransform LobbyCanvas;
+
         protected override void Awake()
         {
             if (startGameButton)
@@ -48,8 +51,9 @@ namespace NSS
 
         private void OnStartGameButtonPressed()
         {
-            EventSystem.current.enabled = false;
-            FadeManager.Instance.LoadSceneWithFade("MainGameScene");
+            /* EventSystem.current.enabled = false;
+             FadeManager.Instance.LoadSceneWithFade("MainGameScene");*/
+            LobbyCanvas.gameObject.SetActive(true);
         }
 
         private void OnLeaderboardButtonPressed()
