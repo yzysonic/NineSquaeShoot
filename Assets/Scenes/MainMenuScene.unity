@@ -29534,7 +29534,7 @@ MonoBehaviour:
   CharacterShadowTransform: {fileID: 4152446215338780039}
   CharacterIdleTransform: {fileID: 560436497}
   CharacterMoveTransform: {fileID: 2105607320}
-  Speed: 200
+  Speed: 600
   CurrentShowTarget: {fileID: 0}
 --- !u!95 &9202553424130971371
 Animator:
