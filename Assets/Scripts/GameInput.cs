@@ -879,45 +879,27 @@ namespace NSS
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""ReturnMainMenu"",
+                    ""name"": ""OpenUI"",
                     ""type"": ""Button"",
-                    ""id"": ""4debd3b5-6a39-4434-bddb-afb9c274303e"",
+                    ""id"": ""b2cb509d-98f4-497a-9473-9f82f5630be1"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""StartGame"",
+                    ""name"": ""CloseUI"",
                     ""type"": ""Button"",
-                    ""id"": ""430cba31-04ff-4973-ab01-ea2c23e60f8b"",
+                    ""id"": ""45c959e2-af23-41ee-9560-abf0f561c9e3"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""CharacterOpen"",
+                    ""name"": ""MoveUI"",
                     ""type"": ""Button"",
-                    ""id"": ""bf26155a-f057-45dd-bbef-5d5d9e4cceda"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""EquipmentIOpen"",
-                    ""type"": ""Button"",
-                    ""id"": ""acdbb12d-bc1b-45b2-b4d0-067119092e6c"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""UpgradeOpen"",
-                    ""type"": ""Button"",
-                    ""id"": ""06c1c54f-8a88-4a67-85da-606e08e633ae"",
+                    ""id"": ""bb1f27eb-5bc4-44ba-9b3f-2a59c578f01d"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -982,56 +964,45 @@ namespace NSS
                 },
                 {
                     ""name"": """",
-                    ""id"": ""4fa8e0d9-6be1-40cd-aea2-347b9114e594"",
-                    ""path"": ""<Keyboard>/b"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ReturnMainMenu"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7d45b13a-2338-4ff5-a20a-e9251da0ca87"",
-                    ""path"": ""<Keyboard>/v"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""StartGame"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""13fb37cc-d57f-4d59-9a80-d4bd938288e8"",
+                    ""id"": ""f646c8f6-1ac2-4599-ab9f-8f0192b5b4b4"",
                     ""path"": ""<Keyboard>/z"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""CharacterOpen"",
+                    ""action"": ""OpenUI"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""29b31e83-7e44-4ae9-9956-8f7a9e7e3782"",
-                    ""path"": ""<Keyboard>/x"",
+                    ""id"": ""463b5a9a-52c5-483a-9025-807bb48dee9a"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""EquipmentIOpen"",
+                    ""action"": ""CloseUI"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""144c44f3-8b1d-420c-be96-b375b0662d27"",
-                    ""path"": ""<Keyboard>/c"",
+                    ""id"": ""334da1cf-720e-45dd-87af-e16a4af3138d"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""Scale"",
                     ""groups"": """",
-                    ""action"": ""UpgradeOpen"",
+                    ""action"": ""MoveUI"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aa16054a-ab26-4ae0-a634-1adc6eee8fee"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale(factor=2)"",
+                    ""groups"": """",
+                    ""action"": ""MoveUI"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1086,11 +1057,9 @@ namespace NSS
             // LobbyPlayer
             m_LobbyPlayer = asset.FindActionMap("LobbyPlayer", throwIfNotFound: true);
             m_LobbyPlayer_Moving = m_LobbyPlayer.FindAction("Moving", throwIfNotFound: true);
-            m_LobbyPlayer_ReturnMainMenu = m_LobbyPlayer.FindAction("ReturnMainMenu", throwIfNotFound: true);
-            m_LobbyPlayer_StartGame = m_LobbyPlayer.FindAction("StartGame", throwIfNotFound: true);
-            m_LobbyPlayer_CharacterOpen = m_LobbyPlayer.FindAction("CharacterOpen", throwIfNotFound: true);
-            m_LobbyPlayer_EquipmentIOpen = m_LobbyPlayer.FindAction("EquipmentIOpen", throwIfNotFound: true);
-            m_LobbyPlayer_UpgradeOpen = m_LobbyPlayer.FindAction("UpgradeOpen", throwIfNotFound: true);
+            m_LobbyPlayer_OpenUI = m_LobbyPlayer.FindAction("OpenUI", throwIfNotFound: true);
+            m_LobbyPlayer_CloseUI = m_LobbyPlayer.FindAction("CloseUI", throwIfNotFound: true);
+            m_LobbyPlayer_MoveUI = m_LobbyPlayer.FindAction("MoveUI", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -1337,21 +1306,17 @@ namespace NSS
         private readonly InputActionMap m_LobbyPlayer;
         private ILobbyPlayerActions m_LobbyPlayerActionsCallbackInterface;
         private readonly InputAction m_LobbyPlayer_Moving;
-        private readonly InputAction m_LobbyPlayer_ReturnMainMenu;
-        private readonly InputAction m_LobbyPlayer_StartGame;
-        private readonly InputAction m_LobbyPlayer_CharacterOpen;
-        private readonly InputAction m_LobbyPlayer_EquipmentIOpen;
-        private readonly InputAction m_LobbyPlayer_UpgradeOpen;
+        private readonly InputAction m_LobbyPlayer_OpenUI;
+        private readonly InputAction m_LobbyPlayer_CloseUI;
+        private readonly InputAction m_LobbyPlayer_MoveUI;
         public struct LobbyPlayerActions
         {
             private @GameInput m_Wrapper;
             public LobbyPlayerActions(@GameInput wrapper) { m_Wrapper = wrapper; }
             public InputAction @Moving => m_Wrapper.m_LobbyPlayer_Moving;
-            public InputAction @ReturnMainMenu => m_Wrapper.m_LobbyPlayer_ReturnMainMenu;
-            public InputAction @StartGame => m_Wrapper.m_LobbyPlayer_StartGame;
-            public InputAction @CharacterOpen => m_Wrapper.m_LobbyPlayer_CharacterOpen;
-            public InputAction @EquipmentIOpen => m_Wrapper.m_LobbyPlayer_EquipmentIOpen;
-            public InputAction @UpgradeOpen => m_Wrapper.m_LobbyPlayer_UpgradeOpen;
+            public InputAction @OpenUI => m_Wrapper.m_LobbyPlayer_OpenUI;
+            public InputAction @CloseUI => m_Wrapper.m_LobbyPlayer_CloseUI;
+            public InputAction @MoveUI => m_Wrapper.m_LobbyPlayer_MoveUI;
             public InputActionMap Get() { return m_Wrapper.m_LobbyPlayer; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -1364,21 +1329,15 @@ namespace NSS
                     @Moving.started -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnMoving;
                     @Moving.performed -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnMoving;
                     @Moving.canceled -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnMoving;
-                    @ReturnMainMenu.started -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnReturnMainMenu;
-                    @ReturnMainMenu.performed -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnReturnMainMenu;
-                    @ReturnMainMenu.canceled -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnReturnMainMenu;
-                    @StartGame.started -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnStartGame;
-                    @StartGame.performed -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnStartGame;
-                    @StartGame.canceled -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnStartGame;
-                    @CharacterOpen.started -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnCharacterOpen;
-                    @CharacterOpen.performed -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnCharacterOpen;
-                    @CharacterOpen.canceled -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnCharacterOpen;
-                    @EquipmentIOpen.started -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnEquipmentIOpen;
-                    @EquipmentIOpen.performed -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnEquipmentIOpen;
-                    @EquipmentIOpen.canceled -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnEquipmentIOpen;
-                    @UpgradeOpen.started -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnUpgradeOpen;
-                    @UpgradeOpen.performed -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnUpgradeOpen;
-                    @UpgradeOpen.canceled -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnUpgradeOpen;
+                    @OpenUI.started -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnOpenUI;
+                    @OpenUI.performed -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnOpenUI;
+                    @OpenUI.canceled -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnOpenUI;
+                    @CloseUI.started -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnCloseUI;
+                    @CloseUI.performed -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnCloseUI;
+                    @CloseUI.canceled -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnCloseUI;
+                    @MoveUI.started -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnMoveUI;
+                    @MoveUI.performed -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnMoveUI;
+                    @MoveUI.canceled -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnMoveUI;
                 }
                 m_Wrapper.m_LobbyPlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -1386,21 +1345,15 @@ namespace NSS
                     @Moving.started += instance.OnMoving;
                     @Moving.performed += instance.OnMoving;
                     @Moving.canceled += instance.OnMoving;
-                    @ReturnMainMenu.started += instance.OnReturnMainMenu;
-                    @ReturnMainMenu.performed += instance.OnReturnMainMenu;
-                    @ReturnMainMenu.canceled += instance.OnReturnMainMenu;
-                    @StartGame.started += instance.OnStartGame;
-                    @StartGame.performed += instance.OnStartGame;
-                    @StartGame.canceled += instance.OnStartGame;
-                    @CharacterOpen.started += instance.OnCharacterOpen;
-                    @CharacterOpen.performed += instance.OnCharacterOpen;
-                    @CharacterOpen.canceled += instance.OnCharacterOpen;
-                    @EquipmentIOpen.started += instance.OnEquipmentIOpen;
-                    @EquipmentIOpen.performed += instance.OnEquipmentIOpen;
-                    @EquipmentIOpen.canceled += instance.OnEquipmentIOpen;
-                    @UpgradeOpen.started += instance.OnUpgradeOpen;
-                    @UpgradeOpen.performed += instance.OnUpgradeOpen;
-                    @UpgradeOpen.canceled += instance.OnUpgradeOpen;
+                    @OpenUI.started += instance.OnOpenUI;
+                    @OpenUI.performed += instance.OnOpenUI;
+                    @OpenUI.canceled += instance.OnOpenUI;
+                    @CloseUI.started += instance.OnCloseUI;
+                    @CloseUI.performed += instance.OnCloseUI;
+                    @CloseUI.canceled += instance.OnCloseUI;
+                    @MoveUI.started += instance.OnMoveUI;
+                    @MoveUI.performed += instance.OnMoveUI;
+                    @MoveUI.canceled += instance.OnMoveUI;
                 }
             }
         }
@@ -1440,11 +1393,9 @@ namespace NSS
         public interface ILobbyPlayerActions
         {
             void OnMoving(InputAction.CallbackContext context);
-            void OnReturnMainMenu(InputAction.CallbackContext context);
-            void OnStartGame(InputAction.CallbackContext context);
-            void OnCharacterOpen(InputAction.CallbackContext context);
-            void OnEquipmentIOpen(InputAction.CallbackContext context);
-            void OnUpgradeOpen(InputAction.CallbackContext context);
+            void OnOpenUI(InputAction.CallbackContext context);
+            void OnCloseUI(InputAction.CallbackContext context);
+            void OnMoveUI(InputAction.CallbackContext context);
         }
     }
 }

@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4274083e0b6c8bf45bfc89e0d04d541c, type: 3}
+  m_Name: WeaponStatus
+  m_EditorClassIdentifier: 
+  SheetName: Assets/Excel/NineSquareShootStatus.xlsx
+  WorksheetName: WeaponStatus
+  dataArray:
+  - n_id: 1
+    name: "\u624B\u69CD"
+    n_weaponname: 301
+    n_weapondescription: 401
+    n_weapontype: 0
+    n_damage: 10
+    n_interval: 100
+    n_intervalmin: 100
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 2
+    name: "\u6B65\u69CDM4A1"
+    n_weaponname: 302
+    n_weapondescription: 402
+    n_weapontype: 0
+    n_damage: 20
+    n_interval: 200
+    n_intervalmin: 100
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 3
+    name: "\u72D9\u64CA\u69CD"
+    n_weaponname: 303
+    n_weapondescription: 403
+    n_weapontype: 0
+    n_damage: 50
+    n_interval: 300
+    n_intervalmin: 100
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  dataList:
+  - n_id: 1
+    name: "\u624B\u69CD"
+    n_weaponname: 301
+    n_weapondescription: 401
+    n_weapontype: 0
+    n_damage: 10
+    n_interval: 100
+    n_intervalmin: 100
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 2
+    name: "\u6B65\u69CDM4A1"
+    n_weaponname: 302
+    n_weapondescription: 402
+    n_weapontype: 0
+    n_damage: 20
+    n_interval: 200
+    n_intervalmin: 100
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 3
+    name: "\u72D9\u64CA\u69CD"
+    n_weaponname: 303
+    n_weapondescription: 403
+    n_weapontype: 0
+    n_damage: 50
+    n_interval: 300
+    n_intervalmin: 100
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
