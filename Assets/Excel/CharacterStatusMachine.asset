@@ -22,10 +22,6 @@ MonoBehaviour:
     name: n_ID
     isEnable: 0
     isArray: 0
-  - type: 1
-    name: name
-    isEnable: 0
-    isArray: 0
   - type: 3
     name: n_Name
     isEnable: 0

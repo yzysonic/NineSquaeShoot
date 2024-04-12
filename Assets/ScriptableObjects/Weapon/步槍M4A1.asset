@@ -10,6 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53c3286af8f4fa041a704f5b98223c57, type: 3}
-  m_Name: WeaponData
+  m_Name: "\u6B65\u69CDM4A1"
   m_EditorClassIdentifier: 
-  WeaponSprite: {fileID: 0}
+  WeaponSprite: {fileID: 21300000, guid: 5a57c28b0a087b448b95cf3f0947cbdb, type: 3}
+  ID: 2
+  WeaponName: 302
+  WeaponDescription: 402
+  WeaponType: 2
+  Damage: 20
+  Interval: 200
+  IntervalMin: 100
+  WeaponBuff: 0
+  ProjectileID: 0
+  WeaponSFX: 0

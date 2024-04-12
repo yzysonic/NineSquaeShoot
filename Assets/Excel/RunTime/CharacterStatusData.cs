@@ -13,10 +13,6 @@ public class CharacterStatusData
   public int N_ID { get {return n_id; } set { n_id = value;} }
   
   [SerializeField]
-  string name;
-  public string Name { get {return name; } set { name = value;} }
-  
-  [SerializeField]
   int n_name;
   public int N_Name { get {return n_name; } set { n_name = value;} }
   

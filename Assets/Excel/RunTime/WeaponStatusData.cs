@@ -13,10 +13,6 @@ public class WeaponStatusData
   public int N_ID { get {return n_id; } set { n_id = value;} }
   
   [SerializeField]
-  string name;
-  public string Name { get {return name; } set { name = value;} }
-  
-  [SerializeField]
   int n_weaponname;
   public int N_Weaponname { get {return n_weaponname; } set { n_weaponname = value;} }
   
@@ -25,8 +21,8 @@ public class WeaponStatusData
   public int N_Weapondescription { get {return n_weapondescription; } set { n_weapondescription = value;} }
   
   [SerializeField]
-  string n_weapontype;
-  public string N_Weapontype { get {return n_weapontype; } set { n_weapontype = value;} }
+  int n_weapontype;
+  public int N_Weapontype { get {return n_weapontype; } set { n_weapontype = value;} }
   
   [SerializeField]
   int n_damage;
