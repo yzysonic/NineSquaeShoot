@@ -30,18 +30,11 @@ public class LobbyUICollider : MonoBehaviour
         
     }
 
-    public void ControlSelectedObj(ControlType Type) {
-        switch (Type) {
-            case ControlType.Enable:
-                SelectedObj.gameObject.SetActive(true);
-                break;
-
-            case ControlType.Disable:
-                SelectedObj.gameObject.SetActive(false);
-                break;
-        }
-    }
-
+    /// <summary>
+    /// 控制角色碰觸到的Collider物件開關
+    /// </summary>
+    /// <param name="Type">Collider類別</param>
+    /// <param name="CType">顯示或隱藏</param>
     void OnUIControled(ColliderType Type, ControlType CType) {
         switch (CType) {
             case ControlType.Enable:
@@ -58,6 +51,9 @@ public class LobbyUICollider : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 當確認鍵按下時的處理
+    /// </summary>
     void OnPopupUIButtonClicked() {
         if (_IsShowSelectedObj) {
             if (SelectedPopupUI != null) {

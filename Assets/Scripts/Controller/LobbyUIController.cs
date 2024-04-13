@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum ColliderType { ReturnMainMenu, StartGame, Equipment, Upgrade, Character };
 public enum ControlType { Enable, Disable };
@@ -17,15 +18,36 @@ public class LobbyUIController : MonoBehaviour
     public Action<ColliderType, ControlType> UIColliderTriggered;
     public Action PopupUIButtonClicked;
     public Action ConfirmButtonClicked;
+    public Action CancelButttonClicked;
     public Action<float> UILabelChangeButtonClicked;
+    public Action<int> LabelChanged;
+    public Action<int> GridChanged;
+    public Action<CharacterStatusData, int> CharacterInfoChanged;
+    public Action<WeaponStatusData> WeaponInfoChanged;
+    public Action<Vector2> GridMoveButtonClicked;
 
-    private void Awake() {
+    public Image CharacterIconImg;
+    public Image WeaponIconImg;
+
+    [SerializeField] private CharacterInfoUIObj[] CharacterLobbyInfoUIObjArray;
+
+    [SerializeField] private WeaponInfoUIObj[] WeaponLobbyInfoUIObjArray;
+
+    void Awake() {
         Instance = this;
     }
 
     // Start is called before the first frame update
     void Start() {
-        
+        CharacterIconImg.sprite = ScriptableObjectController.Instance.SO_CharacterDataDic[PlayerData.CurrentCharacterID].CharacterIconSprite;
+        WeaponIconImg.sprite = ScriptableObjectController.Instance.SO_WeaponDataDic[PlayerData.CurrentWeaponID].WeaponSprite;
+        for (int i = 0; i < CharacterLobbyInfoUIObjArray.Length; i++) {
+            CharacterLobbyInfoUIObjArray[i].InitializeUI(ScriptableObjectController.Instance.CharacterStatusData.dataArray[PlayerData.CurrentCharacterID], 0);
+        }
+
+        for (int i = 0; i < WeaponLobbyInfoUIObjArray.Length; i++) {
+            WeaponLobbyInfoUIObjArray[i].InitializeUI(ScriptableObjectController.Instance.WeaponStatusData.dataArray[PlayerData.CurrentWeaponID]);
+        }
     }
 
     // Update is called once per frame
@@ -57,7 +79,31 @@ public class LobbyUIController : MonoBehaviour
         ConfirmButtonClicked?.Invoke();
     }
 
+    public void SendCanaelButtonClickedEvent() {
+        CancelButttonClicked?.Invoke();
+    }
+
     public void SendUILabelChangeButtonClickedEvent(float Number) {
         UILabelChangeButtonClicked?.Invoke(Number);
+    }
+
+    public void SendGridMoveButtonClickedEvent(Vector2 Vector) {
+        GridMoveButtonClicked?.Invoke(Vector);
+    }
+
+    public void SendGridChangedEvent(int Number) {
+        GridChanged?.Invoke(Number);
+    }
+
+    public void SendCharacterInfoChangedEvent(CharacterStatusData Data, int Value) {
+        CharacterInfoChanged?.Invoke(Data, Value);
+    }
+
+    public void SendWeaponInfoChangedEvent(WeaponStatusData Data) {
+        WeaponInfoChanged?.Invoke(Data);
+    }
+
+    public void SendLabelChangedEvent(int Number) {
+        LabelChanged?.Invoke(Number);
     }
 }

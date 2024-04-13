@@ -36,7 +36,7 @@ public class LobbyInputController : MonoBehaviour, GameInput.ILobbyPlayerActions
     // Update is called once per frame
     void Update() {
         Vector2 vector2d = playerInput.Moving.ReadValue<Vector2>();
-        if (vector2d != Vector2.zero && vector2d.x != 0) {
+        if (vector2d != Vector2.zero && vector2d.x != 0 && !Character.LockMove) {
             Character.Move(vector2d);
         }
     }
@@ -67,15 +67,21 @@ public class LobbyInputController : MonoBehaviour, GameInput.ILobbyPlayerActions
                 }
             }
         }
+
+        if (context.started && LobbyUIController.Instance.IsShowPopupUI) {
+            LobbyUIController.Instance.SendGridMoveButtonClickedEvent(CheckValue);
+        }
     }
 
     public void OnOpenUI(InputAction.CallbackContext context) {
         if (context.started) {
             if (!LobbyUIController.Instance.IsShowPopupUI) {
+                Character.SetCanMove(true);
                 LobbyUIController.Instance.IsShowPopupUI = true;
                 LobbyUIController.Instance.SendPopupUIButtonClickedEvent();
             }
             else {
+                Character.SetCanMove(false);
                 LobbyUIController.Instance.IsShowPopupUI = false;
                 LobbyUIController.Instance.SendConfirmButtonClickedEvent();
             }
@@ -83,7 +89,13 @@ public class LobbyInputController : MonoBehaviour, GameInput.ILobbyPlayerActions
     }
 
     public void OnCloseUI(InputAction.CallbackContext context) {
-        
+        if (context.started) {
+            if (LobbyUIController.Instance.IsShowPopupUI) {
+                Character.SetCanMove(true);
+                LobbyUIController.Instance.IsShowPopupUI = false;
+                LobbyUIController.Instance.SendCanaelButtonClickedEvent();
+            }
+        }
     }
 
     public void OnMoveUI(InputAction.CallbackContext context) {

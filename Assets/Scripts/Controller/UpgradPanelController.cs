@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class UpgradPanelController : MonoBehaviour
 {
+
+    [SerializeField] private int LabelMaxCount;
+    private int CurrentLabelCouunt;
+
     // Start is called before the first frame update
     void Start() {
         LobbyUIController.Instance.UILabelChangeButtonClicked += OnUILabelChangeButtonClicked;
         LobbyUIController.Instance.ConfirmButtonClicked += OnConfirmButtonClicked;
+        LobbyUIController.Instance.CancelButttonClicked += OnCancelButtonClicked;
     }
 
     // Update is called once per frame
@@ -20,7 +25,18 @@ public class UpgradPanelController : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    void OnUILabelChangeButtonClicked(float Number) {
+    void OnCancelButtonClicked() {
+        gameObject.SetActive(false);
+        LobbyUIController.Instance.ControlPopupUIObj(ControlType.Disable);
+    }
 
+    void OnUILabelChangeButtonClicked(float Number) {
+        CurrentLabelCouunt += (int)Number;
+        if (CurrentLabelCouunt < 1 || CurrentLabelCouunt > LabelMaxCount) {
+            CurrentLabelCouunt = (CurrentLabelCouunt < 1) ? 1 : LabelMaxCount;
+        }
+        else {
+            LobbyUIController.Instance.SendLabelChangedEvent(CurrentLabelCouunt);
+        }
     }
 }
