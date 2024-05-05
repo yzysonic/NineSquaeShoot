@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5919b91e6a97de4d829cb94fdd62a41, type: 3}
+  m_Name: WeaponDataInUnity
+  m_EditorClassIdentifier: 
+  SheetName: Assets/Excel/003_Weapon.xlsx
+  WorksheetName: WeaponDataInUnity
+  dataArray:
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  dataList:
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
+  - n_id: 0
+    n_weaponname: 0
+    n_weapondescription: 0
+    n_weapontype: 0
+    n_damage: 0
+    n_interval: 0
+    n_intervalmin: 0
+    n_weaponbuff: 0
+    n_projectileid: 0
+    n_weaponsfx: 0
