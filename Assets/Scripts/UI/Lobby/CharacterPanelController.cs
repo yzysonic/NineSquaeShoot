@@ -13,6 +13,7 @@ public class CharacterPanelController : MonoBehaviour
     private int CurrentShowCharatcerInfoCount;
 
     [SerializeField] private Image CharacterImg;
+    [SerializeField] private Image ChooseCharacterImg;
 
     [SerializeField] private CharacterInfoUIObj[] CharacterInfoUIObjArray;
 
@@ -36,8 +37,7 @@ public class CharacterPanelController : MonoBehaviour
 
     void OnConfirmButtonClicked() {
         if (CurrentShowCharatcerInfoCount != CurrentLabelCouunt) {
-            LobbyUIController.Instance.CharacterIconImg.sprite = ScriptableObjectController.Instance.SO_CharacterDataDic[CurrentLabelCouunt].CharacterIconSprite;
-            LobbyUIController.Instance.SendCharacterInfoChangedEvent(ScriptableObjectController.Instance.CharacterStatusData.dataArray[CurrentLabelCouunt - 1], 0);
+            LobbyUIController.Instance.SetLobbyCharacterInfo(CurrentLabelCouunt);
             CurrentShowCharatcerInfoCount = CurrentLabelCouunt;
             PlayerData.CurrentCharacterID = CurrentLabelCouunt;
         }

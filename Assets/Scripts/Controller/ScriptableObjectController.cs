@@ -6,11 +6,11 @@ public class ScriptableObjectController : MonoBehaviour
 {
     public static ScriptableObjectController Instance;
 
-    [SerializeField] private CharacterStatus _characterStatusData;
-    public CharacterStatus CharacterStatusData => _characterStatusData;
+    [SerializeField] private CharacterDataInUnity _characterStatusData;
+    public CharacterDataInUnity CharacterStatusData => _characterStatusData;
 
-    [SerializeField] private WeaponStatus _weaponStatusData;
-    public WeaponStatus WeaponStatusData => _weaponStatusData;
+    [SerializeField] private WeaponDataInUnity _weaponStatusData;
+    public WeaponDataInUnity WeaponStatusData => _weaponStatusData;
 
     [SerializeField] private CharacterData[] SO_CharacterDataArray;
     [SerializeField] private WeaponData[] SO_WeaponDataArray;
@@ -46,7 +46,6 @@ public class ScriptableObjectController : MonoBehaviour
                 SO_CharacterDataArray[i].HPRecoveryValue = _characterStatusData.dataArray[i].N_Hprecovervalue;
                 SO_CharacterDataArray[i].HPRecoveryTime = _characterStatusData.dataArray[i].N_Hprecovertime;
                 SO_CharacterDataArray[i].Strength = _characterStatusData.dataArray[i].N_Str;
-                SO_CharacterDataArray[i].WeaponType1Ratio = _characterStatusData.dataArray[i].N_Weapontype1raito;
                 SO_CharacterDataArray[i].WeaponType2Ratio = _characterStatusData.dataArray[i].N_Weapontype2raito;
                 SO_CharacterDataArray[i].WeaponType3Ratio = _characterStatusData.dataArray[i].N_Weapontype3raito;
                 SO_CharacterDataArray[i].WeaponType4Ratio = _characterStatusData.dataArray[i].N_Weapontype4raito;

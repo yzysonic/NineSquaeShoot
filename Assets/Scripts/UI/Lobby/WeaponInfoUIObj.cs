@@ -20,11 +20,11 @@ public class WeaponInfoUIObj : MonoBehaviour
 
     }
 
-    public void InitializeUI(WeaponStatusData Data) {
+    public void InitializeUI(WeaponDataInUnityData Data) {
         OnWeaponInfoChanged(Data);
     }
 
-    void OnWeaponInfoChanged(WeaponStatusData StatusData) {
+    void OnWeaponInfoChanged(WeaponDataInUnityData StatusData) {
         switch (StatusType) {
             case WeaponUIType.Name:
                 StatusTitleText.text = "ªZ¾¹¦WºÙ";

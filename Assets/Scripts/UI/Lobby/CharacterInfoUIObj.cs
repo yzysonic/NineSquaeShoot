@@ -23,11 +23,11 @@ public class CharacterInfoUIObj : MonoBehaviour
         
     }
 
-    public void InitializeUI(CharacterStatusData StatusData, int Value) {
+    public void InitializeUI(CharacterDataInUnityData StatusData, int Value) {
         OnCharacterInfoChanged(StatusData, Value);
     }
 
-    void OnCharacterInfoChanged(CharacterStatusData StatusData, int Value) {
+    void OnCharacterInfoChanged(CharacterDataInUnityData StatusData, int Value) {
         if (ObjValue == Value) {
             switch (StatusType) {
                 case CharacterUIType.Name:
@@ -76,11 +76,11 @@ public class CharacterInfoUIObj : MonoBehaviour
                     gameObject.SetActive((StatusData.N_Str == 0) ? false : true);
                     break;
 
-                case CharacterUIType.WeaponType1Ratio:
+                /*case CharacterUIType.WeaponType1Ratio:
                     StatusTitleText.text = "輕型攻擊倍率";
                     StatusText.text = StatusData.N_Weapontype1raito.ToString();
                     gameObject.SetActive((StatusData.N_Weapontype1raito == 0) ? false : true);
-                    break;
+                    break;*/
 
                 case CharacterUIType.WeaponType2Ratio:
                     StatusTitleText.text = "中型攻擊倍率";

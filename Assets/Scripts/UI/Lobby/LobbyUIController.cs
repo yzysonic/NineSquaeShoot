@@ -22,8 +22,8 @@ public class LobbyUIController : MonoBehaviour
     public Action<float> UILabelChangeButtonClicked;
     public Action<int> LabelChanged;
     public Action<int> GridChanged;
-    public Action<CharacterStatusData, int> CharacterInfoChanged;
-    public Action<WeaponStatusData> WeaponInfoChanged;
+    public Action<CharacterDataInUnityData, int> CharacterInfoChanged;
+    public Action<WeaponDataInUnityData> WeaponInfoChanged;
     public Action<Vector2> GridMoveButtonClicked;
 
     public Image CharacterIconImg;
@@ -53,6 +53,11 @@ public class LobbyUIController : MonoBehaviour
     // Update is called once per frame
     void Update() {
         
+    }
+
+    public void SetLobbyCharacterInfo(int Number) {
+        CharacterIconImg.sprite = ScriptableObjectController.Instance.SO_CharacterDataDic[Number].CharacterIconSprite;
+        SendCharacterInfoChangedEvent(ScriptableObjectController.Instance.CharacterStatusData.dataArray[Number - 1], 0);
     }
 
     public void ResetCharacter() {
@@ -95,11 +100,11 @@ public class LobbyUIController : MonoBehaviour
         GridChanged?.Invoke(Number);
     }
 
-    public void SendCharacterInfoChangedEvent(CharacterStatusData Data, int Value) {
+    public void SendCharacterInfoChangedEvent(CharacterDataInUnityData Data, int Value) {
         CharacterInfoChanged?.Invoke(Data, Value);
     }
 
-    public void SendWeaponInfoChangedEvent(WeaponStatusData Data) {
+    public void SendWeaponInfoChangedEvent(WeaponDataInUnityData Data) {
         WeaponInfoChanged?.Invoke(Data);
     }
 

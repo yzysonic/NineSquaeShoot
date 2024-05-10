@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d173d8536b9572548943aa9eef4cbfee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterStatusData: {fileID: 11400000, guid: 25bac1920033d7e4d97e28aed234c70d, type: 2}
-  _weaponStatusData: {fileID: 11400000, guid: 63bd4ec6b929a2244a6dc8c527ea03a6, type: 2}
+  _characterStatusData: {fileID: 11400000, guid: 574520e7983e1784ab96828f99afcc71, type: 2}
+  _weaponStatusData: {fileID: 11400000, guid: 10619499ff339c9449b0826b7ca230db, type: 2}
   SO_CharacterDataArray:
   - {fileID: 11400000, guid: 6cdd4753292e8c34493b32f4c73a1a27, type: 2}
   - {fileID: 11400000, guid: 73d4138b5ef671c43825f1d5865f0d6e, type: 2}

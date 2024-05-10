@@ -15,33 +15,33 @@ MonoBehaviour:
   SheetName: Assets/Excel/003_Weapon.xlsx
   WorksheetName: WeaponDataInUnity
   dataArray:
-  - n_id: 0
-    n_weaponname: 0
-    n_weapondescription: 0
-    n_weapontype: 0
-    n_damage: 0
-    n_interval: 0
-    n_intervalmin: 0
+  - n_id: 1
+    n_weaponname: 301
+    n_weapondescription: 401
+    n_weapontype: 1
+    n_damage: 10
+    n_interval: 100
+    n_intervalmin: 100
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
-    n_weaponname: 0
-    n_weapondescription: 0
-    n_weapontype: 0
-    n_damage: 0
-    n_interval: 0
-    n_intervalmin: 0
+  - n_id: 2
+    n_weaponname: 302
+    n_weapondescription: 402
+    n_weapontype: 2
+    n_damage: 20
+    n_interval: 200
+    n_intervalmin: 100
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
-    n_weaponname: 0
-    n_weapondescription: 0
-    n_weapontype: 0
-    n_damage: 0
-    n_interval: 0
-    n_intervalmin: 0
+  - n_id: 3
+    n_weaponname: 303
+    n_weapondescription: 403
+    n_weapontype: 3
+    n_damage: 50
+    n_interval: 300
+    n_intervalmin: 100
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
@@ -126,33 +126,33 @@ MonoBehaviour:
     n_projectileid: 0
     n_weaponsfx: 0
   dataList:
-  - n_id: 0
-    n_weaponname: 0
-    n_weapondescription: 0
-    n_weapontype: 0
-    n_damage: 0
-    n_interval: 0
-    n_intervalmin: 0
+  - n_id: 1
+    n_weaponname: 301
+    n_weapondescription: 401
+    n_weapontype: 1
+    n_damage: 10
+    n_interval: 100
+    n_intervalmin: 100
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
-    n_weaponname: 0
-    n_weapondescription: 0
-    n_weapontype: 0
-    n_damage: 0
-    n_interval: 0
-    n_intervalmin: 0
+  - n_id: 2
+    n_weaponname: 302
+    n_weapondescription: 402
+    n_weapontype: 2
+    n_damage: 20
+    n_interval: 200
+    n_intervalmin: 100
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
-    n_weaponname: 0
-    n_weapondescription: 0
-    n_weapontype: 0
-    n_damage: 0
-    n_interval: 0
-    n_intervalmin: 0
+  - n_id: 3
+    n_weaponname: 303
+    n_weapondescription: 403
+    n_weapontype: 3
+    n_damage: 50
+    n_interval: 300
+    n_intervalmin: 100
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
