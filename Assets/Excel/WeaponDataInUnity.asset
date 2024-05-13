@@ -45,7 +45,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 4
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 5
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 6
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 7
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
@@ -85,7 +85,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 8
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 9
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 10
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 11
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 4
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 5
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 6
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 7
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 8
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
@@ -206,7 +206,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 9
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
@@ -216,7 +216,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 10
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
@@ -226,7 +226,7 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 0
     n_weaponsfx: 0
-  - n_id: 0
+  - n_id: 11
     n_weaponname: 0
     n_weapondescription: 0
     n_weapontype: 0
