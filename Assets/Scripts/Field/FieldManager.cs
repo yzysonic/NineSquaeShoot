@@ -7,8 +7,11 @@ namespace NSS
 {
     public class FieldManager : Singleton<FieldManager>
     {
-        public const int teamBlockSideCount = 3;
+        public const int teamBlockSideCount = 4;
         public const int teamBlockCount = teamBlockSideCount * teamBlockSideCount;
+
+        [SerializeField]
+        private int BlockSideCount;
 
         [SerializeField]
         private GameObject playerFieldBlockPrefab;
@@ -49,6 +52,7 @@ namespace NSS
                 {
                     Vector3 pos = (Vector3)fieldBlockStartLocation + new Vector3(x * fieldBlockInterval.x, y * -fieldBlockInterval.y, -y / 100.0f);
                     GameObject blockObj = Instantiate(playerFieldBlockPrefab, pos, Quaternion.identity);
+                    blockObj.transform.localScale = new Vector3(0.9f, 0.8f, 1);
                     var block = blockObj.GetComponent<FieldBlock>();
                     block.Index = y * teamBlockSideCount + x;
                     block.Team = ETeam.player;
@@ -87,6 +91,7 @@ namespace NSS
                 {
                     Vector3 pos = new Vector3(-fieldBlockStartLocation.x, fieldBlockStartLocation.y) + new Vector3(ProjectProperty.baseResolution.x/100.0f + x * fieldBlockInterval.x - (teamBlockSideCount - 1) * fieldBlockInterval.x, y * -fieldBlockInterval.y, -y / 100.0f);
                     GameObject blockObj = Instantiate(enemyFieldBlockPrefab, pos, Quaternion.identity);
+                    blockObj.transform.localScale = new Vector3(0.9f, 0.8f, 1);
                     var block = blockObj.GetComponent<FieldBlock>();
                     block.Index = y * teamBlockSideCount + x;
                     block.Team = ETeam.enemy;
