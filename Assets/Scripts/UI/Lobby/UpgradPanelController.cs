@@ -10,14 +10,20 @@ public class UpgradPanelController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        LobbyUIController.Instance.UILabelChangeButtonClicked += OnUILabelChangeButtonClicked;
-        LobbyUIController.Instance.ConfirmButtonClicked += OnConfirmButtonClicked;
-        LobbyUIController.Instance.CancelButttonClicked += OnCancelButtonClicked;
+        LobbyUIController.Instance.RegisterOnUILabelChangeButtonClicked(OnUILabelChangeButtonClicked);
+        LobbyUIController.Instance.RegisterOnChangeButtonClicked(OnChangeButtonClicked);
+        LobbyUIController.Instance.RegisterOnConfirmButtonClicked(OnConfirmButtonClicked);
+        LobbyUIController.Instance.RegisterOnCanaelButtonClicked(OnCancelButtonClicked);
     }
 
     // Update is called once per frame
     void Update() {
         
+    }
+
+    void OnChangeButtonClicked() {
+        gameObject.SetActive(false);
+        LobbyUIController.Instance.ControlPopupUIObj(ControlType.Disable);
     }
 
     void OnConfirmButtonClicked() {

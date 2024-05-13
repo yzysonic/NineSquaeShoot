@@ -41,10 +41,11 @@ public class EquipmentPanelController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        LobbyUIController.Instance.UILabelChangeButtonClicked += OnUILabelChangeButtonClicked;
-        LobbyUIController.Instance.ConfirmButtonClicked += OnConfirmButtonClicked;
-        LobbyUIController.Instance.CancelButttonClicked += OnCancelButtonClicked;
-        LobbyUIController.Instance.GridMoveButtonClicked += OnGridMoveButtonClicked;
+        LobbyUIController.Instance.RegisterOnUILabelChangeButtonClicked(OnUILabelChangeButtonClicked);
+        LobbyUIController.Instance.RegisterOnChangeButtonClicked(OnChangeButtonClicked);
+        LobbyUIController.Instance.RegisterOnConfirmButtonClicked(OnConfirmButtonClicked);
+        LobbyUIController.Instance.RegisterOnCanaelButtonClicked(OnCancelButtonClicked);
+        LobbyUIController.Instance.RegisterOnGridMoveButtonClicked(OnGridMoveButtonClicked);
         IsInWeaponPanel = true;
         CurrentLabelCount = 1;
         CurrentGridCount = 1;
@@ -58,6 +59,20 @@ public class EquipmentPanelController : MonoBehaviour
     // Update is called once per frame
     void Update() {
         
+    }
+
+    void OnChangeButtonClicked() {
+        LobbyUIController.Instance.SendConfirmSelectGridChangedEvent(CurrentGridCount);
+        if (IsInWeaponPanel) {
+            CurrentWeaponImg.sprite = ScriptableObjectController.Instance.SO_WeaponDataDic[CurrentGridCount].WeaponSprite;
+            CurrentWeaponName.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[CurrentGridCount - 1].N_Weaponname.ToString();
+            CurrentWeaponType.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[CurrentGridCount - 1].N_Weapontype.ToString();
+            CurrentWeaponDmage.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[CurrentGridCount - 1].N_Damage.ToString();
+            CurrentWeaponInterval.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[CurrentGridCount - 1].N_Interval.ToString();
+        }
+        else {
+
+        }
     }
 
     void OnConfirmButtonClicked() {
@@ -123,6 +138,6 @@ public class EquipmentPanelController : MonoBehaviour
                 }
             }
         }
-        LobbyUIController.Instance.SendGridChangedEvent(CurrentGridCount);
+        LobbyUIController.Instance.SendSelectGridChangedEvent(CurrentGridCount);
     }
 }

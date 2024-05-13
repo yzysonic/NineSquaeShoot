@@ -34,7 +34,7 @@ public class LobbyCharacter : MonoBehaviour
 
     }
 
-    public void SetCanMove(bool Type) {
+    public void SetLockMove(bool Type) {
         _lockMove = Type;
     }
 

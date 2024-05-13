@@ -21,8 +21,8 @@ public class LobbyUICollider : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        LobbyUIController.Instance.UIColliderTriggered += OnUIControled;
-        LobbyUIController.Instance.PopupUIButtonClicked += OnPopupUIButtonClicked;
+        LobbyUIController.Instance.RegisterOnUIColliderTriggered(OnUIControled);
+        LobbyUIController.Instance.RegisterOnPopupUIButtonClicked(OnPopupUIButtonClicked);
     }
 
     // Update is called once per frame

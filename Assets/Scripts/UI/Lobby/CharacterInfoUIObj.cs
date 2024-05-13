@@ -11,20 +11,18 @@ public class CharacterInfoUIObj : MonoBehaviour
     [SerializeField] private Text StatusTitleText;
     [SerializeField] private Text StatusText;
 
+    [Tooltip("0代表角色選擇頁面中間的角色資訊，1代表角色選擇頁面中下方的目前正在使用的角色資訊，2代表大廳上方的角色資訊")]
     [SerializeField] private int ObjValue;
 
     // Start is called before the first frame update
     void Start() {
-        LobbyUIController.Instance.CharacterInfoChanged += OnCharacterInfoChanged;
+        LobbyUIController.Instance.RegisterOnCharacterInfoChanged(OnCharacterInfoChanged);
+        OnCharacterInfoChanged(ScriptableObjectController.Instance.CharacterStatusData.dataArray[(ObjValue == 0) ? 0 : PlayerData.CurrentCharacterID - 1], ObjValue);
     }
 
     // Update is called once per frame
     void Update() {
         
-    }
-
-    public void InitializeUI(CharacterDataInUnityData StatusData, int Value) {
-        OnCharacterInfoChanged(StatusData, Value);
     }
 
     void OnCharacterInfoChanged(CharacterDataInUnityData StatusData, int Value) {

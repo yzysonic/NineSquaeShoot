@@ -14,7 +14,8 @@ public class SkillGridUIObj : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        LobbyUIController.Instance.GridChanged += OnGridChanged;
+        LobbyUIController.Instance.RegisterOnSelectGridChanged(OnSelectGridChanged);
+        LobbyUIController.Instance.RegisterOnConfirmSelectGridChanged(OnConfirmSelectGridChanged);
         InitializeUI();
     }
 
@@ -28,7 +29,11 @@ public class SkillGridUIObj : MonoBehaviour
         CurrentUseSkillUIObj.gameObject.SetActive((SkillID == PlayerData.CurrentWeaponID) ? true : false);
     }
 
-    void OnGridChanged(int Number) {
+    void OnSelectGridChanged(int Number) {
         CurrentSelectedSkillUIObj.gameObject.SetActive((SkillID == Number) ? true : false);
+    }
+
+    void OnConfirmSelectGridChanged(int Number) {
+        CurrentUseSkillUIObj.gameObject.SetActive((SkillID == Number) ? true : false);
     }
 }

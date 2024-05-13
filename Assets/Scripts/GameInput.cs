@@ -897,6 +897,15 @@ namespace NSS
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""ConfirmUI"",
+                    ""type"": ""Button"",
+                    ""id"": ""93ce5f3f-771f-442d-892e-01ad04e7aea8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""MoveUI"",
                     ""type"": ""Button"",
                     ""id"": ""bb1f27eb-5bc4-44ba-9b3f-2a59c578f01d"",
@@ -1005,6 +1014,17 @@ namespace NSS
                     ""action"": ""MoveUI"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f224dead-f6a3-456e-addd-2180fe578d8f"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ConfirmUI"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -1059,6 +1079,7 @@ namespace NSS
             m_LobbyPlayer_Moving = m_LobbyPlayer.FindAction("Moving", throwIfNotFound: true);
             m_LobbyPlayer_OpenUI = m_LobbyPlayer.FindAction("OpenUI", throwIfNotFound: true);
             m_LobbyPlayer_CloseUI = m_LobbyPlayer.FindAction("CloseUI", throwIfNotFound: true);
+            m_LobbyPlayer_ConfirmUI = m_LobbyPlayer.FindAction("ConfirmUI", throwIfNotFound: true);
             m_LobbyPlayer_MoveUI = m_LobbyPlayer.FindAction("MoveUI", throwIfNotFound: true);
         }
 
@@ -1308,6 +1329,7 @@ namespace NSS
         private readonly InputAction m_LobbyPlayer_Moving;
         private readonly InputAction m_LobbyPlayer_OpenUI;
         private readonly InputAction m_LobbyPlayer_CloseUI;
+        private readonly InputAction m_LobbyPlayer_ConfirmUI;
         private readonly InputAction m_LobbyPlayer_MoveUI;
         public struct LobbyPlayerActions
         {
@@ -1316,6 +1338,7 @@ namespace NSS
             public InputAction @Moving => m_Wrapper.m_LobbyPlayer_Moving;
             public InputAction @OpenUI => m_Wrapper.m_LobbyPlayer_OpenUI;
             public InputAction @CloseUI => m_Wrapper.m_LobbyPlayer_CloseUI;
+            public InputAction @ConfirmUI => m_Wrapper.m_LobbyPlayer_ConfirmUI;
             public InputAction @MoveUI => m_Wrapper.m_LobbyPlayer_MoveUI;
             public InputActionMap Get() { return m_Wrapper.m_LobbyPlayer; }
             public void Enable() { Get().Enable(); }
@@ -1335,6 +1358,9 @@ namespace NSS
                     @CloseUI.started -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnCloseUI;
                     @CloseUI.performed -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnCloseUI;
                     @CloseUI.canceled -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnCloseUI;
+                    @ConfirmUI.started -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnConfirmUI;
+                    @ConfirmUI.performed -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnConfirmUI;
+                    @ConfirmUI.canceled -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnConfirmUI;
                     @MoveUI.started -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnMoveUI;
                     @MoveUI.performed -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnMoveUI;
                     @MoveUI.canceled -= m_Wrapper.m_LobbyPlayerActionsCallbackInterface.OnMoveUI;
@@ -1351,6 +1377,9 @@ namespace NSS
                     @CloseUI.started += instance.OnCloseUI;
                     @CloseUI.performed += instance.OnCloseUI;
                     @CloseUI.canceled += instance.OnCloseUI;
+                    @ConfirmUI.started += instance.OnConfirmUI;
+                    @ConfirmUI.performed += instance.OnConfirmUI;
+                    @ConfirmUI.canceled += instance.OnConfirmUI;
                     @MoveUI.started += instance.OnMoveUI;
                     @MoveUI.performed += instance.OnMoveUI;
                     @MoveUI.canceled += instance.OnMoveUI;
@@ -1395,6 +1424,7 @@ namespace NSS
             void OnMoving(InputAction.CallbackContext context);
             void OnOpenUI(InputAction.CallbackContext context);
             void OnCloseUI(InputAction.CallbackContext context);
+            void OnConfirmUI(InputAction.CallbackContext context);
             void OnMoveUI(InputAction.CallbackContext context);
         }
     }

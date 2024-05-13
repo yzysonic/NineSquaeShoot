@@ -11,7 +11,7 @@ public class LabelUIObj : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        LobbyUIController.Instance.LabelChanged += OnLabelChanged;
+        LobbyUIController.Instance.RegisterOnLabelChanged(OnLabelChanged);
     }
 
     // Update is called once per frame

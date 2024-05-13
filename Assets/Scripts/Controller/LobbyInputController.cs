@@ -76,14 +76,12 @@ public class LobbyInputController : MonoBehaviour, GameInput.ILobbyPlayerActions
     public void OnOpenUI(InputAction.CallbackContext context) {
         if (context.started) {
             if (!LobbyUIController.Instance.IsShowPopupUI) {
-                Character.SetCanMove(true);
+                Character.SetLockMove(true);
                 LobbyUIController.Instance.IsShowPopupUI = true;
                 LobbyUIController.Instance.SendPopupUIButtonClickedEvent();
             }
             else {
-                Character.SetCanMove(false);
-                LobbyUIController.Instance.IsShowPopupUI = false;
-                LobbyUIController.Instance.SendConfirmButtonClickedEvent();
+                LobbyUIController.Instance.SendChangeButtonClickedEvent();
             }
         }
     }
@@ -91,10 +89,18 @@ public class LobbyInputController : MonoBehaviour, GameInput.ILobbyPlayerActions
     public void OnCloseUI(InputAction.CallbackContext context) {
         if (context.started) {
             if (LobbyUIController.Instance.IsShowPopupUI) {
-                Character.SetCanMove(true);
+                Character.SetLockMove(false);
                 LobbyUIController.Instance.IsShowPopupUI = false;
                 LobbyUIController.Instance.SendCanaelButtonClickedEvent();
             }
+        }
+    }
+
+    void GameInput.ILobbyPlayerActions.OnConfirmUI(InputAction.CallbackContext context) {
+        if (context.started) {
+            Character.SetLockMove(false);
+            LobbyUIController.Instance.IsShowPopupUI = false;
+            LobbyUIController.Instance.SendConfirmButtonClickedEvent();
         }
     }
 

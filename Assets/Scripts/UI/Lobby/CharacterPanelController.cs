@@ -9,25 +9,20 @@ public class CharacterPanelController : MonoBehaviour
 {
 
     [SerializeField] private int LabelMaxCount;
-    private int CurrentLabelCouunt;
+    private int CurrentLabelCount;
     private int CurrentShowCharatcerInfoCount;
 
     [SerializeField] private Image CharacterImg;
     [SerializeField] private Image ChooseCharacterImg;
 
-    [SerializeField] private CharacterInfoUIObj[] CharacterInfoUIObjArray;
-
     // Start is called before the first frame update
     void Start() {
-        LobbyUIController.Instance.UILabelChangeButtonClicked += OnUILabelChangeButtonClicked;
-        LobbyUIController.Instance.ConfirmButtonClicked += OnConfirmButtonClicked;
-        LobbyUIController.Instance.CancelButttonClicked += OnCancelButtonClicked;
+        LobbyUIController.Instance.RegisterOnUILabelChangeButtonClicked(OnUILabelChangeButtonClicked);
+        LobbyUIController.Instance.RegisterOnChangeButtonClicked(OnChangeButtonClicked);
+        LobbyUIController.Instance.RegisterOnConfirmButtonClicked(OnConfirmButtonClicked);
+        LobbyUIController.Instance.RegisterOnCanaelButtonClicked(OnCancelButtonClicked);
         CurrentShowCharatcerInfoCount = 1;
-        CurrentLabelCouunt = 1;
-        LobbyUIController.Instance.CharacterIconImg.sprite = ScriptableObjectController.Instance.SO_CharacterDataDic[CurrentLabelCouunt].CharacterIconSprite;
-        for (int i = 0; i < CharacterInfoUIObjArray.Length; i++) {
-            CharacterInfoUIObjArray[i].InitializeUI(ScriptableObjectController.Instance.CharacterStatusData.dataArray[CurrentLabelCouunt - 1], 1);
-        }
+        CurrentLabelCount = 1;
     }
 
     // Update is called once per frame
@@ -35,12 +30,22 @@ public class CharacterPanelController : MonoBehaviour
         
     }
 
-    void OnConfirmButtonClicked() {
-        if (CurrentShowCharatcerInfoCount != CurrentLabelCouunt) {
-            LobbyUIController.Instance.SetLobbyCharacterInfo(CurrentLabelCouunt);
-            CurrentShowCharatcerInfoCount = CurrentLabelCouunt;
-            PlayerData.CurrentCharacterID = CurrentLabelCouunt;
+    void OnChangeButtonClicked() {
+        if (CurrentShowCharatcerInfoCount != CurrentLabelCount) {
+            CurrentShowCharatcerInfoCount = CurrentLabelCount;
+            if (ScriptableObjectController.Instance.SO_CharacterDataDic.ContainsKey(CurrentLabelCount)) {
+                ChooseCharacterImg.sprite = ScriptableObjectController.Instance.SO_CharacterDataDic[CurrentLabelCount].CharacterSprite;
+                LobbyUIController.Instance.SendCharacterInfoChangedEvent(ScriptableObjectController.Instance.CharacterStatusData.dataArray[CurrentLabelCount - 1], 1);
+            }
         }
+    }
+
+    void OnConfirmButtonClicked() {
+        if (ScriptableObjectController.Instance.SO_CharacterDataDic.ContainsKey(CurrentLabelCount)) {
+            LobbyUIController.Instance.CharacterIconImg.sprite = ScriptableObjectController.Instance.SO_CharacterDataDic[CurrentLabelCount].CharacterSprite;
+            LobbyUIController.Instance.SendCharacterInfoChangedEvent(ScriptableObjectController.Instance.CharacterStatusData.dataArray[CurrentLabelCount - 1], 2);
+        }
+        PlayerData.CurrentCharacterID = CurrentLabelCount;
         LobbyUIController.Instance.ControlPopupUIObj(ControlType.Disable);
         gameObject.SetActive(false);
     }
@@ -51,19 +56,20 @@ public class CharacterPanelController : MonoBehaviour
     }
 
     void OnUILabelChangeButtonClicked(float Number) {
-        CurrentLabelCouunt += (int)Number;
-        if (CurrentLabelCouunt < 1 || CurrentLabelCouunt > LabelMaxCount) {
-            CurrentLabelCouunt = (CurrentLabelCouunt < 1) ? 1 : LabelMaxCount;
+        CurrentLabelCount += (int)Number;
+        if (CurrentLabelCount < 1 || CurrentLabelCount > LabelMaxCount) {
+            CurrentLabelCount = (CurrentLabelCount < 1) ? 1 : LabelMaxCount;
         }
         else {
+            LobbyUIController.Instance.SendLabelChangedEvent(CurrentLabelCount);
             SetCharacterInfoUI();
         }
     }
 
     void SetCharacterInfoUI() {
-        if (ScriptableObjectController.Instance.SO_CharacterDataDic.ContainsKey(CurrentLabelCouunt)) {
-            CharacterImg.sprite = ScriptableObjectController.Instance.SO_CharacterDataDic[CurrentLabelCouunt].CharacterSprite;
-            LobbyUIController.Instance.SendCharacterInfoChangedEvent(ScriptableObjectController.Instance.CharacterStatusData.dataArray[CurrentLabelCouunt - 1], 1);
+        if (ScriptableObjectController.Instance.SO_CharacterDataDic.ContainsKey(CurrentLabelCount)) {
+            CharacterImg.sprite = ScriptableObjectController.Instance.SO_CharacterDataDic[CurrentLabelCount].CharacterSprite;
+            LobbyUIController.Instance.SendCharacterInfoChangedEvent(ScriptableObjectController.Instance.CharacterStatusData.dataArray[CurrentLabelCount - 1], 0);
         }
     }
 }

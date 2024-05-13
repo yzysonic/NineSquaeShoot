@@ -19,7 +19,8 @@ public class WeaponGridUIObj : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        LobbyUIController.Instance.GridChanged += OnGridChanged; 
+        LobbyUIController.Instance.RegisterOnSelectGridChanged(OnSelectGridChanged);
+        LobbyUIController.Instance.RegisterOnConfirmSelectGridChanged(OnConfirmSelectGridChanged);
         InitializeUI();
     }
 
@@ -34,7 +35,11 @@ public class WeaponGridUIObj : MonoBehaviour
         CurrentUseWeaponUIObj.gameObject.SetActive((WeaponID == PlayerData.CurrentWeaponID) ? true : false);
     }
 
-    void OnGridChanged(int Number) {
+    void OnSelectGridChanged(int Number) {
         CurrentSelectedWeaponUIObj.gameObject.SetActive((WeaponID == Number) ? true : false);
+    }
+
+    void OnConfirmSelectGridChanged(int Number) {
+        CurrentUseWeaponUIObj.gameObject.SetActive((WeaponID == Number) ? true : false);
     }
 }

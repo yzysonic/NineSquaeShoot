@@ -873,6 +873,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "ConfirmUI",
+                    "type": "Button",
+                    "id": "93ce5f3f-771f-442d-892e-01ad04e7aea8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "MoveUI",
                     "type": "Button",
                     "id": "bb1f27eb-5bc4-44ba-9b3f-2a59c578f01d",
@@ -979,6 +988,17 @@
                     "processors": "Scale",
                     "groups": "",
                     "action": "MoveUI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f224dead-f6a3-456e-addd-2180fe578d8f",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ConfirmUI",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

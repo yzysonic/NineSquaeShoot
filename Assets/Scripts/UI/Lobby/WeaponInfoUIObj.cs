@@ -12,7 +12,7 @@ public class WeaponInfoUIObj : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        LobbyUIController.Instance.WeaponInfoChanged += OnWeaponInfoChanged;
+        LobbyUIController.Instance.RegisterOnWeaponInfoChanged(OnWeaponInfoChanged);
     }
 
     // Update is called once per frame
