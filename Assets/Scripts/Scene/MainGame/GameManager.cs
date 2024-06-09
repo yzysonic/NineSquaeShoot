@@ -9,7 +9,7 @@ namespace NSS
         [SerializeField]
         private GameObject playerPrefab;
 
-        [SerializeField, Range(0, FieldManager.teamBlockCount-1)]
+        [SerializeField]
         private int playerStartFieldBlockIndex = 0;
 
         public Player Player { get; private set; }
@@ -19,7 +19,7 @@ namespace NSS
         protected override void Awake()
         {
             base.Awake();
-            playerStartBlock = FieldManager.Instance.GetBlock(ETeam.player, playerStartFieldBlockIndex);
+            playerStartBlock = FieldManager.Instance.GetBlock(ETeam.player, playerStartFieldBlockIndex, BlockType.Player);
             if(playerStartBlock != null)
             {
                 GameObject playerObj = Instantiate(playerPrefab);

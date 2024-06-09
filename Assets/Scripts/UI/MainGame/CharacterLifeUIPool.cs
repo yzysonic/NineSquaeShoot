@@ -14,12 +14,12 @@ namespace NSS
 
         private readonly Dictionary<Character, UICharacterLife> bindMap = new();
 
-        protected override void Awake()
+        protected override void Start()
         {
             prefab = CharacterLifeUIPrefab;
-            maxCount = FieldManager.teamBlockCount * (int)ETeam.count;
+            maxCount = FieldManager.Instance.EnemyFieldCount * (int)ETeam.count;
             attachTransform = parentTransform;
-            base.Awake();
+            base.Start();
         }
 
         public void BindCharacter(Character character)

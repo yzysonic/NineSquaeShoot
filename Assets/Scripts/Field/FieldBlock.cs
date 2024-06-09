@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace NSS
 {
+    public enum BlockType { Player, Enemy };
     public class FieldBlock : MonoBehaviour, IDamageSender, IDamageReceiver
     {
         private enum EGroundLightState
@@ -13,6 +14,9 @@ namespace NSS
             Enemy,
             Both
         }
+
+        [SerializeField] private BlockType _FieldBlockType;
+        public BlockType FieldBlockType => _FieldBlockType;
 
         [SerializeField]
         private SpriteRenderer groundLightRenderer;

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Projectile
   - FieldCollider
+  - Block
   layers:
   - Default
   - TransparentFX

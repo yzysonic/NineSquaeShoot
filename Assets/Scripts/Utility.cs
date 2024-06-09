@@ -61,7 +61,7 @@ namespace NSS
         {
             if (instance != null)
             {
-                Debug.LogWarning($"シングルトンのインスタンスが複数生成された: {typeof(T).ToString()}");
+                Debug.LogWarning($"シ?グ?ト?のイ?スタ?スが複?生成された: {typeof(T).ToString()}");
             }
 
             instance = this;
@@ -167,6 +167,11 @@ namespace NSS
         private List<T> list;
 
         protected List<T> PooledObjects => list;
+
+        protected virtual void Start() {
+            list = new List<T>(maxCount);
+            AddPooledObject(maxCount);
+        }
 
         protected virtual void Awake()
         {

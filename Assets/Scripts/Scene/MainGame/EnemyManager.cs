@@ -29,10 +29,10 @@ namespace NSS
         [SerializeField]
         private float overrideSpawnIntervalOnEnemyEmpty = 2f;
 
-        [SerializeField, Range(1, FieldManager.teamBlockCount)]
+        [SerializeField]
         private int baseEnemySpawnMaxCount = 3;
 
-        [SerializeField, Range(0, FieldManager.teamBlockCount - 1)]
+        [SerializeField]
         private int keepBlockFreeCount = 1;
 
         [SerializeField]

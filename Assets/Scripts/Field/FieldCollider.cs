@@ -6,21 +6,43 @@ namespace NSS
 {
     public class FieldCollider : MonoBehaviour
     {
-        private FieldBlock[] BlockMap { get; set; } = new FieldBlock[FieldManager.teamBlockSideCount];
+        private FieldBlock[] PlayerBlockMap { get; set; }/* = new FieldBlock[FieldManager.Instance.PlayerFieldCount];*/
 
-        public void SetBlockMap(uint rowIndex, FieldBlock fieldBlock)
-        {
-            if (BlockMap != null && rowIndex < FieldManager.teamBlockSideCount)
-            {
-                BlockMap[rowIndex] = fieldBlock;
+        private FieldBlock[] EnemyBlockMap { get; set; }/* = new FieldBlock[FieldManager.Instance.EnemyFieldCount];*/
+
+        void OnEnable() {
+            PlayerBlockMap = new FieldBlock[FieldManager.Instance.PlayerFieldCount];
+            EnemyBlockMap = new FieldBlock[FieldManager.Instance.EnemyFieldCount];
+        }
+
+        public void SetBlockMap(uint rowIndex, FieldBlock fieldBlock) {
+            switch (fieldBlock.FieldBlockType) {
+                case BlockType.Player:
+                    if (PlayerBlockMap != null && rowIndex < FieldManager.Instance.PlayerWidthCount) {
+                        PlayerBlockMap[rowIndex] = fieldBlock;
+                    }
+                    break;
+
+                case BlockType.Enemy:
+                    if (EnemyBlockMap != null && rowIndex < FieldManager.Instance.EnemyWidthCount) {
+                        EnemyBlockMap[rowIndex] = fieldBlock;
+                    }
+                    break;
             }
         }
 
         public FieldBlock GetBlock(uint rowIndex)
         {
-            if (rowIndex < FieldManager.teamBlockSideCount)
-            {
-                return BlockMap[rowIndex];
+            if (PlayerBlockMap[0] != null) {
+                if (rowIndex < FieldManager.Instance.PlayerWidthCount) {
+                    return PlayerBlockMap[rowIndex];
+                }
+            }
+
+            if (EnemyBlockMap[0] != null) {
+                if (rowIndex < FieldManager.Instance.EnemyWidthCount) {
+                    return EnemyBlockMap[rowIndex];
+                }
             }
             return null;
         }
