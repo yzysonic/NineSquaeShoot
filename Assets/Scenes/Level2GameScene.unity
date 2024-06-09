@@ -2538,26 +2538,26 @@ MonoBehaviour:
   enemyFieldBlockPrefab: {fileID: 4762695902755875193, guid: 3084e31a9166e2644936cc1a62aef4f5, type: 3}
   fieldColliderPrefab: {fileID: 4110324093710217211, guid: 3ae23ebcc66847f49ab1ced3cfcc5d35, type: 3}
   AutoCreatePlayerBlock: 1
-  _PlayerWidthCount: 3
-  _PlayerHeightCount: 2
-  CustomCreatePlayerBlock: 0
+  _PlayerWidthCount: 4
+  _PlayerHeightCount: 4
+  CustomCreatePlayerBlock: 1
   PlayerBlockStartPosition: {x: 1.22, y: 3.88}
-  CustomPlayerPadding: 0
-  PlayerWidthPadding: 2.08
-  PlayerHeightPadding: 0.9
-  CustomPlayerScaling: 0
-  PlayerBlockWidth: 1
+  CustomPlayerPadding: 1
+  PlayerWidthPadding: 1.85
+  PlayerHeightPadding: 0.95
+  CustomPlayerScaling: 1
+  PlayerBlockWidth: 0.9
   PlayerBlockHeight: 1
   AutoCreateEnemyBlock: 1
-  _EnemyWidthCount: 3
-  _EnemyHeightCount: 3
-  CustomCreateEnemyBlock: 0
+  _EnemyWidthCount: 4
+  _EnemyHeightCount: 4
+  CustomCreateEnemyBlock: 1
   EnemyBlockStartPosition: {x: -1.22, y: 3.88}
-  CustomEnemyPadding: 0
-  EnemyWidthPadding: 2.08
-  EnemyHeightPadding: 0.9
-  CustomEnemyScaling: 0
-  EnemyBlockWidth: 1
+  CustomEnemyPadding: 1
+  EnemyWidthPadding: 1.85
+  EnemyHeightPadding: 0.95
+  CustomEnemyScaling: 1
+  EnemyBlockWidth: 0.9
   EnemyBlockHeight: 1
 --- !u!4 &642979591
 Transform:
