@@ -16,6 +16,8 @@ public class LobbyCharacter : MonoBehaviour
     public bool IsMoving => _isMoving;
     private bool _lockMove;
     public bool LockMove => _lockMove;
+    private bool _IsInUICollider;
+    public bool IsinUICollider => _IsInUICollider;
     private bool LockLeft;
     private bool LockRight;
 
@@ -63,12 +65,14 @@ public class LobbyCharacter : MonoBehaviour
 
     void OnTriggerStay(Collider collision) {
         if (collision.gameObject.GetComponent<LobbyUICollider>()) {
+            _IsInUICollider = true;
             LobbyUICollider temp = collision.gameObject.GetComponent<LobbyUICollider>();
             if (!temp.IsShowSelectedObj) {
                 LobbyUIController.Instance.SendColliderTriggeredEvent(temp.ColliderType, ControlType.Enable);
             }
 
             if (temp.ColliderType == ColliderType.ReturnMainMenu) {
+                LobbyUIController.Instance.IsReturnMainMenu = true;
                 LockLeft = true;
             }
 
@@ -80,12 +84,14 @@ public class LobbyCharacter : MonoBehaviour
 
     void OnTriggerExit(Collider collision) {
         if (collision.gameObject.GetComponent<LobbyUICollider>()) {
+            _IsInUICollider = false;
             LobbyUICollider temp = collision.gameObject.GetComponent<LobbyUICollider>();
             if (temp.IsShowSelectedObj) {
                 LobbyUIController.Instance.SendColliderTriggeredEvent(temp.ColliderType, ControlType.Disable);
             }
 
             if (temp.ColliderType == ColliderType.ReturnMainMenu) {
+                LobbyUIController.Instance.IsReturnMainMenu = false;
                 LockLeft = false;
             }
 

@@ -75,13 +75,22 @@ public class LobbyInputController : MonoBehaviour, GameInput.ILobbyPlayerActions
 
     public void OnOpenUI(InputAction.CallbackContext context) {
         if (context.started) {
-            if (!LobbyUIController.Instance.IsShowPopupUI) {
-                Character.SetLockMove(true);
-                LobbyUIController.Instance.IsShowPopupUI = true;
-                LobbyUIController.Instance.SendPopupUIButtonClickedEvent();
+            if (!LobbyUIController.Instance.IsShowPopupUI && !LobbyUIController.Instance.IsReturnMainMenu) {
+                if (Character.IsinUICollider) {
+                    Character.SetLockMove(true);
+                    LobbyUIController.Instance.IsShowPopupUI = true;
+                    LobbyUIController.Instance.SendPopupUIButtonClickedEvent();
+                }
             }
             else {
-                LobbyUIController.Instance.SendChangeButtonClickedEvent();
+                if (LobbyUIController.Instance.IsShowPopupUI) {
+                    LobbyUIController.Instance.SendChangeButtonClickedEvent();
+                }
+
+                if (LobbyUIController.Instance.IsReturnMainMenu) {
+                    LobbyUIController.Instance.IsReturnMainMenu = false;
+                    LobbyUIController.Instance.SendPopupUIButtonClickedEvent();
+                }
             }
         }
     }

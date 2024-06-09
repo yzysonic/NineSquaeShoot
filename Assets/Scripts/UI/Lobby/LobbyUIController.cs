@@ -14,6 +14,7 @@ public class LobbyUIController : MonoBehaviour
     [SerializeField] private RectTransform Character;
 
     public bool IsShowPopupUI;
+    public bool IsReturnMainMenu;
 
     Action<ColliderType, ControlType> UIColliderTriggered;                                          //UICollider碰撞時觸發
     Action PopupUIButtonClicked;                                                                    //PopUpUI顯示按鈕按下

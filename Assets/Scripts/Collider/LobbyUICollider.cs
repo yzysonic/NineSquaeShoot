@@ -71,7 +71,7 @@ public class LobbyUICollider : MonoBehaviour
                         break;
 
                     case ColliderType.StartGame:
-                        FadeManager.Instance.LoadSceneWithFade("MainGameScene");
+                        FadeManager.Instance.LoadSceneWithFade("Level2GameScene");
                         break;
                 }
             }
