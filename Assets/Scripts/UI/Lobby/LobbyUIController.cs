@@ -52,6 +52,12 @@ public class LobbyUIController : MonoBehaviour
         
     }
 
+    public void CloseButtonClicked() {
+        Character.GetComponent<LobbyCharacter>().SetLockMove(false);
+        Instance.IsShowPopupUI = false;
+        Instance.SendCanaelButtonClickedEvent();
+    }
+
     public void ResetCharacter() {
         Character.anchoredPosition = new Vector2(-513, -133);
     }
