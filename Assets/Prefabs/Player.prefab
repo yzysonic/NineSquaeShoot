@@ -422,7 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slowScale: 0.3
-  slowTrasitionDuration: 0.3
+  slowTrasitionDuration: 0.6
   BGMLowpassFreq: 450
   BGMVolume: -10
 --- !u!4 &8930757042930183594 stripped

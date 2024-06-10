@@ -4656,8 +4656,8 @@ MonoBehaviour:
   startEnemySpawnTime: 1
   baseEnemySpawnInterval: 3
   overrideSpawnIntervalOnEnemyEmpty: 2
-  baseEnemySpawnMaxCount: 1
-  keepBlockFreeCount: 4
+  baseEnemySpawnMaxCount: 2
+  keepBlockFreeCount: 6
   enemyDiffcultyParamList:
   - scoreMax: 1000
     hpBonusRate: 1
