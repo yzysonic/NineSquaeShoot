@@ -9,7 +9,7 @@ using UnityQuickSheet;
 ///
 public class SkillDataInUnityAssetPostprocessor : AssetPostprocessor 
 {
-    private static readonly string filePath = "Assets/Excel/005_技能表.xlsx";
+    private static readonly string filePath = "Assets/Excel/005_SKill.xlsx";
     private static readonly string assetFilePath = "Assets/Excel/SkillDataInUnity.asset";
     private static readonly string sheetName = "SkillDataInUnity";
     

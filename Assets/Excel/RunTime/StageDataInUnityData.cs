@@ -17,8 +17,8 @@ public class StageDataInUnityData
   public int N_Round { get {return n_round; } set { n_round = value;} }
   
   [SerializeField]
-  int an_roundgroup;
-  public int An_Roundgroup { get {return an_roundgroup; } set { an_roundgroup = value;} }
+  int[] an_roundgroup = new int[0];
+  public int[] An_Roundgroup { get {return an_roundgroup; } set { an_roundgroup = value;} }
   
   [SerializeField]
   int n_rewardcoin;

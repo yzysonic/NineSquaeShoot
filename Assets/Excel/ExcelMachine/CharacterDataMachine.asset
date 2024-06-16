@@ -15,7 +15,7 @@ MonoBehaviour:
   templatePath: QuickSheet/ExcelPlugin/Templates
   scriptFilePath: Excel/RunTime
   editorScriptFilePath: Excel/Editor
-  sheetName: "002_\u89D2\u8272\u8868.xlsx"
+  sheetName: 002_Character.xlsx
   workSheetName: CharacterDataInUnity
   columnHeaderList:
   - type: 3
@@ -142,7 +142,7 @@ MonoBehaviour:
     name: n_UnlockParam
     isEnable: 0
     isArray: 0
-  excelFilePath: "Assets/Excel/002_\u89D2\u8272\u8868.xlsx"
+  excelFilePath: Assets/Excel/002_Character.xlsx
   SheetNames:
   - CharacterDataInUnity
   - CharacterData

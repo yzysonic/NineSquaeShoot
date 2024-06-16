@@ -9,7 +9,7 @@ using UnityQuickSheet;
 ///
 public class BuffDataInUnityAssetPostprocessor : AssetPostprocessor 
 {
-    private static readonly string filePath = "Assets/Excel/006_Buff表.xlsx";
+    private static readonly string filePath = "Assets/Excel/006_Buff.xlsx";
     private static readonly string assetFilePath = "Assets/Excel/BuffDataInUnity.asset";
     private static readonly string sheetName = "BuffDataInUnity";
     

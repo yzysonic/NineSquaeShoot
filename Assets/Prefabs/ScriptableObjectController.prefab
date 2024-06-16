@@ -44,7 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d173d8536b9572548943aa9eef4cbfee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _BuffData: {fileID: 11400000, guid: 453e389f9027795459484166e880dd11, type: 2}
   _characterStatusData: {fileID: 11400000, guid: 574520e7983e1784ab96828f99afcc71, type: 2}
+  _MesData: {fileID: 11400000, guid: 953e3bd1872aa2b4596922594a0cfdd7, type: 2}
+  _ProjectTileData: {fileID: 11400000, guid: 2c705479fe77f0c4abe756ff84c57a22, type: 2}
+  _RoundGroupData: {fileID: 11400000, guid: eca544ed966af264ba924edcbfd96c7d, type: 2}
+  _SkillData: {fileID: 11400000, guid: e04237f80b0021947b713ecd956403a7, type: 2}
+  _VFXData: {fileID: 11400000, guid: e34c436d76c510641b8ae360ffec9f18, type: 2}
+  _StageData: {fileID: 11400000, guid: 3e9132225fb0acb42b4035de65eef68c, type: 2}
   _weaponStatusData: {fileID: 11400000, guid: 10619499ff339c9449b0826b7ca230db, type: 2}
   SO_CharacterDataArray:
   - {fileID: 11400000, guid: 6cdd4753292e8c34493b32f4c73a1a27, type: 2}
@@ -65,7 +72,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6c7a9fdf9389164469828de524143dcc, type: 2}
   - {fileID: 11400000, guid: 762a1318d11e896419cf9e5435d876a7, type: 2}
   - {fileID: 11400000, guid: 1a9db4bcb408b0046923a17e4ea09375, type: 2}
-  - {fileID: 11400000, guid: d94fa536c939e5f4a89487761416fe61, type: 2}
-  - {fileID: 11400000, guid: a0cce8a20ce90724fa9fb367fcaec2df, type: 2}
-  - {fileID: 11400000, guid: 7bc5531ad6b43f940a8aca855df23506, type: 2}
-  - {fileID: 11400000, guid: ba108c119e835df4bb3c082f30c80d65, type: 2}

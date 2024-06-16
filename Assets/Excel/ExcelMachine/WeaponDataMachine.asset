@@ -15,7 +15,7 @@ MonoBehaviour:
   templatePath: QuickSheet/ExcelPlugin/Templates
   scriptFilePath: Excel/RunTime
   editorScriptFilePath: Excel/Editor
-  sheetName: "003_\u6B66\u5668\u8868.xlsx"
+  sheetName: 003_Weapon.xlsx
   workSheetName: WeaponDataInUnity
   columnHeaderList:
   - type: 3
@@ -58,7 +58,7 @@ MonoBehaviour:
     name: n_WeaponSFX
     isEnable: 0
     isArray: 0
-  excelFilePath: "Assets/Excel/003_\u6B66\u5668\u8868.xlsx"
+  excelFilePath: Assets/Excel/003_Weapon.xlsx
   SheetNames:
   - WeaponDataInUnity
   - ProjecttileDataInUnity

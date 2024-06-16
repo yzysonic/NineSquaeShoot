@@ -9,7 +9,7 @@ using UnityQuickSheet;
 ///
 public class SoundDataInUnityAssetPostprocessor : AssetPostprocessor 
 {
-    private static readonly string filePath = "Assets/Excel/007_音效表.xlsx";
+    private static readonly string filePath = "Assets/Excel/007_Sound.xlsx";
     private static readonly string assetFilePath = "Assets/Excel/SoundDataInUnity.asset";
     private static readonly string sheetName = "SoundDataInUnity";
     

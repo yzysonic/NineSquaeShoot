@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76abf02501031b74193b50ba7e9692d5, type: 3}
   m_Name: SkillDataInUnity
   m_EditorClassIdentifier: 
-  SheetName: Assets/Excel/005_Skill.xlsx
+  SheetName: Assets/Excel/005_SKill.xlsx
   WorksheetName: SkillDataInUnity
   dataArray:
   - n_damageproperty: 0

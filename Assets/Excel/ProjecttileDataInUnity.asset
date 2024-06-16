@@ -15,164 +15,144 @@ MonoBehaviour:
   SheetName: Assets/Excel/003_Weapon.xlsx
   WorksheetName: ProjecttileDataInUnity
   dataArray:
-  - n_id: 0
+  - n_id: 1
     n_projectileflyway: 0
     an_projectileflywayparam: 0
-    n_projectileprefab: 0
+    s_projectileprefab: Projectile
     n_projectiletype: 0
     n_projectiletypeparam: 0
-    n_projectilevelocity: 0
+    n_projectilevelocity: 100
     an_projectileendway: 0
     an_projectileendwayparam: 0
     n_projectilehitsfx: 0
-  - n_id: 0
+  - n_id: 2
     n_projectileflyway: 0
     an_projectileflywayparam: 0
-    n_projectileprefab: 0
-    n_projectiletype: 0
-    n_projectiletypeparam: 0
-    n_projectilevelocity: 0
-    an_projectileendway: 0
+    s_projectileprefab: Projectile
+    n_projectiletype: 1
+    n_projectiletypeparam: 3
+    n_projectilevelocity: 100
+    an_projectileendway: 1
     an_projectileendwayparam: 0
     n_projectilehitsfx: 0
-  - n_id: 0
+  - n_id: 3
     n_projectileflyway: 0
     an_projectileflywayparam: 0
-    n_projectileprefab: 0
+    s_projectileprefab: Projectile
     n_projectiletype: 0
     n_projectiletypeparam: 0
-    n_projectilevelocity: 0
-    an_projectileendway: 0
+    n_projectilevelocity: 100
+    an_projectileendway: 2
+    an_projectileendwayparam: 50
+    n_projectilehitsfx: 0
+  - n_id: 4
+    n_projectileflyway: 0
+    an_projectileflywayparam: 0
+    s_projectileprefab: Projectile
+    n_projectiletype: 0
+    n_projectiletypeparam: 0
+    n_projectilevelocity: 100
+    an_projectileendway: 3
+    an_projectileendwayparam: 1
+    n_projectilehitsfx: 0
+  - n_id: 5
+    n_projectileflyway: 0
+    an_projectileflywayparam: 2
+    s_projectileprefab: Projectile
+    n_projectiletype: 0
+    n_projectiletypeparam: 0
+    n_projectilevelocity: 100
+    an_projectileendway: 1
     an_projectileendwayparam: 0
     n_projectilehitsfx: 0
-  - n_id: 0
+  - n_id: 6
     n_projectileflyway: 0
     an_projectileflywayparam: 0
-    n_projectileprefab: 0
+    s_projectileprefab: Projectile
     n_projectiletype: 0
     n_projectiletypeparam: 0
-    n_projectilevelocity: 0
-    an_projectileendway: 0
+    n_projectilevelocity: 100
+    an_projectileendway: 5
     an_projectileendwayparam: 0
     n_projectilehitsfx: 0
-  - n_id: 0
+  - n_id: 7
     n_projectileflyway: 0
     an_projectileflywayparam: 0
-    n_projectileprefab: 0
+    s_projectileprefab: Projectile
     n_projectiletype: 0
     n_projectiletypeparam: 0
-    n_projectilevelocity: 0
-    an_projectileendway: 0
-    an_projectileendwayparam: 0
-    n_projectilehitsfx: 0
-  - n_id: 0
-    n_projectileflyway: 0
-    an_projectileflywayparam: 0
-    n_projectileprefab: 0
-    n_projectiletype: 0
-    n_projectiletypeparam: 0
-    n_projectilevelocity: 0
-    an_projectileendway: 0
-    an_projectileendwayparam: 0
-    n_projectilehitsfx: 0
-  - n_id: 0
-    n_projectileflyway: 0
-    an_projectileflywayparam: 0
-    n_projectileprefab: 0
-    n_projectiletype: 0
-    n_projectiletypeparam: 0
-    n_projectilevelocity: 0
-    an_projectileendway: 0
-    an_projectileendwayparam: 0
-    n_projectilehitsfx: 0
-  - n_id: 0
-    n_projectileflyway: 0
-    an_projectileflywayparam: 0
-    n_projectileprefab: 0
-    n_projectiletype: 0
-    n_projectiletypeparam: 0
-    n_projectilevelocity: 0
-    an_projectileendway: 0
-    an_projectileendwayparam: 0
+    n_projectilevelocity: 100
+    an_projectileendway: 6
+    an_projectileendwayparam: 3
     n_projectilehitsfx: 0
   dataList:
-  - n_id: 0
+  - n_id: 1
     n_projectileflyway: 0
     an_projectileflywayparam: 0
-    n_projectileprefab: 0
+    s_projectileprefab: Projectile
     n_projectiletype: 0
     n_projectiletypeparam: 0
-    n_projectilevelocity: 0
+    n_projectilevelocity: 100
     an_projectileendway: 0
     an_projectileendwayparam: 0
     n_projectilehitsfx: 0
-  - n_id: 0
+  - n_id: 2
     n_projectileflyway: 0
     an_projectileflywayparam: 0
-    n_projectileprefab: 0
-    n_projectiletype: 0
-    n_projectiletypeparam: 0
-    n_projectilevelocity: 0
-    an_projectileendway: 0
+    s_projectileprefab: Projectile
+    n_projectiletype: 1
+    n_projectiletypeparam: 3
+    n_projectilevelocity: 100
+    an_projectileendway: 1
     an_projectileendwayparam: 0
     n_projectilehitsfx: 0
-  - n_id: 0
+  - n_id: 3
     n_projectileflyway: 0
     an_projectileflywayparam: 0
-    n_projectileprefab: 0
+    s_projectileprefab: Projectile
     n_projectiletype: 0
     n_projectiletypeparam: 0
-    n_projectilevelocity: 0
-    an_projectileendway: 0
+    n_projectilevelocity: 100
+    an_projectileendway: 2
+    an_projectileendwayparam: 50
+    n_projectilehitsfx: 0
+  - n_id: 4
+    n_projectileflyway: 0
+    an_projectileflywayparam: 0
+    s_projectileprefab: Projectile
+    n_projectiletype: 0
+    n_projectiletypeparam: 0
+    n_projectilevelocity: 100
+    an_projectileendway: 3
+    an_projectileendwayparam: 1
+    n_projectilehitsfx: 0
+  - n_id: 5
+    n_projectileflyway: 0
+    an_projectileflywayparam: 2
+    s_projectileprefab: Projectile
+    n_projectiletype: 0
+    n_projectiletypeparam: 0
+    n_projectilevelocity: 100
+    an_projectileendway: 1
     an_projectileendwayparam: 0
     n_projectilehitsfx: 0
-  - n_id: 0
+  - n_id: 6
     n_projectileflyway: 0
     an_projectileflywayparam: 0
-    n_projectileprefab: 0
+    s_projectileprefab: Projectile
     n_projectiletype: 0
     n_projectiletypeparam: 0
-    n_projectilevelocity: 0
-    an_projectileendway: 0
+    n_projectilevelocity: 100
+    an_projectileendway: 5
     an_projectileendwayparam: 0
     n_projectilehitsfx: 0
-  - n_id: 0
+  - n_id: 7
     n_projectileflyway: 0
     an_projectileflywayparam: 0
-    n_projectileprefab: 0
+    s_projectileprefab: Projectile
     n_projectiletype: 0
     n_projectiletypeparam: 0
-    n_projectilevelocity: 0
-    an_projectileendway: 0
-    an_projectileendwayparam: 0
-    n_projectilehitsfx: 0
-  - n_id: 0
-    n_projectileflyway: 0
-    an_projectileflywayparam: 0
-    n_projectileprefab: 0
-    n_projectiletype: 0
-    n_projectiletypeparam: 0
-    n_projectilevelocity: 0
-    an_projectileendway: 0
-    an_projectileendwayparam: 0
-    n_projectilehitsfx: 0
-  - n_id: 0
-    n_projectileflyway: 0
-    an_projectileflywayparam: 0
-    n_projectileprefab: 0
-    n_projectiletype: 0
-    n_projectiletypeparam: 0
-    n_projectilevelocity: 0
-    an_projectileendway: 0
-    an_projectileendwayparam: 0
-    n_projectilehitsfx: 0
-  - n_id: 0
-    n_projectileflyway: 0
-    an_projectileflywayparam: 0
-    n_projectileprefab: 0
-    n_projectiletype: 0
-    n_projectiletypeparam: 0
-    n_projectilevelocity: 0
-    an_projectileendway: 0
-    an_projectileendwayparam: 0
+    n_projectilevelocity: 100
+    an_projectileendway: 6
+    an_projectileendwayparam: 3
     n_projectilehitsfx: 0

@@ -12,7 +12,399 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbf2a3c78399d0478d2cf15964b6bbc, type: 3}
   m_Name: SoundDataInUnity
   m_EditorClassIdentifier: 
-  SheetName: "Assets/Excel/007_\u97F3\u6548\u8868.xlsx"
+  SheetName: Assets/Excel/007_Sound.xlsx
   WorksheetName: SoundDataInUnity
-  dataArray: []
-  dataList: []
+  dataArray:
+  - n_id: 101
+    n_remark: "\u78BA\u8A8D"
+    n_group: 10
+    n_number: 1
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 102
+    n_remark: "\u5207\u63DB"
+    n_group: 10
+    n_number: 2
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 103
+    n_remark: "\u53D6\u6D88/\u95DC\u9589"
+    n_group: 10
+    n_number: 3
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 104
+    n_remark: "UI\u6253\u958B"
+    n_group: 10
+    n_number: 4
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 105
+    n_remark: "UI\u95DC\u9589"
+    n_group: 10
+    n_number: 5
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 201
+    n_remark: "\u904A\u6232\u6A19\u984C\u4ECB\u9762"
+    n_group: 20
+    n_number: 1
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 202
+    n_remark: "\u5927\u5EF3\u6E96\u5099\u5BA4"
+    n_group: 20
+    n_number: 2
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 203
+    n_remark: "\u4E00\u822C\u6230\u9B25"
+    n_group: 20
+    n_number: 3
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 204
+    n_remark: "Boss\u6230\u9B25"
+    n_group: 20
+    n_number: 4
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 205
+    n_remark: "\u91AB\u7642\u5BA4"
+    n_group: 20
+    n_number: 5
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 206
+    n_remark: "\u7814\u7A76\u5BA4"
+    n_group: 20
+    n_number: 6
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 207
+    n_remark: "\u8F49\u5834\u6F14\u51FA"
+    n_group: 20
+    n_number: 7
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1001
+    n_remark: "\u88AB\u6253"
+    n_group: 100
+    n_number: 1
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1002
+    n_remark: "\u6B7B\u4EA1"
+    n_group: 100
+    n_number: 2
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1003
+    n_remark: "\u901A\u95DC"
+    n_group: 100
+    n_number: 3
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1004
+    n_remark: "\u653B\u64CA\u6280\u80FD"
+    n_group: 100
+    n_number: 4
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1005
+    n_remark: "\u9632\u79A6\u6280\u80FD"
+    n_group: 100
+    n_number: 5
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1011
+    n_remark: "\u88AB\u6253"
+    n_group: 101
+    n_number: 1
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1012
+    n_remark: "\u6B7B\u4EA1"
+    n_group: 101
+    n_number: 2
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1013
+    n_remark: "\u901A\u95DC"
+    n_group: 101
+    n_number: 3
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1014
+    n_remark: "\u653B\u64CA\u6280\u80FD"
+    n_group: 101
+    n_number: 4
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1015
+    n_remark: "\u9632\u79A6\u6280\u80FD"
+    n_group: 101
+    n_number: 5
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 2001
+    n_remark: "\u88AB\u6253"
+    n_group: 200
+    n_number: 1
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 2002
+    n_remark: "\u6B7B\u4EA1"
+    n_group: 200
+    n_number: 2
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 2011
+    n_remark: "\u88AB\u6253"
+    n_group: 201
+    n_number: 1
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 2012
+    n_remark: "\u6B7B\u4EA1"
+    n_group: 201
+    n_number: 2
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 2013
+    n_remark: "\u653B\u64CA\u6280\u80FD"
+    n_group: 201
+    n_number: 3
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 2014
+    n_remark: "\u9632\u79A6\u6280\u80FD"
+    n_group: 201
+    n_number: 4
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  dataList:
+  - n_id: 101
+    n_remark: "\u78BA\u8A8D"
+    n_group: 10
+    n_number: 1
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 102
+    n_remark: "\u5207\u63DB"
+    n_group: 10
+    n_number: 2
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 103
+    n_remark: "\u53D6\u6D88/\u95DC\u9589"
+    n_group: 10
+    n_number: 3
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 104
+    n_remark: "UI\u6253\u958B"
+    n_group: 10
+    n_number: 4
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 105
+    n_remark: "UI\u95DC\u9589"
+    n_group: 10
+    n_number: 5
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 201
+    n_remark: "\u904A\u6232\u6A19\u984C\u4ECB\u9762"
+    n_group: 20
+    n_number: 1
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 202
+    n_remark: "\u5927\u5EF3\u6E96\u5099\u5BA4"
+    n_group: 20
+    n_number: 2
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 203
+    n_remark: "\u4E00\u822C\u6230\u9B25"
+    n_group: 20
+    n_number: 3
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 204
+    n_remark: "Boss\u6230\u9B25"
+    n_group: 20
+    n_number: 4
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 205
+    n_remark: "\u91AB\u7642\u5BA4"
+    n_group: 20
+    n_number: 5
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 206
+    n_remark: "\u7814\u7A76\u5BA4"
+    n_group: 20
+    n_number: 6
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 207
+    n_remark: "\u8F49\u5834\u6F14\u51FA"
+    n_group: 20
+    n_number: 7
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1001
+    n_remark: "\u88AB\u6253"
+    n_group: 100
+    n_number: 1
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1002
+    n_remark: "\u6B7B\u4EA1"
+    n_group: 100
+    n_number: 2
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1003
+    n_remark: "\u901A\u95DC"
+    n_group: 100
+    n_number: 3
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1004
+    n_remark: "\u653B\u64CA\u6280\u80FD"
+    n_group: 100
+    n_number: 4
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1005
+    n_remark: "\u9632\u79A6\u6280\u80FD"
+    n_group: 100
+    n_number: 5
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1011
+    n_remark: "\u88AB\u6253"
+    n_group: 101
+    n_number: 1
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1012
+    n_remark: "\u6B7B\u4EA1"
+    n_group: 101
+    n_number: 2
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1013
+    n_remark: "\u901A\u95DC"
+    n_group: 101
+    n_number: 3
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1014
+    n_remark: "\u653B\u64CA\u6280\u80FD"
+    n_group: 101
+    n_number: 4
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 1015
+    n_remark: "\u9632\u79A6\u6280\u80FD"
+    n_group: 101
+    n_number: 5
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 2001
+    n_remark: "\u88AB\u6253"
+    n_group: 200
+    n_number: 1
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 2002
+    n_remark: "\u6B7B\u4EA1"
+    n_group: 200
+    n_number: 2
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 2011
+    n_remark: "\u88AB\u6253"
+    n_group: 201
+    n_number: 1
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 2012
+    n_remark: "\u6B7B\u4EA1"
+    n_group: 201
+    n_number: 2
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 2013
+    n_remark: "\u653B\u64CA\u6280\u80FD"
+    n_group: 201
+    n_number: 3
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0
+  - n_id: 2014
+    n_remark: "\u9632\u79A6\u6280\u80FD"
+    n_group: 201
+    n_number: 4
+    s_soundname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_volume: 0
+    n_loop: 0

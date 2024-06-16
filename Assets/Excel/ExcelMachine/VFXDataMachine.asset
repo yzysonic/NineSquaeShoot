@@ -13,40 +13,40 @@ MonoBehaviour:
   m_Name: VFXDataMachine
   m_EditorClassIdentifier: 
   templatePath: QuickSheet/ExcelPlugin/Templates
-  scriptFilePath: 
-  editorScriptFilePath: 
-  sheetName: "007_\u97F3\u6548\u8868.xlsx"
+  scriptFilePath: Excel/RunTime
+  editorScriptFilePath: Excel/Editor
+  sheetName: 007_Sound.xlsx
   workSheetName: SoundDataInUnity
   columnHeaderList:
-  - type: 0
+  - type: 3
     name: n_ID
     isEnable: 0
     isArray: 0
-  - type: 0
+  - type: 1
     name: n_Remark
     isEnable: 0
     isArray: 0
-  - type: 0
+  - type: 3
     name: n_Group
     isEnable: 0
     isArray: 0
-  - type: 0
+  - type: 3
     name: n_Number
     isEnable: 0
     isArray: 0
-  - type: 0
+  - type: 1
     name: s_SoundName
     isEnable: 0
     isArray: 0
-  - type: 0
+  - type: 3
     name: n_Volume
     isEnable: 0
     isArray: 0
-  - type: 0
+  - type: 3
     name: n_Loop
     isEnable: 0
     isArray: 0
-  excelFilePath: "Assets/Excel/007_\u97F3\u6548\u8868.xlsx"
+  excelFilePath: Assets/Excel/007_Sound.xlsx
   SheetNames:
   - SoundDataInUnity
   - SoundData

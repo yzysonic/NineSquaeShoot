@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c799a2ec1b916f7488e19a7a48628d3e, type: 3}
   m_Name: StageDataInUnity
   m_EditorClassIdentifier: 
-  SheetName: Assets/Excel/004_Level.xlsx
+  SheetName: Assets/Excel/004_Stage.xlsx
   WorksheetName: StageDataInUnity
   dataArray:
   - n_id: 1
     n_round: 5
-    an_roundgroup: 0
+    an_roundgroup: 0100000002000000020000000300000003000000
     n_rewardcoin: 100
     n_rewardtype: 1
     n_rewardrare: 1
@@ -25,7 +25,7 @@ MonoBehaviour:
     an_stageenemybuff: 0
   - n_id: 2
     n_round: 3
-    an_roundgroup: 0
+    an_roundgroup: 030000000300000003000000
     n_rewardcoin: 50
     n_rewardtype: 2
     n_rewardrare: 1
@@ -33,7 +33,7 @@ MonoBehaviour:
     an_stageenemybuff: 0
   - n_id: 3
     n_round: 3
-    an_roundgroup: 0
+    an_roundgroup: 010000000200000002000000
     n_rewardcoin: 50
     n_rewardtype: 1
     n_rewardrare: 2
@@ -41,7 +41,7 @@ MonoBehaviour:
     an_stageenemybuff: 0
   - n_id: 4
     n_round: 3
-    an_roundgroup: 0
+    an_roundgroup: 020000000100000001000000
     n_rewardcoin: 50
     n_rewardtype: 2
     n_rewardrare: 2
@@ -49,7 +49,7 @@ MonoBehaviour:
     an_stageenemybuff: 0
   - n_id: 5
     n_round: 3
-    an_roundgroup: 0
+    an_roundgroup: 030000000200000001000000
     n_rewardcoin: 50
     n_rewardtype: 1
     n_rewardrare: 3
@@ -58,7 +58,7 @@ MonoBehaviour:
   dataList:
   - n_id: 1
     n_round: 5
-    an_roundgroup: 0
+    an_roundgroup: 0100000002000000020000000300000003000000
     n_rewardcoin: 100
     n_rewardtype: 1
     n_rewardrare: 1
@@ -66,7 +66,7 @@ MonoBehaviour:
     an_stageenemybuff: 0
   - n_id: 2
     n_round: 3
-    an_roundgroup: 0
+    an_roundgroup: 030000000300000003000000
     n_rewardcoin: 50
     n_rewardtype: 2
     n_rewardrare: 1
@@ -74,7 +74,7 @@ MonoBehaviour:
     an_stageenemybuff: 0
   - n_id: 3
     n_round: 3
-    an_roundgroup: 0
+    an_roundgroup: 010000000200000002000000
     n_rewardcoin: 50
     n_rewardtype: 1
     n_rewardrare: 2
@@ -82,7 +82,7 @@ MonoBehaviour:
     an_stageenemybuff: 0
   - n_id: 4
     n_round: 3
-    an_roundgroup: 0
+    an_roundgroup: 020000000100000001000000
     n_rewardcoin: 50
     n_rewardtype: 2
     n_rewardrare: 2
@@ -90,7 +90,7 @@ MonoBehaviour:
     an_stageenemybuff: 0
   - n_id: 5
     n_round: 3
-    an_roundgroup: 0
+    an_roundgroup: 030000000200000001000000
     n_rewardcoin: 50
     n_rewardtype: 1
     n_rewardrare: 3

@@ -15,7 +15,7 @@ MonoBehaviour:
   templatePath: QuickSheet/ExcelPlugin/Templates
   scriptFilePath: Excel/RunTime
   editorScriptFilePath: Excel/Editor
-  sheetName: "004_\u6230\u9B25\u95DC\u5361\u8868.xlsx"
+  sheetName: 004_Stage.xlsx
   workSheetName: StageDataInUnity
   columnHeaderList:
   - type: 3
@@ -29,7 +29,7 @@ MonoBehaviour:
   - type: 3
     name: an_RoundGroup
     isEnable: 0
-    isArray: 0
+    isArray: 1
   - type: 3
     name: n_RewardCoin
     isEnable: 0
@@ -50,7 +50,7 @@ MonoBehaviour:
     name: an_StageEnemyBuff
     isEnable: 0
     isArray: 0
-  excelFilePath: "Assets/Excel/004_\u6230\u9B25\u95DC\u5361\u8868.xlsx"
+  excelFilePath: Assets/Excel/004_Stage.xlsx
   SheetNames:
   - StageDataInUnity
   - RoundGroupInUnity

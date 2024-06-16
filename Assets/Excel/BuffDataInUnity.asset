@@ -12,7 +12,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee03ac6a595b374f998e5c59f64a830, type: 3}
   m_Name: BuffDataInUnity
   m_EditorClassIdentifier: 
-  SheetName: "Assets/Excel/006_Buff\u8868.xlsx"
+  SheetName: Assets/Excel/006_Buff.xlsx
   WorksheetName: BuffDataInUnity
-  dataArray: []
-  dataList: []
+  dataArray:
+  - n_id: 0
+    n_name: 0
+    n_description: 0
+    s_bufficon: "\u5167\u5BB9\u66AB\u5B9A"
+    n_buffgroup: 0
+    n_level: 0
+    n_stackcount: 0
+    n_effect: 0
+    n_effectvalue: 0
+    n_effectparam_1: 0
+    n_effectparam_2: 0
+    n_effectparam_3: 0
+    n_chance: 0
+    n_triggertiming: 0
+    n_triggerparam: 0
+    s_triggerfxname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_triggerfxduration: 0
+    n_triggerfxsonud: 0
+    s_removetiming: "\u5167\u5BB9\u66AB\u5B9A"
+    an_removeparams: 0
+    an_nextbuffs: 0
+  dataList:
+  - n_id: 0
+    n_name: 0
+    n_description: 0
+    s_bufficon: "\u5167\u5BB9\u66AB\u5B9A"
+    n_buffgroup: 0
+    n_level: 0
+    n_stackcount: 0
+    n_effect: 0
+    n_effectvalue: 0
+    n_effectparam_1: 0
+    n_effectparam_2: 0
+    n_effectparam_3: 0
+    n_chance: 0
+    n_triggertiming: 0
+    n_triggerparam: 0
+    s_triggerfxname: "\u5167\u5BB9\u66AB\u5B9A"
+    n_triggerfxduration: 0
+    n_triggerfxsonud: 0
+    s_removetiming: "\u5167\u5BB9\u66AB\u5B9A"
+    an_removeparams: 0
+    an_nextbuffs: 0

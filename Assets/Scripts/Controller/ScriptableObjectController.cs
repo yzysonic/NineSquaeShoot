@@ -4,13 +4,37 @@ using UnityEngine;
 
 public class ScriptableObjectController : MonoBehaviour
 {
+
     public static ScriptableObjectController Instance;
+
+    #region ExcelData
+    [SerializeField] private BuffDataInUnity _BuffData;
+    public BuffDataInUnity BuffData => _BuffData;
 
     [SerializeField] private CharacterDataInUnity _characterStatusData;
     public CharacterDataInUnity CharacterStatusData => _characterStatusData;
 
+    [SerializeField] private MesDataInUnity _MesData;
+    public MesDataInUnity MesData => _MesData;
+
+    [SerializeField] private ProjecttileDataInUnity _ProjectTileData;
+    public ProjecttileDataInUnity ProjectTileData => _ProjectTileData;
+
+    [SerializeField] private RoundGroupInUnity _RoundGroupData;
+    public RoundGroupInUnity RoundGroupData => _RoundGroupData;
+
+    [SerializeField] private SkillDataInUnity _SkillData;
+    public SkillDataInUnity SkillData => _SkillData;
+
+    [SerializeField] private SoundDataInUnity _VFXData;
+    public SoundDataInUnity VFXData => _VFXData;
+
+    [SerializeField] private StageDataInUnity _StageData;
+    public StageDataInUnity StageData => _StageData;
+
     [SerializeField] private WeaponDataInUnity _weaponStatusData;
     public WeaponDataInUnity WeaponStatusData => _weaponStatusData;
+    #endregion
 
     [SerializeField] private CharacterData[] SO_CharacterDataArray;
     [SerializeField] private WeaponData[] SO_WeaponDataArray;
