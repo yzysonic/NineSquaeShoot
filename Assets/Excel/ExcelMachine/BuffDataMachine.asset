@@ -15,7 +15,7 @@ MonoBehaviour:
   templatePath: QuickSheet/ExcelPlugin/Templates
   scriptFilePath: Excel/RunTime
   editorScriptFilePath: Excel/Editor
-  sheetName: 006_Buff.xlsx
+  sheetName: "006_Buff\u8868.xlsx"
   workSheetName: BuffDataInUnity
   columnHeaderList:
   - type: 3
@@ -102,7 +102,7 @@ MonoBehaviour:
     name: an_NextBuffs
     isEnable: 0
     isArray: 0
-  excelFilePath: Assets/Excel/006_Buff.xlsx
+  excelFilePath: "Assets/Excel/006_Buff\u8868.xlsx"
   SheetNames:
   - BuffDataInUnity
   - BuffData

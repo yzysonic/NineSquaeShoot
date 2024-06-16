@@ -16,22 +16,22 @@ MonoBehaviour:
   WorksheetName: CharacterDataInUnity
   dataArray:
   - n_id: 1
-    n_remark: "\u5973\u4E3B1"
-    n_name: 101
-    n_description: 201
+    n_name: 20201
+    n_description: 20301
+    s_prefabname: 0
     n_hp: 100
     n_weapon: 1
     n_movetime: 0
     n_colddown: 0
     n_hprecovervalue: 0
     n_hprecovertime: 100
-    n_str: 5
+    n_str: 10
     n_weapontype2raito: 100
     n_weapontype3raito: 100
     n_weapontype4raito: 100
-    n_critcalpercent: 100
-    n_critcalratio: 10
-    n_block: 150
+    n_critcalpercent: 5
+    n_critcalratio: 150
+    n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
     n_dodgeratio: 0
@@ -39,27 +39,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
   - n_id: 2
-    n_remark: "\u5973\u4E3B2"
-    n_name: 102
-    n_description: 202
+    n_name: 20202
+    n_description: 20302
+    s_prefabname: 0
     n_hp: 100
-    n_weapon: 0
+    n_weapon: 2
     n_movetime: 0
     n_colddown: 0
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -68,27 +70,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 3
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
+  - n_id: 101
+    n_name: 20301
+    n_description: 20601
+    s_prefabname: 0
+    n_hp: 10
+    n_weapon: 5
     n_movetime: 0
     n_colddown: 0
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -97,27 +101,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 4
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
-    n_movetime: 0
-    n_colddown: 0
+  - n_id: 102
+    n_name: 20302
+    n_description: 20602
+    s_prefabname: 0
+    n_hp: 20
+    n_weapon: 1
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -126,27 +132,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 5
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
-    n_movetime: 0
-    n_colddown: 0
+  - n_id: 103
+    n_name: 20303
+    n_description: 20603
+    s_prefabname: 0
+    n_hp: 30
+    n_weapon: 1
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -155,27 +163,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 6
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
-    n_movetime: 0
-    n_colddown: 0
+  - n_id: 104
+    n_name: 20304
+    n_description: 20604
+    s_prefabname: 0
+    n_hp: 40
+    n_weapon: 1
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -184,27 +194,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 7
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
-    n_movetime: 0
-    n_colddown: 0
+  - n_id: 105
+    n_name: 20305
+    n_description: 20605
+    s_prefabname: 0
+    n_hp: 50
+    n_weapon: 1
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -213,27 +225,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 8
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
-    n_movetime: 0
-    n_colddown: 0
+  - n_id: 106
+    n_name: 20306
+    n_description: 20606
+    s_prefabname: 0
+    n_hp: 60
+    n_weapon: 1
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -242,27 +256,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 9
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
-    n_movetime: 0
-    n_colddown: 0
+  - n_id: 107
+    n_name: 20307
+    n_description: 20607
+    s_prefabname: 0
+    n_hp: 70
+    n_weapon: 1
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -271,27 +287,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 10
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
-    n_movetime: 0
-    n_colddown: 0
+  - n_id: 108
+    n_name: 20308
+    n_description: 20608
+    s_prefabname: 0
+    n_hp: 80
+    n_weapon: 1
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -300,29 +318,31 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
   dataList:
   - n_id: 1
-    n_remark: "\u5973\u4E3B1"
-    n_name: 101
-    n_description: 201
+    n_name: 20201
+    n_description: 20301
+    s_prefabname: 0
     n_hp: 100
     n_weapon: 1
     n_movetime: 0
     n_colddown: 0
     n_hprecovervalue: 0
     n_hprecovertime: 100
-    n_str: 5
+    n_str: 10
     n_weapontype2raito: 100
     n_weapontype3raito: 100
     n_weapontype4raito: 100
-    n_critcalpercent: 100
-    n_critcalratio: 10
-    n_block: 150
+    n_critcalpercent: 5
+    n_critcalratio: 150
+    n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
     n_dodgeratio: 0
@@ -330,27 +350,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
   - n_id: 2
-    n_remark: "\u5973\u4E3B2"
-    n_name: 102
-    n_description: 202
+    n_name: 20202
+    n_description: 20302
+    s_prefabname: 0
     n_hp: 100
-    n_weapon: 0
+    n_weapon: 2
     n_movetime: 0
     n_colddown: 0
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -359,27 +381,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 3
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
+  - n_id: 101
+    n_name: 20301
+    n_description: 20601
+    s_prefabname: 0
+    n_hp: 10
+    n_weapon: 5
     n_movetime: 0
     n_colddown: 0
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -388,27 +412,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 4
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
-    n_movetime: 0
-    n_colddown: 0
+  - n_id: 102
+    n_name: 20302
+    n_description: 20602
+    s_prefabname: 0
+    n_hp: 20
+    n_weapon: 1
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -417,27 +443,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 5
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
-    n_movetime: 0
-    n_colddown: 0
+  - n_id: 103
+    n_name: 20303
+    n_description: 20603
+    s_prefabname: 0
+    n_hp: 30
+    n_weapon: 1
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -446,27 +474,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 6
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
-    n_movetime: 0
-    n_colddown: 0
+  - n_id: 104
+    n_name: 20304
+    n_description: 20604
+    s_prefabname: 0
+    n_hp: 40
+    n_weapon: 1
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -475,27 +505,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 7
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
-    n_movetime: 0
-    n_colddown: 0
+  - n_id: 105
+    n_name: 20305
+    n_description: 20605
+    s_prefabname: 0
+    n_hp: 50
+    n_weapon: 1
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -504,27 +536,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 8
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
-    n_movetime: 0
-    n_colddown: 0
+  - n_id: 106
+    n_name: 20306
+    n_description: 20606
+    s_prefabname: 0
+    n_hp: 60
+    n_weapon: 1
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -533,27 +567,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 9
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
-    n_movetime: 0
-    n_colddown: 0
+  - n_id: 107
+    n_name: 20307
+    n_description: 20607
+    s_prefabname: 0
+    n_hp: 70
+    n_weapon: 1
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -562,27 +598,29 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0
-  - n_id: 10
-    n_remark: "\u5167\u5BB9\u66AB\u5B9A"
-    n_name: 0
-    n_description: 0
-    n_hp: 0
-    n_weapon: 0
-    n_movetime: 0
-    n_colddown: 0
+  - n_id: 108
+    n_name: 20308
+    n_description: 20608
+    s_prefabname: 0
+    n_hp: 80
+    n_weapon: 1
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
-    n_hprecovertime: 0
-    n_str: 0
-    n_weapontype2raito: 0
-    n_weapontype3raito: 0
-    n_weapontype4raito: 0
-    n_critcalpercent: 0
-    n_critcalratio: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
     n_block: 0
     n_stealhealratio: 0
     n_stealheal: 0
@@ -591,8 +629,10 @@ MonoBehaviour:
     n_luckvalue: 0
     n_uniqueskill: 0
     n_buff: 0
-    s_hitsfx: 0
-    s_deadsfx: 0
-    s_victorysfx: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
     n_unlocktriger: 0
     n_unlockparam: 0

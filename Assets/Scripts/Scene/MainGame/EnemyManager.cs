@@ -59,7 +59,7 @@ namespace NSS
 
         private void Update()
         {
-            UpdateEnemySpawn();
+            //UpdateEnemySpawn();
         }
 
         private void UpdateEnemySpawn()

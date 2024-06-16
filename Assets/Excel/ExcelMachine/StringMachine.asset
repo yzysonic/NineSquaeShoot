@@ -15,7 +15,7 @@ MonoBehaviour:
   templatePath: QuickSheet/ExcelPlugin/Templates
   scriptFilePath: Excel/RunTime
   editorScriptFilePath: Excel/Editor
-  sheetName: 001_String.xlsx
+  sheetName: "001_\u5B57\u4E32\u8868.xlsx"
   workSheetName: MesDataInUnity
   columnHeaderList:
   - type: 3
@@ -54,7 +54,7 @@ MonoBehaviour:
     name: s_Kroean
     isEnable: 0
     isArray: 0
-  excelFilePath: Assets/Excel/001_String.xlsx
+  excelFilePath: "Assets/Excel/001_\u5B57\u4E32\u8868.xlsx"
   SheetNames:
   - MesDataInUnity
   - MesData

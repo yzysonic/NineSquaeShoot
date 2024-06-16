@@ -21,8 +21,8 @@ public class ProjecttileDataInUnityData
   public int An_Projectileflywayparam { get {return an_projectileflywayparam; } set { an_projectileflywayparam = value;} }
   
   [SerializeField]
-  int n_projectileprefab;
-  public int N_Projectileprefab { get {return n_projectileprefab; } set { n_projectileprefab = value;} }
+  string s_projectileprefab;
+  public string S_Projectileprefab { get {return s_projectileprefab; } set { s_projectileprefab = value;} }
   
   [SerializeField]
   int n_projectiletype;

@@ -15,7 +15,7 @@ MonoBehaviour:
   templatePath: QuickSheet/ExcelPlugin/Templates
   scriptFilePath: Excel/RunTime
   editorScriptFilePath: Excel/Editor
-  sheetName: 003_Weapon.xlsx
+  sheetName: "003_\u6B66\u5668\u8868.xlsx"
   workSheetName: ProjecttileDataInUnity
   columnHeaderList:
   - type: 3
@@ -30,8 +30,8 @@ MonoBehaviour:
     name: an_ProjectileFlyWayParam
     isEnable: 0
     isArray: 0
-  - type: 3
-    name: n_ProjectilePrefab
+  - type: 1
+    name: s_ProjectilePrefab
     isEnable: 0
     isArray: 0
   - type: 3
@@ -58,7 +58,7 @@ MonoBehaviour:
     name: n_ProjectileHitSFX
     isEnable: 0
     isArray: 0
-  excelFilePath: Assets/Excel/003_Weapon.xlsx
+  excelFilePath: "Assets/Excel/003_\u6B66\u5668\u8868.xlsx"
   SheetNames:
   - WeaponDataInUnity
   - ProjecttileDataInUnity

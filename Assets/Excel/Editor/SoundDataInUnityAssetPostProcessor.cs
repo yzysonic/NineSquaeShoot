@@ -7,11 +7,11 @@ using UnityQuickSheet;
 ///
 /// !!! Machine generated code !!!
 ///
-public class BuffDataInUnityAssetPostprocessor : AssetPostprocessor 
+public class SoundDataInUnityAssetPostprocessor : AssetPostprocessor 
 {
-    private static readonly string filePath = "Assets/Excel/006_Buff表.xlsx";
-    private static readonly string assetFilePath = "Assets/Excel/BuffDataInUnity.asset";
-    private static readonly string sheetName = "BuffDataInUnity";
+    private static readonly string filePath = "Assets/Excel/007_音效表.xlsx";
+    private static readonly string assetFilePath = "Assets/Excel/SoundDataInUnity.asset";
+    private static readonly string sheetName = "SoundDataInUnity";
     
     static void OnPostprocessAllAssets (string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths)
     {
@@ -20,16 +20,16 @@ public class BuffDataInUnityAssetPostprocessor : AssetPostprocessor
             if (!filePath.Equals (asset))
                 continue;
                 
-            BuffDataInUnity data = (BuffDataInUnity)AssetDatabase.LoadAssetAtPath (assetFilePath, typeof(BuffDataInUnity));
+            SoundDataInUnity data = (SoundDataInUnity)AssetDatabase.LoadAssetAtPath (assetFilePath, typeof(SoundDataInUnity));
             if (data == null) {
-                data = ScriptableObject.CreateInstance<BuffDataInUnity> ();
+                data = ScriptableObject.CreateInstance<SoundDataInUnity> ();
                 data.SheetName = filePath;
                 data.WorksheetName = sheetName;
                 AssetDatabase.CreateAsset ((ScriptableObject)data, assetFilePath);
                 //data.hideFlags = HideFlags.NotEditable;
             }
             
-            //data.dataArray = new ExcelQuery(filePath, sheetName).Deserialize<BuffDataInUnityData>().ToArray();		
+            //data.dataArray = new ExcelQuery(filePath, sheetName).Deserialize<SoundDataInUnityData>().ToArray();		
 
             //ScriptableObject obj = AssetDatabase.LoadAssetAtPath (assetFilePath, typeof(ScriptableObject)) as ScriptableObject;
             //EditorUtility.SetDirty (obj);
@@ -37,8 +37,8 @@ public class BuffDataInUnityAssetPostprocessor : AssetPostprocessor
             ExcelQuery query = new ExcelQuery(filePath, sheetName);
             if (query != null && query.IsValid())
             {
-                data.dataArray = query.Deserialize<BuffDataInUnityData>().ToArray();
-                data.dataList = query.Deserialize<BuffDataInUnityData>();
+                data.dataArray = query.Deserialize<SoundDataInUnityData>().ToArray();
+                data.dataList = query.Deserialize<SoundDataInUnityData>();
                 ScriptableObject obj = AssetDatabase.LoadAssetAtPath (assetFilePath, typeof(ScriptableObject)) as ScriptableObject;
                 EditorUtility.SetDirty (obj);
             }

@@ -13,16 +13,16 @@ public class CharacterDataInUnityData
   public int N_ID { get {return n_id; } set { n_id = value;} }
   
   [SerializeField]
-  string n_remark;
-  public string N_Remark { get {return n_remark; } set { n_remark = value;} }
+  string n_name;
+  public string N_Name { get {return n_name; } set { n_name = value;} }
   
   [SerializeField]
-  int n_name;
-  public int N_Name { get {return n_name; } set { n_name = value;} }
+  string n_description;
+  public string N_Description { get {return n_description; } set { n_description = value;} }
   
   [SerializeField]
-  int n_description;
-  public int N_Description { get {return n_description; } set { n_description = value;} }
+  string s_prefabname;
+  public string S_Prefabname { get {return s_prefabname; } set { s_prefabname = value;} }
   
   [SerializeField]
   int n_hp;
@@ -105,16 +105,24 @@ public class CharacterDataInUnityData
   public int N_Buff { get {return n_buff; } set { n_buff = value;} }
   
   [SerializeField]
-  string s_hitsfx;
-  public string S_Hitsfx { get {return s_hitsfx; } set { s_hitsfx = value;} }
+  int n_attackskillsfx;
+  public int N_Attackskillsfx { get {return n_attackskillsfx; } set { n_attackskillsfx = value;} }
   
   [SerializeField]
-  string s_deadsfx;
-  public string S_Deadsfx { get {return s_deadsfx; } set { s_deadsfx = value;} }
+  int n_defendskillsfx;
+  public int N_Defendskillsfx { get {return n_defendskillsfx; } set { n_defendskillsfx = value;} }
   
   [SerializeField]
-  string s_victorysfx;
-  public string S_Victorysfx { get {return s_victorysfx; } set { s_victorysfx = value;} }
+  int n_hitsfx;
+  public int N_Hitsfx { get {return n_hitsfx; } set { n_hitsfx = value;} }
+  
+  [SerializeField]
+  int n_deadsfx;
+  public int N_Deadsfx { get {return n_deadsfx; } set { n_deadsfx = value;} }
+  
+  [SerializeField]
+  int n_victorysfx;
+  public int N_Victorysfx { get {return n_victorysfx; } set { n_victorysfx = value;} }
   
   [SerializeField]
   int n_unlocktriger;

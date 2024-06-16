@@ -15,7 +15,7 @@ MonoBehaviour:
   templatePath: QuickSheet/ExcelPlugin/Templates
   scriptFilePath: Excel/RunTime
   editorScriptFilePath: Excel/Editor
-  sheetName: 005_Skill.xlsx
+  sheetName: "005_\u6280\u80FD\u8868.xlsx"
   workSheetName: SkillDataInUnity
   columnHeaderList:
   - type: 3
@@ -50,7 +50,7 @@ MonoBehaviour:
     name: s_SkillEffectPoint
     isEnable: 0
     isArray: 0
-  excelFilePath: Assets/Excel/005_Skill.xlsx
+  excelFilePath: "Assets/Excel/005_\u6280\u80FD\u8868.xlsx"
   SheetNames:
   - SkillDataInUnity
   - SkillData

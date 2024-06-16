@@ -31,9 +31,9 @@ public class CharacterData : ScriptableObject
     public int LuckyValue;
     public int UniqueSkill;
     public int Buff;
-    public string HitSFX;
-    public string DeadSFX;
-    public string VictorySFX;
+    public int HitSFX;
+    public int DeadSFX;
+    public int VictorySFX;
     public int UnlockTrigger;
     public int UnlockParam;
 }

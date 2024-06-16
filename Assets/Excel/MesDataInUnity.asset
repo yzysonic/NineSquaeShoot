@@ -16,687 +16,1407 @@ MonoBehaviour:
   WorksheetName: MesDataInUnity
   dataArray:
   - n_id: 10001
-    n_narration: "\u78BA\u5B9A\u6309\u9215"
+    n_narration: "\u78BA\u5B9A"
     n_stringtype: 100
     n_typeid: 1
     s_trachinese: "\u78BA\u5B9A"
     s_simchinese: "\u9810\u7559"
     s_english: Confirm
-    s_japanese: "\u9810\u7559"
-    s_kroean: "\u9810\u7559"
+    s_japanese: Confirm
+    s_kroean: Confirm
   - n_id: 10002
-    n_narration: "\u53D6\u6D88\u6309\u9215"
+    n_narration: "\u53D6\u6D88"
     n_stringtype: 100
     n_typeid: 2
     s_trachinese: "\u53D6\u6D88"
     s_simchinese: "\u9810\u7559"
     s_english: Cancel
-    s_japanese: "\u9810\u7559"
-    s_kroean: "\u9810\u7559"
+    s_japanese: Cancel
+    s_kroean: Cancel
   - n_id: 10003
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: "\u66FF\u63DB"
     n_stringtype: 100
     n_typeid: 3
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u66FF\u63DB"
+    s_simchinese: "\u66FF\u63DB"
+    s_english: Change
+    s_japanese: Change
+    s_kroean: Change
   - n_id: 10004
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: "\u56DE\u5230\u4E3B\u9078\u55AE"
     n_stringtype: 100
     n_typeid: 4
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u56DE\u5230\u4E3B\u9078\u55AE"
+    s_simchinese: "\u56DE\u5230\u4E3B\u9078\u55AE"
+    s_english: Back to Menu
+    s_japanese: Back to Menu
+    s_kroean: Back to Menu
   - n_id: 10005
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: "\u7E7C\u7E8C"
     n_stringtype: 100
     n_typeid: 5
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u7E7C\u7E8C"
+    s_simchinese: "\u7E7C\u7E8C"
+    s_english: Resume
+    s_japanese: Resume
+    s_kroean: Resume
   - n_id: 10006
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: 
     n_stringtype: 100
     n_typeid: 6
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
   - n_id: 10007
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: 
     n_stringtype: 100
     n_typeid: 7
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10008
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 10101
+    n_narration: "\u958B\u59CB\u904A\u6232"
     n_stringtype: 100
     n_typeid: 8
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10009
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u958B\u59CB\u904A\u6232"
+    s_simchinese: "\u958B\u59CB\u904A\u6232"
+    s_english: Start Game
+    s_japanese: Start Game
+    s_kroean: Start Game
+  - n_id: 10102
+    n_narration: "\u6392\u884C\u699C"
     n_stringtype: 100
     n_typeid: 9
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10101
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u6392\u884C\u699C"
+    s_simchinese: "\u6392\u884C\u699C"
+    s_english: LeaderBoard
+    s_japanese: LeaderBoard
+    s_kroean: LeaderBoard
+  - n_id: 10103
+    n_narration: "\u8A2D\u5B9A"
     n_stringtype: 101
     n_typeid: 1
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10102
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u8A2D\u5B9A"
+    s_simchinese: "\u8A2D\u5B9A"
+    s_english: Setting
+    s_japanese: Setting
+    s_kroean: Setting
+  - n_id: 10104
+    n_narration: "\u96E2\u958B\u904A\u6232"
     n_stringtype: 101
     n_typeid: 2
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10103
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u96E2\u958B\u904A\u6232"
+    s_simchinese: "\u96E2\u958B\u904A\u6232"
+    s_english: Exit Game
+    s_japanese: Exit Game
+    s_kroean: Exit Game
+  - n_id: 10105
+    n_narration: "\u89D2\u8272\u5207\u63DB"
     n_stringtype: 101
     n_typeid: 3
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10104
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u89D2\u8272\u5207\u63DB"
+    s_simchinese: "\u89D2\u8272\u5207\u63DB"
+    s_english: "\u89D2\u8272\u5207\u63DB"
+    s_japanese: "\u89D2\u8272\u5207\u63DB"
+    s_kroean: "\u89D2\u8272\u5207\u63DB"
+  - n_id: 10106
+    n_narration: "\u6B66\u5668\u5207\u63DB"
     n_stringtype: 101
     n_typeid: 4
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10105
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u6B66\u5668\u5207\u63DB"
+    s_simchinese: "\u6B66\u5668\u5207\u63DB"
+    s_english: "\u6B66\u5668\u5207\u63DB"
+    s_japanese: "\u6B66\u5668\u5207\u63DB"
+    s_kroean: "\u6B66\u5668\u5207\u63DB"
+  - n_id: 10107
+    n_narration: "\u958B\u767C\u8A2D\u5099"
     n_stringtype: 101
     n_typeid: 5
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10106
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u958B\u767C\u8A2D\u5099"
+    s_simchinese: "\u958B\u767C\u8A2D\u5099"
+    s_english: "\u958B\u767C\u8A2D\u5099"
+    s_japanese: "\u958B\u767C\u8A2D\u5099"
+    s_kroean: "\u958B\u767C\u8A2D\u5099"
+  - n_id: 10108
+    n_narration: "\u51FA\u4EFB\u52D9"
     n_stringtype: 101
     n_typeid: 6
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10107
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u51FA\u4EFB\u52D9"
+    s_simchinese: "\u51FA\u4EFB\u52D9"
+    s_english: "\u51FA\u4EFB\u52D9"
+    s_japanese: "\u51FA\u4EFB\u52D9"
+    s_kroean: "\u51FA\u4EFB\u52D9"
+  - n_id: 10201
+    n_narration: "\u4E3B\u97F3\u91CF"
     n_stringtype: 101
     n_typeid: 7
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10108
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u4E3B\u97F3\u91CF"
+    s_simchinese: "\u4E3B\u97F3\u91CF"
+    s_english: Main Volume
+    s_japanese: Main Volume
+    s_kroean: Main Volume
+  - n_id: 10202
+    n_narration: "\u97F3\u6A02"
     n_stringtype: 101
     n_typeid: 8
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10109
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u97F3\u6A02"
+    s_simchinese: "\u97F3\u6A02"
+    s_english: BGM
+    s_japanese: BGM
+    s_kroean: BGM
+  - n_id: 10203
+    n_narration: "\u97F3\u6548"
     n_stringtype: 101
     n_typeid: 9
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10110
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u97F3\u6548"
+    s_simchinese: "\u97F3\u6548"
+    s_english: SE
+    s_japanese: SE
+    s_kroean: SE
+  - n_id: 10204
+    n_narration: 
     n_stringtype: 101
     n_typeid: 10
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10111
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 10205
+    n_narration: 
     n_stringtype: 101
     n_typeid: 11
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10201
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 10206
+    n_narration: 
     n_stringtype: 102
     n_typeid: 1
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10202
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 10207
+    n_narration: 
     n_stringtype: 102
     n_typeid: 2
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10203
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 10208
+    n_narration: 
     n_stringtype: 102
     n_typeid: 3
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10204
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 10209
+    n_narration: 
     n_stringtype: 102
     n_typeid: 4
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
   - n_id: 10301
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: "\u66AB\u505C"
     n_stringtype: 103
     n_typeid: 1
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u66AB\u505C"
+    s_simchinese: "\u66AB\u505C"
+    s_english: Pasue
+    s_japanese: Pasue
+    s_kroean: Pasue
   - n_id: 10302
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: 
     n_stringtype: 103
     n_typeid: 2
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
   - n_id: 10303
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: 
     n_stringtype: 103
     n_typeid: 3
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
   - n_id: 10304
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: 
     n_stringtype: 103
     n_typeid: 4
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
   - n_id: 10305
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: 
     n_stringtype: 103
     n_typeid: 5
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
   - n_id: 10306
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: 
     n_stringtype: 103
     n_typeid: 6
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10501
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20101
+    n_narration: "\u8840\u91CF"
     n_stringtype: 105
     n_typeid: 1
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10502
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u8840\u91CF"
+    s_simchinese: "\u8840\u91CF"
+    s_english: "\u8840\u91CF"
+    s_japanese: "\u8840\u91CF"
+    s_kroean: "\u8840\u91CF"
+  - n_id: 20102
+    n_narration: "\u9810\u8A2D\u6B66\u5668"
     n_stringtype: 105
     n_typeid: 2
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10503
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u9810\u8A2D\u6B66\u5668"
+    s_simchinese: "\u9810\u8A2D\u6B66\u5668"
+    s_english: "\u9810\u8A2D\u6B66\u5668"
+    s_japanese: "\u9810\u8A2D\u6B66\u5668"
+    s_kroean: "\u9810\u8A2D\u6B66\u5668"
+  - n_id: 20103
+    n_narration: "\u518D\u751F"
     n_stringtype: 105
     n_typeid: 3
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10504
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u518D\u751F"
+    s_simchinese: "\u518D\u751F"
+    s_english: "\u518D\u751F"
+    s_japanese: "\u518D\u751F"
+    s_kroean: "\u518D\u751F"
+  - n_id: 20104
+    n_narration: "\u518D\u751F\u983B\u7387"
     n_stringtype: 105
     n_typeid: 4
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 11001
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u518D\u751F\u983B\u7387"
+    s_simchinese: "\u518D\u751F\u983B\u7387"
+    s_english: "\u518D\u751F\u983B\u7387"
+    s_japanese: "\u518D\u751F\u983B\u7387"
+    s_kroean: "\u518D\u751F\u983B\u7387"
+  - n_id: 20105
+    n_narration: "\u529B\u91CF"
     n_stringtype: 110
     n_typeid: 1
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 11002
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u529B\u91CF"
+    s_simchinese: "\u529B\u91CF"
+    s_english: "\u529B\u91CF"
+    s_japanese: "\u529B\u91CF"
+    s_kroean: "\u529B\u91CF"
+  - n_id: 20106
+    n_narration: "\u8F15\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
     n_stringtype: 110
     n_typeid: 2
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 11003
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u8F15\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_simchinese: "\u8F15\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_english: "\u8F15\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_japanese: "\u8F15\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_kroean: "\u8F15\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+  - n_id: 20107
+    n_narration: "\u4E2D\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
     n_stringtype: 110
     n_typeid: 3
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 11004
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u4E2D\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_simchinese: "\u4E2D\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_english: "\u4E2D\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_japanese: "\u4E2D\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_kroean: "\u4E2D\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+  - n_id: 20108
+    n_narration: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
     n_stringtype: 110
     n_typeid: 4
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_simchinese: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_english: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_japanese: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_kroean: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+  - n_id: 20109
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20110
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20111
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20112
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20113
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20114
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20115
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20116
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20201
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20202
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20203
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20204
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20205
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20206
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20301
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20302
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20303
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30101
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30102
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30103
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30104
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30105
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30106
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30201
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30202
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30203
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30204
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30205
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30301
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30302
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30303
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30304
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30305
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30306
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 40101
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 40102
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 40103
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 40104
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 40105
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 40106
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
   dataList:
   - n_id: 10001
-    n_narration: "\u78BA\u5B9A\u6309\u9215"
+    n_narration: "\u78BA\u5B9A"
     n_stringtype: 100
     n_typeid: 1
     s_trachinese: "\u78BA\u5B9A"
     s_simchinese: "\u9810\u7559"
     s_english: Confirm
-    s_japanese: "\u9810\u7559"
-    s_kroean: "\u9810\u7559"
+    s_japanese: Confirm
+    s_kroean: Confirm
   - n_id: 10002
-    n_narration: "\u53D6\u6D88\u6309\u9215"
+    n_narration: "\u53D6\u6D88"
     n_stringtype: 100
     n_typeid: 2
     s_trachinese: "\u53D6\u6D88"
     s_simchinese: "\u9810\u7559"
     s_english: Cancel
-    s_japanese: "\u9810\u7559"
-    s_kroean: "\u9810\u7559"
+    s_japanese: Cancel
+    s_kroean: Cancel
   - n_id: 10003
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: "\u66FF\u63DB"
     n_stringtype: 100
     n_typeid: 3
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u66FF\u63DB"
+    s_simchinese: "\u66FF\u63DB"
+    s_english: Change
+    s_japanese: Change
+    s_kroean: Change
   - n_id: 10004
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: "\u56DE\u5230\u4E3B\u9078\u55AE"
     n_stringtype: 100
     n_typeid: 4
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u56DE\u5230\u4E3B\u9078\u55AE"
+    s_simchinese: "\u56DE\u5230\u4E3B\u9078\u55AE"
+    s_english: Back to Menu
+    s_japanese: Back to Menu
+    s_kroean: Back to Menu
   - n_id: 10005
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: "\u7E7C\u7E8C"
     n_stringtype: 100
     n_typeid: 5
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u7E7C\u7E8C"
+    s_simchinese: "\u7E7C\u7E8C"
+    s_english: Resume
+    s_japanese: Resume
+    s_kroean: Resume
   - n_id: 10006
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: 
     n_stringtype: 100
     n_typeid: 6
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
   - n_id: 10007
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: 
     n_stringtype: 100
     n_typeid: 7
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10008
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 10101
+    n_narration: "\u958B\u59CB\u904A\u6232"
     n_stringtype: 100
     n_typeid: 8
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10009
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u958B\u59CB\u904A\u6232"
+    s_simchinese: "\u958B\u59CB\u904A\u6232"
+    s_english: Start Game
+    s_japanese: Start Game
+    s_kroean: Start Game
+  - n_id: 10102
+    n_narration: "\u6392\u884C\u699C"
     n_stringtype: 100
     n_typeid: 9
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10101
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u6392\u884C\u699C"
+    s_simchinese: "\u6392\u884C\u699C"
+    s_english: LeaderBoard
+    s_japanese: LeaderBoard
+    s_kroean: LeaderBoard
+  - n_id: 10103
+    n_narration: "\u8A2D\u5B9A"
     n_stringtype: 101
     n_typeid: 1
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10102
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u8A2D\u5B9A"
+    s_simchinese: "\u8A2D\u5B9A"
+    s_english: Setting
+    s_japanese: Setting
+    s_kroean: Setting
+  - n_id: 10104
+    n_narration: "\u96E2\u958B\u904A\u6232"
     n_stringtype: 101
     n_typeid: 2
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10103
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u96E2\u958B\u904A\u6232"
+    s_simchinese: "\u96E2\u958B\u904A\u6232"
+    s_english: Exit Game
+    s_japanese: Exit Game
+    s_kroean: Exit Game
+  - n_id: 10105
+    n_narration: "\u89D2\u8272\u5207\u63DB"
     n_stringtype: 101
     n_typeid: 3
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10104
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u89D2\u8272\u5207\u63DB"
+    s_simchinese: "\u89D2\u8272\u5207\u63DB"
+    s_english: "\u89D2\u8272\u5207\u63DB"
+    s_japanese: "\u89D2\u8272\u5207\u63DB"
+    s_kroean: "\u89D2\u8272\u5207\u63DB"
+  - n_id: 10106
+    n_narration: "\u6B66\u5668\u5207\u63DB"
     n_stringtype: 101
     n_typeid: 4
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10105
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u6B66\u5668\u5207\u63DB"
+    s_simchinese: "\u6B66\u5668\u5207\u63DB"
+    s_english: "\u6B66\u5668\u5207\u63DB"
+    s_japanese: "\u6B66\u5668\u5207\u63DB"
+    s_kroean: "\u6B66\u5668\u5207\u63DB"
+  - n_id: 10107
+    n_narration: "\u958B\u767C\u8A2D\u5099"
     n_stringtype: 101
     n_typeid: 5
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10106
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u958B\u767C\u8A2D\u5099"
+    s_simchinese: "\u958B\u767C\u8A2D\u5099"
+    s_english: "\u958B\u767C\u8A2D\u5099"
+    s_japanese: "\u958B\u767C\u8A2D\u5099"
+    s_kroean: "\u958B\u767C\u8A2D\u5099"
+  - n_id: 10108
+    n_narration: "\u51FA\u4EFB\u52D9"
     n_stringtype: 101
     n_typeid: 6
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10107
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u51FA\u4EFB\u52D9"
+    s_simchinese: "\u51FA\u4EFB\u52D9"
+    s_english: "\u51FA\u4EFB\u52D9"
+    s_japanese: "\u51FA\u4EFB\u52D9"
+    s_kroean: "\u51FA\u4EFB\u52D9"
+  - n_id: 10201
+    n_narration: "\u4E3B\u97F3\u91CF"
     n_stringtype: 101
     n_typeid: 7
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10108
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u4E3B\u97F3\u91CF"
+    s_simchinese: "\u4E3B\u97F3\u91CF"
+    s_english: Main Volume
+    s_japanese: Main Volume
+    s_kroean: Main Volume
+  - n_id: 10202
+    n_narration: "\u97F3\u6A02"
     n_stringtype: 101
     n_typeid: 8
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10109
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u97F3\u6A02"
+    s_simchinese: "\u97F3\u6A02"
+    s_english: BGM
+    s_japanese: BGM
+    s_kroean: BGM
+  - n_id: 10203
+    n_narration: "\u97F3\u6548"
     n_stringtype: 101
     n_typeid: 9
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10110
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u97F3\u6548"
+    s_simchinese: "\u97F3\u6548"
+    s_english: SE
+    s_japanese: SE
+    s_kroean: SE
+  - n_id: 10204
+    n_narration: 
     n_stringtype: 101
     n_typeid: 10
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10111
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 10205
+    n_narration: 
     n_stringtype: 101
     n_typeid: 11
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10201
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 10206
+    n_narration: 
     n_stringtype: 102
     n_typeid: 1
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10202
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 10207
+    n_narration: 
     n_stringtype: 102
     n_typeid: 2
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10203
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 10208
+    n_narration: 
     n_stringtype: 102
     n_typeid: 3
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10204
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 10209
+    n_narration: 
     n_stringtype: 102
     n_typeid: 4
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
   - n_id: 10301
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: "\u66AB\u505C"
     n_stringtype: 103
     n_typeid: 1
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u66AB\u505C"
+    s_simchinese: "\u66AB\u505C"
+    s_english: Pasue
+    s_japanese: Pasue
+    s_kroean: Pasue
   - n_id: 10302
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: 
     n_stringtype: 103
     n_typeid: 2
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
   - n_id: 10303
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: 
     n_stringtype: 103
     n_typeid: 3
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
   - n_id: 10304
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: 
     n_stringtype: 103
     n_typeid: 4
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
   - n_id: 10305
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: 
     n_stringtype: 103
     n_typeid: 5
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
   - n_id: 10306
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    n_narration: 
     n_stringtype: 103
     n_typeid: 6
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10501
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20101
+    n_narration: "\u8840\u91CF"
     n_stringtype: 105
     n_typeid: 1
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10502
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u8840\u91CF"
+    s_simchinese: "\u8840\u91CF"
+    s_english: "\u8840\u91CF"
+    s_japanese: "\u8840\u91CF"
+    s_kroean: "\u8840\u91CF"
+  - n_id: 20102
+    n_narration: "\u9810\u8A2D\u6B66\u5668"
     n_stringtype: 105
     n_typeid: 2
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10503
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u9810\u8A2D\u6B66\u5668"
+    s_simchinese: "\u9810\u8A2D\u6B66\u5668"
+    s_english: "\u9810\u8A2D\u6B66\u5668"
+    s_japanese: "\u9810\u8A2D\u6B66\u5668"
+    s_kroean: "\u9810\u8A2D\u6B66\u5668"
+  - n_id: 20103
+    n_narration: "\u518D\u751F"
     n_stringtype: 105
     n_typeid: 3
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 10504
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u518D\u751F"
+    s_simchinese: "\u518D\u751F"
+    s_english: "\u518D\u751F"
+    s_japanese: "\u518D\u751F"
+    s_kroean: "\u518D\u751F"
+  - n_id: 20104
+    n_narration: "\u518D\u751F\u983B\u7387"
     n_stringtype: 105
     n_typeid: 4
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 11001
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u518D\u751F\u983B\u7387"
+    s_simchinese: "\u518D\u751F\u983B\u7387"
+    s_english: "\u518D\u751F\u983B\u7387"
+    s_japanese: "\u518D\u751F\u983B\u7387"
+    s_kroean: "\u518D\u751F\u983B\u7387"
+  - n_id: 20105
+    n_narration: "\u529B\u91CF"
     n_stringtype: 110
     n_typeid: 1
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 11002
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u529B\u91CF"
+    s_simchinese: "\u529B\u91CF"
+    s_english: "\u529B\u91CF"
+    s_japanese: "\u529B\u91CF"
+    s_kroean: "\u529B\u91CF"
+  - n_id: 20106
+    n_narration: "\u8F15\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
     n_stringtype: 110
     n_typeid: 2
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 11003
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u8F15\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_simchinese: "\u8F15\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_english: "\u8F15\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_japanese: "\u8F15\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_kroean: "\u8F15\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+  - n_id: 20107
+    n_narration: "\u4E2D\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
     n_stringtype: 110
     n_typeid: 3
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 11004
-    n_narration: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u4E2D\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_simchinese: "\u4E2D\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_english: "\u4E2D\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_japanese: "\u4E2D\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_kroean: "\u4E2D\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+  - n_id: 20108
+    n_narration: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
     n_stringtype: 110
     n_typeid: 4
-    s_trachinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_simchinese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_english: "\u5167\u5BB9\u66AB\u5B9A"
-    s_japanese: "\u5167\u5BB9\u66AB\u5B9A"
-    s_kroean: "\u5167\u5BB9\u66AB\u5B9A"
+    s_trachinese: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_simchinese: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_english: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_japanese: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+    s_kroean: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
+  - n_id: 20109
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20110
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20111
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20112
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20113
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20114
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20115
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20116
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20201
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20202
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20203
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20204
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20205
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20206
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20301
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20302
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 20303
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30101
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30102
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30103
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30104
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30105
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30106
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30201
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30202
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30203
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30204
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30205
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30301
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30302
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30303
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30304
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30305
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 30306
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 40101
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 40102
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 40103
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 40104
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 40105
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 
+  - n_id: 40106
+    n_narration: 
+    n_stringtype: 0
+    n_typeid: 0
+    s_trachinese: 
+    s_simchinese: 
+    s_english: 
+    s_japanese: 
+    s_kroean: 

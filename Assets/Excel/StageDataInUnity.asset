@@ -15,148 +15,84 @@ MonoBehaviour:
   SheetName: Assets/Excel/004_Level.xlsx
   WorksheetName: StageDataInUnity
   dataArray:
-  - n_id: 0
-    n_round: 0
+  - n_id: 1
+    n_round: 5
     an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
+    n_rewardcoin: 100
+    n_rewardtype: 1
+    n_rewardrare: 1
+    an_stagemyselfbuff: 0
+    an_stageenemybuff: 0
+  - n_id: 2
+    n_round: 3
     an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
+    n_rewardcoin: 50
+    n_rewardtype: 2
+    n_rewardrare: 1
+    an_stagemyselfbuff: 0
+    an_stageenemybuff: 0
+  - n_id: 3
+    n_round: 3
     an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
+    n_rewardcoin: 50
+    n_rewardtype: 1
+    n_rewardrare: 2
+    an_stagemyselfbuff: 0
+    an_stageenemybuff: 0
+  - n_id: 4
+    n_round: 3
     an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
+    n_rewardcoin: 50
+    n_rewardtype: 2
+    n_rewardrare: 2
+    an_stagemyselfbuff: 0
+    an_stageenemybuff: 0
+  - n_id: 5
+    n_round: 3
     an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
-    an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
-    an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
-    an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
-    an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
+    n_rewardcoin: 50
+    n_rewardtype: 1
+    n_rewardrare: 3
+    an_stagemyselfbuff: 0
+    an_stageenemybuff: 0
   dataList:
-  - n_id: 0
-    n_round: 0
+  - n_id: 1
+    n_round: 5
     an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
+    n_rewardcoin: 100
+    n_rewardtype: 1
+    n_rewardrare: 1
+    an_stagemyselfbuff: 0
+    an_stageenemybuff: 0
+  - n_id: 2
+    n_round: 3
     an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
+    n_rewardcoin: 50
+    n_rewardtype: 2
+    n_rewardrare: 1
+    an_stagemyselfbuff: 0
+    an_stageenemybuff: 0
+  - n_id: 3
+    n_round: 3
     an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
+    n_rewardcoin: 50
+    n_rewardtype: 1
+    n_rewardrare: 2
+    an_stagemyselfbuff: 0
+    an_stageenemybuff: 0
+  - n_id: 4
+    n_round: 3
     an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
+    n_rewardcoin: 50
+    n_rewardtype: 2
+    n_rewardrare: 2
+    an_stagemyselfbuff: 0
+    an_stageenemybuff: 0
+  - n_id: 5
+    n_round: 3
     an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
-    an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
-    an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
-    an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
-  - n_id: 0
-    n_round: 0
-    an_roundgroup: 0
-    n_rewardcoin: 0
-    n_rewardtype: 0
-    n_rewardrare: 0
-    an_stagemyselfbuff: "\u5167\u5BB9\u66AB\u5B9A"
-    an_stageenemybuff: "\u5167\u5BB9\u66AB\u5B9A"
+    n_rewardcoin: 50
+    n_rewardtype: 1
+    n_rewardrare: 3
+    an_stagemyselfbuff: 0
+    an_stageenemybuff: 0

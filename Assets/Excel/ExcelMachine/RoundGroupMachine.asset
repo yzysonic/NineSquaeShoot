@@ -15,7 +15,7 @@ MonoBehaviour:
   templatePath: QuickSheet/ExcelPlugin/Templates
   scriptFilePath: Excel/RunTime
   editorScriptFilePath: Excel/Editor
-  sheetName: 004_Level.xlsx
+  sheetName: "004_\u6230\u9B25\u95DC\u5361\u8868.xlsx"
   workSheetName: RoundGroupInUnity
   columnHeaderList:
   - type: 3
@@ -102,7 +102,7 @@ MonoBehaviour:
     name: n_NeutralPlace5
     isEnable: 0
     isArray: 0
-  excelFilePath: Assets/Excel/004_Level.xlsx
+  excelFilePath: "Assets/Excel/004_\u6230\u9B25\u95DC\u5361\u8868.xlsx"
   SheetNames:
   - StageDataInUnity
   - RoundGroupInUnity

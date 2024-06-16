@@ -59,9 +59,9 @@ public class ScriptableObjectController : MonoBehaviour
                 SO_CharacterDataArray[i].LuckyValue = _characterStatusData.dataArray[i].N_Luckvalue;
                 SO_CharacterDataArray[i].UniqueSkill = _characterStatusData.dataArray[i].N_Uniqueskill;
                 SO_CharacterDataArray[i].Buff = _characterStatusData.dataArray[i].N_Buff;
-                SO_CharacterDataArray[i].HitSFX = _characterStatusData.dataArray[i].S_Hitsfx;
-                SO_CharacterDataArray[i].DeadSFX = _characterStatusData.dataArray[i].S_Deadsfx;
-                SO_CharacterDataArray[i].VictorySFX = _characterStatusData.dataArray[i].S_Victorysfx;
+                SO_CharacterDataArray[i].HitSFX = _characterStatusData.dataArray[i].N_Hitsfx;
+                SO_CharacterDataArray[i].DeadSFX = _characterStatusData.dataArray[i].N_Deadsfx;
+                SO_CharacterDataArray[i].VictorySFX = _characterStatusData.dataArray[i].N_Victorysfx;
                 SO_CharacterDataArray[i].UnlockTrigger = _characterStatusData.dataArray[i].N_Unlocktriger;
                 SO_CharacterDataArray[i].UnlockParam = _characterStatusData.dataArray[i].N_Unlockparam;
             }
