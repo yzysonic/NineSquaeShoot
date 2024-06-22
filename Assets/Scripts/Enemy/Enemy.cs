@@ -61,7 +61,7 @@ namespace NSS
         protected override void OnDefeated()
         {
             base.OnDefeated();
-
+            EnemyManager.Instance.AddDefeatCount(1);
             ScoreManager.Instance.CurrentScore += baseScore;
         }
 
