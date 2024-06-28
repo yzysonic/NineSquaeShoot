@@ -24,6 +24,14 @@ namespace NSS
             EnemyManager.Instance.OnEnemySpawned(this);
         }
 
+        private void Start() {
+            Life.MaxValue = (uint)Status.HP;
+            Life.Value = (uint)Status.HP;
+            Movement.SetMoveDuration(Status.MoveTime);
+            moveInterval = Status.MoveCoolDown;
+            Behaviour.SetMoveTimer();
+        }
+
         protected override void OnDestroy()
         {
             if (EnemyManager.IsCreated)

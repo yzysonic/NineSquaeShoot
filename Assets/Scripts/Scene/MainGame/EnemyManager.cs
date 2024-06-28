@@ -95,6 +95,7 @@ namespace NSS
                 GameObject enemyObj = Instantiate(enemyPrefab);
                 var enemy = enemyObj.GetComponent<Enemy>();
                 if (enemy) {
+                    enemy.Status = ScriptableObjectController.Instance.EnemyStatusDic[CurrentGroup.MonsterID];
                     enemy.EntryField(availableBlocks[blockNo]);
                 }
                 ApplyEnemyDiffcultyParam(enemyObj);

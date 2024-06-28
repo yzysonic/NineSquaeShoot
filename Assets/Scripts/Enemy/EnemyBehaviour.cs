@@ -93,5 +93,9 @@ namespace NSS
 
             return false;
         }
+
+        public void SetMoveTimer() {
+            moveTimer = new Timer(enemy.MoveInterval);
+        }
     }
 }

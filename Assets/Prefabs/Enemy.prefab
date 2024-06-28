@@ -151,6 +151,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entryEffectObject: {fileID: 7327926215633487253, guid: d2673e4d520878146887aa01ab7ddd7c, type: 3}
+  Status:
+    _ID: 0
+    _NameID: 0
+    _DescriptionID: 0
+    _HP: 0
+    _WeaponID: 0
+    _MoveTime: 0
+    _MoveCoolDown: 0
+    _HPRecovery: 0
+    _HPRecoveryTime: 0
+    _Strength: 0
+    _LightAttackRatio: 0
+    _MiddleAttackRatio: 0
+    _HeavyAttackRatio: 0
+    _CriticalPercent: 0
+    _CriticalRatio: 0
+    _Block: 0
+    _StealHeal: 0
+    _StealHealPercent: 0
+    _DodgeRatio: 0
+    _SkillCoolDownRatio: 0
+    _LuckValue: 0
+    _PrefabName: 
   moveInterval: 1
   baseScore: 100
 --- !u!114 &7459154850050120555

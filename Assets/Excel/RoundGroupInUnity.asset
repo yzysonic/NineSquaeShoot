@@ -16,27 +16,27 @@ MonoBehaviour:
   WorksheetName: RoundGroupInUnity
   dataArray:
   - n_id: 1
-    an_monsterid: 1001
+    an_monsterid: 101
     an_monsterplace: 00000000010000000200000003000000
   - n_id: 2
-    an_monsterid: 1002
+    an_monsterid: 102
     an_monsterplace: 04000000050000000600000007000000
   - n_id: 3
-    an_monsterid: 1003
+    an_monsterid: 103
     an_monsterplace: 08000000090000000a0000000b000000
   - n_id: 4
-    an_monsterid: 1004
+    an_monsterid: 104
     an_monsterplace: 0c0000000d0000000e0000000f000000
   dataList:
   - n_id: 1
-    an_monsterid: 1001
+    an_monsterid: 101
     an_monsterplace: 00000000010000000200000003000000
   - n_id: 2
-    an_monsterid: 1002
+    an_monsterid: 102
     an_monsterplace: 04000000050000000600000007000000
   - n_id: 3
-    an_monsterid: 1003
+    an_monsterid: 103
     an_monsterplace: 08000000090000000a0000000b000000
   - n_id: 4
-    an_monsterid: 1004
+    an_monsterid: 104
     an_monsterplace: 0c0000000d0000000e0000000f000000

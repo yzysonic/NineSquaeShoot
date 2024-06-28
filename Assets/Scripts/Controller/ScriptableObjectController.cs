@@ -41,16 +41,17 @@ public class ScriptableObjectController : MonoBehaviour
 
     public Dictionary<int, CharacterData> SO_CharacterDataDic;
     public Dictionary<int, WeaponData> SO_WeaponDataDic;
+    public Dictionary<int, CharacterStatus> EnemyStatusDic;
 
     void Awake() {
         Instance = this;
         SO_CharacterDataDic = new Dictionary<int, CharacterData>();
         SO_WeaponDataDic = new Dictionary<int, WeaponData>();
+        EnemyStatusDic = new Dictionary<int, CharacterStatus>();
     }
 
     // Start is called before the first frame update
     void Start() {
-        SetScriptableObjData();
         SetDictionary();
     }
 
@@ -114,16 +115,27 @@ public class ScriptableObjectController : MonoBehaviour
     }
 
     void SetDictionary() {
-        for (int i = 0; i < SO_CharacterDataArray.Length; i++) {
-            if (SO_CharacterDataArray[i] != null) {
-                SO_CharacterDataDic.Add(SO_CharacterDataArray[i].ID, SO_CharacterDataArray[i]);
-            }
-        }
+        //for (int i = 0; i < SO_CharacterDataArray.Length; i++) {
+        //    if (SO_CharacterDataArray[i] != null) {
+        //        SO_CharacterDataDic.Add(SO_CharacterDataArray[i].ID, SO_CharacterDataArray[i]);
+        //    }
+        //}
 
-        for (int i = 0; i < SO_WeaponDataArray.Length; i++) {
-            if (SO_WeaponDataArray[i] != null) {
-                SO_WeaponDataDic.Add(SO_WeaponDataArray[i].ID, SO_WeaponDataArray[i]);
+        //for (int i = 0; i < SO_WeaponDataArray.Length; i++) {
+        //    if (SO_WeaponDataArray[i] != null) {
+        //        SO_WeaponDataDic.Add(SO_WeaponDataArray[i].ID, SO_WeaponDataArray[i]);
+        //    }
+        //}
+
+        foreach(var status in _characterStatusData.dataArray) {
+            if (status.N_ID < 100) {
+                continue;
             }
+            CharacterStatus temp = new CharacterStatus();
+            temp.SetStatus(status.N_ID, status.N_Name, status.N_Description, status.N_Hp, status.N_Weapon, status.N_Movetime, status.N_Colddown, status.N_Hprecovervalue, status.N_Hprecovertime
+                , status.N_Str, status.N_Weapontype2raito, status.N_Weapontype3raito, status.N_Weapontype4raito, status.N_Critcalpercent, status.N_Critcalratio, status.N_Block
+                , status.N_Stealheal, status.N_Stealhealratio, status.N_Dodgeratio, status.N_Skillcolddownratio, status.N_Luckvalue, status.S_Prefabname);
+            EnemyStatusDic.Add(temp.ID, temp);
         }
     }
 }

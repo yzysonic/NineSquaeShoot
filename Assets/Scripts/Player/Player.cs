@@ -18,6 +18,16 @@ namespace NSS
             counterAction = GetComponent<PlayerCounterAction>();
         }
 
+        private void Start() {
+            var temp = ScriptableObjectController.Instance.CharacterStatusData.dataArray[PlayerData.CurrentCharacterID - 1];
+            Status.SetStatus(temp.N_ID, temp.N_Name, temp.N_Description, temp.N_Hp, temp.N_Weapon, temp.N_Movetime, temp.N_Colddown, temp.N_Hprecovervalue, temp.N_Hprecovertime
+                , temp.N_Str, temp.N_Weapontype2raito, temp.N_Weapontype3raito, temp.N_Weapontype4raito, temp.N_Critcalpercent, temp.N_Critcalratio, temp.N_Block, temp.N_Stealheal
+                , temp.N_Stealhealratio, temp.N_Dodgeratio, temp.N_Skillcolddownratio, temp.N_Luckvalue, temp.S_Prefabname);
+            Life.MaxValue = (uint)Status.HP;
+            Life.Value = (uint)Status.HP;
+            Movement.SetMoveDuration(Status.MoveTime);
+        }
+
         public void OnNewGameStarted()
         {
             SetComponentsEnabledOnDefeated(true);

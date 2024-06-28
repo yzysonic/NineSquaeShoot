@@ -61,6 +61,8 @@ namespace NSS
 
         public event Action Defeated;
 
+        public CharacterStatus Status;
+
         private FieldBlock stayingBlock;
 
         private LifeComponent life;

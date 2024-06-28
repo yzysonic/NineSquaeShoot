@@ -13,12 +13,12 @@ public class CharacterDataInUnityData
   public int N_ID { get {return n_id; } set { n_id = value;} }
   
   [SerializeField]
-  string n_name;
-  public string N_Name { get {return n_name; } set { n_name = value;} }
+  int n_name;
+  public int N_Name { get {return n_name; } set { n_name = value;} }
   
   [SerializeField]
-  string n_description;
-  public string N_Description { get {return n_description; } set { n_description = value;} }
+  int n_description;
+  public int N_Description { get {return n_description; } set { n_description = value;} }
   
   [SerializeField]
   string s_prefabname;

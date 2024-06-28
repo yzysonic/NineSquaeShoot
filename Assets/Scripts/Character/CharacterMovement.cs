@@ -135,5 +135,9 @@ namespace NSS
             endPoint = null;
             timer.Reset(moveDuration);
         }
+
+        public void SetMoveDuration(float Duration) {
+            moveDuration = Duration;
+        }
     }
 }
