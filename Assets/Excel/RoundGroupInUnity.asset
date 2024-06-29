@@ -17,26 +17,26 @@ MonoBehaviour:
   dataArray:
   - n_id: 1
     an_monsterid: 101
-    an_monsterplace: 00000000010000000200000003000000
+    an_monsterplace: 0000000004000000080000000c000000
   - n_id: 2
     an_monsterid: 102
-    an_monsterplace: 04000000050000000600000007000000
+    an_monsterplace: 0100000005000000090000000d000000
   - n_id: 3
     an_monsterid: 103
-    an_monsterplace: 08000000090000000a0000000b000000
+    an_monsterplace: 02000000060000000a0000000e000000
   - n_id: 4
     an_monsterid: 104
-    an_monsterplace: 0c0000000d0000000e0000000f000000
+    an_monsterplace: 03000000070000000b0000000f000000
   dataList:
   - n_id: 1
     an_monsterid: 101
-    an_monsterplace: 00000000010000000200000003000000
+    an_monsterplace: 0000000004000000080000000c000000
   - n_id: 2
     an_monsterid: 102
-    an_monsterplace: 04000000050000000600000007000000
+    an_monsterplace: 0100000005000000090000000d000000
   - n_id: 3
     an_monsterid: 103
-    an_monsterplace: 08000000090000000a0000000b000000
+    an_monsterplace: 02000000060000000a0000000e000000
   - n_id: 4
     an_monsterid: 104
-    an_monsterplace: 0c0000000d0000000e0000000f000000
+    an_monsterplace: 03000000070000000b0000000f000000

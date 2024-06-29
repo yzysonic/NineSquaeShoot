@@ -61,23 +61,23 @@ MonoBehaviour:
     s_japanese: Resume
     s_kroean: Resume
   - n_id: 10006
-    n_narration: 
+    n_narration: 0
     n_stringtype: 100
     n_typeid: 6
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10007
-    n_narration: 
+    n_narration: 0
     n_stringtype: 100
     n_typeid: 7
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10101
     n_narration: "\u958B\u59CB\u904A\u6232"
     n_stringtype: 100
@@ -178,59 +178,59 @@ MonoBehaviour:
     s_japanese: SE
     s_kroean: SE
   - n_id: 10204
-    n_narration: 
+    n_narration: 0
     n_stringtype: 101
     n_typeid: 10
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10205
-    n_narration: 
+    n_narration: 0
     n_stringtype: 101
     n_typeid: 11
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10206
-    n_narration: 
+    n_narration: 0
     n_stringtype: 102
     n_typeid: 1
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10207
-    n_narration: 
+    n_narration: 0
     n_stringtype: 102
     n_typeid: 2
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10208
-    n_narration: 
+    n_narration: 0
     n_stringtype: 102
     n_typeid: 3
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10209
-    n_narration: 
+    n_narration: 0
     n_stringtype: 102
     n_typeid: 4
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10301
     n_narration: "\u66AB\u505C"
     n_stringtype: 103
@@ -241,50 +241,50 @@ MonoBehaviour:
     s_japanese: Pasue
     s_kroean: Pasue
   - n_id: 10302
-    n_narration: 
+    n_narration: 0
     n_stringtype: 103
     n_typeid: 2
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10303
-    n_narration: 
+    n_narration: 0
     n_stringtype: 103
     n_typeid: 3
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10304
-    n_narration: 
+    n_narration: 0
     n_stringtype: 103
     n_typeid: 4
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10305
-    n_narration: 
+    n_narration: 0
     n_stringtype: 103
     n_typeid: 5
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10306
-    n_narration: 
+    n_narration: 0
     n_stringtype: 103
     n_typeid: 6
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20101
     n_narration: "\u8840\u91CF"
     n_stringtype: 105
@@ -358,365 +358,365 @@ MonoBehaviour:
     s_japanese: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
     s_kroean: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
   - n_id: 20109
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u7206\u64CA\u6A5F\u7387(%)"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u7206\u64CA\u6A5F\u7387(%)"
+    s_simchinese: "\u7206\u64CA\u6A5F\u7387(%)"
+    s_english: "\u7206\u64CA\u6A5F\u7387(%)"
+    s_japanese: "\u7206\u64CA\u6A5F\u7387(%)"
+    s_kroean: "\u7206\u64CA\u6A5F\u7387(%)"
   - n_id: 20110
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u7206\u64CA\u500D\u7387"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u7206\u64CA\u500D\u7387"
+    s_simchinese: "\u7206\u64CA\u500D\u7387"
+    s_english: "\u7206\u64CA\u500D\u7387"
+    s_japanese: "\u7206\u64CA\u500D\u7387"
+    s_kroean: "\u7206\u64CA\u500D\u7387"
   - n_id: 20111
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u8B77\u76FE\u503C"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u8B77\u76FE\u503C"
+    s_simchinese: "\u8B77\u76FE\u503C"
+    s_english: "\u8B77\u76FE\u503C"
+    s_japanese: "\u8B77\u76FE\u503C"
+    s_kroean: "\u8B77\u76FE\u503C"
   - n_id: 20112
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u5077\u53D6\u751F\u547D\u500D\u7387"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u5077\u53D6\u751F\u547D\u500D\u7387"
+    s_simchinese: "\u5077\u53D6\u751F\u547D\u500D\u7387"
+    s_english: "\u5077\u53D6\u751F\u547D\u500D\u7387"
+    s_japanese: "\u5077\u53D6\u751F\u547D\u500D\u7387"
+    s_kroean: "\u5077\u53D6\u751F\u547D\u500D\u7387"
   - n_id: 20113
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u5077\u53D6\u751F\u547D\u503C"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u5077\u53D6\u751F\u547D\u503C"
+    s_simchinese: "\u5077\u53D6\u751F\u547D\u503C"
+    s_english: "\u5077\u53D6\u751F\u547D\u503C"
+    s_japanese: "\u5077\u53D6\u751F\u547D\u503C"
+    s_kroean: "\u5077\u53D6\u751F\u547D\u503C"
   - n_id: 20114
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u8FF4\u907F\u7387(%)"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u8FF4\u907F\u7387(%)"
+    s_simchinese: "\u8FF4\u907F\u7387(%)"
+    s_english: "\u8FF4\u907F\u7387(%)"
+    s_japanese: "\u8FF4\u907F\u7387(%)"
+    s_kroean: "\u8FF4\u907F\u7387(%)"
   - n_id: 20115
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u6280\u80FD\u51B7\u537B(%)"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u6280\u80FD\u51B7\u537B(%)"
+    s_simchinese: "\u6280\u80FD\u51B7\u537B(%)"
+    s_english: "\u6280\u80FD\u51B7\u537B(%)"
+    s_japanese: "\u6280\u80FD\u51B7\u537B(%)"
+    s_kroean: "\u6280\u80FD\u51B7\u537B(%)"
   - n_id: 20116
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u904B\u6C23\u503C"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u904B\u6C23\u503C"
+    s_simchinese: "\u904B\u6C23\u503C"
+    s_english: "\u904B\u6C23\u503C"
+    s_japanese: "\u904B\u6C23\u503C"
+    s_kroean: "\u904B\u6C23\u503C"
   - n_id: 20201
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u59B9\u5B50"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u59B9\u5B50"
+    s_simchinese: "\u59B9\u5B50"
+    s_english: "\u59B9\u5B50"
+    s_japanese: "\u59B9\u5B50"
+    s_kroean: "\u59B9\u5B50"
   - n_id: 20202
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20203
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20204
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20205
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20206
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20301
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20302
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20303
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30101
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u6B66\u5668\u6AC3"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u6B66\u5668\u6AC3"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30102
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u7A2E\u985E"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u7A2E\u985E"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30103
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u706B\u529B"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u706B\u529B"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30104
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u653B\u901F"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u653B\u901F"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30105
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u9644\u52A0\u6548\u679C"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u9644\u52A0\u6548\u679C"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30106
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30201
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u624B\u69CD"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u624B\u69CD"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30202
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u6A5F\u69CD"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u6A5F\u69CD"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30203
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u72D9\u64CA\u69CD"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u72D9\u64CA\u69CD"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30204
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u6563\u5F48\u69CD"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u6563\u5F48\u69CD"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30205
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u5206\u88C2\u69CD"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u5206\u88C2\u69CD"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30301
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30302
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30303
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30304
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30305
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30306
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 40101
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u6280\u80FD\u98FE\u54C1"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u6280\u80FD\u98FE\u54C1"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 40102
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 40103
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 40104
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 40105
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 40106
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   dataList:
   - n_id: 10001
     n_narration: "\u78BA\u5B9A"
@@ -764,23 +764,23 @@ MonoBehaviour:
     s_japanese: Resume
     s_kroean: Resume
   - n_id: 10006
-    n_narration: 
+    n_narration: 0
     n_stringtype: 100
     n_typeid: 6
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10007
-    n_narration: 
+    n_narration: 0
     n_stringtype: 100
     n_typeid: 7
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10101
     n_narration: "\u958B\u59CB\u904A\u6232"
     n_stringtype: 100
@@ -881,59 +881,59 @@ MonoBehaviour:
     s_japanese: SE
     s_kroean: SE
   - n_id: 10204
-    n_narration: 
+    n_narration: 0
     n_stringtype: 101
     n_typeid: 10
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10205
-    n_narration: 
+    n_narration: 0
     n_stringtype: 101
     n_typeid: 11
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10206
-    n_narration: 
+    n_narration: 0
     n_stringtype: 102
     n_typeid: 1
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10207
-    n_narration: 
+    n_narration: 0
     n_stringtype: 102
     n_typeid: 2
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10208
-    n_narration: 
+    n_narration: 0
     n_stringtype: 102
     n_typeid: 3
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10209
-    n_narration: 
+    n_narration: 0
     n_stringtype: 102
     n_typeid: 4
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10301
     n_narration: "\u66AB\u505C"
     n_stringtype: 103
@@ -944,50 +944,50 @@ MonoBehaviour:
     s_japanese: Pasue
     s_kroean: Pasue
   - n_id: 10302
-    n_narration: 
+    n_narration: 0
     n_stringtype: 103
     n_typeid: 2
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10303
-    n_narration: 
+    n_narration: 0
     n_stringtype: 103
     n_typeid: 3
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10304
-    n_narration: 
+    n_narration: 0
     n_stringtype: 103
     n_typeid: 4
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10305
-    n_narration: 
+    n_narration: 0
     n_stringtype: 103
     n_typeid: 5
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 10306
-    n_narration: 
+    n_narration: 0
     n_stringtype: 103
     n_typeid: 6
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20101
     n_narration: "\u8840\u91CF"
     n_stringtype: 105
@@ -1061,362 +1061,362 @@ MonoBehaviour:
     s_japanese: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
     s_kroean: "\u91CD\u578B\u6B66\u5668\u653B\u64CA\u500D\u7387"
   - n_id: 20109
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u7206\u64CA\u6A5F\u7387(%)"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u7206\u64CA\u6A5F\u7387(%)"
+    s_simchinese: "\u7206\u64CA\u6A5F\u7387(%)"
+    s_english: "\u7206\u64CA\u6A5F\u7387(%)"
+    s_japanese: "\u7206\u64CA\u6A5F\u7387(%)"
+    s_kroean: "\u7206\u64CA\u6A5F\u7387(%)"
   - n_id: 20110
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u7206\u64CA\u500D\u7387"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u7206\u64CA\u500D\u7387"
+    s_simchinese: "\u7206\u64CA\u500D\u7387"
+    s_english: "\u7206\u64CA\u500D\u7387"
+    s_japanese: "\u7206\u64CA\u500D\u7387"
+    s_kroean: "\u7206\u64CA\u500D\u7387"
   - n_id: 20111
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u8B77\u76FE\u503C"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u8B77\u76FE\u503C"
+    s_simchinese: "\u8B77\u76FE\u503C"
+    s_english: "\u8B77\u76FE\u503C"
+    s_japanese: "\u8B77\u76FE\u503C"
+    s_kroean: "\u8B77\u76FE\u503C"
   - n_id: 20112
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u5077\u53D6\u751F\u547D\u500D\u7387"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u5077\u53D6\u751F\u547D\u500D\u7387"
+    s_simchinese: "\u5077\u53D6\u751F\u547D\u500D\u7387"
+    s_english: "\u5077\u53D6\u751F\u547D\u500D\u7387"
+    s_japanese: "\u5077\u53D6\u751F\u547D\u500D\u7387"
+    s_kroean: "\u5077\u53D6\u751F\u547D\u500D\u7387"
   - n_id: 20113
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u5077\u53D6\u751F\u547D\u503C"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u5077\u53D6\u751F\u547D\u503C"
+    s_simchinese: "\u5077\u53D6\u751F\u547D\u503C"
+    s_english: "\u5077\u53D6\u751F\u547D\u503C"
+    s_japanese: "\u5077\u53D6\u751F\u547D\u503C"
+    s_kroean: "\u5077\u53D6\u751F\u547D\u503C"
   - n_id: 20114
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u8FF4\u907F\u7387(%)"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u8FF4\u907F\u7387(%)"
+    s_simchinese: "\u8FF4\u907F\u7387(%)"
+    s_english: "\u8FF4\u907F\u7387(%)"
+    s_japanese: "\u8FF4\u907F\u7387(%)"
+    s_kroean: "\u8FF4\u907F\u7387(%)"
   - n_id: 20115
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u6280\u80FD\u51B7\u537B(%)"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u6280\u80FD\u51B7\u537B(%)"
+    s_simchinese: "\u6280\u80FD\u51B7\u537B(%)"
+    s_english: "\u6280\u80FD\u51B7\u537B(%)"
+    s_japanese: "\u6280\u80FD\u51B7\u537B(%)"
+    s_kroean: "\u6280\u80FD\u51B7\u537B(%)"
   - n_id: 20116
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u904B\u6C23\u503C"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u904B\u6C23\u503C"
+    s_simchinese: "\u904B\u6C23\u503C"
+    s_english: "\u904B\u6C23\u503C"
+    s_japanese: "\u904B\u6C23\u503C"
+    s_kroean: "\u904B\u6C23\u503C"
   - n_id: 20201
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u59B9\u5B50"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u59B9\u5B50"
+    s_simchinese: "\u59B9\u5B50"
+    s_english: "\u59B9\u5B50"
+    s_japanese: "\u59B9\u5B50"
+    s_kroean: "\u59B9\u5B50"
   - n_id: 20202
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20203
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20204
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20205
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20206
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20301
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20302
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 20303
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30101
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u6B66\u5668\u6AC3"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u6B66\u5668\u6AC3"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30102
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u7A2E\u985E"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u7A2E\u985E"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30103
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u706B\u529B"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u706B\u529B"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30104
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u653B\u901F"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u653B\u901F"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30105
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u9644\u52A0\u6548\u679C"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u9644\u52A0\u6548\u679C"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30106
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30201
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u624B\u69CD"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u624B\u69CD"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30202
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u6A5F\u69CD"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u6A5F\u69CD"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30203
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u72D9\u64CA\u69CD"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u72D9\u64CA\u69CD"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30204
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u6563\u5F48\u69CD"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u6563\u5F48\u69CD"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30205
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u5206\u88C2\u69CD"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u5206\u88C2\u69CD"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30301
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30302
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30303
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30304
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30305
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 30306
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 40101
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: "\u6280\u80FD\u98FE\u54C1"
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: "\u6280\u80FD\u98FE\u54C1"
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 40102
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 40103
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 40104
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 40105
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0
   - n_id: 40106
-    n_narration: 
-    n_stringtype: 0
-    n_typeid: 0
-    s_trachinese: 
-    s_simchinese: 
-    s_english: 
-    s_japanese: 
-    s_kroean: 
+    n_narration: 0
+    n_stringtype: 110
+    n_typeid: 4
+    s_trachinese: 0
+    s_simchinese: 0
+    s_english: 0
+    s_japanese: 0
+    s_kroean: 0

@@ -22,7 +22,7 @@ MonoBehaviour:
     n_hp: 100
     n_weapon: 1
     n_movetime: 0
-    n_colddown: 0
+    n_colddown: 1
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -52,8 +52,8 @@ MonoBehaviour:
     s_prefabname: 0
     n_hp: 100
     n_weapon: 2
-    n_movetime: 0
-    n_colddown: 0
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -83,8 +83,8 @@ MonoBehaviour:
     s_prefabname: 0
     n_hp: 10
     n_weapon: 5
-    n_movetime: 0
-    n_colddown: 0
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -333,7 +333,7 @@ MonoBehaviour:
     n_hp: 100
     n_weapon: 1
     n_movetime: 0
-    n_colddown: 0
+    n_colddown: 1
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -363,8 +363,8 @@ MonoBehaviour:
     s_prefabname: 0
     n_hp: 100
     n_weapon: 2
-    n_movetime: 0
-    n_colddown: 0
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -394,8 +394,8 @@ MonoBehaviour:
     s_prefabname: 0
     n_hp: 10
     n_weapon: 5
-    n_movetime: 0
-    n_colddown: 0
+    n_movetime: 1
+    n_colddown: 1
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
