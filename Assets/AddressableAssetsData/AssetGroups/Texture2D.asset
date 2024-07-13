@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Texture2D
+  m_EditorClassIdentifier: 
+  m_GroupName: Texture2D
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 9ab364289f109d34f942675e56a47173
+  m_SerializeEntries:
+  - m_GUID: b9b5d3858a146d441aeac022dbe0395d
+    m_Address: Assets/Textures/icon/gun/gun1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Weapon
+  - m_GUID: 0423c46fb71b9c147b9c0c124c5007e5
+    m_Address: Assets/Textures/icon/gun/gun2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Weapon
+  - m_GUID: 5a57c28b0a087b448b95cf3f0947cbdb
+    m_Address: Assets/Textures/icon/gun/gun3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Weapon
+  - m_GUID: 2b40d65a6adf8224ba4e08311a3efa91
+    m_Address: Assets/Textures/icon/gun/gun4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Weapon
+  - m_GUID: e178270fc1c17a64e804b5fab6687286
+    m_Address: Assets/Textures/icon/gun/gun5.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Weapon
+  - m_GUID: 5aa3eecbb52908d469edb2ffac04674c
+    m_Address: Assets/Textures/icon/Character/character01.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterIcon
+  - m_GUID: 4683c0fde4493f048abf812c256284e5
+    m_Address: Assets/Textures/character1/character01_idle01.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Character
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 23f74c62c8292724ca0754d1635e7b9c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 27bccf689e6867848be0f292141e1fe2, type: 2}
+    - {fileID: 11400000, guid: 058c406880cccab469752a616582ee7a, type: 2}
