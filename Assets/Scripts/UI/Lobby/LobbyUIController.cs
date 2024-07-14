@@ -29,8 +29,8 @@ public class LobbyUIController : MonoBehaviour
     Action<WeaponDataInUnityData> WeaponInfoChanged;                                                //目標武器資訊更動時觸發
     Action<Vector2> GridMoveButtonClicked;                                                          //移動選擇格子按鈕按下
 
-    public Image CharacterIconImg;
-    public Image WeaponIconImg;
+    [SerializeField] private Image CharacterIconImg;
+    [SerializeField] private Image WeaponIconImg;
 
     [SerializeField] private WeaponInfoUIObj[] WeaponLobbyInfoUIObjArray;
 
@@ -40,11 +40,8 @@ public class LobbyUIController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        CharacterIconImg.sprite = ScriptableObjectController.Instance.SO_CharacterDataDic[PlayerData.CurrentCharacterID].CharacterIconSprite;
-        WeaponIconImg.sprite = ScriptableObjectController.Instance.SO_WeaponDataDic[PlayerData.CurrentWeaponID].WeaponSprite;
-
         for (int i = 0; i < WeaponLobbyInfoUIObjArray.Length; i++) {
-            WeaponLobbyInfoUIObjArray[i].InitializeUI(ScriptableObjectController.Instance.WeaponStatusData.dataArray[PlayerData.CurrentWeaponID]);
+            WeaponLobbyInfoUIObjArray[i].InitializeUI(ScriptableObjectController.Instance.WeaponStatusData.dataArray[SaveDataController.Instance.Data.playerData.CurrentWeaponID]);
         }
     }
 
@@ -69,6 +66,11 @@ public class LobbyUIController : MonoBehaviour
 
     public void ControlPopupUIObj(ControlType Type) {
         PopupUIObjParent.gameObject.SetActive((Type == ControlType.Enable) ? true : false);
+    }
+
+    public void SetLobbyIcon() {
+        CharacterIconImg.sprite = ScriptableObjectController.Instance.CharacterStatusDic[SaveDataController.Instance.Data.playerData.CurrentCharacterID].CharacterIconSprite;
+        WeaponIconImg.sprite = ScriptableObjectController.Instance.WeaponStatusDic[SaveDataController.Instance.Data.playerData.CurrentWeaponID].WeaponSprite;
     }
 
     #region UIColliderTriggered

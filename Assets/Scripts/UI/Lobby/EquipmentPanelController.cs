@@ -31,11 +31,11 @@ public class EquipmentPanelController : MonoBehaviour
 
     void OnEnable() {
         if (ScriptableObjectController.Instance != null) {
-            CurrentWeaponImg.sprite = ScriptableObjectController.Instance.SO_WeaponDataDic[PlayerData.CurrentWeaponID].WeaponSprite;
-            CurrentWeaponName.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[PlayerData.CurrentWeaponID - 1].N_Weaponname.ToString();
-            CurrentWeaponType.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[PlayerData.CurrentWeaponID - 1].N_Weapontype.ToString();
-            CurrentWeaponDmage.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[PlayerData.CurrentWeaponID - 1].N_Damage.ToString();
-            CurrentWeaponInterval.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[PlayerData.CurrentWeaponID - 1].N_Interval.ToString();
+            CurrentWeaponImg.sprite = ScriptableObjectController.Instance.WeaponStatusDic[SaveDataController.Instance.Data.playerData.CurrentWeaponID].WeaponSprite;
+            CurrentWeaponName.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[SaveDataController.Instance.Data.playerData.CurrentWeaponID - 1].N_Weaponname.ToString();
+            CurrentWeaponType.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[SaveDataController.Instance.Data.playerData.CurrentWeaponID - 1].N_Weapontype.ToString();
+            CurrentWeaponDmage.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[SaveDataController.Instance.Data.playerData.CurrentWeaponID - 1].N_Damage.ToString();
+            CurrentWeaponInterval.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[SaveDataController.Instance.Data.playerData.CurrentWeaponID - 1].N_Interval.ToString();
         }
     }
 
@@ -49,11 +49,11 @@ public class EquipmentPanelController : MonoBehaviour
         IsInWeaponPanel = true;
         CurrentLabelCount = 1;
         CurrentGridCount = 1;
-        CurrentWeaponImg.sprite = ScriptableObjectController.Instance.SO_WeaponDataDic[PlayerData.CurrentWeaponID].WeaponSprite;
-        CurrentWeaponName.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[PlayerData.CurrentWeaponID - 1].N_Weaponname.ToString();
-        CurrentWeaponType.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[PlayerData.CurrentWeaponID - 1].N_Weapontype.ToString();
-        CurrentWeaponDmage.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[PlayerData.CurrentWeaponID - 1].N_Damage.ToString();
-        CurrentWeaponInterval.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[PlayerData.CurrentWeaponID - 1].N_Interval.ToString();
+        CurrentWeaponImg.sprite = ScriptableObjectController.Instance.WeaponStatusDic[SaveDataController.Instance.Data.playerData.CurrentWeaponID].WeaponSprite;
+        CurrentWeaponName.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[SaveDataController.Instance.Data.playerData.CurrentWeaponID - 1].N_Weaponname.ToString();
+        CurrentWeaponType.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[SaveDataController.Instance.Data.playerData.CurrentWeaponID - 1].N_Weapontype.ToString();
+        CurrentWeaponDmage.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[SaveDataController.Instance.Data.playerData.CurrentWeaponID - 1].N_Damage.ToString();
+        CurrentWeaponInterval.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[SaveDataController.Instance.Data.playerData.CurrentWeaponID - 1].N_Interval.ToString();
     }
 
     // Update is called once per frame
@@ -64,7 +64,7 @@ public class EquipmentPanelController : MonoBehaviour
     void OnChangeButtonClicked() {
         LobbyUIController.Instance.SendConfirmSelectGridChangedEvent(CurrentGridCount);
         if (IsInWeaponPanel) {
-            CurrentWeaponImg.sprite = ScriptableObjectController.Instance.SO_WeaponDataDic[CurrentGridCount].WeaponSprite;
+            //CurrentWeaponImg.sprite = ScriptableObjectController.Instance.SO_WeaponDataDic[CurrentGridCount].WeaponSprite;
             CurrentWeaponName.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[CurrentGridCount - 1].N_Weaponname.ToString();
             CurrentWeaponType.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[CurrentGridCount - 1].N_Weapontype.ToString();
             CurrentWeaponDmage.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[CurrentGridCount - 1].N_Damage.ToString();
@@ -77,10 +77,10 @@ public class EquipmentPanelController : MonoBehaviour
 
     void OnConfirmButtonClicked() {
         if (IsInWeaponPanel) {
-            if (CurrentGridCount != PlayerData.CurrentWeaponID) {
-                PlayerData.CurrentWeaponID = CurrentGridCount;
-                LobbyUIController.Instance.WeaponIconImg.sprite = ScriptableObjectController.Instance.SO_WeaponDataDic[PlayerData.CurrentWeaponID].WeaponSprite;
-                LobbyUIController.Instance.SendWeaponInfoChangedEvent(ScriptableObjectController.Instance.WeaponStatusData.dataArray[PlayerData.CurrentWeaponID - 1]);
+            if (CurrentGridCount != SaveDataController.Instance.Data.playerData.CurrentWeaponID) {
+                SaveDataController.Instance.Data.playerData.CurrentWeaponID = CurrentGridCount;
+                //LobbyUIController.Instance.WeaponIconImg.sprite = ScriptableObjectController.Instance.SO_WeaponDataDic[SaveDataController.Instance.Data.playerData.CurrentWeaponID].WeaponSprite;
+                LobbyUIController.Instance.SendWeaponInfoChangedEvent(ScriptableObjectController.Instance.WeaponStatusData.dataArray[SaveDataController.Instance.Data.playerData.CurrentWeaponID - 1]);
             }
         }
         LobbyUIController.Instance.ControlPopupUIObj(ControlType.Disable);
@@ -112,10 +112,10 @@ public class EquipmentPanelController : MonoBehaviour
                 CurrentGridCount = (Vector.y < 0) ? CurrentGridCount + 1 : CurrentGridCount - 1;
             }
 
-            if (CurrentGridCount < 1 || CurrentGridCount > ScriptableObjectController.Instance.SO_WeaponDataDic.Count) {
+            /*if (CurrentGridCount < 1 || CurrentGridCount > ScriptableObjectController.Instance.SO_WeaponDataDic.Count) {
                 CurrentGridCount = (CurrentGridCount < 1) ? CurrentGridCount = 1 : ScriptableObjectController.Instance.SO_WeaponDataDic.Count;
             }
-            SelectedWeaponImg.sprite = ScriptableObjectController.Instance.SO_WeaponDataDic[CurrentGridCount].WeaponSprite;
+            SelectedWeaponImg.sprite = ScriptableObjectController.Instance.SO_WeaponDataDic[CurrentGridCount].WeaponSprite;*/
             SelectedWeaponName.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[CurrentGridCount - 1].N_Weaponname.ToString();
             SelectedWeaponDescription.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[CurrentGridCount - 1].N_Weapondescription.ToString();
             SelectedWeaponType.text = ScriptableObjectController.Instance.WeaponStatusData.dataArray[CurrentGridCount - 1].N_Weapontype.ToString();

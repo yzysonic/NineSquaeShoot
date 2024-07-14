@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 public class ScriptableObjectController : MonoBehaviour
 {
@@ -36,23 +37,35 @@ public class ScriptableObjectController : MonoBehaviour
     public WeaponDataInUnity WeaponStatusData => _weaponStatusData;
     #endregion
 
-    [SerializeField] private CharacterData[] SO_CharacterDataArray;
-    [SerializeField] private WeaponData[] SO_WeaponDataArray;
+    [SerializeField] private List<Sprite> WeaponSpriteList;
+    [SerializeField] private List<Sprite> CharacterSpriteList;
+    [SerializeField] private List<Sprite> CharacterIconSpriteList;
 
-    public Dictionary<int, CharacterData> SO_CharacterDataDic;
-    public Dictionary<int, WeaponData> SO_WeaponDataDic;
+    public Dictionary<string, Sprite> CharacterSpriteDic;
+    public Dictionary<string, Sprite> CharacterIconSpriteDic;
+    public Dictionary<string, Sprite> WeaponSpriteDic;
     public Dictionary<int, CharacterStatus> EnemyStatusDic;
+    public Dictionary<int, CharacterStatus> CharacterStatusDic;
+    public Dictionary<int, WeaponStatus> WeaponStatusDic;
 
     void Awake() {
         Instance = this;
-        SO_CharacterDataDic = new Dictionary<int, CharacterData>();
-        SO_WeaponDataDic = new Dictionary<int, WeaponData>();
+        CharacterSpriteDic = new Dictionary<string, Sprite>();
+        CharacterIconSpriteDic = new Dictionary<string, Sprite>();
+        WeaponSpriteDic = new Dictionary<string, Sprite>();
         EnemyStatusDic = new Dictionary<int, CharacterStatus>();
+        CharacterStatusDic = new Dictionary<int, CharacterStatus>();
+        WeaponStatusDic = new Dictionary<int, WeaponStatus>();
+        WeaponSpriteList = new List<Sprite>();
+        CharacterSpriteList = new List<Sprite>();
+        CharacterIconSpriteList = new List<Sprite>();
+        LoadTexture();
+        StartCoroutine("WaitSetDictionary");
     }
 
     // Start is called before the first frame update
     void Start() {
-        SetDictionary();
+        
     }
 
     // Update is called once per frame
@@ -60,82 +73,61 @@ public class ScriptableObjectController : MonoBehaviour
         
     }
 
-    void SetScriptableObjData() {
-        if (SO_CharacterDataArray.Length == _characterStatusData.dataArray.Length) {
-            for (int i = 0; i < _characterStatusData.dataArray.Length; i++) {
-                SO_CharacterDataArray[i].ID = _characterStatusData.dataArray[i].N_ID;
-                SO_CharacterDataArray[i].HP = _characterStatusData.dataArray[i].N_Hp;
-                SO_CharacterDataArray[i].InitialWeapon = _characterStatusData.dataArray[i].N_Weapon;
-                SO_CharacterDataArray[i].MoveTime = _characterStatusData.dataArray[i].N_Movetime;
-                SO_CharacterDataArray[i].MoveTimeCoolDown = _characterStatusData.dataArray[i].N_Colddown;
-                SO_CharacterDataArray[i].HPRecoveryValue = _characterStatusData.dataArray[i].N_Hprecovervalue;
-                SO_CharacterDataArray[i].HPRecoveryTime = _characterStatusData.dataArray[i].N_Hprecovertime;
-                SO_CharacterDataArray[i].Strength = _characterStatusData.dataArray[i].N_Str;
-                SO_CharacterDataArray[i].WeaponType2Ratio = _characterStatusData.dataArray[i].N_Weapontype2raito;
-                SO_CharacterDataArray[i].WeaponType3Ratio = _characterStatusData.dataArray[i].N_Weapontype3raito;
-                SO_CharacterDataArray[i].WeaponType4Ratio = _characterStatusData.dataArray[i].N_Weapontype4raito;
-                SO_CharacterDataArray[i].CriticalPercent = _characterStatusData.dataArray[i].N_Critcalpercent;
-                SO_CharacterDataArray[i].CriticalRatio = _characterStatusData.dataArray[i].N_Critcalratio;
-                SO_CharacterDataArray[i].Block = _characterStatusData.dataArray[i].N_Block;
-                SO_CharacterDataArray[i].StealHealRatio = _characterStatusData.dataArray[i].N_Stealhealratio;
-                SO_CharacterDataArray[i].StealHeal = _characterStatusData.dataArray[i].N_Stealheal;
-                SO_CharacterDataArray[i].DodgeRatio = _characterStatusData.dataArray[i].N_Dodgeratio;
-                SO_CharacterDataArray[i].SkillCoolDownRatio = _characterStatusData.dataArray[i].N_Skillcolddownratio;
-                SO_CharacterDataArray[i].LuckyValue = _characterStatusData.dataArray[i].N_Luckvalue;
-                SO_CharacterDataArray[i].UniqueSkill = _characterStatusData.dataArray[i].N_Uniqueskill;
-                SO_CharacterDataArray[i].Buff = _characterStatusData.dataArray[i].N_Buff;
-                SO_CharacterDataArray[i].HitSFX = _characterStatusData.dataArray[i].N_Hitsfx;
-                SO_CharacterDataArray[i].DeadSFX = _characterStatusData.dataArray[i].N_Deadsfx;
-                SO_CharacterDataArray[i].VictorySFX = _characterStatusData.dataArray[i].N_Victorysfx;
-                SO_CharacterDataArray[i].UnlockTrigger = _characterStatusData.dataArray[i].N_Unlocktriger;
-                SO_CharacterDataArray[i].UnlockParam = _characterStatusData.dataArray[i].N_Unlockparam;
-            }
-        }
-        else {
-            Debug.LogError("CharacterDataArray長度與Excel表資料不一樣");
-        }
-
-        if (SO_WeaponDataArray.Length == _weaponStatusData.dataArray.Length) {
-            for (int i = 0; i < _weaponStatusData.dataArray.Length; i++) {
-                SO_WeaponDataArray[i].ID = _weaponStatusData.dataArray[i].N_ID;
-                SO_WeaponDataArray[i].WeaponName = _weaponStatusData.dataArray[i].N_Weaponname;
-                SO_WeaponDataArray[i].WeaponDescription = _weaponStatusData.dataArray[i].N_Weapondescription;
-                SO_WeaponDataArray[i].WeaponType = _weaponStatusData.dataArray[i].N_Weapontype;
-                SO_WeaponDataArray[i].Damage = _weaponStatusData.dataArray[i].N_Damage;
-                SO_WeaponDataArray[i].Interval = _weaponStatusData.dataArray[i].N_Interval;
-                SO_WeaponDataArray[i].IntervalMin = _weaponStatusData.dataArray[i].N_Intervalmin;
-                SO_WeaponDataArray[i].WeaponBuff = _weaponStatusData.dataArray[i].N_Weaponbuff;
-                SO_WeaponDataArray[i].ProjectileID = _weaponStatusData.dataArray[i].N_Projectileid;
-                SO_WeaponDataArray[i].WeaponSFX = _weaponStatusData.dataArray[i].N_Weaponsfx;
-            }
-        }
-        else {
-            Debug.LogError("WeaponDataArray長度與Excel表資料不一樣");
-        }
+    IEnumerator WaitSetDictionary() {
+        yield return new WaitUntil(() => CharacterIconSpriteList.Count != 0);
+        SetDictionary();
+        StopCoroutine("WaitSetDictionary");
     }
 
     void SetDictionary() {
-        //for (int i = 0; i < SO_CharacterDataArray.Length; i++) {
-        //    if (SO_CharacterDataArray[i] != null) {
-        //        SO_CharacterDataDic.Add(SO_CharacterDataArray[i].ID, SO_CharacterDataArray[i]);
-        //    }
-        //}
+        foreach (var status in _weaponStatusData.dataArray) {
+            WeaponStatus temp = new WeaponStatus();
+            temp.SetStatus(status.N_ID, status.N_Weaponname, status.N_Weapondescription, status.N_Weapontype, status.N_Damage, status.N_Interval, status.N_Intervalmin, status.N_Weaponbuff, status.N_Projectileid, status.N_Weaponsfx, WeaponSpriteDic[status.S_Weapontexturename]);
+            WeaponStatusDic.Add(temp.ID, temp);
+        }
 
-        //for (int i = 0; i < SO_WeaponDataArray.Length; i++) {
-        //    if (SO_WeaponDataArray[i] != null) {
-        //        SO_WeaponDataDic.Add(SO_WeaponDataArray[i].ID, SO_WeaponDataArray[i]);
-        //    }
-        //}
-
-        foreach(var status in _characterStatusData.dataArray) {
-            if (status.N_ID < 100) {
-                continue;
-            }
+        foreach (var status in _characterStatusData.dataArray) {
             CharacterStatus temp = new CharacterStatus();
             temp.SetStatus(status.N_ID, status.N_Name, status.N_Description, status.N_Hp, status.N_Weapon, status.N_Movetime, status.N_Colddown, status.N_Hprecovervalue, status.N_Hprecovertime
                 , status.N_Str, status.N_Weapontype2raito, status.N_Weapontype3raito, status.N_Weapontype4raito, status.N_Critcalpercent, status.N_Critcalratio, status.N_Block
-                , status.N_Stealheal, status.N_Stealhealratio, status.N_Dodgeratio, status.N_Skillcolddownratio, status.N_Luckvalue, status.S_Prefabname);
-            EnemyStatusDic.Add(temp.ID, temp);
+                , status.N_Stealheal, status.N_Stealhealratio, status.N_Dodgeratio, status.N_Skillcolddownratio, status.N_Luckvalue, status.S_Prefabname
+                , (CharacterSpriteDic.ContainsKey(status.S_Texturename)) ? CharacterSpriteDic[status.S_Texturename] : null, (status.N_ID < 100 && CharacterIconSpriteDic.ContainsKey(status.S_Icontexturename)) ? CharacterIconSpriteDic[status.S_Icontexturename] : null);
+            if (status.N_ID < 100) {
+                CharacterStatusDic.Add(temp.ID, temp);
+            }
+            else {
+                EnemyStatusDic.Add(temp.ID, temp);
+            }
         }
+
+    }
+
+    void LoadTexture() {
+        Addressables.LoadAssetsAsync<Texture2D>("Weapon", null).Completed += objects => {
+            foreach (var texture in objects.Result) {
+                Sprite WeaponSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100);
+                WeaponSprite.name = texture.name;
+                WeaponSpriteList.Add(WeaponSprite);
+                WeaponSpriteDic.Add(WeaponSprite.name, WeaponSprite);
+            }
+        };
+
+        Addressables.LoadAssetsAsync<Texture2D>("Character", null).Completed += objects => {
+            foreach (var texture in objects.Result) {
+                Sprite CharacterSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100);
+                CharacterSprite.name = texture.name;
+                CharacterSpriteList.Add(CharacterSprite);
+                CharacterSpriteDic.Add(CharacterSprite.name, CharacterSprite);
+            }
+        };
+
+        Addressables.LoadAssetsAsync<Texture2D>("CharacterIcon", null).Completed += objects => {
+            foreach (var texture in objects.Result) {
+                Sprite CharacterIconSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100);
+                CharacterIconSprite.name = texture.name;
+                CharacterIconSpriteList.Add(CharacterIconSprite);
+                CharacterIconSpriteDic.Add(CharacterIconSprite.name, CharacterIconSprite);
+            }
+        };
     }
 }

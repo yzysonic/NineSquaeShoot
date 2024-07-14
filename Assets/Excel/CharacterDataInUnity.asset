@@ -18,6 +18,8 @@ MonoBehaviour:
   - n_id: 1
     n_name: 20201
     n_description: 20301
+    s_icontexturename: character01
+    s_texturename: character01_idle01
     s_prefabname: 0
     n_hp: 100
     n_weapon: 1
@@ -49,6 +51,8 @@ MonoBehaviour:
   - n_id: 2
     n_name: 20202
     n_description: 20302
+    s_icontexturename: char2
+    s_texturename: char2
     s_prefabname: 0
     n_hp: 100
     n_weapon: 2
@@ -80,6 +84,8 @@ MonoBehaviour:
   - n_id: 101
     n_name: 20301
     n_description: 20601
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 10
     n_weapon: 5
@@ -111,6 +117,8 @@ MonoBehaviour:
   - n_id: 102
     n_name: 20302
     n_description: 20602
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 20
     n_weapon: 1
@@ -142,6 +150,8 @@ MonoBehaviour:
   - n_id: 103
     n_name: 20303
     n_description: 20603
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 30
     n_weapon: 1
@@ -173,6 +183,8 @@ MonoBehaviour:
   - n_id: 104
     n_name: 20304
     n_description: 20604
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 40
     n_weapon: 1
@@ -204,6 +216,8 @@ MonoBehaviour:
   - n_id: 105
     n_name: 20305
     n_description: 20605
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 50
     n_weapon: 1
@@ -235,6 +249,8 @@ MonoBehaviour:
   - n_id: 106
     n_name: 20306
     n_description: 20606
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 60
     n_weapon: 1
@@ -266,6 +282,8 @@ MonoBehaviour:
   - n_id: 107
     n_name: 20307
     n_description: 20607
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 70
     n_weapon: 1
@@ -297,6 +315,8 @@ MonoBehaviour:
   - n_id: 108
     n_name: 20308
     n_description: 20608
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 80
     n_weapon: 1
@@ -329,6 +349,8 @@ MonoBehaviour:
   - n_id: 1
     n_name: 20201
     n_description: 20301
+    s_icontexturename: character01
+    s_texturename: character01_idle01
     s_prefabname: 0
     n_hp: 100
     n_weapon: 1
@@ -360,6 +382,8 @@ MonoBehaviour:
   - n_id: 2
     n_name: 20202
     n_description: 20302
+    s_icontexturename: char2
+    s_texturename: char2
     s_prefabname: 0
     n_hp: 100
     n_weapon: 2
@@ -391,6 +415,8 @@ MonoBehaviour:
   - n_id: 101
     n_name: 20301
     n_description: 20601
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 10
     n_weapon: 5
@@ -422,6 +448,8 @@ MonoBehaviour:
   - n_id: 102
     n_name: 20302
     n_description: 20602
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 20
     n_weapon: 1
@@ -453,6 +481,8 @@ MonoBehaviour:
   - n_id: 103
     n_name: 20303
     n_description: 20603
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 30
     n_weapon: 1
@@ -484,6 +514,8 @@ MonoBehaviour:
   - n_id: 104
     n_name: 20304
     n_description: 20604
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 40
     n_weapon: 1
@@ -515,6 +547,8 @@ MonoBehaviour:
   - n_id: 105
     n_name: 20305
     n_description: 20605
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 50
     n_weapon: 1
@@ -546,6 +580,8 @@ MonoBehaviour:
   - n_id: 106
     n_name: 20306
     n_description: 20606
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 60
     n_weapon: 1
@@ -577,6 +613,8 @@ MonoBehaviour:
   - n_id: 107
     n_name: 20307
     n_description: 20607
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 70
     n_weapon: 1
@@ -608,6 +646,8 @@ MonoBehaviour:
   - n_id: 108
     n_name: 20308
     n_description: 20608
+    s_icontexturename: 0
+    s_texturename: 0
     s_prefabname: 0
     n_hp: 80
     n_weapon: 1

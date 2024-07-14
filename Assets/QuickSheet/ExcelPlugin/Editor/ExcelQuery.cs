@@ -119,6 +119,10 @@ namespace UnityQuickSheet
                     continue;
                 }
 
+                //剔除空白列
+                if (row.GetCell(0) == null)
+                    break;
+
                 var item = (T)Activator.CreateInstance(t);
                 for (var i = 0; i < p.Length; i++)
                 {

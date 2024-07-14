@@ -103,7 +103,7 @@ namespace UnityQuickSheet
         public MemberFieldData()
         {
             name = "";
-            type = CellType.Undefined;
+            type = CellType.Int;
         }
 
         [System.Obsolete("Use default constructor.")]

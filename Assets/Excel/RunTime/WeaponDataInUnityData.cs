@@ -13,6 +13,10 @@ public class WeaponDataInUnityData
   public int N_ID { get {return n_id; } set { n_id = value;} }
   
   [SerializeField]
+  string s_weapontexturename;
+  public string S_Weapontexturename { get {return s_weapontexturename; } set { s_weapontexturename = value;} }
+  
+  [SerializeField]
   int n_weaponname;
   public int N_Weaponname { get {return n_weaponname; } set { n_weaponname = value;} }
   

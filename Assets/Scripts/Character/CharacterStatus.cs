@@ -72,9 +72,15 @@ public class CharacterStatus
     [SerializeField] private string _PrefabName;
     public string PrefabName => _PrefabName;
 
+    [SerializeField] private Sprite _CharacterSprite;
+    public Sprite CharacterSprite => _CharacterSprite;
+
+    [SerializeField] private Sprite _CharacterIconSprite;
+    public Sprite CharacterIconSprite => _CharacterIconSprite;
+
     public void SetStatus(int id, int nameid, int descriptionid, int hp, int weaponid, int movetime, int movecooldown, int hprecovery, int hprecoverytime, int strength, int lightattackratio,
         int middleattackratio, int heavyattackratio, int criticalpercent, int criticalratio, int block, int stealheal, int stealhealpercent, int dodgeratio, int skillcooldownratio,
-        int luckvalue, string prefabname) {
+        int luckvalue, string prefabname, Sprite charactersprite, Sprite charactericonsprite) {
         _ID = id;
         _NameID = nameid;
         _DescriptionID = descriptionid;
@@ -97,5 +103,7 @@ public class CharacterStatus
         _SkillCoolDownRatio = skillcooldownratio;
         _LuckValue = luckvalue;
         _PrefabName = prefabname;
+        _CharacterSprite = charactersprite;
+        _CharacterIconSprite = charactericonsprite;
     }
 }

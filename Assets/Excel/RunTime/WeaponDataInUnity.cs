@@ -10,7 +10,7 @@ using System.Collections.Generic;
 /// can be serialized onto an asset data file.
 /// 
 [System.Serializable]
-public class WeaponDataInUnity : ScriptableObject 
+public partial class WeaponDataInUnity : ScriptableObject 
 {	
     [HideInInspector] [SerializeField] 
     public string SheetName = "";

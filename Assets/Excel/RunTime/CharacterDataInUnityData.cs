@@ -21,6 +21,14 @@ public class CharacterDataInUnityData
   public int N_Description { get {return n_description; } set { n_description = value;} }
   
   [SerializeField]
+  string s_icontexturename;
+  public string S_Icontexturename { get {return s_icontexturename; } set { s_icontexturename = value;} }
+  
+  [SerializeField]
+  string s_texturename;
+  public string S_Texturename { get {return s_texturename; } set { s_texturename = value;} }
+  
+  [SerializeField]
   string s_prefabname;
   public string S_Prefabname { get {return s_prefabname; } set { s_prefabname = value;} }
   

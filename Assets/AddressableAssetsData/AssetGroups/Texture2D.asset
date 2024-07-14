@@ -52,6 +52,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Character
+  - m_GUID: 8d5ef64883c154147a15f08b2d677fa8
+    m_Address: Assets/Textures/char2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Character
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 23f74c62c8292724ca0754d1635e7b9c, type: 2}
   m_SchemaSet:

@@ -54,6 +54,7 @@ namespace NSS
             /* EventSystem.current.enabled = false;
              FadeManager.Instance.LoadSceneWithFade("MainGameScene");*/
             LobbyCanvas.gameObject.SetActive(true);
+            LobbyUIController.Instance.SetLobbyIcon();
         }
 
         private void OnLeaderboardButtonPressed()

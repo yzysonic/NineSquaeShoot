@@ -375,7 +375,7 @@ namespace UnityQuickSheet
             // remove all white space. e.g.) "SkillLevel | uint"
             string cHeader = new string(columnheader.ToCharArray().Where(c => !Char.IsWhiteSpace(c)).ToArray());
 
-            CellType ctype = CellType.Undefined;
+            CellType ctype = CellType.Int;
             bool bArray = false;
             if (cHeader.Contains('|'))
             {
@@ -393,7 +393,7 @@ namespace UnityQuickSheet
                 return new ColumnHeader { name = substr, type = ctype, isArray = bArray, OrderNO = order };
             }
 
-            return new ColumnHeader { name = cHeader, type = CellType.Undefined, OrderNO = order };
+            return new ColumnHeader { name = cHeader, type = CellType.Int, OrderNO = order };
         }
     }
 }

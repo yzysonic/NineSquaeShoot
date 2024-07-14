@@ -16,143 +16,157 @@ MonoBehaviour:
   WorksheetName: WeaponDataInUnity
   dataArray:
   - n_id: 1
+    s_weapontexturename: gun5
     n_weaponname: 302001
     n_weapondescription: 303001
     n_weapontype: 1
     n_damage: 5
-    n_interval: 1
-    n_intervalmin: 1
+    n_interval: 100
+    n_intervalmin: 50
     n_weaponbuff: 0
     n_projectileid: 1
     n_weaponsfx: 0
   - n_id: 2
+    s_weapontexturename: gun2
     n_weaponname: 302002
     n_weapondescription: 303002
     n_weapontype: 2
     n_damage: 10
-    n_interval: 1
-    n_intervalmin: 1
+    n_interval: 150
+    n_intervalmin: 100
     n_weaponbuff: 0
     n_projectileid: 2
     n_weaponsfx: 0
   - n_id: 3
+    s_weapontexturename: gun3
     n_weaponname: 302003
     n_weapondescription: 303003
     n_weapontype: 3
     n_damage: 50
-    n_interval: 2
-    n_intervalmin: 2
+    n_interval: 200
+    n_intervalmin: 150
     n_weaponbuff: 0
     n_projectileid: 3
     n_weaponsfx: 0
   - n_id: 4
+    s_weapontexturename: gun1
     n_weaponname: 302004
     n_weapondescription: 303004
     n_weapontype: 3
     n_damage: 30
-    n_interval: 1
-    n_intervalmin: 1
+    n_interval: 150
+    n_intervalmin: 100
     n_weaponbuff: 0
     n_projectileid: 4
     n_weaponsfx: 0
   - n_id: 5
+    s_weapontexturename: gun3
     n_weaponname: 302005
     n_weapondescription: 303005
     n_weapontype: 2
     n_damage: 10
-    n_interval: 1
-    n_intervalmin: 1
+    n_interval: 100
+    n_intervalmin: 50
     n_weaponbuff: 0
     n_projectileid: 5
     n_weaponsfx: 0
   - n_id: 6
+    s_weapontexturename: gun4
     n_weaponname: 302006
     n_weapondescription: 303006
     n_weapontype: 3
     n_damage: 100
-    n_interval: 3
-    n_intervalmin: 3
+    n_interval: 300
+    n_intervalmin: 250
     n_weaponbuff: 0
     n_projectileid: 6
     n_weaponsfx: 0
   - n_id: 7
+    s_weapontexturename: gun4
     n_weaponname: 302007
     n_weapondescription: 303007
     n_weapontype: 2
     n_damage: 5
-    n_interval: 1
-    n_intervalmin: 1
+    n_interval: 100
+    n_intervalmin: 50
     n_weaponbuff: 0
     n_projectileid: 7
     n_weaponsfx: 0
   dataList:
   - n_id: 1
+    s_weapontexturename: gun5
     n_weaponname: 302001
     n_weapondescription: 303001
     n_weapontype: 1
     n_damage: 5
-    n_interval: 1
-    n_intervalmin: 1
+    n_interval: 100
+    n_intervalmin: 50
     n_weaponbuff: 0
     n_projectileid: 1
     n_weaponsfx: 0
   - n_id: 2
+    s_weapontexturename: gun2
     n_weaponname: 302002
     n_weapondescription: 303002
     n_weapontype: 2
     n_damage: 10
-    n_interval: 1
-    n_intervalmin: 1
+    n_interval: 150
+    n_intervalmin: 100
     n_weaponbuff: 0
     n_projectileid: 2
     n_weaponsfx: 0
   - n_id: 3
+    s_weapontexturename: gun3
     n_weaponname: 302003
     n_weapondescription: 303003
     n_weapontype: 3
     n_damage: 50
-    n_interval: 2
-    n_intervalmin: 2
+    n_interval: 200
+    n_intervalmin: 150
     n_weaponbuff: 0
     n_projectileid: 3
     n_weaponsfx: 0
   - n_id: 4
+    s_weapontexturename: gun1
     n_weaponname: 302004
     n_weapondescription: 303004
     n_weapontype: 3
     n_damage: 30
-    n_interval: 1
-    n_intervalmin: 1
+    n_interval: 150
+    n_intervalmin: 100
     n_weaponbuff: 0
     n_projectileid: 4
     n_weaponsfx: 0
   - n_id: 5
+    s_weapontexturename: gun3
     n_weaponname: 302005
     n_weapondescription: 303005
     n_weapontype: 2
     n_damage: 10
-    n_interval: 1
-    n_intervalmin: 1
+    n_interval: 100
+    n_intervalmin: 50
     n_weaponbuff: 0
     n_projectileid: 5
     n_weaponsfx: 0
   - n_id: 6
+    s_weapontexturename: gun4
     n_weaponname: 302006
     n_weapondescription: 303006
     n_weapontype: 3
     n_damage: 100
-    n_interval: 3
-    n_intervalmin: 3
+    n_interval: 300
+    n_intervalmin: 250
     n_weaponbuff: 0
     n_projectileid: 6
     n_weaponsfx: 0
   - n_id: 7
+    s_weapontexturename: gun4
     n_weaponname: 302007
     n_weapondescription: 303007
     n_weapontype: 2
     n_damage: 5
-    n_interval: 1
-    n_intervalmin: 1
+    n_interval: 100
+    n_intervalmin: 50
     n_weaponbuff: 0
     n_projectileid: 7
     n_weaponsfx: 0
