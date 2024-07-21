@@ -17,28 +17,18 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 9ab364289f109d34f942675e56a47173
   m_SerializeEntries:
-  - m_GUID: b9b5d3858a146d441aeac022dbe0395d
-    m_Address: Assets/Textures/icon/gun/gun1.png
+  - m_GUID: 4e1de884c672c504ea6d50bb3a29efda
+    m_Address: Assets/Textures/icon/gun/gun03.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Weapon
-  - m_GUID: 0423c46fb71b9c147b9c0c124c5007e5
-    m_Address: Assets/Textures/icon/gun/gun2.png
+  - m_GUID: 273b21dd409f70446a7402657ecf3947
+    m_Address: Assets/Textures/icon/gun/gun02.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Weapon
-  - m_GUID: 5a57c28b0a087b448b95cf3f0947cbdb
-    m_Address: Assets/Textures/icon/gun/gun3.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Weapon
-  - m_GUID: 2b40d65a6adf8224ba4e08311a3efa91
-    m_Address: Assets/Textures/icon/gun/gun4.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Weapon
-  - m_GUID: e178270fc1c17a64e804b5fab6687286
-    m_Address: Assets/Textures/icon/gun/gun5.png
+  - m_GUID: 810d10ce45d4b504087b0166a9fe1264
+    m_Address: Assets/Textures/icon/gun/gun01.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - Weapon
