@@ -13,7 +13,7 @@ public class UpgradPanelController : MonoBehaviour
         LobbyUIController.Instance.RegisterOnUILabelChangeButtonClicked(OnUILabelChangeButtonClicked);
         LobbyUIController.Instance.RegisterOnChangeButtonClicked(OnChangeButtonClicked);
         LobbyUIController.Instance.RegisterOnConfirmButtonClicked(OnConfirmButtonClicked);
-        LobbyUIController.Instance.RegisterOnCanaelButtonClicked(OnCancelButtonClicked);
+        LobbyUIController.Instance.RegisterOnCancelButtonClicked(OnCancelButtonClicked);
     }
 
     // Update is called once per frame
@@ -36,8 +36,8 @@ public class UpgradPanelController : MonoBehaviour
         LobbyUIController.Instance.ControlPopupUIObj(ControlType.Disable);
     }
 
-    void OnUILabelChangeButtonClicked(float Number) {
-        CurrentLabelCouunt += (int)Number;
+    void OnUILabelChangeButtonClicked(int Number) {
+        CurrentLabelCouunt += Number;
         if (CurrentLabelCouunt < 1 || CurrentLabelCouunt > LabelMaxCount) {
             CurrentLabelCouunt = (CurrentLabelCouunt < 1) ? 1 : LabelMaxCount;
         }

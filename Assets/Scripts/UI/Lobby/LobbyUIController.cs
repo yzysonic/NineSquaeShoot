@@ -21,18 +21,16 @@ public class LobbyUIController : MonoBehaviour
     Action ChangeButtonClicked;                                                                     //切換選擇按鈕按下
     Action ConfirmButtonClicked;                                                                    //確認選擇按鈕按下
     Action CancelButttonClicked;                                                                    //取消選擇按鈕按下            
-    Action<float> UILabelChangeButtonClicked;                                                       //PopUp標籤切換按鈕按下
+    Action<int> UILabelChangeButtonClicked;                                                         //PopUp標籤切換按鈕按下
     Action<int> LabelChanged;                                                                       //PopUp頁面上方標籤切換時觸發
     Action<int> SelectGridChanged;                                                                  //目前選擇格子切換時觸發
     Action<int> ConfirmSelectGridChanged;                                                           //目前選定格子切換時觸發
-    Action<CharacterDataInUnityData, int> CharacterInfoChanged;                                     //目標角色資訊更動時觸發
-    Action<WeaponDataInUnityData> WeaponInfoChanged;                                                //目標武器資訊更動時觸發
+    Action<CharacterStatus, int> CharacterInfoChanged;                                              //目標角色資訊更動時觸發
+    Action<WeaponStatus, int> WeaponInfoChanged;                                                    //目標武器資訊更動時觸發
     Action<Vector2> GridMoveButtonClicked;                                                          //移動選擇格子按鈕按下
 
     [SerializeField] private Image CharacterIconImg;
     [SerializeField] private Image WeaponIconImg;
-
-    [SerializeField] private WeaponInfoUIObj[] WeaponLobbyInfoUIObjArray;
 
     void Awake() {
         Instance = this;
@@ -40,9 +38,7 @@ public class LobbyUIController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        for (int i = 0; i < WeaponLobbyInfoUIObjArray.Length; i++) {
-            WeaponLobbyInfoUIObjArray[i].InitializeUI(ScriptableObjectController.Instance.WeaponStatusData.dataArray[SaveDataController.Instance.Data.playerData.CurrentWeaponID]);
-        }
+
     }
 
     // Update is called once per frame
@@ -131,23 +127,23 @@ public class LobbyUIController : MonoBehaviour
         CancelButttonClicked?.Invoke();
     }
 
-    public void RegisterOnCanaelButtonClicked(Action callback) {
+    public void RegisterOnCancelButtonClicked(Action callback) {
         CancelButttonClicked += callback;
     }
-    public void UnregisterOnCanaelButtonClicked(Action callback) {
+    public void UnRegisterOnCancelButtonClicked(Action callback) {
         CancelButttonClicked -= callback;
     }
     #endregion
 
     #region UILabelChangeButtonClicked
-    public void SendUILabelChangeButtonClickedEvent(float Number) {
+    public void SendUILabelChangeButtonClickedEvent(int Number) {
         UILabelChangeButtonClicked?.Invoke(Number);
     }
 
-    public void RegisterOnUILabelChangeButtonClicked(Action<float> callback) {
+    public void RegisterOnUILabelChangeButtonClicked(Action<int> callback) {
         UILabelChangeButtonClicked += callback;
     }
-    public void UnregisterOnUILabelChangeButtonClicked(Action<float> callback) {
+    public void UnregisterOnUILabelChangeButtonClicked(Action<int> callback) {
         UILabelChangeButtonClicked -= callback;
     }
     #endregion
@@ -192,27 +188,27 @@ public class LobbyUIController : MonoBehaviour
     #endregion
 
     #region CharacterInfoChanged
-    public void SendCharacterInfoChangedEvent(CharacterDataInUnityData Data, int Value) {
+    public void SendCharacterInfoChangedEvent(CharacterStatus Data, int Value) {
         CharacterInfoChanged?.Invoke(Data, Value);
     }
 
-    public void RegisterOnCharacterInfoChanged(Action<CharacterDataInUnityData, int> callback) {
+    public void RegisterOnCharacterInfoChanged(Action<CharacterStatus, int> callback) {
         CharacterInfoChanged += callback;
     }
-    public void UnregisterOnCharacterInfoChanged(Action<CharacterDataInUnityData, int> callback) {
+    public void UnregisterOnCharacterInfoChanged(Action<CharacterStatus, int> callback) {
         CharacterInfoChanged -= callback;
     }
     #endregion
 
     #region WeaponInfoChanged
-    public void SendWeaponInfoChangedEvent(WeaponDataInUnityData Data) {
-        WeaponInfoChanged?.Invoke(Data);
+    public void SendWeaponInfoChangedEvent(WeaponStatus Data, int Value) {
+        WeaponInfoChanged?.Invoke(Data, Value);
     }
 
-    public void RegisterOnWeaponInfoChanged(Action<WeaponDataInUnityData> callback) {
+    public void RegisterOnWeaponInfoChanged(Action<WeaponStatus, int> callback) {
         WeaponInfoChanged += callback;
     }
-    public void UnregisterOnWeaponInfoChanged(Action<WeaponDataInUnityData> callback) {
+    public void UnregisterOnWeaponInfoChanged(Action<WeaponStatus, int> callback) {
         WeaponInfoChanged -= callback;
     }
     #endregion

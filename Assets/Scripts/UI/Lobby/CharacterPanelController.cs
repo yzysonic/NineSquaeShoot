@@ -1,33 +1,43 @@
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public enum CharacterUIType { Name, HP, InitialWeapon, MoveTime, MoveTimeCoolDown, HPRecoverValue, HPRecoverTime, Strength, WeaponType1Ratio, WeaponType2Ratio
-        , WeaponType3Ratio, WeaponType4Ratio, CriticalRatio, CriticalPercent, Block, StealHPRatio, StealHeal, DodgeRatio, SkillCoolDownRatio, LuckValue, Buff };
+        , WeaponType3Ratio, CriticalRatio, CriticalPercent, Block, StealHPRatio, StealHeal, DodgeRatio, SkillCoolDownRatio, LuckValue, Buff };
 public class CharacterPanelController : MonoBehaviour
 {
+    [SerializeField] private int CurrentLabelCount;
+    [SerializeField] private int CurrentShowCharatcerInfoID;
 
-    [SerializeField] private int LabelMaxCount;
-    private int CurrentLabelCount;
-    private int CurrentShowCharatcerInfoCount;
-
-    [SerializeField] private Image CharacterImg;
+    [SerializeField] private Image CurrentShowCharacterImg;
     [SerializeField] private Image ChooseCharacterImg;
 
     [SerializeField] private LabelUIObj CharaterLabel;
 
     [SerializeField] private Transform LabelParent;
 
+    private List<LabelUIObj> LabelObjList;
+
+    void OnEnable() {
+        SetChooseCharacterInfo(SaveDataController.Instance.Data.playerData.CurrentCharacterID);
+    }
+
+    void Awake() {
+        LabelObjList = new List<LabelUIObj>();
+    }
+
     // Start is called before the first frame update
     void Start() {
         LobbyUIController.Instance.RegisterOnUILabelChangeButtonClicked(OnUILabelChangeButtonClicked);
         LobbyUIController.Instance.RegisterOnChangeButtonClicked(OnChangeButtonClicked);
         LobbyUIController.Instance.RegisterOnConfirmButtonClicked(OnConfirmButtonClicked);
-        LobbyUIController.Instance.RegisterOnCanaelButtonClicked(OnCancelButtonClicked);
+        LobbyUIController.Instance.RegisterOnCancelButtonClicked(OnCancelButtonClicked);
         CreateLabel();
-        CurrentShowCharatcerInfoCount = 1;
-        CurrentLabelCount = 1;
+        CurrentShowCharatcerInfoID = LabelObjList[0].CharacterID;
+        CurrentLabelCount = 0;
+        SetChooseCharacterInfo(SaveDataController.Instance.Data.playerData.CurrentCharacterID);
     }
 
     // Update is called once per frame
@@ -35,43 +45,62 @@ public class CharacterPanelController : MonoBehaviour
         
     }
 
+    void SetChooseCharacterInfo(int Value) {
+        var Status = ScriptableObjectController.Instance.CharacterStatusDic[Value];
+        ChooseCharacterImg.sprite = Status.CharacterIconSprite;
+        LobbyUIController.Instance.SendCharacterInfoChangedEvent(Status, 1);
+    }
+
+    void SetCharacterInfoUI() {
+        var Status = ScriptableObjectController.Instance.CharacterStatusDic[CurrentShowCharatcerInfoID];
+        CurrentShowCharacterImg.sprite = Status.CharacterSprite;
+        LobbyUIController.Instance.SendCharacterInfoChangedEvent(Status, 0);
+    }
+
     void CreateLabel() {
-        float temp = LabelParent.GetComponentsInChildren<LabelUIObj>().Length;
-        float CharacterCount = ScriptableObjectController.Instance.CharacterStatusDic.Count;
+        int temp = LabelParent.GetComponentsInChildren<LabelUIObj>().Length;
+        int CharacterCount = ScriptableObjectController.Instance.CharacterStatusDic.Count;
         if (temp == 0) {
             for (int i = 0; i < CharacterCount; i++) {
                 var label = Instantiate(CharaterLabel, LabelParent);
                 label.transform.SetSiblingIndex(LabelParent.childCount - 2);
-                label.GetComponent<LabelUIObj>().SetLabelCount(i + 1);
-            }
-        }
-
-        if (temp < CharacterCount) {
-            for (int i = 0; i < CharacterCount - temp; i++) {
-                var label = Instantiate(CharaterLabel, LabelParent);
-                label.transform.SetSiblingIndex(LabelParent.childCount - 2);
-                label.GetComponent<LabelUIObj>().SetLabelCount((int)CharacterCount);
+                label.GetComponent<LabelUIObj>().SetLabelCount(i);
+                label.SetCharacterID(ScriptableObjectController.Instance.CharacterStatusData.dataArray[i].N_ID);
+                LabelObjList.Add(label);
             }
         }
         else {
-            for (int i = 0; i < temp - CharacterCount; i++) {
-                LabelParent.GetChild(LabelParent.childCount - 2 - i).gameObject.SetActive(false);
+            if (temp < CharacterCount) {
+                for (int i = 0; i < CharacterCount - temp; i++) {
+                    var label = Instantiate(CharaterLabel, LabelParent);
+                    label.transform.SetSiblingIndex(LabelParent.childCount - 2);
+                    label.GetComponent<LabelUIObj>().SetLabelCount(CharacterCount - i - 1);
+                    label.SetCharacterID(ScriptableObjectController.Instance.CharacterStatusData.dataArray[CharacterCount - i - 2].N_ID);
+                    LabelObjList.Add(label);
+                }
+            }
+            else {
+                for (int i = 0; i < temp - CharacterCount; i++) {
+                    var label = LabelParent.GetChild(LabelParent.childCount - 2 - i).gameObject;
+                    label.SetActive(false);
+                    LabelObjList.Remove(label.GetComponent<LabelUIObj>());
+                }
             }
         }
+        LabelObjList.OrderBy(x => x.CharacterID).ToList();
     }
 
     void OnChangeButtonClicked() {
-        if (CurrentShowCharatcerInfoCount != CurrentLabelCount) {
-            CurrentShowCharatcerInfoCount = CurrentLabelCount;
-            ChooseCharacterImg.sprite = ScriptableObjectController.Instance.CharacterStatusDic[CurrentLabelCount].CharacterSprite;
-            LobbyUIController.Instance.SendCharacterInfoChangedEvent(ScriptableObjectController.Instance.CharacterStatusData.dataArray[CurrentLabelCount - 1], 1);
+        if (CurrentShowCharatcerInfoID != SaveDataController.Instance.Data.playerData.CurrentCharacterID) {
+            CurrentShowCharatcerInfoID = LabelObjList[CurrentLabelCount].CharacterID;
+            SetChooseCharacterInfo(CurrentShowCharatcerInfoID);
         }
     }
 
     void OnConfirmButtonClicked() {
+        LobbyUIController.Instance.SendCharacterInfoChangedEvent(ScriptableObjectController.Instance.CharacterStatusDic[CurrentShowCharatcerInfoID], 2);
+        SaveDataController.Instance.Data.playerData.CurrentCharacterID = CurrentShowCharatcerInfoID;
         LobbyUIController.Instance.SetLobbyIcon();
-        LobbyUIController.Instance.SendCharacterInfoChangedEvent(ScriptableObjectController.Instance.CharacterStatusData.dataArray[CurrentLabelCount - 1], 2);
-        SaveDataController.Instance.Data.playerData.CurrentCharacterID = CurrentLabelCount;
         LobbyUIController.Instance.ControlPopupUIObj(ControlType.Disable);
         gameObject.SetActive(false);
     }
@@ -81,19 +110,15 @@ public class CharacterPanelController : MonoBehaviour
         LobbyUIController.Instance.ControlPopupUIObj(ControlType.Disable);
     }
 
-    void OnUILabelChangeButtonClicked(float Number) {
-        CurrentLabelCount += (int)Number;
-        if (CurrentLabelCount < 1 || CurrentLabelCount > LabelMaxCount) {
-            CurrentLabelCount = (CurrentLabelCount < 1) ? 1 : LabelMaxCount;
+    void OnUILabelChangeButtonClicked(int Number) {
+        CurrentLabelCount += Number;
+        if (CurrentLabelCount < 0 || CurrentLabelCount > LabelObjList.Count - 1) {
+            CurrentLabelCount = (CurrentLabelCount < 0) ? 0 : LabelObjList.Count - 1;
         }
         else {
             LobbyUIController.Instance.SendLabelChangedEvent(CurrentLabelCount);
+            CurrentShowCharatcerInfoID = LabelObjList[CurrentLabelCount].CharacterID;
             SetCharacterInfoUI();
         }
-    }
-
-    void SetCharacterInfoUI() {
-        CharacterImg.sprite = ScriptableObjectController.Instance.CharacterStatusDic[CurrentLabelCount].CharacterSprite;
-        LobbyUIController.Instance.SendCharacterInfoChangedEvent(ScriptableObjectController.Instance.CharacterStatusData.dataArray[CurrentLabelCount - 1], 0);
     }
 }

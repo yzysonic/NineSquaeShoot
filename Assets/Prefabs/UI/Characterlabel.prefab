@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6875146487441605877}
-  - component: {fileID: -1583038846483978406}
+  - component: {fileID: 8244849561954175815}
   m_Layer: 5
   m_Name: Characterlabel
   m_TagString: Untagged
@@ -135,7 +135,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 172, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &-1583038846483978406
+--- !u!114 &8244849561954175815
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,10 +147,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215030602f0abf64a977a582903d31f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  labelType: 0
   LabelCount: 1
   ActiveLabelImgObj: {fileID: 305460918032562929}
   LabelText: {fileID: 1121687753060971497}
   ActiveLabelText: {fileID: 535187733348278264}
+  _CharacterID: 0
 --- !u!1 &5102363111548379403
 GameObject:
   m_ObjectHideFlags: 0

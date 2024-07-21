@@ -36,6 +36,24 @@ AnimationClip:
     path: FAL
     classID: 212
     script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: c0ad7b064223a814ea8610980a9f6ad6, type: 3}
+    - time: 0.11666667
+      value: {fileID: 21300000, guid: fe52603caa49b994687decdc8f534df2, type: 3}
+    attribute: m_Sprite
+    path: rifle
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: 72fe4d1cfa3c2e74987da83c1b23effd, type: 3}
+    - time: 0.11666667
+      value: {fileID: 21300000, guid: d63d6a99c43499249be1c072c3d46da1, type: 3}
+    attribute: m_Sprite
+    path: shotgun
+    classID: 212
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -57,11 +75,29 @@ AnimationClip:
       typeID: 212
       customType: 23
       isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 3151297237
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 4004402145
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 21300000, guid: 049a0bbaaf05a814492a96c842dea699, type: 3}
     - {fileID: 21300000, guid: 1e5fc97924b112b4ba6c41e260bc5def, type: 3}
     - {fileID: 21300000, guid: 621a639013d922f4da64426f561dc600, type: 3}
     - {fileID: 21300000, guid: 6498565ae383e4140bd9438d76965808, type: 3}
+    - {fileID: 21300000, guid: c0ad7b064223a814ea8610980a9f6ad6, type: 3}
+    - {fileID: 21300000, guid: fe52603caa49b994687decdc8f534df2, type: 3}
+    - {fileID: 21300000, guid: 72fe4d1cfa3c2e74987da83c1b23effd, type: 3}
+    - {fileID: 21300000, guid: d63d6a99c43499249be1c072c3d46da1, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
