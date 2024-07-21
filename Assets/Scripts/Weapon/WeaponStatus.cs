@@ -21,11 +21,11 @@ public class WeaponStatus
     [SerializeField] private int _Damage;
     public int Damage => _Damage;
 
-    [SerializeField] private int _Interval;
-    public int Interval => _Interval;
+    [SerializeField] private float _Interval;
+    public float Interval => _Interval;
 
-    [SerializeField] private int _IntervalMin;
-    public int IntervalMin => _IntervalMin;
+    [SerializeField] private float _IntervalMin;
+    public float IntervalMin => _IntervalMin;
 
     [SerializeField] private int _WeaponBuff;
     public int WeaponBuff => _WeaponBuff;
@@ -45,8 +45,8 @@ public class WeaponStatus
         _DescriptionID = descriptionid;
         _WeaponType = weapontype;
         _Damage = damage;
-        _Interval = interval;
-        _IntervalMin = intervalmin;
+        _Interval = interval / 100;
+        _IntervalMin = intervalmin / 100;
         _WeaponBuff = weaponbuff;
         _ProjectTileID = projecttileid;
         _WeaponSFX = weaponsfx;

@@ -30,26 +30,26 @@ public class CharacterStatus
     [SerializeField] private int _HPRecovery;
     public int HPRecovery => _HPRecovery;
 
-    [SerializeField] private int _HPRecoveryTime;
-    public int HPRecoveryTime => _HPRecoveryTime;
+    [SerializeField] private float _HPRecoveryTime;
+    public float HPRecoveryTime => _HPRecoveryTime;
 
     [SerializeField] private int _Strength;
     public int Strength => _Strength;
 
-    [SerializeField] private int _LightAttackRatio;
-    public int LightAttackRatio => _LightAttackRatio;
+    [SerializeField] private float _LightAttackRatio;
+    public float LightAttackRatio => _LightAttackRatio;
 
-    [SerializeField] private int _MiddleAttackRatio;
-    public int MiddleAttackRatio => _MiddleAttackRatio;
+    [SerializeField] private float _MiddleAttackRatio;
+    public float MiddleAttackRatio => _MiddleAttackRatio;
 
-    [SerializeField] private int _HeavyAttackRatio;
-    public int HeavyAttackRatio => _HeavyAttackRatio;
+    [SerializeField] private float _HeavyAttackRatio;
+    public float HeavyAttackRatio => _HeavyAttackRatio;
 
-    [SerializeField] private int _CriticalPercent;
-    public int CriticalPercent => _CriticalPercent;
+    [SerializeField] private float _CriticalPercent;
+    public float CriticalPercent => _CriticalPercent;
 
-    [SerializeField] private int _CriticalRatio;
-    public int CriticalRatio => _CriticalRatio;
+    [SerializeField] private float _CriticalRatio;
+    public float CriticalRatio => _CriticalRatio;
 
     [SerializeField] private int _Block;
     public int Block => _Block;
@@ -57,17 +57,44 @@ public class CharacterStatus
     [SerializeField] private int _StealHeal;
     public int StealHeal => _StealHeal;
 
-    [SerializeField] private int _StealHealPercent;
-    public int StealHealPercent => _StealHealPercent;
+    [SerializeField] private float _StealHealPercent;
+    public float StealHealPercent => _StealHealPercent;
 
-    [SerializeField] private int _DodgeRatio;
-    public int DodgeRatio => _DodgeRatio;
+    [SerializeField] private float _DodgeRatio;
+    public float DodgeRatio => _DodgeRatio;
 
-    [SerializeField] private int _SkillCoolDownRatio;
-    public int SkillCoolDownRatio => _SkillCoolDownRatio;
+    [SerializeField] private float _SkillCoolDownRatio;
+    public float SkillCoolDownRatio => _SkillCoolDownRatio;
 
     [SerializeField] private int _LuckValue;
     public int LuckValue => _LuckValue;
+
+    [SerializeField] private int _Buff;
+    public int Buff => _Buff;
+
+    [SerializeField] private int _UniqueSkill;
+    public int UniqueSkill => _UniqueSkill;
+
+    [SerializeField] private int _UnlockTrigger;
+    public int UnlockTrigger => _UnlockTrigger;
+
+    [SerializeField] private int _UnlockParam;
+    public int UnlockParam => _UnlockParam;
+
+    [SerializeField] private int _AttackSkillSFX;
+    public int AttackSkillSFX => _AttackSkillSFX;
+
+    [SerializeField] private int _DefendSkillSFX;
+    public int DefendSkillSFX => _DefendSkillSFX;
+
+    [SerializeField] private int _HitSFX;
+    public int HitSFX => _HitSFX;
+
+    [SerializeField] private int _DeadSFX;
+    public int DeadSFX => _DeadSFX;
+
+    [SerializeField] private int _VictorySFX;
+    public int VictorySFX => _VictorySFX;
 
     [SerializeField] private string _PrefabName;
     public string PrefabName => _PrefabName;
@@ -80,7 +107,8 @@ public class CharacterStatus
 
     public void SetStatus(int id, int nameid, int descriptionid, int hp, int weaponid, int movetime, int movecooldown, int hprecovery, int hprecoverytime, int strength, int lightattackratio,
         int middleattackratio, int heavyattackratio, int criticalpercent, int criticalratio, int block, int stealheal, int stealhealpercent, int dodgeratio, int skillcooldownratio,
-        int luckvalue, string prefabname, Sprite charactersprite, Sprite charactericonsprite) {
+        int luckvalue, int buff, int uniqueskill, int unlocktrigger, int unlockparam, int attackskillsfx, int defendskillsfx, int hitsfx, int deadsfx, int victorysfx
+        , string prefabname, Sprite charactersprite, Sprite charactericonsprite) {
         _ID = id;
         _NameID = nameid;
         _DescriptionID = descriptionid;
@@ -89,19 +117,28 @@ public class CharacterStatus
         _MoveTime = movetime;
         _MoveCoolDown = movecooldown;
         _HPRecovery = hprecovery;
-        _HPRecoveryTime = hprecoverytime;
+        _HPRecoveryTime = hprecoverytime / 100;
         _Strength = strength;
-        _LightAttackRatio = lightattackratio;
-        _MiddleAttackRatio = middleattackratio;
-        _HeavyAttackRatio = heavyattackratio;
-        _CriticalPercent = criticalpercent;
-        _CriticalRatio = criticalratio;
+        _LightAttackRatio = lightattackratio / 100;
+        _MiddleAttackRatio = middleattackratio / 100;
+        _HeavyAttackRatio = heavyattackratio / 100;
+        _CriticalPercent = criticalpercent / 100;
+        _CriticalRatio = criticalratio / 100;
         _Block = block;
         _StealHeal = stealheal;
-        _StealHealPercent = stealhealpercent;
-        _DodgeRatio = dodgeratio;
-        _SkillCoolDownRatio = skillcooldownratio;
+        _StealHealPercent = stealhealpercent / 100;
+        _DodgeRatio = dodgeratio / 100;
+        _SkillCoolDownRatio = skillcooldownratio / 100;
         _LuckValue = luckvalue;
+        _Buff = buff;
+        _UniqueSkill = uniqueskill;
+        _UnlockTrigger = unlocktrigger;
+        _UnlockParam = unlockparam;
+        _AttackSkillSFX = attackskillsfx;
+        _DefendSkillSFX = defendskillsfx;
+        _HitSFX = hitsfx;
+        _DeadSFX = deadsfx;
+        _VictorySFX = victorysfx;
         _PrefabName = prefabname;
         _CharacterSprite = charactersprite;
         _CharacterIconSprite = charactericonsprite;

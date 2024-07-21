@@ -115,7 +115,7 @@ public class LobbyInputController : MonoBehaviour, GameInput.ILobbyPlayerActions
 
     public void OnMoveUI(InputAction.CallbackContext context) {
         if (context.started) {
-            LobbyUIController.Instance.SendUILabelChangeButtonClickedEvent(context.ReadValue<float>());
+            LobbyUIController.Instance.SendUILabelChangeButtonClickedEvent((int)context.ReadValue<float>());
         }
     }
 }

@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class WeaponGridUIObj : MonoBehaviour
 {
-
-    [SerializeField] private int WeaponID;
+    [SerializeField] private int _GridID;
+    public int GridID => _GridID;
+    [SerializeField] private int _WeaponID;
+    public int WeaponID => _WeaponID;
 
     [SerializeField] private RectTransform CurrentUseWeaponUIObj;
     [SerializeField] private RectTransform CurrentSelectedWeaponUIObj;
@@ -29,17 +31,25 @@ public class WeaponGridUIObj : MonoBehaviour
         
     }
 
+    public void SetGridID(int Value) {
+        _GridID = Value;
+    }
+
+    public void SetWeaponID(int Value) {
+        _WeaponID = Value;
+    }
+
     void InitializeUI() {
-        CurrentSelectedWeaponUIObj.gameObject.SetActive((WeaponID == 1) ? true : false);
-        WeaponImg.sprite = ScriptableObjectController.Instance.WeaponStatusDic[WeaponID].WeaponSprite;
-        CurrentUseWeaponUIObj.gameObject.SetActive((WeaponID == SaveDataController.Instance.Data.playerData.CurrentWeaponID) ? true : false);
+        CurrentSelectedWeaponUIObj.gameObject.SetActive((_GridID == 1) ? true : false);
+        WeaponImg.sprite = ScriptableObjectController.Instance.WeaponStatusDic[_WeaponID].WeaponSprite;
+        CurrentUseWeaponUIObj.gameObject.SetActive((_WeaponID == SaveDataController.Instance.Data.playerData.CurrentWeaponID) ? true : false);
     }
 
     void OnSelectGridChanged(int Number) {
-        CurrentSelectedWeaponUIObj.gameObject.SetActive((WeaponID == Number) ? true : false);
+        CurrentSelectedWeaponUIObj.gameObject.SetActive((_GridID == Number) ? true : false);
     }
 
     void OnConfirmSelectGridChanged(int Number) {
-        CurrentUseWeaponUIObj.gameObject.SetActive((WeaponID == Number) ? true : false);
+        CurrentUseWeaponUIObj.gameObject.SetActive((_GridID == Number) ? true : false);
     }
 }
