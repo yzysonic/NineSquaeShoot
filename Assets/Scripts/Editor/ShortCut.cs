@@ -1,50 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Diagnostics;
 using UnityEngine;
 using UnityEditor;
 
 public class ShortCut
 {
-    [MenuItem("OpenDrive/Excel/字串表")]
+    [MenuItem("OpenDrive/Excel/001_String")]
     public static void OpenSrringSheet() {
-        Process.Start(@"D:\Unity Project\NineSquareShoot\Assets\Excel\001_String.xlsx");
+        string path = Application.dataPath.Replace("/", "\\") + "\\Excel\\001_String.xlsx";
+        Process.Start(@path);
     }
 
-    [MenuItem("OpenDrive/Excel/角色資料表")]
+    [MenuItem("OpenDrive/Excel/002_Character")]
     public static void OpenCharacterSheet() {
-        Process.Start(@"D:\Unity Project\NineSquareShoot\Assets\Excel\002_Character.xlsx");
+        string path = Application.dataPath.Replace("/", "\\") + "\\Excel\\002_Character.xlsx";
+        Process.Start(@path);
     }
 
-    [MenuItem("OpenDrive/Excel/武器資料表")]
+    [MenuItem("OpenDrive/Excel/003_Weapon")]
     public static void OpenWeaponSheet() {
-        Process.Start(@"D:\Unity Project\NineSquareShoot\Assets\Excel\003_Weapon.xlsx");
+        string path = Application.dataPath.Replace("/", "\\") + "\\Excel\\003_Weapon.xlsx";
+        Process.Start(@path);
     }
 
-    [MenuItem("OpenDrive/Excel/關卡資料表")]
+    [MenuItem("OpenDrive/Excel/004_Stage")]
     public static void OpenStageSheet() {
-        Process.Start(@"D:\Unity Project\NineSquareShoot\Assets\Excel\004_Stage.xlsx");
+        string path = Application.dataPath.Replace("/", "\\") + "\\Excel\\004_Stage.xlsx";
+        Process.Start(@path);
     }
 
-    [MenuItem("OpenDrive/Excel/技能資料表")]
+    [MenuItem("OpenDrive/Excel/005_SKill")]
     public static void OpenSkillSheet() {
-        Process.Start(@"D:\Unity Project\NineSquareShoot\Assets\Excel\005_SKill.xlsx");
+        string path = Application.dataPath.Replace("/", "\\") + "\\Excel\\005_SKill.xlsx";
+        Process.Start(@path);
     }
 
-    [MenuItem("OpenDrive/Excel/Buff資料表")]
+    [MenuItem("OpenDrive/Excel/006_Buff")]
     public static void OpenBuffSheet() {
-        Process.Start(@"D:\Unity Project\NineSquareShoot\Assets\Excel\006_Buff.xlsx");
+        string path = Application.dataPath.Replace("/", "\\") + "\\Excel\\006_Buff.xlsx";
+        Process.Start(@path);
     }
 
-    [MenuItem("OpenDrive/Excel/聲音資料表")]
+    [MenuItem("OpenDrive/Excel/007_Sound")]
     public static void OpenSoundSheet() {
-        Process.Start(@"D:\Unity Project\NineSquareShoot\Assets\Excel\007_Sound.xlsx");
+        string path = Application.dataPath.Replace("/", "\\") + "\\Excel\\007_Sound.xlsx";
+        Process.Start(@path);
     }
 
     [MenuItem("OpenDrive/Jira")]
     public static void OpenJira() {
         string strCmdText;
         strCmdText = "/C start /b https://projectnine.atlassian.net/jira/software/projects/KAN/boards/1";
-        System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+        Process.Start("CMD.exe", strCmdText);
     }
 }
