@@ -19,7 +19,7 @@ namespace NSS
         }
 
         private void Start() {
-            Status = ScriptableObjectController.Instance.CharacterStatusDic[SaveDataController.Instance.Data.playerData.CurrentCharacterID - 1];
+            Status = ScriptableObjectController.Instance.CharacterStatusDic[SaveDataController.Instance.Data.playerData.CurrentCharacterID];
             Life.MaxValue = (uint)Status.HP;
             Life.Value = (uint)Status.HP;
             Movement.SetMoveDuration(Status.MoveTime);

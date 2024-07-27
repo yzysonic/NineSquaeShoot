@@ -50,6 +50,10 @@ public class StageController : Singleton<StageController>
     }
 
     public void CheckStageClear() {
+        Invoke("CheckStage", 2);
+    }
+
+    void CheckStage() {
         if (WaveController.Instance.CurrentWave >= LevelData.MaxWave) {
             MainGameTimer.Instance.enabled = false;
             ScoreManager.Instance.IsScoreReadonly = true;

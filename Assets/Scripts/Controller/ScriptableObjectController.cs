@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.SceneManagement;
 
 public class ScriptableObjectController : MonoBehaviour
 {
@@ -59,8 +60,13 @@ public class ScriptableObjectController : MonoBehaviour
         WeaponSpriteList = new List<Sprite>();
         CharacterSpriteList = new List<Sprite>();
         CharacterIconSpriteList = new List<Sprite>();
-        LoadTexture();
-        StartCoroutine("WaitSetDictionary");
+        if (SceneManager.GetActiveScene().name == "Level2GameScene") {
+            SetDictionary();
+        }
+        else {
+            LoadTexture();
+            StartCoroutine("WaitSetDictionary");
+        }
     }
 
     // Start is called before the first frame update
@@ -82,7 +88,7 @@ public class ScriptableObjectController : MonoBehaviour
     void SetDictionary() {
         foreach (var status in _weaponStatusData.dataArray) {
             WeaponStatus temp = new WeaponStatus();
-            temp.SetStatus(status.N_ID, status.N_Weaponname, status.N_Weapondescription, status.N_Weapontype, status.N_Damage, status.N_Interval, status.N_Intervalmin, status.N_Weaponbuff, status.N_Projectileid, status.N_Weaponsfx, WeaponSpriteDic[status.S_Weapontexturename]);
+            temp.SetStatus(status.N_ID, status.N_Weaponname, status.N_Weapondescription, status.N_Weapontype, status.N_Damage, status.N_Interval, status.N_Intervalmin, status.N_Weaponbuff, status.N_Projectileid, status.N_Weaponsfx, WeaponSpriteDic.ContainsKey(status.S_Weapontexturename) ? WeaponSpriteDic[status.S_Weapontexturename] : null);
             WeaponStatusDic.Add(temp.ID, temp);
         }
 
