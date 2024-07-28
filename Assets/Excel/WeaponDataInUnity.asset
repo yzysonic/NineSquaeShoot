@@ -37,60 +37,115 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 2
     n_weaponsfx: 0
-  - n_id: 3
+  - n_id: 101
     s_weapontexturename: gun03
     n_weaponname: 302003
     n_weapondescription: 303003
+    n_weapontype: 1
+    n_damage: 10
+    n_interval: 100
+    n_intervalmin: 150
+    n_weaponbuff: 0
+    n_projectileid: 1
+    n_weaponsfx: 0
+  - n_id: 102
+    s_weapontexturename: gun03
+    n_weaponname: 302004
+    n_weapondescription: 303004
+    n_weapontype: 2
+    n_damage: 12
+    n_interval: 100
+    n_intervalmin: 150
+    n_weaponbuff: 0
+    n_projectileid: 2
+    n_weaponsfx: 0
+  - n_id: 103
+    s_weapontexturename: gun03
+    n_weaponname: 302005
+    n_weapondescription: 303005
     n_weapontype: 3
-    n_damage: 50
-    n_interval: 200
+    n_damage: 14
+    n_interval: 100
     n_intervalmin: 150
     n_weaponbuff: 0
     n_projectileid: 3
     n_weaponsfx: 0
-  - n_id: 4
-    s_weapontexturename: gun03
-    n_weaponname: 302004
-    n_weapondescription: 303004
-    n_weapontype: 3
-    n_damage: 30
-    n_interval: 150
-    n_intervalmin: 100
-    n_weaponbuff: 0
-    n_projectileid: 4
-    n_weaponsfx: 0
-  - n_id: 5
-    s_weapontexturename: gun03
-    n_weaponname: 302005
-    n_weapondescription: 303005
-    n_weapontype: 2
-    n_damage: 10
-    n_interval: 100
-    n_intervalmin: 50
-    n_weaponbuff: 0
-    n_projectileid: 5
-    n_weaponsfx: 0
-  - n_id: 6
+  - n_id: 104
     s_weapontexturename: gun03
     n_weaponname: 302006
     n_weapondescription: 303006
-    n_weapontype: 3
-    n_damage: 100
-    n_interval: 300
-    n_intervalmin: 250
+    n_weapontype: 1
+    n_damage: 16
+    n_interval: 100
+    n_intervalmin: 150
     n_weaponbuff: 0
-    n_projectileid: 6
+    n_projectileid: 4
     n_weaponsfx: 0
-  - n_id: 7
+  - n_id: 105
     s_weapontexturename: gun03
     n_weaponname: 302007
     n_weapondescription: 303007
     n_weapontype: 2
-    n_damage: 5
+    n_damage: 18
     n_interval: 100
-    n_intervalmin: 50
+    n_intervalmin: 150
     n_weaponbuff: 0
-    n_projectileid: 7
+    n_projectileid: 5
+    n_weaponsfx: 0
+  - n_id: 106
+    s_weapontexturename: gun03
+    n_weaponname: 302008
+    n_weapondescription: 303008
+    n_weapontype: 3
+    n_damage: 20
+    n_interval: 100
+    n_intervalmin: 150
+    n_weaponbuff: 0
+    n_projectileid: 6
+    n_weaponsfx: 0
+  - n_id: 107
+    s_weapontexturename: gun03
+    n_weaponname: 302009
+    n_weapondescription: 303009
+    n_weapontype: 1
+    n_damage: 22
+    n_interval: 100
+    n_intervalmin: 150
+    n_weaponbuff: 0
+    n_projectileid: 8
+    n_weaponsfx: 0
+  - n_id: 108
+    s_weapontexturename: gun03
+    n_weaponname: 302010
+    n_weapondescription: 303010
+    n_weapontype: 2
+    n_damage: 24
+    n_interval: 100
+    n_intervalmin: 150
+    n_weaponbuff: 0
+    n_projectileid: 9
+    n_weaponsfx: 0
+  - n_id: 109
+    s_weapontexturename: gun03
+    n_weaponname: 302011
+    n_weapondescription: 303011
+    n_weapontype: 3
+    n_damage: 26
+    n_interval: 100
+    n_intervalmin: 150
+    n_weaponbuff: 0
+    n_projectileid: 10
+    n_weaponsfx: 0
+  - n_id: 110
+    s_weapontexturename: gun03
+    n_weaponname: 302012
+    n_weapondescription: 303012
+    n_weapontype: 1
+    n_damage: 30
+    n_interval: 100
+    n_intervalmin: 100
+    n_weaponbuff: 0
+    n_projectileid: 11
     n_weaponsfx: 0
   dataList:
   - n_id: 1
@@ -115,58 +170,113 @@ MonoBehaviour:
     n_weaponbuff: 0
     n_projectileid: 2
     n_weaponsfx: 0
-  - n_id: 3
+  - n_id: 101
     s_weapontexturename: gun03
     n_weaponname: 302003
     n_weapondescription: 303003
+    n_weapontype: 1
+    n_damage: 10
+    n_interval: 100
+    n_intervalmin: 150
+    n_weaponbuff: 0
+    n_projectileid: 1
+    n_weaponsfx: 0
+  - n_id: 102
+    s_weapontexturename: gun03
+    n_weaponname: 302004
+    n_weapondescription: 303004
+    n_weapontype: 2
+    n_damage: 12
+    n_interval: 100
+    n_intervalmin: 150
+    n_weaponbuff: 0
+    n_projectileid: 2
+    n_weaponsfx: 0
+  - n_id: 103
+    s_weapontexturename: gun03
+    n_weaponname: 302005
+    n_weapondescription: 303005
     n_weapontype: 3
-    n_damage: 50
-    n_interval: 200
+    n_damage: 14
+    n_interval: 100
     n_intervalmin: 150
     n_weaponbuff: 0
     n_projectileid: 3
     n_weaponsfx: 0
-  - n_id: 4
-    s_weapontexturename: gun03
-    n_weaponname: 302004
-    n_weapondescription: 303004
-    n_weapontype: 3
-    n_damage: 30
-    n_interval: 150
-    n_intervalmin: 100
-    n_weaponbuff: 0
-    n_projectileid: 4
-    n_weaponsfx: 0
-  - n_id: 5
-    s_weapontexturename: gun03
-    n_weaponname: 302005
-    n_weapondescription: 303005
-    n_weapontype: 2
-    n_damage: 10
-    n_interval: 100
-    n_intervalmin: 50
-    n_weaponbuff: 0
-    n_projectileid: 5
-    n_weaponsfx: 0
-  - n_id: 6
+  - n_id: 104
     s_weapontexturename: gun03
     n_weaponname: 302006
     n_weapondescription: 303006
-    n_weapontype: 3
-    n_damage: 100
-    n_interval: 300
-    n_intervalmin: 250
+    n_weapontype: 1
+    n_damage: 16
+    n_interval: 100
+    n_intervalmin: 150
     n_weaponbuff: 0
-    n_projectileid: 6
+    n_projectileid: 4
     n_weaponsfx: 0
-  - n_id: 7
+  - n_id: 105
     s_weapontexturename: gun03
     n_weaponname: 302007
     n_weapondescription: 303007
     n_weapontype: 2
-    n_damage: 5
+    n_damage: 18
     n_interval: 100
-    n_intervalmin: 50
+    n_intervalmin: 150
     n_weaponbuff: 0
-    n_projectileid: 7
+    n_projectileid: 5
+    n_weaponsfx: 0
+  - n_id: 106
+    s_weapontexturename: gun03
+    n_weaponname: 302008
+    n_weapondescription: 303008
+    n_weapontype: 3
+    n_damage: 20
+    n_interval: 100
+    n_intervalmin: 150
+    n_weaponbuff: 0
+    n_projectileid: 6
+    n_weaponsfx: 0
+  - n_id: 107
+    s_weapontexturename: gun03
+    n_weaponname: 302009
+    n_weapondescription: 303009
+    n_weapontype: 1
+    n_damage: 22
+    n_interval: 100
+    n_intervalmin: 150
+    n_weaponbuff: 0
+    n_projectileid: 8
+    n_weaponsfx: 0
+  - n_id: 108
+    s_weapontexturename: gun03
+    n_weaponname: 302010
+    n_weapondescription: 303010
+    n_weapontype: 2
+    n_damage: 24
+    n_interval: 100
+    n_intervalmin: 150
+    n_weaponbuff: 0
+    n_projectileid: 9
+    n_weaponsfx: 0
+  - n_id: 109
+    s_weapontexturename: gun03
+    n_weaponname: 302011
+    n_weapondescription: 303011
+    n_weapontype: 3
+    n_damage: 26
+    n_interval: 100
+    n_intervalmin: 150
+    n_weaponbuff: 0
+    n_projectileid: 10
+    n_weaponsfx: 0
+  - n_id: 110
+    s_weapontexturename: gun03
+    n_weaponname: 302012
+    n_weapondescription: 303012
+    n_weapontype: 1
+    n_damage: 30
+    n_interval: 100
+    n_intervalmin: 100
+    n_weaponbuff: 0
+    n_projectileid: 11
     n_weaponsfx: 0

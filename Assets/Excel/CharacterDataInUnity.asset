@@ -55,7 +55,7 @@ MonoBehaviour:
     s_texturename: char2
     s_prefabname: 0
     n_hp: 100
-    n_weapon: 2
+    n_weapon: 1
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 10
-    n_weapon: 5
+    n_weapon: 101
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 20
-    n_weapon: 1
+    n_weapon: 102
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 30
-    n_weapon: 1
+    n_weapon: 103
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 40
-    n_weapon: 1
+    n_weapon: 104
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 50
-    n_weapon: 1
+    n_weapon: 105
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -253,7 +253,7 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 60
-    n_weapon: 1
+    n_weapon: 106
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -286,7 +286,7 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 70
-    n_weapon: 1
+    n_weapon: 107
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -319,7 +319,73 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 80
-    n_weapon: 1
+    n_weapon: 108
+    n_movetime: 1
+    n_colddown: 1
+    n_hprecovervalue: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
+    n_block: 0
+    n_stealhealratio: 0
+    n_stealheal: 0
+    n_dodgeratio: 0
+    n_skillcolddownratio: 0
+    n_luckvalue: 0
+    n_uniqueskill: 0
+    n_buff: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
+    n_unlocktriger: 0
+    n_unlockparam: 0
+  - n_id: 109
+    n_name: 20309
+    n_description: 20609
+    s_icontexturename: 0
+    s_texturename: 0
+    s_prefabname: 0
+    n_hp: 90
+    n_weapon: 109
+    n_movetime: 1
+    n_colddown: 1
+    n_hprecovervalue: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
+    n_block: 0
+    n_stealhealratio: 0
+    n_stealheal: 0
+    n_dodgeratio: 0
+    n_skillcolddownratio: 0
+    n_luckvalue: 0
+    n_uniqueskill: 0
+    n_buff: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
+    n_unlocktriger: 0
+    n_unlockparam: 0
+  - n_id: 110
+    n_name: 20310
+    n_description: 20610
+    s_icontexturename: 0
+    s_texturename: 0
+    s_prefabname: 0
+    n_hp: 200
+    n_weapon: 110
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -386,7 +452,7 @@ MonoBehaviour:
     s_texturename: char2
     s_prefabname: 0
     n_hp: 100
-    n_weapon: 2
+    n_weapon: 1
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -419,7 +485,7 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 10
-    n_weapon: 5
+    n_weapon: 101
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -452,7 +518,7 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 20
-    n_weapon: 1
+    n_weapon: 102
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -485,7 +551,7 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 30
-    n_weapon: 1
+    n_weapon: 103
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -518,7 +584,7 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 40
-    n_weapon: 1
+    n_weapon: 104
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -551,7 +617,7 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 50
-    n_weapon: 1
+    n_weapon: 105
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -584,7 +650,7 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 60
-    n_weapon: 1
+    n_weapon: 106
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -617,7 +683,7 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 70
-    n_weapon: 1
+    n_weapon: 107
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0
@@ -650,7 +716,73 @@ MonoBehaviour:
     s_texturename: 0
     s_prefabname: 0
     n_hp: 80
-    n_weapon: 1
+    n_weapon: 108
+    n_movetime: 1
+    n_colddown: 1
+    n_hprecovervalue: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
+    n_block: 0
+    n_stealhealratio: 0
+    n_stealheal: 0
+    n_dodgeratio: 0
+    n_skillcolddownratio: 0
+    n_luckvalue: 0
+    n_uniqueskill: 0
+    n_buff: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
+    n_unlocktriger: 0
+    n_unlockparam: 0
+  - n_id: 109
+    n_name: 20309
+    n_description: 20609
+    s_icontexturename: 0
+    s_texturename: 0
+    s_prefabname: 0
+    n_hp: 90
+    n_weapon: 109
+    n_movetime: 1
+    n_colddown: 1
+    n_hprecovervalue: 0
+    n_hprecovertime: 100
+    n_str: 10
+    n_weapontype2raito: 100
+    n_weapontype3raito: 100
+    n_weapontype4raito: 100
+    n_critcalpercent: 5
+    n_critcalratio: 150
+    n_block: 0
+    n_stealhealratio: 0
+    n_stealheal: 0
+    n_dodgeratio: 0
+    n_skillcolddownratio: 0
+    n_luckvalue: 0
+    n_uniqueskill: 0
+    n_buff: 0
+    n_attackskillsfx: 0
+    n_defendskillsfx: 0
+    n_hitsfx: 0
+    n_deadsfx: 0
+    n_victorysfx: 0
+    n_unlocktriger: 0
+    n_unlockparam: 0
+  - n_id: 110
+    n_name: 20310
+    n_description: 20610
+    s_icontexturename: 0
+    s_texturename: 0
+    s_prefabname: 0
+    n_hp: 200
+    n_weapon: 110
     n_movetime: 1
     n_colddown: 1
     n_hprecovervalue: 0

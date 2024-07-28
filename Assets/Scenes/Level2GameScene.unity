@@ -3857,7 +3857,7 @@ MonoBehaviour:
     _MaxWave: 0
     _RoundGroupList: 
   GroupDataList: []
-  StageDataID: 2
+  StageDataID: 1
 --- !u!4 &941587055
 Transform:
   m_ObjectHideFlags: 0

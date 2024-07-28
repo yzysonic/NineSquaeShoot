@@ -17,26 +17,62 @@ MonoBehaviour:
   dataArray:
   - n_id: 1
     an_monsterid: 101
-    an_monsterplace: 0000000004000000080000000c000000
+    an_monsterplace: 00000000050000000a0000000f000000
   - n_id: 2
     an_monsterid: 102
-    an_monsterplace: 0100000005000000090000000d000000
+    an_monsterplace: 0300000006000000090000000c000000
   - n_id: 3
     an_monsterid: 103
-    an_monsterplace: 02000000060000000a0000000e000000
+    an_monsterplace: 0100000009000000060000000e000000
   - n_id: 4
     an_monsterid: 104
-    an_monsterplace: 03000000070000000b0000000f000000
+    an_monsterplace: 03000000070000000b0000000f000000060000000a000000
+  - n_id: 5
+    an_monsterid: 105
+    an_monsterplace: 010000000500000009000000070000000b0000000f000000
+  - n_id: 6
+    an_monsterid: 106
+    an_monsterplace: 02000000060000000b0000000f000000
+  - n_id: 7
+    an_monsterid: 107
+    an_monsterplace: 020000000e0000000400000008000000
+  - n_id: 8
+    an_monsterid: 108
+    an_monsterplace: 000000000c000000070000000b000000
+  - n_id: 9
+    an_monsterid: 109
+    an_monsterplace: 02000000050000000a0000000f000000
+  - n_id: 10
+    an_monsterid: 110
+    an_monsterplace: 030000000f000000
   dataList:
   - n_id: 1
     an_monsterid: 101
-    an_monsterplace: 0000000004000000080000000c000000
+    an_monsterplace: 00000000050000000a0000000f000000
   - n_id: 2
     an_monsterid: 102
-    an_monsterplace: 0100000005000000090000000d000000
+    an_monsterplace: 0300000006000000090000000c000000
   - n_id: 3
     an_monsterid: 103
-    an_monsterplace: 02000000060000000a0000000e000000
+    an_monsterplace: 0100000009000000060000000e000000
   - n_id: 4
     an_monsterid: 104
-    an_monsterplace: 03000000070000000b0000000f000000
+    an_monsterplace: 03000000070000000b0000000f000000060000000a000000
+  - n_id: 5
+    an_monsterid: 105
+    an_monsterplace: 010000000500000009000000070000000b0000000f000000
+  - n_id: 6
+    an_monsterid: 106
+    an_monsterplace: 02000000060000000b0000000f000000
+  - n_id: 7
+    an_monsterid: 107
+    an_monsterplace: 020000000e0000000400000008000000
+  - n_id: 8
+    an_monsterid: 108
+    an_monsterplace: 000000000c000000070000000b000000
+  - n_id: 9
+    an_monsterid: 109
+    an_monsterplace: 02000000050000000a0000000f000000
+  - n_id: 10
+    an_monsterid: 110
+    an_monsterplace: 030000000f000000
