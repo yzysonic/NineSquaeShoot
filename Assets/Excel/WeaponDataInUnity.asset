@@ -17,8 +17,8 @@ MonoBehaviour:
   dataArray:
   - n_id: 1
     s_weapontexturename: gun01
-    n_weaponname: 302001
-    n_weapondescription: 303001
+    n_weaponname: 30201
+    n_weapondescription: 30301
     n_weapontype: 1
     n_damage: 5
     n_interval: 100
@@ -28,8 +28,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 2
     s_weapontexturename: gun02
-    n_weaponname: 302002
-    n_weapondescription: 303002
+    n_weaponname: 30202
+    n_weapondescription: 30302
     n_weapontype: 2
     n_damage: 10
     n_interval: 150
@@ -39,8 +39,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 101
     s_weapontexturename: gun03
-    n_weaponname: 302003
-    n_weapondescription: 303003
+    n_weaponname: 30203
+    n_weapondescription: 30303
     n_weapontype: 1
     n_damage: 10
     n_interval: 100
@@ -50,8 +50,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 102
     s_weapontexturename: gun03
-    n_weaponname: 302004
-    n_weapondescription: 303004
+    n_weaponname: 30204
+    n_weapondescription: 30304
     n_weapontype: 2
     n_damage: 12
     n_interval: 100
@@ -61,8 +61,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 103
     s_weapontexturename: gun03
-    n_weaponname: 302005
-    n_weapondescription: 303005
+    n_weaponname: 30205
+    n_weapondescription: 30305
     n_weapontype: 3
     n_damage: 14
     n_interval: 100
@@ -72,8 +72,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 104
     s_weapontexturename: gun03
-    n_weaponname: 302006
-    n_weapondescription: 303006
+    n_weaponname: 30201
+    n_weapondescription: 30306
     n_weapontype: 1
     n_damage: 16
     n_interval: 100
@@ -83,8 +83,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 105
     s_weapontexturename: gun03
-    n_weaponname: 302007
-    n_weapondescription: 303007
+    n_weaponname: 30202
+    n_weapondescription: 30307
     n_weapontype: 2
     n_damage: 18
     n_interval: 100
@@ -94,8 +94,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 106
     s_weapontexturename: gun03
-    n_weaponname: 302008
-    n_weapondescription: 303008
+    n_weaponname: 30203
+    n_weapondescription: 30308
     n_weapontype: 3
     n_damage: 20
     n_interval: 100
@@ -105,8 +105,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 107
     s_weapontexturename: gun03
-    n_weaponname: 302009
-    n_weapondescription: 303009
+    n_weaponname: 30204
+    n_weapondescription: 30309
     n_weapontype: 1
     n_damage: 22
     n_interval: 100
@@ -116,8 +116,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 108
     s_weapontexturename: gun03
-    n_weaponname: 302010
-    n_weapondescription: 303010
+    n_weaponname: 30205
+    n_weapondescription: 30310
     n_weapontype: 2
     n_damage: 24
     n_interval: 100
@@ -127,8 +127,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 109
     s_weapontexturename: gun03
-    n_weaponname: 302011
-    n_weapondescription: 303011
+    n_weaponname: 30201
+    n_weapondescription: 30311
     n_weapontype: 3
     n_damage: 26
     n_interval: 100
@@ -138,8 +138,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 110
     s_weapontexturename: gun03
-    n_weaponname: 302012
-    n_weapondescription: 303012
+    n_weaponname: 30202
+    n_weapondescription: 30312
     n_weapontype: 1
     n_damage: 30
     n_interval: 100
@@ -150,8 +150,8 @@ MonoBehaviour:
   dataList:
   - n_id: 1
     s_weapontexturename: gun01
-    n_weaponname: 302001
-    n_weapondescription: 303001
+    n_weaponname: 30201
+    n_weapondescription: 30301
     n_weapontype: 1
     n_damage: 5
     n_interval: 100
@@ -161,8 +161,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 2
     s_weapontexturename: gun02
-    n_weaponname: 302002
-    n_weapondescription: 303002
+    n_weaponname: 30202
+    n_weapondescription: 30302
     n_weapontype: 2
     n_damage: 10
     n_interval: 150
@@ -172,8 +172,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 101
     s_weapontexturename: gun03
-    n_weaponname: 302003
-    n_weapondescription: 303003
+    n_weaponname: 30203
+    n_weapondescription: 30303
     n_weapontype: 1
     n_damage: 10
     n_interval: 100
@@ -183,8 +183,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 102
     s_weapontexturename: gun03
-    n_weaponname: 302004
-    n_weapondescription: 303004
+    n_weaponname: 30204
+    n_weapondescription: 30304
     n_weapontype: 2
     n_damage: 12
     n_interval: 100
@@ -194,8 +194,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 103
     s_weapontexturename: gun03
-    n_weaponname: 302005
-    n_weapondescription: 303005
+    n_weaponname: 30205
+    n_weapondescription: 30305
     n_weapontype: 3
     n_damage: 14
     n_interval: 100
@@ -205,8 +205,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 104
     s_weapontexturename: gun03
-    n_weaponname: 302006
-    n_weapondescription: 303006
+    n_weaponname: 30201
+    n_weapondescription: 30306
     n_weapontype: 1
     n_damage: 16
     n_interval: 100
@@ -216,8 +216,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 105
     s_weapontexturename: gun03
-    n_weaponname: 302007
-    n_weapondescription: 303007
+    n_weaponname: 30202
+    n_weapondescription: 30307
     n_weapontype: 2
     n_damage: 18
     n_interval: 100
@@ -227,8 +227,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 106
     s_weapontexturename: gun03
-    n_weaponname: 302008
-    n_weapondescription: 303008
+    n_weaponname: 30203
+    n_weapondescription: 30308
     n_weapontype: 3
     n_damage: 20
     n_interval: 100
@@ -238,8 +238,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 107
     s_weapontexturename: gun03
-    n_weaponname: 302009
-    n_weapondescription: 303009
+    n_weaponname: 30204
+    n_weapondescription: 30309
     n_weapontype: 1
     n_damage: 22
     n_interval: 100
@@ -249,8 +249,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 108
     s_weapontexturename: gun03
-    n_weaponname: 302010
-    n_weapondescription: 303010
+    n_weaponname: 30205
+    n_weapondescription: 30310
     n_weapontype: 2
     n_damage: 24
     n_interval: 100
@@ -260,8 +260,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 109
     s_weapontexturename: gun03
-    n_weaponname: 302011
-    n_weapondescription: 303011
+    n_weaponname: 30201
+    n_weapondescription: 30311
     n_weapontype: 3
     n_damage: 26
     n_interval: 100
@@ -271,8 +271,8 @@ MonoBehaviour:
     n_weaponsfx: 0
   - n_id: 110
     s_weapontexturename: gun03
-    n_weaponname: 302012
-    n_weapondescription: 303012
+    n_weaponname: 30202
+    n_weapondescription: 30312
     n_weapontype: 1
     n_damage: 30
     n_interval: 100
