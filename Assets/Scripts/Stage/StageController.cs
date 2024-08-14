@@ -59,7 +59,14 @@ public class StageController : Singleton<StageController>
             ScoreManager.Instance.IsScoreReadonly = true;
             EnemyManager.Instance.EnableSpawnEnemy = false;
             BGMPlayer.Instance.Stop();
-            ResultManager.Instance.DisplayResult();
+            if (GameManager.Instance.CanPlayEndAni) {
+                GameManager.Instance.Player.gameObject.SetActive(false);
+                FieldManager.Instance.DisableAllBlock();
+                GameManager.Instance.FakeClearAni.Play();
+            }
+            else {
+                ResultManager.Instance.DisplayResult();
+            }
         }
         else {
             WaveController.Instance.ChangeWave(1);

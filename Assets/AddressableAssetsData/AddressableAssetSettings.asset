@@ -44,6 +44,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ee323b547004c394781ab2204f52b936, type: 2}
   - {fileID: 11400000, guid: 146de2934d252f142b8f365f334562de, type: 2}
   - {fileID: 11400000, guid: a14d0e5ae1e420a4fadd80972de653df, type: 2}
+  - {fileID: 11400000, guid: 9d01f16f8c5dcd44fa024e795b867a6e, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -88,6 +89,7 @@ MonoBehaviour:
     - Weapon
     - Character
     - CharacterIcon
+    - CharacterPrefab
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 12c839352baba054b82dbaf9d4532172, type: 2}

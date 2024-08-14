@@ -474,5 +474,23 @@ namespace NSS
                 availableBlocks[(int)block.Team].Add(block);
             }
         }
+
+        public void DisableAllBlock() {
+            foreach (var block in blocks) {
+                foreach(var obj in block) {
+                    obj.gameObject.SetActive(false);
+                }
+            }
+        }
+
+        public void ShowAllBlock() {
+            foreach (var block in blocks)
+            {
+                foreach (var obj in block)
+                {
+                    obj.gameObject.SetActive(true);
+                }
+            }
+        }
     }
 }

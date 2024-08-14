@@ -16,6 +16,11 @@ namespace NSS
 
         private FieldBlock playerStartBlock;
 
+        [Header("是否要播放假通關動畫")]
+        public bool CanPlayEndAni;
+
+        public Animation FakeClearAni;
+
         protected override void Awake()
         {
             base.Awake();
