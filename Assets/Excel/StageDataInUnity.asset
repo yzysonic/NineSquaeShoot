@@ -16,8 +16,8 @@ MonoBehaviour:
   WorksheetName: StageDataInUnity
   dataArray:
   - n_id: 1
-    n_round: 10
-    an_roundgroup: 0100000002000000030000000400000005000000060000000700000008000000090000000a000000
+    n_round: 5
+    an_roundgroup: 0100000002000000030000000400000005000000
     n_rewardcoin: 100
     n_rewardtype: 1
     n_rewardrare: 1
@@ -57,8 +57,8 @@ MonoBehaviour:
     an_stageenemybuff: 0
   dataList:
   - n_id: 1
-    n_round: 10
-    an_roundgroup: 0100000002000000030000000400000005000000060000000700000008000000090000000a000000
+    n_round: 5
+    an_roundgroup: 0100000002000000030000000400000005000000
     n_rewardcoin: 100
     n_rewardtype: 1
     n_rewardrare: 1
