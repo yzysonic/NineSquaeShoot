@@ -60,6 +60,7 @@ public class StageController : Singleton<StageController>
             EnemyManager.Instance.EnableSpawnEnemy = false;
             BGMPlayer.Instance.Stop();
             if (GameManager.Instance.CanPlayEndAni) {
+                ItemManager.Instance.OnNewGameStarted();
                 GameManager.Instance.Player.gameObject.SetActive(false);
                 FieldManager.Instance.DisableAllBlock();
                 GameManager.Instance.FakeClearAni.Play();
