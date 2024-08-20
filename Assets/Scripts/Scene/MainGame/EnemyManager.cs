@@ -18,9 +18,6 @@ namespace NSS
     public class EnemyManager : Singleton<EnemyManager>
     {
         [SerializeField]
-        private List<GameObject> enemyPrefabs = new();
-
-        [SerializeField]
         private float startEnemySpawnTime = 1.5f;
 
         [SerializeField]
@@ -55,7 +52,6 @@ namespace NSS
 
         protected override void Awake() {
             base.Awake();
-            EnableSpawnEnemy = true;
             ScoreManager.Instance.CurrentScoreChanged += OnScoreChanged;
             OnScoreChanged(ScoreManager.Instance.CurrentScore);
             WaveController.Instance.RegisterWaveChanged(OnWaveChanged);
@@ -66,6 +62,7 @@ namespace NSS
             availableBlocks = FieldManager.Instance.GetAvailaleBlocks(ETeam.enemy);
             CurrentGroup = StageController.Instance.GetCurrentGroupData();
             baseEnemySpawnMaxCount = CurrentGroup.CreateGridList.Count;
+            AddressableLoader.Instance.RegisterAssetLoaded(OnPrefabLoaded);
         }
 
         private void Update() {
@@ -91,48 +88,50 @@ namespace NSS
             }
             for (int i = 0; i < CurrentGroup.CreateGridList.Count; i++) {
                 int blockNo = CurrentGroup.CreateGridList[i];
-                GameObject enemyPrefab = enemyPrefabs[0];
-                GameObject enemyObj = Instantiate(enemyPrefab);
-                var enemy = enemyObj.GetComponent<Enemy>();
-                if (enemy) {
-                    enemy.Status = ScriptableObjectController.Instance.EnemyStatusDic[CurrentGroup.MonsterID];
-                    enemy.EntryField(availableBlocks[blockNo]);
+                GameObject enemyPrefab = AddressableLoader.Instance.GetCharacterPrefaab(CurrentGroup.MonsterID);
+                if (enemyPrefab != null) {
+                    GameObject enemyObj = Instantiate(enemyPrefab);
+                    var enemy = enemyObj.GetComponent<Enemy>();
+                    if (enemy) {
+                        enemy.Status = ScriptableObjectController.Instance.EnemyStatusDic[CurrentGroup.MonsterID];
+                        enemy.EntryField(availableBlocks[blockNo]);
+                    }
+                    ApplyEnemyDiffcultyParam(enemyObj);
+                    CurrentCreateEnemyCount++;
                 }
-                ApplyEnemyDiffcultyParam(enemyObj);
-                CurrentCreateEnemyCount++;
             }   
         }
 
         private void SpawnEnemyRandomly() {
-            // Check available field block count
-            int maxCount = FieldManager.Instance.GetAvailableBlockCount(ETeam.enemy) - keepBlockFreeCount;
-            if (maxCount == 0) {
-                return;
-            }
+            //// Check available field block count
+            //int maxCount = FieldManager.Instance.GetAvailableBlockCount(ETeam.enemy) - keepBlockFreeCount;
+            //if (maxCount == 0) {
+            //    return;
+            //}
 
-            // Determine spawn count
-            int spawnCount = Mathf.Min(maxCount, (int)(baseEnemySpawnMaxCount * currentDiffcultyParam.spawnMaxCountBonusRate));
+            //// Determine spawn count
+            //int spawnCount = Mathf.Min(maxCount, (int)(baseEnemySpawnMaxCount * currentDiffcultyParam.spawnMaxCountBonusRate));
 
-            List<FieldBlock> availableBlocks = FieldManager.Instance.GetAvailaleBlocks(ETeam.enemy);
+            //List<FieldBlock> availableBlocks = FieldManager.Instance.GetAvailaleBlocks(ETeam.enemy);
 
-            for (int i = 0; i < spawnCount; i++) {
-                // Determine enemy type
-                GameObject enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Count - 1)];
+            //for (int i = 0; i < spawnCount; i++) {
+            //    // Determine enemy type
+            //    GameObject enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Count - 1)];
 
-                // Determine spawn location
-                int blockNo = Random.Range(0, availableBlocks.Count - 1);
+            //    // Determine spawn location
+            //    int blockNo = Random.Range(0, availableBlocks.Count - 1);
 
-                // Spawn enemy
-                GameObject enemyObj = Instantiate(enemyPrefab);
-                var enemy = enemyObj.GetComponent<Enemy>();
-                if (enemy) {
-                    enemy.EntryField(availableBlocks[blockNo]);
-                }
+            //    // Spawn enemy
+            //    GameObject enemyObj = Instantiate(enemyPrefab);
+            //    var enemy = enemyObj.GetComponent<Enemy>();
+            //    if (enemy) {
+            //        enemy.EntryField(availableBlocks[blockNo]);
+            //    }
 
-                ApplyEnemyDiffcultyParam(enemyObj);
+            //    ApplyEnemyDiffcultyParam(enemyObj);
 
-                availableBlocks.RemoveAtSwap(blockNo);
-            }
+            //    availableBlocks.RemoveAtSwap(blockNo);
+            //}
         }
 
         public void DestroyAllEnemies(bool disableAllProjectiles = true) {
@@ -220,6 +219,10 @@ namespace NSS
             CurrentCreateEnemyCount = 0;
             CurrentGroup = StageController.Instance.GetCurrentGroupData();
             baseEnemySpawnMaxCount = CurrentGroup.CreateGridList.Count;
+        }
+
+        void OnPrefabLoaded() {
+            EnableSpawnEnemy = true;
         }
     }
 }

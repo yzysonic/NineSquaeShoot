@@ -20,7 +20,7 @@ MonoBehaviour:
     n_description: 20301
     s_icontexturename: character01
     s_texturename: character01_idle01
-    s_prefabname: 0
+    s_prefabname: Player
     n_hp: 100
     n_weapon: 1
     n_movetime: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
     n_description: 20601
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy021
     n_hp: 10
     n_weapon: 101
     n_movetime: 1
@@ -119,7 +119,7 @@ MonoBehaviour:
     n_description: 20602
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy011
     n_hp: 15
     n_weapon: 102
     n_movetime: 1
@@ -152,7 +152,7 @@ MonoBehaviour:
     n_description: 20603
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy021
     n_hp: 20
     n_weapon: 103
     n_movetime: 1
@@ -185,7 +185,7 @@ MonoBehaviour:
     n_description: 20604
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy011
     n_hp: 25
     n_weapon: 104
     n_movetime: 1
@@ -218,7 +218,7 @@ MonoBehaviour:
     n_description: 20605
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy021
     n_hp: 30
     n_weapon: 105
     n_movetime: 1
@@ -251,7 +251,7 @@ MonoBehaviour:
     n_description: 20606
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy011
     n_hp: 35
     n_weapon: 106
     n_movetime: 1
@@ -284,7 +284,7 @@ MonoBehaviour:
     n_description: 20607
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy011
     n_hp: 40
     n_weapon: 107
     n_movetime: 1
@@ -317,7 +317,7 @@ MonoBehaviour:
     n_description: 20608
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy011
     n_hp: 45
     n_weapon: 108
     n_movetime: 1
@@ -350,7 +350,7 @@ MonoBehaviour:
     n_description: 20609
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy011
     n_hp: 50
     n_weapon: 109
     n_movetime: 1
@@ -383,7 +383,7 @@ MonoBehaviour:
     n_description: 20610
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy011
     n_hp: 200
     n_weapon: 110
     n_movetime: 1
@@ -417,7 +417,7 @@ MonoBehaviour:
     n_description: 20301
     s_icontexturename: character01
     s_texturename: character01_idle01
-    s_prefabname: 0
+    s_prefabname: Player
     n_hp: 100
     n_weapon: 1
     n_movetime: 0
@@ -483,7 +483,7 @@ MonoBehaviour:
     n_description: 20601
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy021
     n_hp: 10
     n_weapon: 101
     n_movetime: 1
@@ -516,7 +516,7 @@ MonoBehaviour:
     n_description: 20602
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy011
     n_hp: 15
     n_weapon: 102
     n_movetime: 1
@@ -549,7 +549,7 @@ MonoBehaviour:
     n_description: 20603
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy021
     n_hp: 20
     n_weapon: 103
     n_movetime: 1
@@ -582,7 +582,7 @@ MonoBehaviour:
     n_description: 20604
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy011
     n_hp: 25
     n_weapon: 104
     n_movetime: 1
@@ -615,7 +615,7 @@ MonoBehaviour:
     n_description: 20605
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy021
     n_hp: 30
     n_weapon: 105
     n_movetime: 1
@@ -648,7 +648,7 @@ MonoBehaviour:
     n_description: 20606
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy011
     n_hp: 35
     n_weapon: 106
     n_movetime: 1
@@ -681,7 +681,7 @@ MonoBehaviour:
     n_description: 20607
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy011
     n_hp: 40
     n_weapon: 107
     n_movetime: 1
@@ -714,7 +714,7 @@ MonoBehaviour:
     n_description: 20608
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy011
     n_hp: 45
     n_weapon: 108
     n_movetime: 1
@@ -747,7 +747,7 @@ MonoBehaviour:
     n_description: 20609
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy011
     n_hp: 50
     n_weapon: 109
     n_movetime: 1
@@ -780,7 +780,7 @@ MonoBehaviour:
     n_description: 20610
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: 0
+    s_prefabname: Enemy011
     n_hp: 200
     n_weapon: 110
     n_movetime: 1

@@ -14,8 +14,8 @@ public class StageController : Singleton<StageController>
 
     private Dictionary<int, RoundGroupData> GroupDataDictionary;
 
-    [Header("Ãö¥dID")]
-    [PropertyTooltip("¿é¤J¸ÕºâªíStageDataInUnity¸Ì­±ªº²Ä¤@­ÓID")]
+    [Header("é—œå¡ID")]
+    [PropertyTooltip("å¡«å…¥è¦æ¸¬è©¦çš„é—œå¡ID")]
     [SerializeField] private int StageDataID;
 
     protected override void Awake() {

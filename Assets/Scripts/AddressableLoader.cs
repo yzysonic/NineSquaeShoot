@@ -65,6 +65,23 @@ public class AddressableLoader : MonoBehaviour
         return null;
     }
 
+    public GameObject GetCharacterPrefaab(int PrefabID) {
+        var status = (PrefabID < 100) ? ScriptableObjectController.Instance.CharacterStatusDic[PrefabID] : ScriptableObjectController.Instance.EnemyStatusDic[PrefabID];
+        if (status != null) {
+            if (CharacterPrefabDic.ContainsKey(status.PrefabName)) {
+                return CharacterPrefabDic[status.PrefabName];
+            }
+            else {
+                Debug.LogError($"編號{PrefabID}的Prefab名稱有錯誤，請檢查002_Character資料表，或是檢查是否有把相關的Prefab丟進Addressable裡");
+                return null;
+            }
+        }
+        else {
+            Debug.LogError($"002_Character裡沒有編號{PrefabID}的資料，請檢查一下有沒有輸入錯誤");
+        }
+        return null;
+    }
+
     void LoadAssets() {
         AsyncOperationHandle<IList<Texture2D>> LoadWeaponTexture = Addressables.LoadAssetsAsync<Texture2D>("Weapon", null);
         AsyncOperationHandle<IList<Texture2D>> LoadCharacterTexture = Addressables.LoadAssetsAsync<Texture2D>("Character", null);
@@ -85,7 +102,6 @@ public class AddressableLoader : MonoBehaviour
     }
 
     void OnTextureLoaded(AsyncOperationHandle<IList<Texture2D>> obj) {
-        CheckLoadProgress();
         if (LoadAssetDic.ContainsKey(obj)) {
             switch (LoadAssetDic[obj]) {
                 case "Weapon":
@@ -113,9 +129,15 @@ public class AddressableLoader : MonoBehaviour
                     break;
             }
         }
+        CheckLoadProgress();
     }
 
     void OnGameObjectLoaded(AsyncOperationHandle<IList<GameObject>> obj) {
+        foreach(var prefab in obj.Result) {
+            if (!CharacterPrefabDic.ContainsKey(prefab.name)) {
+                CharacterPrefabDic.Add(prefab.name, prefab);
+            }
+        }
         CheckLoadProgress();
     }
 

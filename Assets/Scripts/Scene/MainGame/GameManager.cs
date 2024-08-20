@@ -16,7 +16,7 @@ namespace NSS
 
         private FieldBlock playerStartBlock;
 
-        [Header("¬O§_­n¼½©ñ°²³qÃö°Êµe")]
+        [Header("æ˜¯å¦è¦æ’­æ”¾å‡é€šé—œå‹•ç•«")]
         public bool CanPlayEndAni;
 
         public Animation FakeClearAni;
@@ -24,17 +24,10 @@ namespace NSS
         protected override void Awake()
         {
             base.Awake();
-            playerStartBlock = FieldManager.Instance.GetBlock(ETeam.player, playerStartFieldBlockIndex, BlockType.Player);
-            if(playerStartBlock != null)
-            {
-                GameObject playerObj = Instantiate(playerPrefab);
-                Player = playerObj.GetComponent<Player>();
-                if (Player)
-                {
-                    Player.EntryField(playerStartBlock);
-                    Player.Defeated += OnPlayerDefeated;
-                }
-            }
+        }
+
+        private void Start() {
+            AddressableLoader.Instance.RegisterAssetLoaded(OnPlayerLoaded);
         }
 
         private void OnPlayerDefeated()
@@ -60,6 +53,21 @@ namespace NSS
                 if (Player.Movement && playerStartBlock)
                 {
                     Player.Movement.TryEnterBlock(playerStartBlock);
+                }
+            }
+        }
+
+        private void OnPlayerLoaded() {
+            playerStartBlock = FieldManager.Instance.GetBlock(ETeam.player, playerStartFieldBlockIndex, BlockType.Player);
+            if (playerStartBlock != null) {
+                playerPrefab = AddressableLoader.Instance.GetCharacterPrefaab(SaveDataController.Instance.Data.playerData.CurrentCharacterID);
+                if (playerPrefab != null) {
+                    GameObject playerObj = Instantiate(playerPrefab);
+                    Player = playerObj.GetComponent<Player>();
+                    if (Player) {
+                        Player.EntryField(playerStartBlock);
+                        Player.Defeated += OnPlayerDefeated;
+                    }
                 }
             }
         }
