@@ -40,31 +40,50 @@ namespace NSS
                 return;
             }
 
+            //// Move action
+            //moveTimer.Step();
+            //if (moveTimer.IsComplete)
+            //{
+            //    moveTimer.Reset();
+            //    if (TryMoveRandomly())
+            //    {
+            //        // If we move successfully then we don't do anything further
+            //        return;
+            //    }
+            //}
+
+            //// Fire action
+            //if (startIdleTimer.IsComplete)
+            //{
+            //    if (weapon && weapon.IsCoolDownComplete)
+            //    {
+            //        weapon.TryFireOnce();
+            //    }
+            //}
+            //else
+            //{
+            //    startIdleTimer.Step();
+            //}
+
             // Move action
             moveTimer.Step();
+            startIdleTimer.Step();
             if (moveTimer.IsComplete)
             {
-                moveTimer.Reset();
-                if (TryMoveRandomly())
-                {
-                    // If we move successfully then we don't do anything further
-                    return;
-                }
-            }
-
-            // Fire action
-            if (startIdleTimer.IsComplete)
-            {
+                // Fire action
                 if (weapon && weapon.IsCoolDownComplete)
                 {
                     weapon.TryFireOnce();
                 }
-            }
-            else
-            {
-                startIdleTimer.Step();
-            }
-            
+                else {
+                    moveTimer.Reset();
+                    if (TryMoveRandomly())
+                    {
+                        // If we move successfully then we don't do anything further
+                        return;
+                    }
+                }
+            }           
         }
 
         private bool TryMoveRandomly()

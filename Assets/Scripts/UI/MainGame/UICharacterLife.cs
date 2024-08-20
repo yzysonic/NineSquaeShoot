@@ -65,6 +65,9 @@ namespace NSS
             if (OwnerCharacter)
             {
                 SpriteRenderer spriteRenderer = ownerCharacter.GetComponent<SpriteRenderer>();
+                if (spriteRenderer == null) {
+                    spriteRenderer = ownerCharacter.gameObject.transform.GetComponentInChildren<SpriteRenderer>();
+                }
                 Sprite sprite = spriteRenderer ? spriteRenderer.sprite : null;
                 if (sprite)
                 {

@@ -86,11 +86,11 @@ MonoBehaviour:
     n_description: 20601
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: Enemy021
+    s_prefabname: Enemy011
     n_hp: 10
     n_weapon: 101
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 100
+    n_colddown: 0
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -483,11 +483,11 @@ MonoBehaviour:
     n_description: 20601
     s_icontexturename: 0
     s_texturename: 0
-    s_prefabname: Enemy021
+    s_prefabname: Enemy011
     n_hp: 10
     n_weapon: 101
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 100
+    n_colddown: 0
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10

@@ -114,8 +114,8 @@ public class CharacterStatus
         _DescriptionID = descriptionid;
         _HP = hp;
         _WeaponID = weaponid;
-        _MoveTime = movetime;
-        _MoveCoolDown = movecooldown;
+        _MoveTime = movetime / 100;
+        _MoveCoolDown = movecooldown / 100;
         _HPRecovery = hprecovery;
         _HPRecoveryTime = hprecoverytime / 100;
         _Strength = strength;
