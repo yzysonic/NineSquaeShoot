@@ -24,7 +24,7 @@ MonoBehaviour:
     n_hp: 100
     n_weapon: 1
     n_movetime: 0
-    n_colddown: 1
+    n_colddown: 100
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -56,8 +56,8 @@ MonoBehaviour:
     s_prefabname: 0
     n_hp: 100
     n_weapon: 1
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 0
+    n_colddown: 100
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -89,8 +89,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 10
     n_weapon: 101
-    n_movetime: 100
-    n_colddown: 0
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -122,8 +122,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 15
     n_weapon: 102
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -155,8 +155,8 @@ MonoBehaviour:
     s_prefabname: Enemy021
     n_hp: 20
     n_weapon: 103
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -188,8 +188,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 25
     n_weapon: 104
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -221,8 +221,8 @@ MonoBehaviour:
     s_prefabname: Enemy021
     n_hp: 30
     n_weapon: 105
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -254,8 +254,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 35
     n_weapon: 106
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -287,8 +287,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 40
     n_weapon: 107
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -320,8 +320,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 45
     n_weapon: 108
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -353,8 +353,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 50
     n_weapon: 109
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -386,8 +386,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 200
     n_weapon: 110
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -421,7 +421,7 @@ MonoBehaviour:
     n_hp: 100
     n_weapon: 1
     n_movetime: 0
-    n_colddown: 1
+    n_colddown: 100
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -453,8 +453,8 @@ MonoBehaviour:
     s_prefabname: 0
     n_hp: 100
     n_weapon: 1
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 0
+    n_colddown: 100
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -486,8 +486,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 10
     n_weapon: 101
-    n_movetime: 100
-    n_colddown: 0
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -519,8 +519,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 15
     n_weapon: 102
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -552,8 +552,8 @@ MonoBehaviour:
     s_prefabname: Enemy021
     n_hp: 20
     n_weapon: 103
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -585,8 +585,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 25
     n_weapon: 104
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -618,8 +618,8 @@ MonoBehaviour:
     s_prefabname: Enemy021
     n_hp: 30
     n_weapon: 105
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -651,8 +651,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 35
     n_weapon: 106
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -684,8 +684,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 40
     n_weapon: 107
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -717,8 +717,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 45
     n_weapon: 108
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -750,8 +750,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 50
     n_weapon: 109
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
@@ -783,8 +783,8 @@ MonoBehaviour:
     s_prefabname: Enemy011
     n_hp: 200
     n_weapon: 110
-    n_movetime: 1
-    n_colddown: 1
+    n_movetime: 50
+    n_colddown: 200
     n_hprecovervalue: 0
     n_hprecovertime: 100
     n_str: 10
